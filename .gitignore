@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+env/
+venv/
+
+# Local logs and caches
+.DS_Store
+
+# Downloaded HTML snapshot
+data/tbs_election_2026_downloaded.html
+
+# Results and intermediate data
+results/
+!results/README.md
+
+# Node modules (not used in this project)
+node_modules/
+
+# Decompressed shapefile components (we use GeoJSON instead)
+*.dbf
+*.shp
+*.shx
+*.prj
+*.cpg
+
+# Python build artifacts
+build/
+dist/
+*.egg-info
