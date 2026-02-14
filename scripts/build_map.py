@@ -288,8 +288,8 @@ def build_map(geojson: Dict[str, Any], results_df: pd.DataFrame, coalition_code:
     const tooltipData = {{ tooltip_json | safe }};
         const paletteMap = {
             default: ['{{ start_color }}', '{{ end_color }}'],
-            yellow_blue: ['#FFF7BC', '#2C7FB8'],
-            blue_yellow: ['#2C7FB8', '#FFF7BC'],
+            yellow_blue: ['#FFF7BC', '#003F87'],
+            blue_yellow: ['#003F87', '#FFF7BC'],
             green_red: ['#4CAF50', '#B71C1C'],
             red_green: ['#B71C1C', '#4CAF50'],
             orange_purple: ['#FDB863', '#5E3C99'],
