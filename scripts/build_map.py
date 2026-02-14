@@ -261,11 +261,20 @@ def build_map(geojson: Dict[str, Any], results_df: pd.DataFrame, coalition_code:
     geo_json.add_to(m)
     # Add legend
     legend_html = Template('''
-    <div style="position: fixed; bottom: 24px; left: 24px; z-index: 1000; background-color: white; padding: 10px 12px; border: 1px solid #ccc; font-size: 13px; max-width: 260px;">
-        <div style="font-weight: 600; line-height: 1.25; margin-bottom: 6px;">{{ title }}</div>
+    <div style="position: fixed; bottom: 24px; left: 24px; z-index: 1000; background-color: white; padding: 10px 12px; border: 1px solid #ccc; font-size: 13px; max-width: 280px;">
+        <div style="font-weight: 600; line-height: 1.25; margin-bottom: 2px;">{{ title }}</div>
+        {% if coalition_code == 'bnp_vs_islamist' %}
+        <div style="font-size: 11px; color: #666; margin-bottom: 6px;">BNP's share of (BNP + Islamist Alliance) votes</div>
+        {% else %}
+        <div style="font-size: 11px; color: #666; margin-bottom: 6px;">Percentage of total votes cast in each constituency</div>
+        {% endif %}
         <div style="margin: 2px 0 8px 0; display: flex; gap: 6px; align-items: center;">
             <span style="display: inline-block; width: 12px; height: 12px; background: #000000; border: 1px solid #222;"></span>
-            <span>No nomination (0%)</span>
+            {% if coalition_code == 'bnp_vs_islamist' %}
+            <span>Neither group nominated</span>
+            {% else %}
+            <span>No candidates nominated</span>
+            {% endif %}
         </div>
         <svg width="200" height="10" aria-hidden="true">
             <defs>
@@ -276,11 +285,17 @@ def build_map(geojson: Dict[str, Any], results_df: pd.DataFrame, coalition_code:
             </defs>
             <rect width="200" height="10" fill="url(#grad)" />
         </svg>
-        <div style="display: flex; justify-content: space-between; width: 200px; margin-top: 2px;">
-            <span>0%+</span><span>100%</span>
+        {% if coalition_code == 'bnp_vs_islamist' %}
+        <div style="display: flex; justify-content: space-between; width: 200px; margin-top: 2px; font-size: 11px;">
+            <span style="text-align: left;">Islamist<br/>dominated</span><span style="text-align: right;">BNP<br/>dominated</span>
         </div>
+        {% else %}
+        <div style="display: flex; justify-content: space-between; width: 200px; margin-top: 2px; font-size: 11px;">
+            <span style="text-align: left;">Weaker<br/>support (0%)</span><span style="text-align: right;">Stronger<br/>support (100%)</span>
+        </div>
+        {% endif %}
     </div>
-    ''').render(title=coalition_meta['display_name'] + ' vote share', start_color=start_color, end_color=end_color)
+    ''').render(title=coalition_meta['display_name'], start_color=start_color, end_color=end_color, coalition_code=coalition_code)
     m.get_root().html.add_child(folium.Element(legend_html))
     # Attach custom JS for tooltips
     tooltip_script = Template('''
