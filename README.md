@@ -83,6 +83,10 @@ election_site/
      --output_dir site/maps
    ```
 
+   If you update map styling or tooltip logic in `scripts/build_map.py`,
+   you must re-run this command to regenerate the HTML files in
+   `site/maps`.
+
 4. **Preview the site locally**.  Launch the simple HTTP server:
 
    ```bash

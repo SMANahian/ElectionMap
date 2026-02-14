@@ -212,6 +212,14 @@ def party_in_coalition(party_name: str, keywords: List[str]) -> bool:
     return any(kw in name_lc for kw in keywords)
 
 
+def _extract_candidate_name(candidate: Dict[str, Any]) -> str:
+    for key in ('candidate_name', 'name', 'candidate', 'full_name', 'candidateName'):
+        value = candidate.get(key)
+        if value:
+            return str(value).strip()
+    return 'Unknown'
+
+
 def compute_results(data: Dict[str, Any], coalitions: Dict[str, Dict[str, Any]]) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     """Compute constituency and party vote totals and coalition metrics.
 
@@ -242,6 +250,7 @@ def compute_results(data: Dict[str, Any], coalitions: Dict[str, Dict[str, Any]])
     seat_records: List[Dict[str, Any]] = []
     party_vote_totals: Dict[str, int] = {}
     party_by_seat_records: List[Dict[str, Any]] = []
+    seat_party_votes: Dict[str, Dict[str, int]] = {}
     for seat_id, seat_info in constituencies.items():
         seat_number = seat_info.get('seat_number')
         seat_name = seat_info.get('seat_name')
@@ -253,6 +262,8 @@ def compute_results(data: Dict[str, Any], coalitions: Dict[str, Dict[str, Any]])
             result_dict = results
         total_votes = 0
         coalition_counts = {code: 0 for code in coalitions}
+        seat_votes_by_party: Dict[str, int] = {}
+        candidate_rankings: List[Tuple[int, str, str]] = []
         # Build lookup for candidate definitions keyed by diid
         candidate_list = candidates_by_seat.get(seat_id, [])
         candidates_by_diid = {str(cand.get('diid')): cand for cand in candidate_list}
@@ -261,10 +272,11 @@ def compute_results(data: Dict[str, Any], coalitions: Dict[str, Dict[str, Any]])
             if votes is None:
                 continue
             total_votes += votes
-            candidate = candidates_by_diid.get(str(diid))
-            party_name = candidate['party'] if candidate else 'UNKNOWN'
+            candidate = candidates_by_diid.get(str(diid), {})
+            party_name = candidate.get('party') or 'UNKNOWN'
             # Accumulate per party totals
             party_vote_totals[party_name] = party_vote_totals.get(party_name, 0) + votes
+            seat_votes_by_party[party_name] = seat_votes_by_party.get(party_name, 0) + votes
             # Record this party in this seat
             party_by_seat_records.append({
                 'seat_id': seat_id,
@@ -273,6 +285,8 @@ def compute_results(data: Dict[str, Any], coalitions: Dict[str, Dict[str, Any]])
                 'party': party_name,
                 'votes': votes,
             })
+            candidate_name = _extract_candidate_name(candidate)
+            candidate_rankings.append((votes, candidate_name, party_name))
             # Update coalition counters
             for code, meta in coalitions.items():
                 keywords = meta.get('keywords', [])
@@ -284,17 +298,39 @@ def compute_results(data: Dict[str, Any], coalitions: Dict[str, Dict[str, Any]])
         else:
             ratios = {code: (coalition_counts[code] / total_votes) for code in coalitions}
         # Build seat record
+        top_three_candidates = ''
+        top_three_parties = ''
+        if candidate_rankings and total_votes > 0:
+            candidate_rankings.sort(key=lambda row: row[0], reverse=True)
+            top_entries = candidate_rankings[:3]
+            top_three_candidates = ', '.join(
+                f"{name} ({party}) {votes / total_votes * 100:.1f}%"
+                for votes, name, party in top_entries
+            )
+            top_three_parties = ', '.join(
+                f"{party} ({votes / total_votes * 100:.1f}%)"
+                for votes, _, party in top_entries
+            )
+
         record = {
             'seat_id': seat_id,
             'seat_number': seat_number,
             'seat_name': seat_name,
             'total_votes': total_votes,
+            'top_three_candidates': top_three_candidates,
+            'top_three': top_three_parties,
         }
         for code in coalitions:
             record[f'{code}_votes'] = coalition_counts[code]
             record[f'{code}_ratio'] = ratios[code]
         seat_records.append(record)
+        seat_party_votes[seat_id] = seat_votes_by_party
     # Convert to DataFrames
+    all_parties = sorted(party_vote_totals.keys())
+    for record in seat_records:
+        party_votes = seat_party_votes.get(record['seat_id'], {})
+        for party_name in all_parties:
+            record[party_name] = party_votes.get(party_name, 0)
     seat_results_df = pd.DataFrame(seat_records)
     # Aggregate party totals
     party_totals_df = pd.DataFrame(sorted(party_vote_totals.items(), key=lambda x: x[1], reverse=True), columns=['party', 'votes'])

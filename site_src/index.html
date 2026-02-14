@@ -20,16 +20,25 @@
 <body>
   <header>
     <h1>Bangladesh Election 2026 – Interactive Maps</h1>
-    <p>Select a statistic to visualise on the map:</p>
+    <p>Select a statistic and color spectrum to visualise on the map:</p>
     <select id="mapSelect">
       <option value="bnp">BNP vote share</option>
       <option value="jamaat">Jamaat vote share</option>
       <option value="democracy_platform">Democracy Platform vote share</option>
       <option value="islamist_alliance">Islamist Alliance vote share</option>
+      <option value="bnp_alliance">BNP Alliance vote share</option>
+    </select>
+    <select id="paletteSelect">
+      <option value="default">Default palette</option>
+      <option value="yellow_blue">Yellow to Blue</option>
+      <option value="green_red">Green to Red</option>
+      <option value="orange_purple">Orange to Purple</option>
+      <option value="teal_orange">Teal to Orange</option>
+      <option value="gray_red">Gray to Red</option>
     </select>
   </header>
   <main>
-    <iframe id="mapFrame" src="maps/bnp.html" allow="fullscreen"></iframe>
+    <iframe id="mapFrame" src="maps/bnp.html?palette=default" allow="fullscreen"></iframe>
     <div class="credits">
       <p>Data source: <a href="https://www.tbsnews.net/election-2026" target="_blank">The Business Standard</a> (view source) and Bangladesh Election Commission.</p>
       <p>Boundary data: <a href="https://data.humdata.org/dataset/bangladesh-constituencies-georeferenced" target="_blank">GeoReferenced Electoral Districts (GRED)</a>. Visualisation generated with Folium.</p>
@@ -40,11 +49,13 @@
     &copy; 2026 Nahian. All rights reserved.
   </footer>
   <script>
-    // Change the iframe source when the user selects a different statistic
-    document.getElementById('mapSelect').addEventListener('change', function() {
-      var slug = this.value;
-      document.getElementById('mapFrame').src = 'maps/' + slug + '.html';
-    });
+    function updateMapFrame() {
+      var slug = document.getElementById('mapSelect').value;
+      var palette = document.getElementById('paletteSelect').value;
+      document.getElementById('mapFrame').src = 'maps/' + slug + '.html?palette=' + palette;
+    }
+    document.getElementById('mapSelect').addEventListener('change', updateMapFrame);
+    document.getElementById('paletteSelect').addEventListener('change', updateMapFrame);
   </script>
 </body>
 </html>

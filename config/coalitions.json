@@ -61,5 +61,19 @@
       "Labour Party"
     ],
     "color_scale": ["#E8F5E9", "#004D40"]
+  },
+  "bnp_alliance": {
+    "display_name": "BNP\u202fAlliance (approx.)",
+    "keywords": [
+      "Bangladesh Nationalist Party",
+      "BNP",
+      "Revolutionary Workers Party",
+      "RWPB",
+      "Gono Odhikar Parishad",
+      "GOP",
+      "Gonosanhati Andolon",
+      "GSA"
+    ],
+    "color_scale": ["#E0F7FA", "#006064"]
   }
 }

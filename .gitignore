@@ -17,6 +17,10 @@ data/tbs_election_2026_downloaded.html
 results/
 !results/README.md
 
+# Generated site output (rebuilt in CI)
+site/
+!site/README.md
+
 # Node modules (not used in this project)
 node_modules/
 
