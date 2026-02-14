@@ -271,7 +271,7 @@ def build_map(geojson: Dict[str, Any], results_df: pd.DataFrame, coalition_code:
         <div style="margin: 2px 0 8px 0; display: flex; gap: 6px; align-items: center;">
             <span style="display: inline-block; width: 12px; height: 12px; background: #000000; border: 1px solid #222;"></span>
             {% if coalition_code == 'bnp_vs_eleven_party_alliance' %}
-            <span>Neither group nominated</span>
+            <span>At least one group missing data</span>
             {% else %}
             <span>No candidates nominated</span>
             {% endif %}
