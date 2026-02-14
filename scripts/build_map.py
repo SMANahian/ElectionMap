@@ -310,7 +310,9 @@ def build_map(geojson: Dict[str, Any], results_df: pd.DataFrame, coalition_code:
             orange_purple: ['#FDB863', '#5E3C99'],
             purple_orange: ['#5E3C99', '#FDB863'],
             gray_red: ['#E0E0E0', '#B71C1C'],
-            red_gray: ['#B71C1C', '#E0E0E0']
+            red_gray: ['#B71C1C', '#E0E0E0'],
+            red_blue: ['#B71C1C', '#003F87'],
+            blue_red: ['#003F87', '#B71C1C']
         };
 
         function hexToRgb(hex) {
