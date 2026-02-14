@@ -15,7 +15,7 @@ by the BBC Bangla election map).
 * **Jamaat** – Bangladesh Jamaat‑e‑Islami
 * **Democracy Platform** – a six‑party alliance formed under the
   banner *Ganatantra Manch*【479248487050056†L181-L187】
-* **Islamist Alliance** – an eleven‑party coalition led by
+* **Eleven-Party Alliance** – an eleven‑party coalition led by
   Jamaat‑e‑Islami【651089003901836†L170-L183】
 
 ## Repository structure
