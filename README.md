@@ -1,11 +1,15 @@
 # Bangladesh Election 2026 Interactive Maps
-
+> **Note:** If you have a better or more authoritative vote data source, you're welcome to contribute! Submit a pull request with updated data or scraping logic—I'll gladly review and merge improvements.
 This project provides an open, reproducible pipeline for scraping
 constituency‑level vote data from **The Business Standard** (TBS)
 election portal, merging it with official boundary data, and
 visualising the results as interactive maps.  The maps show the
 vote share of four key blocs across Bangladesh’s 300 parliamentary
 seats:
+
+Built by S M A Nahian (<https://smanahian.com>). Vote data comes from
+The Business Standard, and boundary data is based on GRED (as referenced
+by the BBC Bangla election map).
 
 * **BNP** – Bangladesh Nationalist Party
 * **Jamaat** – Bangladesh Jamaat‑e‑Islami
@@ -128,18 +132,27 @@ their names (or abbreviations) to the appropriate ``keywords`` list.
   constituency boundaries.  The GRED codebook notes that the
   boundaries were georeferenced from a 2018 *Dhaka Tribune* map and
   manually corrected for several seats【672971089959022†L667-L688】.
-* **Coalition membership** – based on contemporary reporting:
-  *The Daily Observer* lists the six parties of the Democracy
-  Platform【479248487050056†L181-L187】, while the 11‑party Islamist
-  alliance includes parties such as the National Citizen Party and
-  Liberal Democratic Party【651089003901836†L170-L183】.
-* **Implementation and analysis** – created by Nahian with
-  assistance from **ChatGPT** for code generation, debugging and
-  documentation.
+* **Boundary source context** – the BBC Bangla election map
+  (<https://www.bbc.com/bengali/resources/idt-12e6dcd9-2189-4c28-aafb-b106e6d01189>)
+  indicates its boundaries are based on GRED, which this project uses.
+* **Coalition membership** – based on contemporary reporting from
+  multiple news sources and official party announcements.
+* **Implementation and analysis** – created by S M A Nahian
+  (<https://smanahian.com>) with tooling support from ChatGPT agent
+  and GitHub Copilot.
+
+## Credits
+
+* **Project author** – S M A Nahian (<https://smanahian.com>).
+* **Vote data** – The Business Standard election portal.
+* **Boundary context** – BBC Bangla election map (based on GRED).
+* **Tooling support** – ChatGPT agent and GitHub Copilot.
 
 ## License
 
 This project is released under the MIT License.  Please see
 `LICENSE` for details.  The GRED boundary data is © their
 respective authors and distributed for non‑commercial use; see
-`data/README` for further information.
+`data/README` for further information. Data sources and attribution are
+listed above; S M A Nahian (<https://smanahian.com>) compiled the
+visualization with tooling support from ChatGPT agent and GitHub Copilot.

@@ -27,26 +27,30 @@
       <option value="democracy_platform">Democracy Platform vote share</option>
       <option value="islamist_alliance">Islamist Alliance vote share</option>
       <option value="bnp_alliance">BNP Alliance vote share</option>
+      <option value="bnp_vs_islamist">BNP vs Islamist Alliance (BNP share)</option>
     </select>
     <select id="paletteSelect">
-      <option value="default">Default palette</option>
       <option value="yellow_blue">Yellow to Blue</option>
+      <option value="blue_yellow">Blue to Yellow</option>
       <option value="green_red">Green to Red</option>
+      <option value="red_green">Red to Green</option>
       <option value="orange_purple">Orange to Purple</option>
-      <option value="teal_orange">Teal to Orange</option>
+      <option value="purple_orange">Purple to Orange</option>
       <option value="gray_red">Gray to Red</option>
+      <option value="red_gray">Red to Gray</option>
     </select>
   </header>
   <main>
-    <iframe id="mapFrame" src="maps/bnp.html?palette=default" allow="fullscreen"></iframe>
+    <iframe id="mapFrame" src="maps/bnp.html?palette=yellow_blue" allow="fullscreen"></iframe>
     <div class="credits">
-      <p>Data source: <a href="https://www.tbsnews.net/election-2026" target="_blank">The Business Standard</a> (view source) and Bangladesh Election Commission.</p>
-      <p>Boundary data: <a href="https://data.humdata.org/dataset/bangladesh-constituencies-georeferenced" target="_blank">GeoReferenced Electoral Districts (GRED)</a>. Visualisation generated with Folium.</p>
-      <p>Prepared by Nahian using a custom Python pipeline (with help from ChatGPT for code generation and analysis). See the project README for details.</p>
+      <p><strong>Contribute:</strong> If you have better vote data, submit a pull request to the <a href="https://github.com/SMANahian/ElectionMap" target="_blank">GitHub repository</a>—improvements are welcome!</p>
+      <p>Vote data: <a href="https://www.tbsnews.net/election-2026" target="_blank">The Business Standard</a> (view source) and Bangladesh Election Commission.</p>
+      <p>Boundary data: <a href="https://www.bbc.com/bengali/resources/idt-12e6dcd9-2189-4c28-aafb-b106e6d01189" target="_blank">BBC Bangla election map</a> (based on <a href="https://data.humdata.org/dataset/bangladesh-constituencies-georeferenced" target="_blank">GeoReferenced Electoral Districts (GRED)</a>).</p>
+      <p>Built by S M A Nahian (<a href="https://smanahian.com" target="_blank">smanahian.com</a>) with a custom Python pipeline. Tooling support: ChatGPT agent and GitHub Copilot.</p>
     </div>
   </main>
   <footer>
-    &copy; 2026 Nahian. All rights reserved.
+    &copy; 2026 S M A Nahian. All rights reserved.
   </footer>
   <script>
     function updateMapFrame() {

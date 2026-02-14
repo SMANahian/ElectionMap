@@ -31,7 +31,7 @@ import argparse
 import json
 import os
 import re
-from typing import Dict, Any, Tuple
+from typing import Dict, Any, Tuple, Optional
 
 import pandas as pd
 import folium
@@ -131,6 +131,25 @@ def build_map(geojson: Dict[str, Any], results_df: pd.DataFrame, coalition_code:
     ratio_col = f"{coalition_code}_ratio"
     votes_col = f"{coalition_code}_votes"
     seat_data = {}
+
+    def compute_ratio(row: pd.Series) -> Tuple[Optional[float], bool]:
+        if coalition_code != 'bnp_vs_islamist':
+            if ratio_col not in row:
+                return None, False
+            value = row[ratio_col]
+            if pd.isna(value):
+                return None, False
+            return float(value), True
+        bnp_ratio = row.get('bnp_ratio')
+        isl_ratio = row.get('islamist_alliance_ratio')
+        if pd.isna(bnp_ratio) or pd.isna(isl_ratio):
+            return None, False
+        if bnp_ratio <= 0 or isl_ratio <= 0:
+            return 0.0, False
+        total = bnp_ratio + isl_ratio
+        if total <= 0:
+            return 0.0, False
+        return float(bnp_ratio / total), True
     for _, row in results_df.iterrows():
         seat_name = str(row['seat_name'])
         seat_key = normalize_seat_name(seat_name)
@@ -142,8 +161,10 @@ def build_map(geojson: Dict[str, Any], results_df: pd.DataFrame, coalition_code:
             top_three_parties = ''
         if not seat_key:
             continue
+        ratio_value, ratio_defined = compute_ratio(row)
         seat_data[seat_key] = {
-            'ratio': row[ratio_col] if ratio_col in row else 0.0,
+            'ratio': ratio_value if ratio_value is not None else 0.0,
+            'ratio_defined': ratio_defined,
             'votes': row[votes_col] if votes_col in row else 0,
             'total_votes': row['total_votes'],
             'seat_name': row['seat_name'],
@@ -159,11 +180,14 @@ def build_map(geojson: Dict[str, Any], results_df: pd.DataFrame, coalition_code:
         data = seat_data.get(seat_key)
         if data:
             feature['properties']['ratio'] = data['ratio']
+            feature['properties']['ratio_defined'] = data['ratio_defined']
             feature['properties']['top_three'] = data['top_three']
             feature['properties']['seat_name'] = data['seat_name']
         else:
             feature['properties']['ratio'] = 0.0
+            feature['properties']['ratio_defined'] = False
             feature['properties']['top_three'] = ''
+            feature['properties']['seat_name'] = seat_name
 
     def style_function(feature):
         """Return style dict for each polygon based on the coalition ratio.
@@ -177,7 +201,8 @@ def build_map(geojson: Dict[str, Any], results_df: pd.DataFrame, coalition_code:
         seat_key = feature['properties'].get('seat_key')
         data = seat_data.get(seat_key, None)
         ratio = data['ratio'] if data else 0.0
-        color = '#000000' if ratio <= 0 else interpolate_color(start_color, end_color, ratio)
+        ratio_defined = data['ratio_defined'] if data else False
+        color = '#000000' if (ratio <= 0 or not ratio_defined) else interpolate_color(start_color, end_color, ratio)
         return {
             'fillOpacity': 0.7,
             'weight': 0.5,
@@ -195,7 +220,9 @@ def build_map(geojson: Dict[str, Any], results_df: pd.DataFrame, coalition_code:
         seat_key = feature['properties'].get('seat_key')
         data = seat_data.get(seat_key, None)
         if not data:
-            return "No data"
+            seat_name = feature['properties'].get('seat_name') or feature['properties'].get('cst_n')
+            seat_label = seat_name or 'Unknown seat'
+            return f"<div class=\"tooltip-title\">{seat_label}</div><div class=\"tooltip-empty\">No data</div>"
         top_three = data.get('top_three')
         top_items = [item.strip() for item in top_three.split(',')] if top_three else []
         if top_items:
@@ -262,10 +289,13 @@ def build_map(geojson: Dict[str, Any], results_df: pd.DataFrame, coalition_code:
         const paletteMap = {
             default: ['{{ start_color }}', '{{ end_color }}'],
             yellow_blue: ['#FFF7BC', '#2C7FB8'],
+            blue_yellow: ['#2C7FB8', '#FFF7BC'],
             green_red: ['#4CAF50', '#B71C1C'],
+            red_green: ['#B71C1C', '#4CAF50'],
             orange_purple: ['#FDB863', '#5E3C99'],
-            teal_orange: ['#2A9D8F', '#E76F51'],
-            gray_red: ['#E0E0E0', '#B71C1C']
+            purple_orange: ['#5E3C99', '#FDB863'],
+            gray_red: ['#E0E0E0', '#B71C1C'],
+            red_gray: ['#B71C1C', '#E0E0E0']
         };
 
         function hexToRgb(hex) {
@@ -299,8 +329,9 @@ def build_map(geojson: Dict[str, Any], results_df: pd.DataFrame, coalition_code:
                         const layer = {{ layer_name }};
                         layer.eachLayer(function (leafletLayer) {
                                 const ratio = leafletLayer.feature?.properties?.ratio ?? 0;
-                        const scaled = ratio <= 0 ? 0 : scaleRatio(ratio);
-                        const fillColor = ratio <= 0 ? '#000000' : interpolateColor(start, end, scaled);
+                                const ratioDefined = leafletLayer.feature?.properties?.ratio_defined ?? false;
+                                const scaled = ratio <= 0 ? 0 : scaleRatio(ratio);
+                                const fillColor = ratio <= 0 || !ratioDefined ? '#000000' : interpolateColor(start, end, scaled);
                                 leafletLayer.setStyle({ fillColor });
                         });
                         const startStop = document.getElementById('legendStart');
@@ -311,7 +342,7 @@ def build_map(geojson: Dict[str, Any], results_df: pd.DataFrame, coalition_code:
 
                 function scaleRatio(ratio) {
                     const clamped = Math.max(0, Math.min(1, ratio));
-                    const k = 8;
+                    const k = 18;
                     const sigmoid = (x) => 1 / (1 + Math.exp(-k * (x - 0.5)));
                     const lo = sigmoid(0);
                     const hi = sigmoid(1);
@@ -382,8 +413,9 @@ def main() -> None:
     if not os.path.exists(args.output_dir):
         os.makedirs(args.output_dir, exist_ok=True)
     # Build maps
+    derived_codes = {'bnp_vs_islamist'}
     for code, meta in coalitions.items():
-        if f'{code}_ratio' not in results_df.columns:
+        if f'{code}_ratio' not in results_df.columns and code not in derived_codes:
             # Skip coalitions that are not present
             continue
         output_path = os.path.join(args.output_dir, f'{code}.html')
