@@ -1,0 +1,77 @@
+name: Build and Deploy
+
+# This workflow builds the election website and deploys it to GitHub Pages.
+# It runs whenever changes are pushed to the default branch (usually
+# ``main``) so that the maps and data remain up to date.  The
+# workflow installs Python dependencies, scrapes the latest vote
+# data, generates new maps, then uploads the ``site`` directory as a
+# GitHub Pages artifact.
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Scrape vote data
+        run: |
+          mkdir -p results
+          python scripts/scrape_votes.py \
+            --config config/coalitions.json \
+            --url https://www.tbsnews.net/election-2026 \
+            --local_html data/tbs_election_2026.html \
+            --output_seat_results results/seat_results.csv \
+            --output_party_votes results/party_totals.csv \
+            --output_party_by_seat results/party_by_seat.csv \
+            --save_html
+
+      - name: Generate maps
+        run: |
+          mkdir -p site/maps
+          python scripts/build_map.py \
+            --config config/coalitions.json \
+            --results_csv results/seat_results.csv \
+            --geojson data/constituencies.geojson \
+            --output_dir site/maps
+
+      - name: Copy website files
+        run: |
+          # Copy static HTML pages (index and parameterised pages)
+          cp -r site_src/* site/
+
+      - name: Upload artifact for Pages
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: site
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1

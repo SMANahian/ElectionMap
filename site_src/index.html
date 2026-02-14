@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bangladesh Election 2026 – Interactive Maps</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header { background-color: #003366; color: white; padding: 1em; }
+    header h1 { margin: 0; font-size: 1.6em; }
+    header p { margin: 0.5em 0 0 0; font-size: 0.9em; }
+    main { padding: 1em; }
+    #mapFrame { border: none; width: 100%; height: 650px; }
+    footer { background-color: #f0f0f0; padding: 1em; font-size: 0.8em; color: #333; }
+    select { padding: 0.5em; font-size: 1em; margin-top: 0.5em; }
+    .credits { margin-top: 1em; }
+    .credits a { color: #003366; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bangladesh Election 2026 – Interactive Maps</h1>
+    <p>Select a statistic to visualise on the map:</p>
+    <select id="mapSelect">
+      <option value="bnp">BNP vote share</option>
+      <option value="jamaat">Jamaat vote share</option>
+      <option value="democracy_platform">Democracy Platform vote share</option>
+      <option value="islamist_alliance">Islamist Alliance vote share</option>
+    </select>
+  </header>
+  <main>
+    <iframe id="mapFrame" src="maps/bnp.html" allow="fullscreen"></iframe>
+    <div class="credits">
+      <p>Data source: <a href="https://www.tbsnews.net/election-2026" target="_blank">The Business Standard</a> (view source) and Bangladesh Election Commission.</p>
+      <p>Boundary data: <a href="https://data.humdata.org/dataset/bangladesh-constituencies-georeferenced" target="_blank">GeoReferenced Electoral Districts (GRED)</a>. Visualisation generated with Folium.</p>
+      <p>Prepared by Nahian using a custom Python pipeline (with help from ChatGPT for code generation and analysis). See the project README for details.</p>
+    </div>
+  </main>
+  <footer>
+    &copy; 2026 Nahian. All rights reserved.
+  </footer>
+  <script>
+    // Change the iframe source when the user selects a different statistic
+    document.getElementById('mapSelect').addEventListener('change', function() {
+      var slug = this.value;
+      document.getElementById('mapFrame').src = 'maps/' + slug + '.html';
+    });
+  </script>
+</body>
+</html>

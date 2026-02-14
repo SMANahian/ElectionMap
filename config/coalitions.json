@@ -1,0 +1,65 @@
+{
+  "bnp": {
+    "display_name": "Bangladesh Nationalist Party (BNP)",
+    "keywords": [
+      "Bangladesh Nationalist Party",
+      "BNP"
+    ],
+    "color_scale": ["#FFFFCC", "#0060C9"]
+  },
+  "jamaat": {
+    "display_name": "Bangladesh Jamaat‑e‑Islami",
+    "keywords": [
+      "Jamaat",
+      "Bangladesh Jamaat"
+    ],
+    "color_scale": ["#FFF7BC", "#2C7FB8"]
+  },
+  "democracy_platform": {
+    "display_name": "Democracy Platform (Ganatantra Manch)",
+    "keywords": [
+      "Jatiya Samajtantrik Dal",
+      "Samajtantrik Dal",
+      "JSD",
+      "Nagrik Oikya",
+      "Nagorik Oikya",
+      "Revolutionary Workers Party",
+      "RWPB",
+      "Bhasani Anusari",
+      "BAP",
+      "Rastro Songskar",
+      "Rashtra Sanskar",
+      "RSA",
+      "Ganosanhati Andolon",
+      "Ganosanhati",
+      "GSA"
+    ],
+    "color_scale": ["#FFE6E6", "#990000"]
+  },
+  "islamist_alliance": {
+    "display_name": "Islamist Alliance (11‑Party)",
+    "keywords": [
+      "Jamaat",
+      "Khelafat Majlish",
+      "Khelafat Majlis",
+      "Khilafat Andolan",
+      "Khelafat Andolon",
+      "BKA",
+      "Nizam-e-Islam",
+      "Nezame Islam",
+      "BNIP",
+      "Development Party",
+      "BDP",
+      "Jatiya Ganotantrik",
+      "National Citizen Party",
+      "NCP",
+      "Liberal Democratic Party",
+      "LDP",
+      "Amar Bangladesh Party",
+      "AB Party",
+      "Bangladesh Labour Party",
+      "Labour Party"
+    ],
+    "color_scale": ["#E8F5E9", "#004D40"]
+  }
+}
