@@ -36,8 +36,8 @@
     ],
     "color_scale": ["#FFE6E6", "#990000"]
   },
-  "islamist_alliance": {
-    "display_name": "Islamist Alliance (11‑Party)",
+  "eleven_party_alliance": {
+    "display_name": "Eleven-Party Alliance (Islamist)",
     "keywords": [
       "Jamaat",
       "Khelafat Majlish",
@@ -76,8 +76,8 @@
     ],
     "color_scale": ["#E0F7FA", "#006064"]
   },
-  "bnp_vs_islamist": {
-    "display_name": "Islamist Alliance vs BNP (BNP share)",
+  "bnp_vs_eleven_party_alliance": {
+    "display_name": "Eleven-Party Alliance vs BNP (BNP share)",
     "keywords": [],
     "color_scale": ["#FDE0DD", "#C51B8A"]
   }

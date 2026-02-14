@@ -133,7 +133,7 @@ def build_map(geojson: Dict[str, Any], results_df: pd.DataFrame, coalition_code:
     seat_data = {}
 
     def compute_ratio(row: pd.Series) -> Tuple[Optional[float], bool]:
-        if coalition_code != 'bnp_vs_islamist':
+        if coalition_code != 'bnp_vs_eleven_party_alliance':
             if ratio_col not in row:
                 return None, False
             value = row[ratio_col]
@@ -141,12 +141,12 @@ def build_map(geojson: Dict[str, Any], results_df: pd.DataFrame, coalition_code:
                 return None, False
             return float(value), True
         bnp_ratio = row.get('bnp_ratio')
-        isl_ratio = row.get('islamist_alliance_ratio')
-        if pd.isna(bnp_ratio) or pd.isna(isl_ratio):
+        epa_ratio = row.get('eleven_party_alliance_ratio')
+        if pd.isna(bnp_ratio) or pd.isna(epa_ratio):
             return None, False
-        if bnp_ratio <= 0 or isl_ratio <= 0:
+        if bnp_ratio <= 0 or epa_ratio <= 0:
             return 0.0, False
-        total = bnp_ratio + isl_ratio
+        total = bnp_ratio + epa_ratio
         if total <= 0:
             return 0.0, False
         return float(bnp_ratio / total), True
@@ -263,14 +263,14 @@ def build_map(geojson: Dict[str, Any], results_df: pd.DataFrame, coalition_code:
     legend_html = Template('''
     <div style="position: fixed; bottom: 24px; left: 24px; z-index: 1000; background-color: white; padding: 10px 12px; border: 1px solid #ccc; font-size: 13px; max-width: 280px;">
         <div style="font-weight: 600; line-height: 1.25; margin-bottom: 2px;">{{ title }}</div>
-        {% if coalition_code == 'bnp_vs_islamist' %}
-        <div style="font-size: 11px; color: #666; margin-bottom: 6px;">BNP's share of (BNP + Islamist Alliance) votes</div>
+        {% if coalition_code == 'bnp_vs_eleven_party_alliance' %}
+        <div style="font-size: 11px; color: #666; margin-bottom: 6px;">BNP's share of (BNP + Eleven-Party Alliance) votes</div>
         {% else %}
         <div style="font-size: 11px; color: #666; margin-bottom: 6px;">Percentage of total votes cast in each constituency</div>
         {% endif %}
         <div style="margin: 2px 0 8px 0; display: flex; gap: 6px; align-items: center;">
             <span style="display: inline-block; width: 12px; height: 12px; background: #000000; border: 1px solid #222;"></span>
-            {% if coalition_code == 'bnp_vs_islamist' %}
+            {% if coalition_code == 'bnp_vs_eleven_party_alliance' %}
             <span>Neither group nominated</span>
             {% else %}
             <span>No candidates nominated</span>
@@ -285,9 +285,9 @@ def build_map(geojson: Dict[str, Any], results_df: pd.DataFrame, coalition_code:
             </defs>
             <rect width="200" height="10" fill="url(#grad)" />
         </svg>
-        {% if coalition_code == 'bnp_vs_islamist' %}
+        {% if coalition_code == 'bnp_vs_eleven_party_alliance' %}
         <div style="display: flex; justify-content: space-between; width: 200px; margin-top: 2px; font-size: 11px;">
-            <span style="text-align: left;">Islamist<br/>dominated</span><span style="text-align: right;">BNP<br/>dominated</span>
+            <span style="text-align: left;">Eleven-Party<br/>Alliance dominated</span><span style="text-align: right;">BNP<br/>dominated</span>
         </div>
         {% else %}
         <div style="display: flex; justify-content: space-between; width: 200px; margin-top: 2px; font-size: 11px;">
@@ -428,7 +428,7 @@ def main() -> None:
     if not os.path.exists(args.output_dir):
         os.makedirs(args.output_dir, exist_ok=True)
     # Build maps
-    derived_codes = {'bnp_vs_islamist'}
+    derived_codes = {'bnp_vs_eleven_party_alliance'}
     for code, meta in coalitions.items():
         if f'{code}_ratio' not in results_df.columns and code not in derived_codes:
             # Skip coalitions that are not present
