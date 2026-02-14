@@ -77,7 +77,7 @@
     "color_scale": ["#E0F7FA", "#006064"]
   },
   "bnp_vs_islamist": {
-    "display_name": "BNP vs Islamist Alliance (BNP share)",
+    "display_name": "Islamist Alliance vs BNP (BNP share)",
     "keywords": [],
     "color_scale": ["#FDE0DD", "#C51B8A"]
   }
