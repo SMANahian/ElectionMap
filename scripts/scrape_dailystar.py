@@ -41,6 +41,72 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 
+# Normalize Daily Star party names to match TBS naming convention.
+PARTY_NAME_MAP = {
+    "BNP": "Bangladesh Nationalist Party (BNP)",
+    "Bangladesh Jamaat-e-Islami": "Bangladesh Jamaat-e-Islami (Jamaat)",
+    "Independent": "Independent Candidate (Independent)",
+    "National Citizens Party - NCP": "National Citizen Party (NCP)",
+    "Islamic Andolon Bangladesh": "Islami Andolan Bangladesh (IAB)",
+    "Bangladesh Islamic Front": "Bangladesh Islami Front (BIF)",
+    "Bangladesh Khilafat Majlis": "Bangladesh Khelafat Majlish (BKM)",
+    "Khilafat Majlis": "Khelafat Majlis",
+    "Liberal Democratic Party - LDP": "Bangladesh Liberal Democratic Party (LDP)",
+    "Jatiya Party": "Jatiya Party (JaPa)",
+    "Jatiya Party - JAPA": "Jatiya Party (JaPa)",
+    "Gono Odhikar Parishad": "Gono Odhikar Parishad (GOP)",
+    "Gono Odhikar Porishad- GOP": "Gono Odhikar Parishad (GOP)",
+    "Amar Bangladesh Party (AB Party)": "Amar Bangladesh Party (AB)",
+    "Bangladesh Development Party - BDP": "Bangladesh Development Party (BDP)",
+    "Bangladesh National Party - BJP": "Bangladesh Jatiya Party (BJP)",
+    "Jamiat Ulama-e-Islam Bangladesh": "Jamiat Ulema-e-Islam Bangladesh (JUIB)",
+    "Gono Forum": "Gono Forum (GF)",
+    "Gano Forum": "Gono Forum (GF)",
+    "Bangladesh Supreme Party - BSP": "Bangladesh Supreme Party (BSP)",
+    "Zaker Party": "Zaker Party (ZP)",
+    "Bangladesh Jasod": "Bangladesh Jatiya Samajtantrik Dal (Bangladesh JaSad)",
+    "Jatiya Samajtantrik Dal (JSD)": "Jatiya Samajtantrik Dal (JSD)",
+    "Jatiya Samajtantrik Dal (JSD Rab)": "Jatiya Samajtantrik Dal-JASAD",
+    "Ganosamhati Andolon": "Ganosanhati Andolan (GSA)",
+    "Bangladesh Muslim League - BML": "Bangladesh Muslim League (BML)",
+    "Bangladesh Nezam e Islam Party": "Bangladesh Nezame Islam Party (BNIP)",
+    "Bangladesh Nezam Islam Party": "Bangladesh Nezame Islam Party (BNIP)",
+    "Nagorik Oikya": "Nagorik Oikya (NO)",
+    "Nagorik Oikko": "Nagorik Oikya (NO)",
+    "Bangladesh Republican Party - BRP": "Bangladesh Republican Party (BRP)",
+    "Communist Party of Bangladesh": "Communist Party of Bangladesh (CPB)",
+    "Bangladesh Samajtantrik Dal": "Bangladesh Samajtantrik Dal (Basad)",
+    "Insaniat Biplob Bangladesh - Insaniat Biplob": "Insaniyat Biplob Bangladesh (IBB)",
+    "Nationalist Democratic Movement - NDM": "Nationalist Democratic Movement (NDM)",
+    "Ganatantri Party": "Ganatantri Party (GP)",
+    "Janatar Dal": "Janotar Dol",
+    "Amjanatar Dal": "Amjanatar Dol",
+    "Islamic Front Bangladesh - IFB": "Islamic Front Bangladesh (IFB)",
+    "Bangladesher Biplobi Workers Party": "Revolutionary Workers Party of Bangladesh (RWPB)",
+    "Bangladesh Revolutionary Workers Party": "Revolutionary Workers Party of Bangladesh (RWPB)",
+    "Bangladesh Khelafat Andolon": "Bangladesh Khelafat Andolon (BKA)",
+    "Bangladesh Sangskritik Muktijote": "Bangladesh Sangskritik Muktijote (BSM)",
+    "Bangladesher Samajtantrik Dal (BSD)": "Bangladesh Samajtantrik Dal (Basad)",
+    "Bangladesher Samajtantrik Dal (Marxist)": "Socialist Party of Bangladesh (Marxist) (SPB-M)",
+    "Bangladesh Nationalist Front - BNF": "Bangladesh Nationalist Front (BNF)",
+    "Bangladesh Kalyan Party": "Bangladesh Kallyan Party (BKP)",
+    "Bangladesh Labor Party": "Bangladesh Labour Party",
+    "Bangladesh Minority Janata Party - BMJP": "Bangladesh Minority Janata Party (BMJP)",
+    "Bangladesh Nap": "Bangladesh National Awami Party–Bangladesh NAP (BNAP)",
+    "Bangladesh Gonofront": "Gono Front (GF)",
+    "Bangladesh Equal Rights Party": "Bangladesh Somo Odhikar Party (BEP)",
+    "Islamic Oikkojot": "Islami Oikya Jote (IOJ)",
+    "National People's Party - NPP": "National People's Party (NPP)",
+    "National Democratic Party - JDP": "Jatiya Ganatantrik Party (JAGPA)",
+    "Islamic Front Bangladesh": "Islamic Front Bangladesh (IFB)",
+}
+
+
+def normalize_party(name: str) -> str:
+    """Normalize a DS party name to match TBS convention."""
+    return PARTY_NAME_MAP.get(name, name)
+
+
 def load_coalitions(config_path: str) -> dict[str, dict[str, Any]]:
     with open(config_path, "r", encoding="utf-8") as f:
         coalitions = json.load(f)
@@ -101,7 +167,7 @@ def extract_seat_from_card(card) -> dict | None:
     winner_party_span = card.find(
         "span", class_=lambda c: c and "text-gray-700" in c and "bg-white" in c
     )
-    winner_party = winner_party_span.get_text(strip=True) if winner_party_span else ""
+    winner_party = normalize_party(winner_party_span.get_text(strip=True)) if winner_party_span else ""
 
     # Winner votes from banner
     winner_votes_span = card.find(
@@ -187,7 +253,7 @@ def _parse_candidate_card(cdiv, text_parts: str) -> dict | None:
 
     # Find party (p tag with party info)
     party_p = cdiv.find("p")
-    party = party_p.get_text(strip=True) if party_p else ""
+    party = normalize_party(party_p.get_text(strip=True)) if party_p else ""
 
     # Find votes if present (None means data not available)
     votes = None

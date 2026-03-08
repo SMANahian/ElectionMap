@@ -1,107 +1,88 @@
 seat_name,candidate_ds,party_ds,party_tbs,tbs_votes,ds_votes,diff,issue
-Bagerhat 3,Mohammed Abdul Wadud Sheikh,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),83550,83705,155,Vote count mismatch
-Bagerhat 3,Sheikh Faridul Islam,BNP,Bangladesh Nationalist Party (BNP),102661,103711,1050,Vote count mismatch
-Barguna 1,Md. Jamal Hossain,Jatiya Party,Jatiya Party (JaPa),-,981,-,Party not found in TBS (mapping needed?)
-Barishal 2,Abdul Mannan,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),78082,74082,-4000,Vote count mismatch
-Bhola 4,Mohammad Mustafa Kamal,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),81937,81437,-500,Vote count mismatch
-Bogura 2,Mir Shah Alam,BNP,Bangladesh Nationalist Party (BNP),145137,145024,-113,Vote count mismatch
-Bogura 7,Morshed Milton,BNP,Bangladesh Nationalist Party (BNP),264212,158196,-106016,Vote count mismatch
-Brahmanbaria 1,A.K.M. Kamruzzaman,Independent,Independent Candidate (Independent),17666,35220,17554,Vote count mismatch
-Brahmanbaria 1,Md. Habibur Rahman,Independent,Independent Candidate (Independent),17666,106,-17560,Vote count mismatch
-Brahmanbaria 2,Rumin Farhana,Independent,Independent Candidate (Independent),12560,118547,105987,Vote count mismatch
-Chandpur 4,Md. Abdul Hannan,Independent,Independent Candidate (Independent),184,74175,73991,Vote count mismatch
-Chattogram 16,Ehsanul Hoque,Bangladesh Muslim League - BML,Bangladesh Muslim League (BML),-,105,-,Party not found in TBS (mapping needed?)
-Coxs Bazar 2,A. H. M. Hamidur Rahaman Azad,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),91889,89817,-2072,Vote count mismatch
-Coxs Bazar 2,Alamgir Mohammad Mahfuzullah Farid,BNP,Bangladesh Nationalist Party (BNP),125543,124660,-883,Vote count mismatch
-Dhaka 19,Dilshana Parul,National Citizens Party - NCP,National Citizen Party (NCP),125283,123283,-2000,Vote count mismatch
-Dinajpur 2,A. K. M. Afjalul Anam,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),104887,101831,-3056,Vote count mismatch
-Dinajpur 2,Md. Sadiq Reaz,BNP,Bangladesh Nationalist Party (BNP),139622,144317,4695,Vote count mismatch
-Dinajpur 3,Md. Maynul Alam,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),136239,134618,-1621,Vote count mismatch
-Dinajpur 3,Syed Jahangir Alam,BNP,Bangladesh Nationalist Party (BNP),140608,139207,-1401,Vote count mismatch
-Dinajpur 4,Akhtaruzzaman Mia,BNP,Bangladesh Nationalist Party (BNP),166717,165577,-1140,Vote count mismatch
-Dinajpur 4,Md. Aftab Uddin Mollah,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),129056,127666,-1390,Vote count mismatch
-Dinajpur 5,A. Z. M. Rezwanul Haque,Independent,Independent Candidate (Independent),114484,113650,-834,Vote count mismatch
-Dinajpur 5,Md. Abdul Ahad,National Citizens Party - NCP,National Citizen Party (NCP),110195,108948,-1247,Vote count mismatch
-Dinajpur 6,Abu Zafar Md. Zahid Hossain,BNP,Bangladesh Nationalist Party (BNP),205118,203887,-1231,Vote count mismatch
-Dinajpur 6,Md. Anowarul Islam,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),190703,188719,-1984,Vote count mismatch
-Faridpur 1,Khandaker Nasirul Islam,BNP,Bangladesh Nationalist Party (BNP),126476,126475,-1,Vote count mismatch
-Faridpur 1,Md. Elias Molla,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),154145,154772,627,Vote count mismatch
-Feni 1,Mahbub Morshed Majumder,Bangladesh Muslim League - BML,Bangladesh Muslim League (BML),-,188,-,Party not found in TBS (mapping needed?)
-Feni 3,Mr. Abdul Awal Mintu,BNP,Bangladesh Nationalist Party (BNP),157825,157425,-400,Vote count mismatch
-Gaibandha 3,Abul Kausar Mohammad Nazrul Islam,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),162457,163457,1000,Vote count mismatch
-Gopalganj 2,M.H. Khan Manju,Independent,Independent Candidate (Independent),27891,33039,5148,Vote count mismatch
-Habiganj 3,Abdul Mumin Chowdhury,Jatiya Party,Jatiya Party (JaPa),-,1259,-,Party not found in TBS (mapping needed?)
-Habiganj 3,Md. Shahinur Rahman,Bangladesh Sangskritik Muktijote,Bangladesh Sangskritik Muktijote (BSM),-,132,-,Party not found in TBS (mapping needed?)
-Habiganj 3,Mohib Uddin Ahmed Sohel,Islamic Andolon Bangladesh,Islami Andolan Bangladesh (IAB),-,5443,-,Party not found in TBS (mapping needed?)
-Habiganj 3,S. M. Sarwar,Bangladesh Islamic Front,Bangladesh Islami Front (BIF),-,14133,-,Party not found in TBS (mapping needed?)
-Habiganj 4,Saleh Ahmed Sajan,Independent,Independent Candidate (Independent),652,619,-33,Vote count mismatch
-Jamalpur 1,M Rashiduzzaman Millat,BNP,Bangladesh Nationalist Party (BNP),172115,173656,1541,Vote count mismatch
-Jamalpur 1,Muhammad Nazmul Haque Sayeedi,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),93661,97820,4159,Vote count mismatch
-Jashore 2,Md. Shamsul Haque,Bangladesh Nationalist Front - BNF,Bangladesh Nationalist Front (BNF),203,233,30,Vote count mismatch
-Jashore 2,Md. Zahurul Islam,Independent,Independent Candidate (Independent),389,188,-201,Vote count mismatch
-Jhenaidah 4,Md. Saiful Islam Firoz,Independent,Independent Candidate (Independent),77104,77140,36,Vote count mismatch
-Khagrachhari 1,Dharma Jyoti Chakma,Independent,Independent Candidate (Independent),934,68315,67381,Vote count mismatch
-Kishoreganj 5,Sk Mozibur Rahman Iqbal,Independent,Independent Candidate (Independent),1897,79604,77707,Vote count mismatch
-Kurigram 3,Md. Mahbubul Alam,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),106923,107930,1007,Vote count mismatch
-Kurigram 3,Tasvir Ul Islam,BNP,Bangladesh Nationalist Party (BNP),672,79352,78680,Vote count mismatch
-Kurigram 4,Md. Azizur Rahman,BNP,Bangladesh Nationalist Party (BNP),83762,84423,661,Vote count mismatch
-Kurigram 4,Md. Mostafizur Rahman,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),106347,108210,1863,Vote count mismatch
-Kushtia 3,Md. Amir Hamza,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),182476,180690,-1786,Vote count mismatch
-Kushtia 3,Md. Zakir Hossain Sarker,BNP,Bangladesh Nationalist Party (BNP),127559,126909,-650,Vote count mismatch
-Lalmonirhat 2,Md. Firoz Haider,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),107886,117252,9366,Vote count mismatch
-Lalmonirhat 2,Md. Rokon Uddin Babul,BNP,Bangladesh Nationalist Party (BNP),118359,123946,5587,Vote count mismatch
-Madaripur 2,Milton Baidya,Independent,Independent Candidate (Independent),2779,46476,43697,Vote count mismatch
-Manikganj 1,Md. Tozammel Haque,Independent,Independent Candidate (Independent),6966,77818,70852,Vote count mismatch
-Manikganj 2,Md. Salauddin,Khilafat Majlis,Khelafat Majlis,-,81531,-,Party not found in TBS (mapping needed?)
-Moulvibazar 4,Md. Mujibur Rahman Chowdhury,BNP,Bangladesh Nationalist Party (BNP),170877,169608,-1269,Vote count mismatch
-Moulvibazar 4,Sheikh Noor-e-Alam Hamidi,Bangladesh Khilafat Majlis,Bangladesh Khelafat Majlish (BKM),50204,49189,-1015,Vote count mismatch
-Mymensingh 4,Md. Abu Wahab Akand Wahid,BNP,Bangladesh Nationalist Party (BNP),179688,179668,-20,Vote count mismatch
-Mymensingh 5,Md. Matiur Rahman Akand,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),102228,102226,-2,Vote count mismatch
-Mymensingh 5,Mohammad Zakir Hossain,BNP,Bangladesh Nationalist Party (BNP),128898,128896,-2,Vote count mismatch
-Mymensingh 6,Akhtar Sultana,Independent,Independent Candidate (Independent),51970,53331,1361,Vote count mismatch
-Naogaon 4,Ekramul Bari Tipu,BNP,Bangladesh Nationalist Party (BNP),133928,133924,-4,Vote count mismatch
-Naogaon 5,Md. Zahidul Islam Dhulu,BNP,Bangladesh Nationalist Party (BNP),129385,129358,-27,Vote count mismatch
-Natore 1,Md. Taiful Islam Tipu,Independent,Independent Candidate (Independent),80,73173,73093,Vote count mismatch
-Natore 3,Md. Daudar Mahmud,Independent,Independent Candidate (Independent),372,66492,66120,Vote count mismatch
-Nilphamari 1,Maolana Md. Monjurul Islam,Jamiat Ulama-e-Islam Bangladesh,Jamiat Ulema-e-Islam Bangladesh (JUIB),119059,118160,-899,Vote count mismatch
-Nilphamari 1,Md. Abdus Sattar,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),150824,149224,-1600,Vote count mismatch
-Nilphamari 2,Al Faruq Abdul Latif,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),146430,145202,-1228,Vote count mismatch
-Nilphamari 2,Shahrin Islam,BNP,Bangladesh Nationalist Party (BNP),135418,134579,-839,Vote count mismatch
-Nilphamari 3,Alhaj Syed Ali,BNP,Bangladesh Nationalist Party (BNP),89807,89102,-705,Vote count mismatch
-Nilphamari 3,Obaidullah Salafi,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),109686,108560,-1126,Vote count mismatch
-Nilphamari 4,Abdul Muntakim,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),126222,124865,-1357,Vote count mismatch
-Nilphamari 4,Md. Abdul Gafur Sarker,BNP,Bangladesh Nationalist Party (BNP),82086,81526,-560,Vote count mismatch
-Pabna 3,Muhammad Ali Asghar,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),147475,147465,-10,Vote count mismatch
-Patuakhali 1,Mohammad Abdul Wahab,Amar Bangladesh Party (AB Party),Amar Bangladesh Party (AB),46010,46310,300,Vote count mismatch
-Patuakhali 4,Dr. Zahir Uddin Ahmed,Bangladesh Khilafat Majlis,Bangladesh Khelafat Majlish (BKM),-,14985,-,Party not found in TBS (mapping needed?)
-Rajshahi 2,Md. Mizanur Rahman,BNP,Bangladesh Nationalist Party (BNP),128546,188546,60000,Vote count mismatch
-Rajshahi 6,Md. Abu Sayed Chad,BNP,Bangladesh Nationalist Party (BNP),148672,147672,-1000,Vote count mismatch
-Rangpur 2,ATM Azharul Islam,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),89456,43076,-46380,Vote count mismatch
-Rangpur 2,Mohammad Ali Sarkar,BNP,Bangladesh Nationalist Party (BNP),53626,22100,-31526,Vote count mismatch
-Rangpur 4,Akhtar Hossain,National Citizens Party - NCP,National Citizen Party (NCP),149966,147947,-2019,Vote count mismatch
-Rangpur 4,Mohammad Emdadul Haque Bhorsa,BNP,Bangladesh Nationalist Party (BNP),140564,139616,-948,Vote count mismatch
-Rangpur 5,Md. Golam Rabbani,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),176411,175208,-1203,Vote count mismatch
-Rangpur 5,Md. Golam Rabbani,BNP,Bangladesh Nationalist Party (BNP),115116,114141,-975,Vote count mismatch
-Rangpur 6,Md. Nurul Amin,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),120128,118890,-1238,Vote count mismatch
-Rangpur 6,Md. Saiful Islam,BNP,Bangladesh Nationalist Party (BNP),117703,116919,-784,Vote count mismatch
-Satkhira 1,Md. Habibul Islam Habib,Jatiya Party,Jatiya Party (JaPa),2544,169995,167451,Vote count mismatch
-Satkhira 4,G. M. Nazrul Islam,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),106913,105805,-1108,Vote count mismatch
-Satkhira 4,Md. Moniruzzaman,BNP,Bangladesh Nationalist Party (BNP),85426,84868,-558,Vote count mismatch
-Sherpur 1,Md. Ilias Uddin,Independent,Independent Candidate (Independent),-,205,-,Party not found in TBS (mapping needed?)
-Sherpur 1,Md. Likhon Mia,National Citizens Party - NCP,National Citizen Party (NCP),-,456,-,Party not found in TBS (mapping needed?)
-Sherpur 1,Md. Mahmudul Haque Moni,Jatiya Party,Jatiya Party (JaPa),-,751,-,Party not found in TBS (mapping needed?)
-Sherpur 1,Md. Shafiqul Islam Masud,Independent,Independent Candidate (Independent),-,62415,-,Party not found in TBS (mapping needed?)
-Sirajganj 1,Md. Selim Reza,BNP,Bangladesh Nationalist Party (BNP),115132,116613,1481,Vote count mismatch
-Sirajganj 1,Md. Shahinur Alam,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),106732,108815,2083,Vote count mismatch
-Sirajganj 4,Abdur Rahman,Islamic Andolon Bangladesh,Islami Andolan Bangladesh (IAB),-,2216,-,Party not found in TBS (mapping needed?)
-Sirajganj 4,Md. Abdul Hakim,Communist Party of Bangladesh,Communist Party of Bangladesh (CPB),-,695,-,Party not found in TBS (mapping needed?)
-Sirajganj 4,Md. Hilton Pramanik,Jatiya Party,Jatiya Party (JaPa),-,1213,-,Party not found in TBS (mapping needed?)
-Sylhet 1,Khandaker Abdul Muktadir,BNP,Bangladesh Nationalist Party (BNP),176936,173932,-3004,Vote count mismatch
-Sylhet 2,Ms. Tahsina Rushdeer,BNP,Bangladesh Nationalist Party (BNP),116697,117956,1259,Vote count mismatch
-Sylhet 2,Muhammad Muntasir Ali,Khilafat Majlis,Khelafat Majlis,37446,38635,1189,Vote count mismatch
-Sylhet 3,Mohammad Abdul Malik,BNP,Bangladesh Nationalist Party (BNP),114255,115450,1195,Vote count mismatch
-Sylhet 4,Ariful Haque Chowdhury,BNP,Bangladesh Nationalist Party (BNP),181609,186846,5237,Vote count mismatch
-Sylhet 4,Md. Joynal Abedin,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),65776,71391,5615,Vote count mismatch
-Sylhet 6,Emran Ahmed Chowdhury,BNP,Bangladesh Nationalist Party (BNP),108612,109917,1305,Vote count mismatch
-Sylhet 6,Mohammad Selim Uddin,Bangladesh Jamaat-e-Islami,Bangladesh Jamaat-e-Islami (Jamaat),97748,101569,3821,Vote count mismatch
-Tangail 4,Abdul Latif Siddique,Independent,Independent Candidate (Independent),4152,62509,58357,Vote count mismatch
+Bagerhat 3,Mohammed Abdul Wadud Sheikh,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),83550,83705,155,Vote count mismatch
+Bagerhat 3,Sheikh Faridul Islam,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),102661,103711,1050,Vote count mismatch
+Barishal 2,Abdul Mannan,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),78082,74082,-4000,Vote count mismatch
+Bhola 4,Mohammad Mustafa Kamal,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),81937,81437,-500,Vote count mismatch
+Bogura 2,Mir Shah Alam,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),145137,145024,-113,Vote count mismatch
+Bogura 7,Morshed Milton,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),264212,158196,-106016,Vote count mismatch
+Coxs Bazar 2,A. H. M. Hamidur Rahaman Azad,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),91889,89817,-2072,Vote count mismatch
+Coxs Bazar 2,Alamgir Mohammad Mahfuzullah Farid,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),125543,124660,-883,Vote count mismatch
+Dhaka 19,Dilshana Parul,National Citizen Party (NCP),National Citizen Party (NCP),125283,123283,-2000,Vote count mismatch
+Dinajpur 2,A. K. M. Afjalul Anam,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),104887,101831,-3056,Vote count mismatch
+Dinajpur 2,Md. Sadiq Reaz,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),139622,144317,4695,Vote count mismatch
+Dinajpur 3,Md. Maynul Alam,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),136239,134618,-1621,Vote count mismatch
+Dinajpur 3,Syed Jahangir Alam,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),140608,139207,-1401,Vote count mismatch
+Dinajpur 4,Akhtaruzzaman Mia,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),166717,165577,-1140,Vote count mismatch
+Dinajpur 4,Md. Aftab Uddin Mollah,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),129056,127666,-1390,Vote count mismatch
+Dinajpur 5,A. Z. M. Rezwanul Haque,Independent Candidate (Independent),Independent Candidate (Independent),114484,113650,-834,Vote count mismatch
+Dinajpur 5,Md. Abdul Ahad,National Citizen Party (NCP),National Citizen Party (NCP),110195,108948,-1247,Vote count mismatch
+Dinajpur 6,Abu Zafar Md. Zahid Hossain,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),205118,203887,-1231,Vote count mismatch
+Dinajpur 6,Md. Anowarul Islam,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),190703,188719,-1984,Vote count mismatch
+Faridpur 1,Khandaker Nasirul Islam,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),126476,126475,-1,Vote count mismatch
+Faridpur 1,Md. Elias Molla,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),154145,154772,627,Vote count mismatch
+Feni 3,Mr. Abdul Awal Mintu,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),157825,157425,-400,Vote count mismatch
+Gaibandha 3,Abul Kausar Mohammad Nazrul Islam,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),162457,163457,1000,Vote count mismatch
+Habiganj 3,Abdul Mumin Chowdhury,Jatiya Party (JaPa),Jatiya Party (JaPa),-,1259,-,Party not found in TBS for this seat
+Habiganj 3,Md. Shahinur Rahman,Bangladesh Sangskritik Muktijote (BSM),Bangladesh Sangskritik Muktijote (BSM),-,132,-,Party not found in TBS for this seat
+Habiganj 3,Mohib Uddin Ahmed Sohel,Islami Andolan Bangladesh (IAB),Islami Andolan Bangladesh (IAB),-,5443,-,Party not found in TBS for this seat
+Habiganj 3,S. M. Sarwar,Bangladesh Islami Front (BIF),Bangladesh Islami Front (BIF),-,14133,-,Party not found in TBS for this seat
+Jamalpur 1,M Rashiduzzaman Millat,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),172115,173656,1541,Vote count mismatch
+Jamalpur 1,Muhammad Nazmul Haque Sayeedi,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),93661,97820,4159,Vote count mismatch
+Jashore 2,Md. Shamsul Haque,Bangladesh Nationalist Front (BNF),Bangladesh Nationalist Front (BNF),203,233,30,Vote count mismatch
+Jhenaidah 4,Md. Saiful Islam Firoz,Independent Candidate (Independent),Independent Candidate (Independent),77104,77140,36,Vote count mismatch
+Kurigram 3,Md. Mahbubul Alam,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),106923,107930,1007,Vote count mismatch
+Kurigram 3,Tasvir Ul Islam,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),672,79352,78680,Vote count mismatch
+Kurigram 4,Md. Azizur Rahman,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),83762,84423,661,Vote count mismatch
+Kurigram 4,Md. Mostafizur Rahman,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),106347,108210,1863,Vote count mismatch
+Kushtia 3,Md. Amir Hamza,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),182476,180690,-1786,Vote count mismatch
+Kushtia 3,Md. Zakir Hossain Sarker,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),127559,126909,-650,Vote count mismatch
+Lalmonirhat 2,Md. Firoz Haider,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),107886,117252,9366,Vote count mismatch
+Lalmonirhat 2,Md. Rokon Uddin Babul,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),118359,123946,5587,Vote count mismatch
+Moulvibazar 4,Md. Mujibur Rahman Chowdhury,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),170877,169608,-1269,Vote count mismatch
+Moulvibazar 4,Sheikh Noor-e-Alam Hamidi,Bangladesh Khelafat Majlish (BKM),Bangladesh Khelafat Majlish (BKM),50204,49189,-1015,Vote count mismatch
+Mymensingh 4,Md. Abu Wahab Akand Wahid,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),179688,179668,-20,Vote count mismatch
+Mymensingh 5,Md. Matiur Rahman Akand,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),102228,102226,-2,Vote count mismatch
+Mymensingh 5,Mohammad Zakir Hossain,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),128898,128896,-2,Vote count mismatch
+Naogaon 4,Ekramul Bari Tipu,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),133928,133924,-4,Vote count mismatch
+Naogaon 5,Md. Zahidul Islam Dhulu,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),129385,129358,-27,Vote count mismatch
+Nilphamari 1,Maolana Md. Monjurul Islam,Jamiat Ulema-e-Islam Bangladesh (JUIB),Jamiat Ulema-e-Islam Bangladesh (JUIB),119059,118160,-899,Vote count mismatch
+Nilphamari 1,Md. Abdus Sattar,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),150824,149224,-1600,Vote count mismatch
+Nilphamari 2,Al Faruq Abdul Latif,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),146430,145202,-1228,Vote count mismatch
+Nilphamari 2,Shahrin Islam,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),135418,134579,-839,Vote count mismatch
+Nilphamari 3,Alhaj Syed Ali,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),89807,89102,-705,Vote count mismatch
+Nilphamari 3,Obaidullah Salafi,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),109686,108560,-1126,Vote count mismatch
+Nilphamari 4,Abdul Muntakim,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),126222,124865,-1357,Vote count mismatch
+Nilphamari 4,Md. Abdul Gafur Sarker,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),82086,81526,-560,Vote count mismatch
+Pabna 3,Muhammad Ali Asghar,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),147475,147465,-10,Vote count mismatch
+Patuakhali 1,Mohammad Abdul Wahab,Amar Bangladesh Party (AB),Amar Bangladesh Party (AB),46010,46310,300,Vote count mismatch
+Patuakhali 4,Dr. Zahir Uddin Ahmed,Bangladesh Khelafat Majlish (BKM),Bangladesh Khelafat Majlish (BKM),-,14985,-,Party not found in TBS for this seat
+Rajshahi 2,Md. Mizanur Rahman,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),128546,188546,60000,Vote count mismatch
+Rajshahi 6,Md. Abu Sayed Chad,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),148672,147672,-1000,Vote count mismatch
+Rangpur 2,ATM Azharul Islam,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),89456,43076,-46380,Vote count mismatch
+Rangpur 2,Mohammad Ali Sarkar,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),53626,22100,-31526,Vote count mismatch
+Rangpur 4,Akhtar Hossain,National Citizen Party (NCP),National Citizen Party (NCP),149966,147947,-2019,Vote count mismatch
+Rangpur 4,Mohammad Emdadul Haque Bhorsa,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),140564,139616,-948,Vote count mismatch
+Rangpur 5,Md. Golam Rabbani,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),176411,175208,-1203,Vote count mismatch
+Rangpur 5,Md. Golam Rabbani,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),115116,114141,-975,Vote count mismatch
+Rangpur 6,Md. Nurul Amin,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),120128,118890,-1238,Vote count mismatch
+Rangpur 6,Md. Saiful Islam,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),117703,116919,-784,Vote count mismatch
+Satkhira 1,Md. Habibul Islam Habib,Jatiya Party (JaPa),Jatiya Party (JaPa),2544,169995,167451,Vote count mismatch
+Satkhira 4,G. M. Nazrul Islam,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),106913,105805,-1108,Vote count mismatch
+Satkhira 4,Md. Moniruzzaman,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),85426,84868,-558,Vote count mismatch
+Sherpur 1,Md. Ilias Uddin,Independent Candidate (Independent),Independent Candidate (Independent),-,205,-,Party not found in TBS for this seat
+Sherpur 1,Md. Likhon Mia,National Citizen Party (NCP),National Citizen Party (NCP),-,456,-,Party not found in TBS for this seat
+Sherpur 1,Md. Mahmudul Haque Moni,Jatiya Party (JaPa),Jatiya Party (JaPa),-,751,-,Party not found in TBS for this seat
+Sherpur 1,Md. Shafiqul Islam Masud,Independent Candidate (Independent),Independent Candidate (Independent),-,62415,-,Party not found in TBS for this seat
+Sirajganj 1,Md. Selim Reza,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),115132,116613,1481,Vote count mismatch
+Sirajganj 1,Md. Shahinur Alam,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),106732,108815,2083,Vote count mismatch
+Sirajganj 4,Abdur Rahman,Islami Andolan Bangladesh (IAB),Islami Andolan Bangladesh (IAB),-,2216,-,Party not found in TBS for this seat
+Sirajganj 4,Md. Abdul Hakim,Communist Party of Bangladesh (CPB),Communist Party of Bangladesh (CPB),-,695,-,Party not found in TBS for this seat
+Sirajganj 4,Md. Hilton Pramanik,Jatiya Party (JaPa),Jatiya Party (JaPa),-,1213,-,Party not found in TBS for this seat
+Sylhet 1,Khandaker Abdul Muktadir,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),176936,173932,-3004,Vote count mismatch
+Sylhet 2,Ms. Tahsina Rushdeer,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),116697,117956,1259,Vote count mismatch
+Sylhet 2,Muhammad Muntasir Ali,Khelafat Majlis,Khelafat Majlis,37446,38635,1189,Vote count mismatch
+Sylhet 3,Mohammad Abdul Malik,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),114255,115450,1195,Vote count mismatch
+Sylhet 4,Ariful Haque Chowdhury,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),181609,186846,5237,Vote count mismatch
+Sylhet 4,Md. Joynal Abedin,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),65776,71391,5615,Vote count mismatch
+Sylhet 6,Emran Ahmed Chowdhury,Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),108612,109917,1305,Vote count mismatch
+Sylhet 6,Mohammad Selim Uddin,Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),97748,101569,3821,Vote count mismatch

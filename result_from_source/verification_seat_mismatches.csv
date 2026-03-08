@@ -45,6 +45,7 @@ Sirajganj-1,bnp_alliance_votes,116302,116613,311,DS bnp_alliance_votes exceeds T
 Sirajganj-4,total_votes,323150,327274,4124,DS partial total exceeds TBS full total
 Sylhet-2,total_votes,154143,156591,2448,DS partial total exceeds TBS full total
 Sylhet-2,bnp_votes,116697,117956,1259,DS bnp_votes exceeds TBS
+Sylhet-2,eleven_party_alliance_votes,37446,38635,1189,DS eleven_party_alliance_votes exceeds TBS
 Sylhet-2,bnp_alliance_votes,116697,117956,1259,DS bnp_alliance_votes exceeds TBS
 Sylhet-3,total_votes,187869,189064,1195,DS partial total exceeds TBS full total
 Sylhet-3,bnp_votes,114255,115450,1195,DS bnp_votes exceeds TBS

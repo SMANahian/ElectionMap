@@ -32,46 +32,67 @@ import pandas as pd
 
 # Mapping of Daily Star party names to TBS party names.
 PARTY_NAME_MAP = {
+    # Major parties
     "BNP": "Bangladesh Nationalist Party (BNP)",
     "Bangladesh Jamaat-e-Islami": "Bangladesh Jamaat-e-Islami (Jamaat)",
     "Independent": "Independent Candidate (Independent)",
     "National Citizens Party - NCP": "National Citizen Party (NCP)",
+    "Islamic Andolon Bangladesh": "Islami Andolan Bangladesh (IAB)",
+    "Bangladesh Islamic Front": "Bangladesh Islami Front (BIF)",
     "Bangladesh Khilafat Majlis": "Bangladesh Khelafat Majlish (BKM)",
     "Khilafat Majlis": "Khelafat Majlis",
-    "Islamic Andolon Bangladesh": "Islami Andolan Bangladesh (IAB)",
     "Liberal Democratic Party - LDP": "Bangladesh Liberal Democratic Party (LDP)",
     "Jatiya Party": "Jatiya Party (JaPa)",
-    "Bangladesh Islamic Front": "Bangladesh Islami Front (BIF)",
+    "Jatiya Party - JAPA": "Jatiya Party (JaPa)",
     "Gono Odhikar Parishad": "Gono Odhikar Parishad (GOP)",
+    "Gono Odhikar Porishad- GOP": "Gono Odhikar Parishad (GOP)",
     "Amar Bangladesh Party (AB Party)": "Amar Bangladesh Party (AB)",
     "Bangladesh Development Party - BDP": "Bangladesh Development Party (BDP)",
     "Bangladesh National Party - BJP": "Bangladesh Jatiya Party (BJP)",
     "Jamiat Ulama-e-Islam Bangladesh": "Jamiat Ulema-e-Islam Bangladesh (JUIB)",
     "Gono Forum": "Gono Forum (GF)",
+    "Gano Forum": "Gono Forum (GF)",
     "Bangladesh Supreme Party - BSP": "Bangladesh Supreme Party (BSP)",
     "Zaker Party": "Zaker Party (ZP)",
     "Bangladesh Jasod": "Bangladesh Jatiya Samajtantrik Dal (Bangladesh JaSad)",
     "Bangladesh Congress": "Bangladesh Congress",
     "Jatiya Samajtantrik Dal (JSD)": "Jatiya Samajtantrik Dal (JSD)",
+    "Jatiya Samajtantrik Dal (JSD Rab)": "Jatiya Samajtantrik Dal-JASAD",
     "Ganosamhati Andolon": "Ganosanhati Andolan (GSA)",
-    "Bangladesh Muslim League": "Bangladesh Muslim League (BML)",
+    "Bangladesh Muslim League": "Bangladesh Muslim League",
     "Bangladesh Muslim League - BML": "Bangladesh Muslim League (BML)",
     "Bangladesh Nezam e Islam Party": "Bangladesh Nezame Islam Party (BNIP)",
+    "Bangladesh Nezam Islam Party": "Bangladesh Nezame Islam Party (BNIP)",
     "Nagorik Oikya": "Nagorik Oikya (NO)",
+    "Nagorik Oikko": "Nagorik Oikya (NO)",
     "Bangladesh Republican Party - BRP": "Bangladesh Republican Party (BRP)",
     "Communist Party of Bangladesh": "Communist Party of Bangladesh (CPB)",
     "Bangladesh Samajtantrik Dal": "Bangladesh Samajtantrik Dal (Basad)",
     "Insaniat Biplob Bangladesh - Insaniat Biplob": "Insaniyat Biplob Bangladesh (IBB)",
-    "Nationalist Democratic Movement - NDM": "Bangladesh Nationalist Front (BNF)",
+    "Nationalist Democratic Movement - NDM": "Nationalist Democratic Movement (NDM)",
     "Ganatantri Party": "Ganatantri Party (GP)",
     "Janotar Dol": "Janotar Dol",
+    "Janatar Dal": "Janotar Dol",
     "Amjanatar Dal": "Amjanatar Dol",
     "Islamic Front Bangladesh - IFB": "Islamic Front Bangladesh (IFB)",
+    "Islamic Front Bangladesh": "Islamic Front Bangladesh (IFB)",
     "Bangladesher Biplobi Workers Party": "Revolutionary Workers Party of Bangladesh (RWPB)",
+    "Bangladesh Revolutionary Workers Party": "Revolutionary Workers Party of Bangladesh (RWPB)",
     "Bangladesh Khelafat Andolon": "Bangladesh Khelafat Andolon (BKA)",
     "Bangladesh Sangskritik Muktijote": "Bangladesh Sangskritik Muktijote (BSM)",
     "Bangladesher Samajtantrik Dal (BSD)": "Bangladesh Samajtantrik Dal (Basad)",
+    "Bangladesher Samajtantrik Dal (Marxist)": "Socialist Party of Bangladesh (Marxist) (SPB-M)",
     "Bangladesh Nationalist Front - BNF": "Bangladesh Nationalist Front (BNF)",
+    "Bangladesh Kalyan Party": "Bangladesh Kallyan Party (BKP)",
+    "Bangladesh Labor Party": "Bangladesh Labour Party",
+    "Bangladesh Minority Janata Party - BMJP": "Bangladesh Minority Janata Party (BMJP)",
+    "Bangladesh Nap": "Bangladesh National Awami Party–Bangladesh NAP (BNAP)",
+    "Bangladesh Gonofront": "Gono Front (GF)",
+    "Bangladesh Equal Rights Party": "Bangladesh Somo Odhikar Party (BEP)",
+    "Islamic Oikkojot": "Islami Oikya Jote (IOJ)",
+    "National People's Party - NPP": "National People's Party (NPP)",
+    "National Democratic Party - JDP": "Jatiya Ganatantrik Party (JAGPA)",
+    "Democratic Party": "Democratic Party",
 }
 
 # Known alternative spellings between TBS and Daily Star
@@ -102,6 +123,46 @@ def normalize_seat_name(name: str) -> str:
 def map_ds_party(ds_party: str) -> str:
     """Map a Daily Star party name to TBS equivalent."""
     return PARTY_NAME_MAP.get(ds_party, ds_party)
+
+
+def normalize_candidate_name(name: str) -> str:
+    """Normalize candidate name for fuzzy matching."""
+    name = str(name).strip().lower()
+    # Remove honorifics and common prefixes
+    name = re.sub(r"^(mr\.?|ms\.?|md\.?|dr\.?|prof\.?|eng\.?|advocate|alhaj|maolana|sheikh)\s+", "", name)
+    name = re.sub(r"\bmd\.?\b", "", name)
+    # Remove punctuation and extra spaces
+    name = re.sub(r"[.\-,'()]", " ", name)
+    name = re.sub(r"\s+", " ", name).strip()
+    return name
+
+
+def candidate_name_similarity(name1: str, name2: str) -> float:
+    """Simple word-overlap similarity between two candidate names."""
+    n1 = normalize_candidate_name(name1)
+    n2 = normalize_candidate_name(name2)
+    if n1 == n2:
+        return 1.0
+    words1 = set(n1.split())
+    words2 = set(n2.split())
+    if not words1 or not words2:
+        return 0.0
+    overlap = words1 & words2
+    return len(overlap) / max(len(words1), len(words2))
+
+
+def find_best_tbs_match(ds_candidate: str, tbs_matches: pd.DataFrame) -> pd.Series:
+    """Given multiple TBS rows for the same party in a seat, pick the best candidate name match."""
+    if len(tbs_matches) == 1:
+        return tbs_matches.iloc[0]
+    best_score = -1
+    best_row = tbs_matches.iloc[0]
+    for _, row in tbs_matches.iterrows():
+        score = candidate_name_similarity(ds_candidate, row.get("candidate", ""))
+        if score > best_score:
+            best_score = score
+            best_row = row
+    return best_row
 
 
 def compare_seat_results(tbs_path: str, ds_path: str, output_dir: str):
@@ -366,6 +427,22 @@ def compare_vote_counts(tbs_pbs_path: str, ds_pbs_path: str, output_dir: str):
             (tbs["_norm_seat"] == norm_seat) & (tbs["party"] == mapped_party)
         ]
 
+        # Fallback: try partial match (party name without abbreviation suffix)
+        if len(tbs_match) == 0:
+            base_party = re.sub(r"\s*\([^)]*\)\s*$", "", mapped_party).strip()
+            seat_parties = tbs[tbs["_norm_seat"] == norm_seat]
+            if base_party != mapped_party:
+                tbs_match = seat_parties[
+                    seat_parties["party"].str.startswith(base_party)
+                ]
+            # Fallback: check if any TBS party contains the mapped name as substring
+            if len(tbs_match) == 0:
+                tbs_match = seat_parties[
+                    seat_parties["party"].str.contains(
+                        re.escape(base_party), case=False, na=False
+                    )
+                ]
+
         if len(tbs_match) == 0:
             unmapped += 1
             all_mismatches.append({
@@ -376,11 +453,13 @@ def compare_vote_counts(tbs_pbs_path: str, ds_pbs_path: str, output_dir: str):
                 "tbs_votes": "-",
                 "ds_votes": ds_votes,
                 "diff": "-",
-                "issue": "Party not found in TBS (mapping needed?)",
+                "issue": "Party not found in TBS for this seat",
             })
             continue
 
-        tbs_votes = int(tbs_match.iloc[0]["votes"])
+        ds_candidate = ds_row.get("candidate", "")
+        best = find_best_tbs_match(ds_candidate, tbs_match)
+        tbs_votes = int(best["votes"])
         matched += 1
 
         if tbs_votes != ds_votes:
@@ -397,12 +476,12 @@ def compare_vote_counts(tbs_pbs_path: str, ds_pbs_path: str, output_dir: str):
             })
 
     vote_mismatches = [m for m in all_mismatches if m["issue"] == "Vote count mismatch"]
-    mapping_issues = [m for m in all_mismatches if "mapping" in m["issue"]]
+    not_in_tbs = [m for m in all_mismatches if "not found" in m["issue"]]
 
     logging.info(f"Successfully matched: {matched}")
     logging.info(f"Vote count matches: {matched - len(vote_mismatches)}")
     logging.info(f"Vote count mismatches: {len(vote_mismatches)}")
-    logging.info(f"Unmapped parties: {unmapped}")
+    logging.info(f"DS parties not in TBS for seat: {unmapped}")
 
     if vote_mismatches:
         logging.info(f"\nVote count mismatches (sorted by |diff|):")
@@ -414,13 +493,13 @@ def compare_vote_counts(tbs_pbs_path: str, ds_pbs_path: str, output_dir: str):
         if len(vote_mismatches) > 30:
             logging.info(f"  ... and {len(vote_mismatches) - 30} more")
 
-    if mapping_issues:
-        logging.info(f"\nUnmapped DS parties ({len(mapping_issues)}):")
-        seen = set()
-        for m in mapping_issues:
-            if m["party_ds"] not in seen:
-                seen.add(m["party_ds"])
-                logging.info(f"  DS: \"{m['party_ds']}\" -> tried: \"{m['party_tbs']}\"")
+    if not_in_tbs:
+        logging.info(f"\nDS parties not found in TBS for their seat ({len(not_in_tbs)}):")
+        for m in not_in_tbs:
+            logging.info(
+                f"  {m['seat_name']} | DS: \"{m['party_ds']}\" ({m['ds_votes']:,} votes) "
+                f"-> mapped: \"{m['party_tbs']}\" — TBS has no such party for this seat"
+            )
 
     out_path = os.path.join(output_dir, "verification_vote_mismatches.csv")
     if all_mismatches:
@@ -435,7 +514,7 @@ def compare_vote_counts(tbs_pbs_path: str, ds_pbs_path: str, output_dir: str):
         "candidate_matched": matched,
         "candidate_votes_match": matched - len(vote_mismatches),
         "candidate_vote_mismatches": len(vote_mismatches),
-        "unmapped": unmapped,
+        "ds_only_parties": unmapped,
         "all_mismatches": all_mismatches,
     }
 
@@ -486,7 +565,7 @@ def main():
     logging.info(f"Candidate vote mismatches:     {vote_stats['candidate_vote_mismatches']}")
     logging.info(f"Seat-level anomalies:          {len(seat_mismatches)}")
     logging.info(f"Party totals compared:         {party_matched}")
-    logging.info(f"Unmapped party names:          {vote_stats['unmapped']}")
+    logging.info(f"DS parties not in TBS seat:     {vote_stats['ds_only_parties']}")
 
     # Save summary CSV
     summary = {
@@ -501,7 +580,7 @@ def main():
         "candidate_vote_mismatches": vote_stats["candidate_vote_mismatches"],
         "seat_level_anomalies": len(seat_mismatches),
         "party_totals_compared": party_matched,
-        "unmapped_parties": vote_stats["unmapped"],
+        "ds_only_parties": vote_stats["ds_only_parties"],
     }
     summary_path = os.path.join(args.output_dir, "verification_summary.csv")
     pd.DataFrame([summary]).to_csv(summary_path, index=False)

@@ -1,2 +1,2 @@
-common_seats,only_in_tbs,only_in_ds,winner_agree,winner_total,winner_votes_match,candidate_votes_matched,candidate_votes_agree,candidate_vote_mismatches,seat_level_anomalies,party_totals_compared,unmapped_parties
-297,0,2,295,296,255,673,583,90,60,29,16
+common_seats,only_in_tbs,only_in_ds,winner_agree,winner_total,winner_votes_match,candidate_votes_matched,candidate_votes_agree,candidate_vote_mismatches,seat_level_anomalies,party_totals_compared,ds_only_parties
+297,0,2,295,296,255,677,602,75,61,29,12
