@@ -1,0 +1,2410 @@
+[
+  {
+    "division": "Barisal",
+    "division_id": "283793",
+    "district": "Barguna",
+    "district_id": "283798",
+    "seat_name": "Barguna-1",
+    "seat_id": "barguna_1"
+  },
+  {
+    "division": "Barisal",
+    "division_id": "283793",
+    "district": "Barguna",
+    "district_id": "283798",
+    "seat_name": "Barguna-2",
+    "seat_id": "barguna_2"
+  },
+  {
+    "division": "Barisal",
+    "division_id": "283793",
+    "district": "Barishal",
+    "district_id": "283833",
+    "seat_name": "Barishal-1",
+    "seat_id": "barishal_1"
+  },
+  {
+    "division": "Barisal",
+    "division_id": "283793",
+    "district": "Barishal",
+    "district_id": "283833",
+    "seat_name": "Barishal-2",
+    "seat_id": "barishal_2"
+  },
+  {
+    "division": "Barisal",
+    "division_id": "283793",
+    "district": "Barishal",
+    "district_id": "283833",
+    "seat_name": "Barishal-3",
+    "seat_id": "barishal_3"
+  },
+  {
+    "division": "Barisal",
+    "division_id": "283793",
+    "district": "Barishal",
+    "district_id": "283833",
+    "seat_name": "Barishal-4",
+    "seat_id": "barishal_4"
+  },
+  {
+    "division": "Barisal",
+    "division_id": "283793",
+    "district": "Barishal",
+    "district_id": "283833",
+    "seat_name": "Barishal-5",
+    "seat_id": "barishal_5"
+  },
+  {
+    "division": "Barisal",
+    "division_id": "283793",
+    "district": "Barishal",
+    "district_id": "283833",
+    "seat_name": "Barishal-6",
+    "seat_id": "barishal_6"
+  },
+  {
+    "division": "Barisal",
+    "division_id": "283793",
+    "district": "Bhola",
+    "district_id": "283888",
+    "seat_name": "Bhola-1",
+    "seat_id": "bhola_1"
+  },
+  {
+    "division": "Barisal",
+    "division_id": "283793",
+    "district": "Bhola",
+    "district_id": "283888",
+    "seat_name": "Bhola-2",
+    "seat_id": "bhola_2"
+  },
+  {
+    "division": "Barisal",
+    "division_id": "283793",
+    "district": "Bhola",
+    "district_id": "283888",
+    "seat_name": "Bhola-3",
+    "seat_id": "bhola_3"
+  },
+  {
+    "division": "Barisal",
+    "division_id": "283793",
+    "district": "Bhola",
+    "district_id": "283888",
+    "seat_name": "Bhola-4",
+    "seat_id": "bhola_4"
+  },
+  {
+    "division": "Barisal",
+    "division_id": "283793",
+    "district": "Jhalokathi",
+    "district_id": "283928",
+    "seat_name": "Jhalokathi-1",
+    "seat_id": "jhalokathi_1"
+  },
+  {
+    "division": "Barisal",
+    "division_id": "283793",
+    "district": "Jhalokathi",
+    "district_id": "283928",
+    "seat_name": "Jhalokathi-2",
+    "seat_id": "jhalokathi_2"
+  },
+  {
+    "division": "Barisal",
+    "division_id": "283793",
+    "district": "Patuakhali",
+    "district_id": "283953",
+    "seat_name": "Patuakhali-1",
+    "seat_id": "patuakhali_1"
+  },
+  {
+    "division": "Barisal",
+    "division_id": "283793",
+    "district": "Patuakhali",
+    "district_id": "283953",
+    "seat_name": "Patuakhali-2",
+    "seat_id": "patuakhali_2"
+  },
+  {
+    "division": "Barisal",
+    "division_id": "283793",
+    "district": "Patuakhali",
+    "district_id": "283953",
+    "seat_name": "Patuakhali-3",
+    "seat_id": "patuakhali_3"
+  },
+  {
+    "division": "Barisal",
+    "division_id": "283793",
+    "district": "Patuakhali",
+    "district_id": "283953",
+    "seat_name": "Patuakhali-4",
+    "seat_id": "patuakhali_4"
+  },
+  {
+    "division": "Barisal",
+    "division_id": "283793",
+    "district": "Pirojpur",
+    "district_id": "283998",
+    "seat_name": "Pirojpur-1",
+    "seat_id": "pirojpur_1"
+  },
+  {
+    "division": "Barisal",
+    "division_id": "283793",
+    "district": "Pirojpur",
+    "district_id": "283998",
+    "seat_name": "Pirojpur-2",
+    "seat_id": "pirojpur_2"
+  },
+  {
+    "division": "Barisal",
+    "division_id": "283793",
+    "district": "Pirojpur",
+    "district_id": "283998",
+    "seat_name": "Pirojpur-3",
+    "seat_id": "pirojpur_3"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Bandarban",
+    "district_id": "284043",
+    "seat_name": "Bandarban-1",
+    "seat_id": "bandarban_1"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Brahmanbaria",
+    "district_id": "284083",
+    "seat_name": "Brahmanbaria-1",
+    "seat_id": "brahmanbaria_1"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Brahmanbaria",
+    "district_id": "284083",
+    "seat_name": "Brahmanbaria-2",
+    "seat_id": "brahmanbaria_2"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Brahmanbaria",
+    "district_id": "284083",
+    "seat_name": "Brahmanbaria-3",
+    "seat_id": "brahmanbaria_3"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Brahmanbaria",
+    "district_id": "284083",
+    "seat_name": "Brahmanbaria-4",
+    "seat_id": "brahmanbaria_4"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Brahmanbaria",
+    "district_id": "284083",
+    "seat_name": "Brahmanbaria-5",
+    "seat_id": "brahmanbaria_5"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Brahmanbaria",
+    "district_id": "284083",
+    "seat_name": "Brahmanbaria-6",
+    "seat_id": "brahmanbaria_6"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Chandpur",
+    "district_id": "284133",
+    "seat_name": "Chandpur-1",
+    "seat_id": "chandpur_1"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Chandpur",
+    "district_id": "284133",
+    "seat_name": "Chandpur-2",
+    "seat_id": "chandpur_2"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Chandpur",
+    "district_id": "284133",
+    "seat_name": "Chandpur-3",
+    "seat_id": "chandpur_3"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Chandpur",
+    "district_id": "284133",
+    "seat_name": "Chandpur-4",
+    "seat_id": "chandpur_4"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Chandpur",
+    "district_id": "284133",
+    "seat_name": "Chandpur-5",
+    "seat_id": "chandpur_5"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Chattogram",
+    "district_id": "284178",
+    "seat_name": "Chattogram-1",
+    "seat_id": "chattogram_1"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Chattogram",
+    "district_id": "284178",
+    "seat_name": "Chattogram-2",
+    "seat_id": "chattogram_2"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Chattogram",
+    "district_id": "284178",
+    "seat_name": "Chattogram-3",
+    "seat_id": "chattogram_3"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Chattogram",
+    "district_id": "284178",
+    "seat_name": "Chattogram-4",
+    "seat_id": "chattogram_4"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Chattogram",
+    "district_id": "284178",
+    "seat_name": "Chattogram-5",
+    "seat_id": "chattogram_5"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Chattogram",
+    "district_id": "284178",
+    "seat_name": "Chattogram-6",
+    "seat_id": "chattogram_6"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Chattogram",
+    "district_id": "284178",
+    "seat_name": "Chattogram-7",
+    "seat_id": "chattogram_7"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Chattogram",
+    "district_id": "284178",
+    "seat_name": "Chattogram-8",
+    "seat_id": "chattogram_8"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Chattogram",
+    "district_id": "284178",
+    "seat_name": "Chattogram-9",
+    "seat_id": "chattogram_9"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Chattogram",
+    "district_id": "284178",
+    "seat_name": "Chattogram-10",
+    "seat_id": "chattogram_10"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Chattogram",
+    "district_id": "284178",
+    "seat_name": "Chattogram-11",
+    "seat_id": "chattogram_11"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Chattogram",
+    "district_id": "284178",
+    "seat_name": "Chattogram-12",
+    "seat_id": "chattogram_12"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Chattogram",
+    "district_id": "284178",
+    "seat_name": "Chattogram-13",
+    "seat_id": "chattogram_13"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Chattogram",
+    "district_id": "284178",
+    "seat_name": "Chattogram-14",
+    "seat_id": "chattogram_14"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Chattogram",
+    "district_id": "284178",
+    "seat_name": "Chattogram-15",
+    "seat_id": "chattogram_15"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Chattogram",
+    "district_id": "284178",
+    "seat_name": "Chattogram-16",
+    "seat_id": "chattogram_16"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Coxs bazar",
+    "district_id": "284258",
+    "seat_name": "Coxs bazar-1",
+    "seat_id": "coxs_bazar_1"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Coxs bazar",
+    "district_id": "284258",
+    "seat_name": "Coxs bazar-2",
+    "seat_id": "coxs_bazar_2"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Coxs bazar",
+    "district_id": "284258",
+    "seat_name": "Coxs bazar-3",
+    "seat_id": "coxs_bazar_3"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Coxs bazar",
+    "district_id": "284258",
+    "seat_name": "Coxs bazar-4",
+    "seat_id": "coxs_bazar_4"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Cumilla",
+    "district_id": "284303",
+    "seat_name": "Cumilla-1",
+    "seat_id": "cumilla_1"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Cumilla",
+    "district_id": "284303",
+    "seat_name": "Cumilla-2",
+    "seat_id": "cumilla_2"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Cumilla",
+    "district_id": "284303",
+    "seat_name": "Cumilla-3",
+    "seat_id": "cumilla_3"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Cumilla",
+    "district_id": "284303",
+    "seat_name": "Cumilla-4",
+    "seat_id": "cumilla_4"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Cumilla",
+    "district_id": "284303",
+    "seat_name": "Cumilla-5",
+    "seat_id": "cumilla_5"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Cumilla",
+    "district_id": "284303",
+    "seat_name": "Cumilla-6",
+    "seat_id": "cumilla_6"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Cumilla",
+    "district_id": "284303",
+    "seat_name": "Cumilla-7",
+    "seat_id": "cumilla_7"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Cumilla",
+    "district_id": "284303",
+    "seat_name": "Cumilla-8",
+    "seat_id": "cumilla_8"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Cumilla",
+    "district_id": "284303",
+    "seat_name": "Cumilla-9",
+    "seat_id": "cumilla_9"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Cumilla",
+    "district_id": "284303",
+    "seat_name": "Cumilla-10",
+    "seat_id": "cumilla_10"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Cumilla",
+    "district_id": "284303",
+    "seat_name": "Cumilla-11",
+    "seat_id": "cumilla_11"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Feni",
+    "district_id": "284393",
+    "seat_name": "Feni-1",
+    "seat_id": "feni_1"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Feni",
+    "district_id": "284393",
+    "seat_name": "Feni-2",
+    "seat_id": "feni_2"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Feni",
+    "district_id": "284393",
+    "seat_name": "Feni-3",
+    "seat_id": "feni_3"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Khagrachhari",
+    "district_id": "284428",
+    "seat_name": "Khagrachhari-1",
+    "seat_id": "khagrachhari_1"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Lakshmipur",
+    "district_id": "284478",
+    "seat_name": "Lakshmipur-1",
+    "seat_id": "lakshmipur_1"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Lakshmipur",
+    "district_id": "284478",
+    "seat_name": "Lakshmipur-2",
+    "seat_id": "lakshmipur_2"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Lakshmipur",
+    "district_id": "284478",
+    "seat_name": "Lakshmipur-3",
+    "seat_id": "lakshmipur_3"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Lakshmipur",
+    "district_id": "284478",
+    "seat_name": "Lakshmipur-4",
+    "seat_id": "lakshmipur_4"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Noakhali",
+    "district_id": "284508",
+    "seat_name": "Noakhali-1",
+    "seat_id": "noakhali_1"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Noakhali",
+    "district_id": "284508",
+    "seat_name": "Noakhali-2",
+    "seat_id": "noakhali_2"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Noakhali",
+    "district_id": "284508",
+    "seat_name": "Noakhali-3",
+    "seat_id": "noakhali_3"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Noakhali",
+    "district_id": "284508",
+    "seat_name": "Noakhali-4",
+    "seat_id": "noakhali_4"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Noakhali",
+    "district_id": "284508",
+    "seat_name": "Noakhali-5",
+    "seat_id": "noakhali_5"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Noakhali",
+    "district_id": "284508",
+    "seat_name": "Noakhali-6",
+    "seat_id": "noakhali_6"
+  },
+  {
+    "division": "Chattogram",
+    "division_id": "284038",
+    "district": "Rangamati",
+    "district_id": "284558",
+    "seat_name": "Rangamati-1",
+    "seat_id": "rangamati_1"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Dhaka",
+    "district_id": "284618",
+    "seat_name": "Dhaka-1",
+    "seat_id": "dhaka_1"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Dhaka",
+    "district_id": "284618",
+    "seat_name": "Dhaka-2",
+    "seat_id": "dhaka_2"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Dhaka",
+    "district_id": "284618",
+    "seat_name": "Dhaka-3",
+    "seat_id": "dhaka_3"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Dhaka",
+    "district_id": "284618",
+    "seat_name": "Dhaka-4",
+    "seat_id": "dhaka_4"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Dhaka",
+    "district_id": "284618",
+    "seat_name": "Dhaka-5",
+    "seat_id": "dhaka_5"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Dhaka",
+    "district_id": "284618",
+    "seat_name": "Dhaka-6",
+    "seat_id": "dhaka_6"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Dhaka",
+    "district_id": "284618",
+    "seat_name": "Dhaka-7",
+    "seat_id": "dhaka_7"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Dhaka",
+    "district_id": "284618",
+    "seat_name": "Dhaka-8",
+    "seat_id": "dhaka_8"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Dhaka",
+    "district_id": "284618",
+    "seat_name": "Dhaka-9",
+    "seat_id": "dhaka_9"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Dhaka",
+    "district_id": "284618",
+    "seat_name": "Dhaka-10",
+    "seat_id": "dhaka_10"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Dhaka",
+    "district_id": "284618",
+    "seat_name": "Dhaka-11",
+    "seat_id": "dhaka_11"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Dhaka",
+    "district_id": "284618",
+    "seat_name": "Dhaka-12",
+    "seat_id": "dhaka_12"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Dhaka",
+    "district_id": "284618",
+    "seat_name": "Dhaka-13",
+    "seat_id": "dhaka_13"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Dhaka",
+    "district_id": "284618",
+    "seat_name": "Dhaka-14",
+    "seat_id": "dhaka_14"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Dhaka",
+    "district_id": "284618",
+    "seat_name": "Dhaka-15",
+    "seat_id": "dhaka_15"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Dhaka",
+    "district_id": "284618",
+    "seat_name": "Dhaka-16",
+    "seat_id": "dhaka_16"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Dhaka",
+    "district_id": "284618",
+    "seat_name": "Dhaka-17",
+    "seat_id": "dhaka_17"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Dhaka",
+    "district_id": "284618",
+    "seat_name": "Dhaka-18",
+    "seat_id": "dhaka_18"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Dhaka",
+    "district_id": "284618",
+    "seat_name": "Dhaka-19",
+    "seat_id": "dhaka_19"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Dhaka",
+    "district_id": "284618",
+    "seat_name": "Dhaka-20",
+    "seat_id": "dhaka_20"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Faridpur",
+    "district_id": "284893",
+    "seat_name": "Faridpur-1",
+    "seat_id": "faridpur_1"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Faridpur",
+    "district_id": "284893",
+    "seat_name": "Faridpur-2",
+    "seat_id": "faridpur_2"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Faridpur",
+    "district_id": "284893",
+    "seat_name": "Faridpur-3",
+    "seat_id": "faridpur_3"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Faridpur",
+    "district_id": "284893",
+    "seat_name": "Faridpur-4",
+    "seat_id": "faridpur_4"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Gazipur",
+    "district_id": "284943",
+    "seat_name": "Gazipur-1",
+    "seat_id": "gazipur_1"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Gazipur",
+    "district_id": "284943",
+    "seat_name": "Gazipur-2",
+    "seat_id": "gazipur_2"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Gazipur",
+    "district_id": "284943",
+    "seat_name": "Gazipur-3",
+    "seat_id": "gazipur_3"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Gazipur",
+    "district_id": "284943",
+    "seat_name": "Gazipur-4",
+    "seat_id": "gazipur_4"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Gazipur",
+    "district_id": "284943",
+    "seat_name": "Gazipur-5",
+    "seat_id": "gazipur_5"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Gazipur",
+    "district_id": "284943",
+    "seat_name": "Gazipur-6",
+    "seat_id": "gazipur_6"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Gopalganj",
+    "district_id": "284973",
+    "seat_name": "Gopalganj-1",
+    "seat_id": "gopalganj_1"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Gopalganj",
+    "district_id": "284973",
+    "seat_name": "Gopalganj-2",
+    "seat_id": "gopalganj_2"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Gopalganj",
+    "district_id": "284973",
+    "seat_name": "Gopalganj-3",
+    "seat_id": "gopalganj_3"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Kishoreganj",
+    "district_id": "285003",
+    "seat_name": "Kishoreganj-1",
+    "seat_id": "kishoreganj_1"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Kishoreganj",
+    "district_id": "285003",
+    "seat_name": "Kishoreganj-2",
+    "seat_id": "kishoreganj_2"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Kishoreganj",
+    "district_id": "285003",
+    "seat_name": "Kishoreganj-3",
+    "seat_id": "kishoreganj_3"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Kishoreganj",
+    "district_id": "285003",
+    "seat_name": "Kishoreganj-4",
+    "seat_id": "kishoreganj_4"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Kishoreganj",
+    "district_id": "285003",
+    "seat_name": "Kishoreganj-5",
+    "seat_id": "kishoreganj_5"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Kishoreganj",
+    "district_id": "285003",
+    "seat_name": "Kishoreganj-6",
+    "seat_id": "kishoreganj_6"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Madaripur",
+    "district_id": "285073",
+    "seat_name": "Madaripur-1",
+    "seat_id": "madaripur_1"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Madaripur",
+    "district_id": "285073",
+    "seat_name": "Madaripur-2",
+    "seat_id": "madaripur_2"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Madaripur",
+    "district_id": "285073",
+    "seat_name": "Madaripur-3",
+    "seat_id": "madaripur_3"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Manikganj",
+    "district_id": "285098",
+    "seat_name": "Manikganj-1",
+    "seat_id": "manikganj_1"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Manikganj",
+    "district_id": "285098",
+    "seat_name": "Manikganj-2",
+    "seat_id": "manikganj_2"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Manikganj",
+    "district_id": "285098",
+    "seat_name": "Manikganj-3",
+    "seat_id": "manikganj_3"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Munshiganj",
+    "district_id": "285138",
+    "seat_name": "Munshiganj-1",
+    "seat_id": "munshiganj_1"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Munshiganj",
+    "district_id": "285138",
+    "seat_name": "Munshiganj-2",
+    "seat_id": "munshiganj_2"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Munshiganj",
+    "district_id": "285138",
+    "seat_name": "Munshiganj-3",
+    "seat_id": "munshiganj_3"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Narayanganj",
+    "district_id": "285173",
+    "seat_name": "Narayanganj-1",
+    "seat_id": "narayanganj_1"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Narayanganj",
+    "district_id": "285173",
+    "seat_name": "Narayanganj-2",
+    "seat_id": "narayanganj_2"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Narayanganj",
+    "district_id": "285173",
+    "seat_name": "Narayanganj-3",
+    "seat_id": "narayanganj_3"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Narayanganj",
+    "district_id": "285173",
+    "seat_name": "Narayanganj-4",
+    "seat_id": "narayanganj_4"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Narayanganj",
+    "district_id": "285173",
+    "seat_name": "Narayanganj-5",
+    "seat_id": "narayanganj_5"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Narsingdi",
+    "district_id": "285203",
+    "seat_name": "Narsingdi-1",
+    "seat_id": "narsingdi_1"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Narsingdi",
+    "district_id": "285203",
+    "seat_name": "Narsingdi-2",
+    "seat_id": "narsingdi_2"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Narsingdi",
+    "district_id": "285203",
+    "seat_name": "Narsingdi-3",
+    "seat_id": "narsingdi_3"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Narsingdi",
+    "district_id": "285203",
+    "seat_name": "Narsingdi-4",
+    "seat_id": "narsingdi_4"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Narsingdi",
+    "district_id": "285203",
+    "seat_name": "Narsingdi-5",
+    "seat_id": "narsingdi_5"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Rajbari",
+    "district_id": "285238",
+    "seat_name": "Rajbari-1",
+    "seat_id": "rajbari_1"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Rajbari",
+    "district_id": "285238",
+    "seat_name": "Rajbari-2",
+    "seat_id": "rajbari_2"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Shariatpur",
+    "district_id": "285268",
+    "seat_name": "Shariatpur-1",
+    "seat_id": "shariatpur_1"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Shariatpur",
+    "district_id": "285268",
+    "seat_name": "Shariatpur-2",
+    "seat_id": "shariatpur_2"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Shariatpur",
+    "district_id": "285268",
+    "seat_name": "Shariatpur-3",
+    "seat_id": "shariatpur_3"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Tangail",
+    "district_id": "285303",
+    "seat_name": "Tangail-1",
+    "seat_id": "tangail_1"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Tangail",
+    "district_id": "285303",
+    "seat_name": "Tangail-2",
+    "seat_id": "tangail_2"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Tangail",
+    "district_id": "285303",
+    "seat_name": "Tangail-3",
+    "seat_id": "tangail_3"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Tangail",
+    "district_id": "285303",
+    "seat_name": "Tangail-4",
+    "seat_id": "tangail_4"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Tangail",
+    "district_id": "285303",
+    "seat_name": "Tangail-5",
+    "seat_id": "tangail_5"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Tangail",
+    "district_id": "285303",
+    "seat_name": "Tangail-6",
+    "seat_id": "tangail_6"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Tangail",
+    "district_id": "285303",
+    "seat_name": "Tangail-7",
+    "seat_id": "tangail_7"
+  },
+  {
+    "division": "Dhaka",
+    "division_id": "284613",
+    "district": "Tangail",
+    "district_id": "285303",
+    "seat_name": "Tangail-8",
+    "seat_id": "tangail_8"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Bagerhat",
+    "district_id": "285373",
+    "seat_name": "Bagerhat-1",
+    "seat_id": "bagerhat_1"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Bagerhat",
+    "district_id": "285373",
+    "seat_name": "Bagerhat-2",
+    "seat_id": "bagerhat_2"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Bagerhat",
+    "district_id": "285373",
+    "seat_name": "Bagerhat-3",
+    "seat_id": "bagerhat_3"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Bagerhat",
+    "district_id": "285373",
+    "seat_name": "Bagerhat-4",
+    "seat_id": "bagerhat_4"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Chuadanga",
+    "district_id": "285423",
+    "seat_name": "Chuadanga-1",
+    "seat_id": "chuadanga_1"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Chuadanga",
+    "district_id": "285423",
+    "seat_name": "Chuadanga-2",
+    "seat_id": "chuadanga_2"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Jashore",
+    "district_id": "285448",
+    "seat_name": "Jashore-1",
+    "seat_id": "jashore_1"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Jashore",
+    "district_id": "285448",
+    "seat_name": "Jashore-2",
+    "seat_id": "jashore_2"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Jashore",
+    "district_id": "285448",
+    "seat_name": "Jashore-3",
+    "seat_id": "jashore_3"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Jashore",
+    "district_id": "285448",
+    "seat_name": "Jashore-4",
+    "seat_id": "jashore_4"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Jashore",
+    "district_id": "285448",
+    "seat_name": "Jashore-5",
+    "seat_id": "jashore_5"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Jashore",
+    "district_id": "285448",
+    "seat_name": "Jashore-6",
+    "seat_id": "jashore_6"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Jhenaidah",
+    "district_id": "285493",
+    "seat_name": "Jhenaidah-1",
+    "seat_id": "jhenaidah_1"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Jhenaidah",
+    "district_id": "285493",
+    "seat_name": "Jhenaidah-2",
+    "seat_id": "jhenaidah_2"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Jhenaidah",
+    "district_id": "285493",
+    "seat_name": "Jhenaidah-3",
+    "seat_id": "jhenaidah_3"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Jhenaidah",
+    "district_id": "285493",
+    "seat_name": "Jhenaidah-4",
+    "seat_id": "jhenaidah_4"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Khulna",
+    "district_id": "285528",
+    "seat_name": "Khulna-1",
+    "seat_id": "khulna_1"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Khulna",
+    "district_id": "285528",
+    "seat_name": "Khulna-2",
+    "seat_id": "khulna_2"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Khulna",
+    "district_id": "285528",
+    "seat_name": "Khulna-3",
+    "seat_id": "khulna_3"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Khulna",
+    "district_id": "285528",
+    "seat_name": "Khulna-4",
+    "seat_id": "khulna_4"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Khulna",
+    "district_id": "285528",
+    "seat_name": "Khulna-5",
+    "seat_id": "khulna_5"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Khulna",
+    "district_id": "285528",
+    "seat_name": "Khulna-6",
+    "seat_id": "khulna_6"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Kushtia",
+    "district_id": "285578",
+    "seat_name": "Kushtia-1",
+    "seat_id": "kushtia_1"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Kushtia",
+    "district_id": "285578",
+    "seat_name": "Kushtia-2",
+    "seat_id": "kushtia_2"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Kushtia",
+    "district_id": "285578",
+    "seat_name": "Kushtia-3",
+    "seat_id": "kushtia_3"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Kushtia",
+    "district_id": "285578",
+    "seat_name": "Kushtia-4",
+    "seat_id": "kushtia_4"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Magura",
+    "district_id": "285613",
+    "seat_name": "Magura-1",
+    "seat_id": "magura_1"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Magura",
+    "district_id": "285613",
+    "seat_name": "Magura-2",
+    "seat_id": "magura_2"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Meherpur",
+    "district_id": "285638",
+    "seat_name": "Meherpur-1",
+    "seat_id": "meherpur_1"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Meherpur",
+    "district_id": "285638",
+    "seat_name": "Meherpur-2",
+    "seat_id": "meherpur_2"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Narail",
+    "district_id": "285658",
+    "seat_name": "Narail-1",
+    "seat_id": "narail_1"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Narail",
+    "district_id": "285658",
+    "seat_name": "Narail-2",
+    "seat_id": "narail_2"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Satkhira",
+    "district_id": "285678",
+    "seat_name": "Satkhira-1",
+    "seat_id": "satkhira_1"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Satkhira",
+    "district_id": "285678",
+    "seat_name": "Satkhira-2",
+    "seat_id": "satkhira_2"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Satkhira",
+    "district_id": "285678",
+    "seat_name": "Satkhira-3",
+    "seat_id": "satkhira_3"
+  },
+  {
+    "division": "Khulna",
+    "division_id": "285368",
+    "district": "Satkhira",
+    "district_id": "285678",
+    "seat_name": "Satkhira-4",
+    "seat_id": "satkhira_4"
+  },
+  {
+    "division": "Mymensingh",
+    "division_id": "285718",
+    "district": "Jamalpur",
+    "district_id": "285723",
+    "seat_name": "Jamalpur-1",
+    "seat_id": "jamalpur_1"
+  },
+  {
+    "division": "Mymensingh",
+    "division_id": "285718",
+    "district": "Jamalpur",
+    "district_id": "285723",
+    "seat_name": "Jamalpur-2",
+    "seat_id": "jamalpur_2"
+  },
+  {
+    "division": "Mymensingh",
+    "division_id": "285718",
+    "district": "Jamalpur",
+    "district_id": "285723",
+    "seat_name": "Jamalpur-3",
+    "seat_id": "jamalpur_3"
+  },
+  {
+    "division": "Mymensingh",
+    "division_id": "285718",
+    "district": "Jamalpur",
+    "district_id": "285723",
+    "seat_name": "Jamalpur-4",
+    "seat_id": "jamalpur_4"
+  },
+  {
+    "division": "Mymensingh",
+    "division_id": "285718",
+    "district": "Jamalpur",
+    "district_id": "285723",
+    "seat_name": "Jamalpur-5",
+    "seat_id": "jamalpur_5"
+  },
+  {
+    "division": "Mymensingh",
+    "division_id": "285718",
+    "district": "Mymensingh",
+    "district_id": "285763",
+    "seat_name": "Mymensingh-1",
+    "seat_id": "mymensingh_1"
+  },
+  {
+    "division": "Mymensingh",
+    "division_id": "285718",
+    "district": "Mymensingh",
+    "district_id": "285763",
+    "seat_name": "Mymensingh-2",
+    "seat_id": "mymensingh_2"
+  },
+  {
+    "division": "Mymensingh",
+    "division_id": "285718",
+    "district": "Mymensingh",
+    "district_id": "285763",
+    "seat_name": "Mymensingh-3",
+    "seat_id": "mymensingh_3"
+  },
+  {
+    "division": "Mymensingh",
+    "division_id": "285718",
+    "district": "Mymensingh",
+    "district_id": "285763",
+    "seat_name": "Mymensingh-4",
+    "seat_id": "mymensingh_4"
+  },
+  {
+    "division": "Mymensingh",
+    "division_id": "285718",
+    "district": "Mymensingh",
+    "district_id": "285763",
+    "seat_name": "Mymensingh-5",
+    "seat_id": "mymensingh_5"
+  },
+  {
+    "division": "Mymensingh",
+    "division_id": "285718",
+    "district": "Mymensingh",
+    "district_id": "285763",
+    "seat_name": "Mymensingh-6",
+    "seat_id": "mymensingh_6"
+  },
+  {
+    "division": "Mymensingh",
+    "division_id": "285718",
+    "district": "Mymensingh",
+    "district_id": "285763",
+    "seat_name": "Mymensingh-7",
+    "seat_id": "mymensingh_7"
+  },
+  {
+    "division": "Mymensingh",
+    "division_id": "285718",
+    "district": "Mymensingh",
+    "district_id": "285763",
+    "seat_name": "Mymensingh-8",
+    "seat_id": "mymensingh_8"
+  },
+  {
+    "division": "Mymensingh",
+    "division_id": "285718",
+    "district": "Mymensingh",
+    "district_id": "285763",
+    "seat_name": "Mymensingh-9",
+    "seat_id": "mymensingh_9"
+  },
+  {
+    "division": "Mymensingh",
+    "division_id": "285718",
+    "district": "Mymensingh",
+    "district_id": "285763",
+    "seat_name": "Mymensingh-10",
+    "seat_id": "mymensingh_10"
+  },
+  {
+    "division": "Mymensingh",
+    "division_id": "285718",
+    "district": "Mymensingh",
+    "district_id": "285763",
+    "seat_name": "Mymensingh-11",
+    "seat_id": "mymensingh_11"
+  },
+  {
+    "division": "Mymensingh",
+    "division_id": "285718",
+    "district": "Netrakona",
+    "district_id": "285833",
+    "seat_name": "Netrakona-1",
+    "seat_id": "netrakona_1"
+  },
+  {
+    "division": "Mymensingh",
+    "division_id": "285718",
+    "district": "Netrakona",
+    "district_id": "285833",
+    "seat_name": "Netrakona-2",
+    "seat_id": "netrakona_2"
+  },
+  {
+    "division": "Mymensingh",
+    "division_id": "285718",
+    "district": "Netrakona",
+    "district_id": "285833",
+    "seat_name": "Netrakona-3",
+    "seat_id": "netrakona_3"
+  },
+  {
+    "division": "Mymensingh",
+    "division_id": "285718",
+    "district": "Netrakona",
+    "district_id": "285833",
+    "seat_name": "Netrakona-4",
+    "seat_id": "netrakona_4"
+  },
+  {
+    "division": "Mymensingh",
+    "division_id": "285718",
+    "district": "Netrakona",
+    "district_id": "285833",
+    "seat_name": "Netrakona-5",
+    "seat_id": "netrakona_5"
+  },
+  {
+    "division": "Mymensingh",
+    "division_id": "285718",
+    "district": "Sherpur",
+    "district_id": "285888",
+    "seat_name": "Sherpur-1",
+    "seat_id": "sherpur_1"
+  },
+  {
+    "division": "Mymensingh",
+    "division_id": "285718",
+    "district": "Sherpur",
+    "district_id": "285888",
+    "seat_name": "Sherpur-2",
+    "seat_id": "sherpur_2"
+  },
+  {
+    "division": "Mymensingh",
+    "division_id": "285718",
+    "district": "Sherpur",
+    "district_id": "285888",
+    "seat_name": "Sherpur-3",
+    "seat_id": "sherpur_3"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Bogura",
+    "district_id": "285923",
+    "seat_name": "Bogura-1",
+    "seat_id": "bogura_1"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Bogura",
+    "district_id": "285923",
+    "seat_name": "Bogura-2",
+    "seat_id": "bogura_2"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Bogura",
+    "district_id": "285923",
+    "seat_name": "Bogura-3",
+    "seat_id": "bogura_3"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Bogura",
+    "district_id": "285923",
+    "seat_name": "Bogura-4",
+    "seat_id": "bogura_4"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Bogura",
+    "district_id": "285923",
+    "seat_name": "Bogura-5",
+    "seat_id": "bogura_5"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Bogura",
+    "district_id": "285923",
+    "seat_name": "Bogura-6",
+    "seat_id": "bogura_6"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Bogura",
+    "district_id": "285923",
+    "seat_name": "Bogura-7",
+    "seat_id": "bogura_7"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Chapainawabganj",
+    "district_id": "286118",
+    "seat_name": "Chapainawabganj-1",
+    "seat_id": "chapainawabganj_1"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Chapainawabganj",
+    "district_id": "286118",
+    "seat_name": "Chapainawabganj-2",
+    "seat_id": "chapainawabganj_2"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Chapainawabganj",
+    "district_id": "286118",
+    "seat_name": "Chapainawabganj-3",
+    "seat_id": "chapainawabganj_3"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Joypurhat",
+    "district_id": "285988",
+    "seat_name": "Joypurhat-1",
+    "seat_id": "joypurhat_1"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Joypurhat",
+    "district_id": "285988",
+    "seat_name": "Joypurhat-2",
+    "seat_id": "joypurhat_2"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Naogaon",
+    "district_id": "286018",
+    "seat_name": "Naogaon-1",
+    "seat_id": "naogaon_1"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Naogaon",
+    "district_id": "286018",
+    "seat_name": "Naogaon-2",
+    "seat_id": "naogaon_2"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Naogaon",
+    "district_id": "286018",
+    "seat_name": "Naogaon-3",
+    "seat_id": "naogaon_3"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Naogaon",
+    "district_id": "286018",
+    "seat_name": "Naogaon-4",
+    "seat_id": "naogaon_4"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Naogaon",
+    "district_id": "286018",
+    "seat_name": "Naogaon-5",
+    "seat_id": "naogaon_5"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Naogaon",
+    "district_id": "286018",
+    "seat_name": "Naogaon-6",
+    "seat_id": "naogaon_6"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Natore",
+    "district_id": "286078",
+    "seat_name": "Natore-1",
+    "seat_id": "natore_1"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Natore",
+    "district_id": "286078",
+    "seat_name": "Natore-2",
+    "seat_id": "natore_2"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Natore",
+    "district_id": "286078",
+    "seat_name": "Natore-3",
+    "seat_id": "natore_3"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Natore",
+    "district_id": "286078",
+    "seat_name": "Natore-4",
+    "seat_id": "natore_4"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Pabna",
+    "district_id": "286148",
+    "seat_name": "Pabna-1",
+    "seat_id": "pabna_1"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Pabna",
+    "district_id": "286148",
+    "seat_name": "Pabna-2",
+    "seat_id": "pabna_2"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Pabna",
+    "district_id": "286148",
+    "seat_name": "Pabna-3",
+    "seat_id": "pabna_3"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Pabna",
+    "district_id": "286148",
+    "seat_name": "Pabna-4",
+    "seat_id": "pabna_4"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Pabna",
+    "district_id": "286148",
+    "seat_name": "Pabna-5",
+    "seat_id": "pabna_5"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Rajshahi",
+    "district_id": "286198",
+    "seat_name": "Rajshahi-1",
+    "seat_id": "rajshahi_1"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Rajshahi",
+    "district_id": "286198",
+    "seat_name": "Rajshahi-2",
+    "seat_id": "rajshahi_2"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Rajshahi",
+    "district_id": "286198",
+    "seat_name": "Rajshahi-3",
+    "seat_id": "rajshahi_3"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Rajshahi",
+    "district_id": "286198",
+    "seat_name": "Rajshahi-4",
+    "seat_id": "rajshahi_4"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Rajshahi",
+    "district_id": "286198",
+    "seat_name": "Rajshahi-5",
+    "seat_id": "rajshahi_5"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Rajshahi",
+    "district_id": "286198",
+    "seat_name": "Rajshahi-6",
+    "seat_id": "rajshahi_6"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Sirajganj",
+    "district_id": "286248",
+    "seat_name": "Sirajganj-1",
+    "seat_id": "sirajganj_1"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Sirajganj",
+    "district_id": "286248",
+    "seat_name": "Sirajganj-2",
+    "seat_id": "sirajganj_2"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Sirajganj",
+    "district_id": "286248",
+    "seat_name": "Sirajganj-3",
+    "seat_id": "sirajganj_3"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Sirajganj",
+    "district_id": "286248",
+    "seat_name": "Sirajganj-4",
+    "seat_id": "sirajganj_4"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Sirajganj",
+    "district_id": "286248",
+    "seat_name": "Sirajganj-5",
+    "seat_id": "sirajganj_5"
+  },
+  {
+    "division": "Rajshahi",
+    "division_id": "285918",
+    "district": "Sirajganj",
+    "district_id": "286248",
+    "seat_name": "Sirajganj-6",
+    "seat_id": "sirajganj_6"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Dinajpur",
+    "district_id": "286303",
+    "seat_name": "Dinajpur-1",
+    "seat_id": "dinajpur_1"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Dinajpur",
+    "district_id": "286303",
+    "seat_name": "Dinajpur-2",
+    "seat_id": "dinajpur_2"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Dinajpur",
+    "district_id": "286303",
+    "seat_name": "Dinajpur-3",
+    "seat_id": "dinajpur_3"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Dinajpur",
+    "district_id": "286303",
+    "seat_name": "Dinajpur-4",
+    "seat_id": "dinajpur_4"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Dinajpur",
+    "district_id": "286303",
+    "seat_name": "Dinajpur-5",
+    "seat_id": "dinajpur_5"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Dinajpur",
+    "district_id": "286303",
+    "seat_name": "Dinajpur-6",
+    "seat_id": "dinajpur_6"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Gaibandha",
+    "district_id": "286373",
+    "seat_name": "Gaibandha-1",
+    "seat_id": "gaibandha_1"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Gaibandha",
+    "district_id": "286373",
+    "seat_name": "Gaibandha-2",
+    "seat_id": "gaibandha_2"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Gaibandha",
+    "district_id": "286373",
+    "seat_name": "Gaibandha-3",
+    "seat_id": "gaibandha_3"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Gaibandha",
+    "district_id": "286373",
+    "seat_name": "Gaibandha-4",
+    "seat_id": "gaibandha_4"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Gaibandha",
+    "district_id": "286373",
+    "seat_name": "Gaibandha-5",
+    "seat_id": "gaibandha_5"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Kurigram",
+    "district_id": "286413",
+    "seat_name": "Kurigram-1",
+    "seat_id": "kurigram_1"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Kurigram",
+    "district_id": "286413",
+    "seat_name": "Kurigram-2",
+    "seat_id": "kurigram_2"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Kurigram",
+    "district_id": "286413",
+    "seat_name": "Kurigram-3",
+    "seat_id": "kurigram_3"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Kurigram",
+    "district_id": "286413",
+    "seat_name": "Kurigram-4",
+    "seat_id": "kurigram_4"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Lalmonirhat",
+    "district_id": "286463",
+    "seat_name": "Lalmonirhat-1",
+    "seat_id": "lalmonirhat_1"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Lalmonirhat",
+    "district_id": "286463",
+    "seat_name": "Lalmonirhat-2",
+    "seat_id": "lalmonirhat_2"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Lalmonirhat",
+    "district_id": "286463",
+    "seat_name": "Lalmonirhat-3",
+    "seat_id": "lalmonirhat_3"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Nilphamari",
+    "district_id": "286493",
+    "seat_name": "Nilphamari-1",
+    "seat_id": "nilphamari_1"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Nilphamari",
+    "district_id": "286493",
+    "seat_name": "Nilphamari-2",
+    "seat_id": "nilphamari_2"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Nilphamari",
+    "district_id": "286493",
+    "seat_name": "Nilphamari-3",
+    "seat_id": "nilphamari_3"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Nilphamari",
+    "district_id": "286493",
+    "seat_name": "Nilphamari-4",
+    "seat_id": "nilphamari_4"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Panchagarh",
+    "district_id": "286528",
+    "seat_name": "Panchagarh-1",
+    "seat_id": "panchagarh_1"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Panchagarh",
+    "district_id": "286528",
+    "seat_name": "Panchagarh-2",
+    "seat_id": "panchagarh_2"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Rangpur",
+    "district_id": "286558",
+    "seat_name": "Rangpur-1",
+    "seat_id": "rangpur_1"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Rangpur",
+    "district_id": "286558",
+    "seat_name": "Rangpur-2",
+    "seat_id": "rangpur_2"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Rangpur",
+    "district_id": "286558",
+    "seat_name": "Rangpur-3",
+    "seat_id": "rangpur_3"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Rangpur",
+    "district_id": "286558",
+    "seat_name": "Rangpur-4",
+    "seat_id": "rangpur_4"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Rangpur",
+    "district_id": "286558",
+    "seat_name": "Rangpur-5",
+    "seat_id": "rangpur_5"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Rangpur",
+    "district_id": "286558",
+    "seat_name": "Rangpur-6",
+    "seat_id": "rangpur_6"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Thakurgaon",
+    "district_id": "286603",
+    "seat_name": "Thakurgaon-1",
+    "seat_id": "thakurgaon_1"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Thakurgaon",
+    "district_id": "286603",
+    "seat_name": "Thakurgaon-2",
+    "seat_id": "thakurgaon_2"
+  },
+  {
+    "division": "Rangpur",
+    "division_id": "286298",
+    "district": "Thakurgaon",
+    "district_id": "286603",
+    "seat_name": "Thakurgaon-3",
+    "seat_id": "thakurgaon_3"
+  },
+  {
+    "division": "Sylhet",
+    "division_id": "286633",
+    "district": "Habiganj",
+    "district_id": "286638",
+    "seat_name": "Habiganj-1",
+    "seat_id": "habiganj_1"
+  },
+  {
+    "division": "Sylhet",
+    "division_id": "286633",
+    "district": "Habiganj",
+    "district_id": "286638",
+    "seat_name": "Habiganj-2",
+    "seat_id": "habiganj_2"
+  },
+  {
+    "division": "Sylhet",
+    "division_id": "286633",
+    "district": "Habiganj",
+    "district_id": "286638",
+    "seat_name": "Habiganj-3",
+    "seat_id": "habiganj_3"
+  },
+  {
+    "division": "Sylhet",
+    "division_id": "286633",
+    "district": "Habiganj",
+    "district_id": "286638",
+    "seat_name": "Habiganj-4",
+    "seat_id": "habiganj_4"
+  },
+  {
+    "division": "Sylhet",
+    "division_id": "286633",
+    "district": "Moulvibazar",
+    "district_id": "286683",
+    "seat_name": "Moulvibazar-1",
+    "seat_id": "moulvibazar_1"
+  },
+  {
+    "division": "Sylhet",
+    "division_id": "286633",
+    "district": "Moulvibazar",
+    "district_id": "286683",
+    "seat_name": "Moulvibazar-2",
+    "seat_id": "moulvibazar_2"
+  },
+  {
+    "division": "Sylhet",
+    "division_id": "286633",
+    "district": "Moulvibazar",
+    "district_id": "286683",
+    "seat_name": "Moulvibazar-3",
+    "seat_id": "moulvibazar_3"
+  },
+  {
+    "division": "Sylhet",
+    "division_id": "286633",
+    "district": "Moulvibazar",
+    "district_id": "286683",
+    "seat_name": "Moulvibazar-4",
+    "seat_id": "moulvibazar_4"
+  },
+  {
+    "division": "Sylhet",
+    "division_id": "286633",
+    "district": "Sunamganj",
+    "district_id": "286723",
+    "seat_name": "Sunamganj-1",
+    "seat_id": "sunamganj_1"
+  },
+  {
+    "division": "Sylhet",
+    "division_id": "286633",
+    "district": "Sunamganj",
+    "district_id": "286723",
+    "seat_name": "Sunamganj-2",
+    "seat_id": "sunamganj_2"
+  },
+  {
+    "division": "Sylhet",
+    "division_id": "286633",
+    "district": "Sunamganj",
+    "district_id": "286723",
+    "seat_name": "Sunamganj-3",
+    "seat_id": "sunamganj_3"
+  },
+  {
+    "division": "Sylhet",
+    "division_id": "286633",
+    "district": "Sunamganj",
+    "district_id": "286723",
+    "seat_name": "Sunamganj-4",
+    "seat_id": "sunamganj_4"
+  },
+  {
+    "division": "Sylhet",
+    "division_id": "286633",
+    "district": "Sunamganj",
+    "district_id": "286723",
+    "seat_name": "Sunamganj-5",
+    "seat_id": "sunamganj_5"
+  },
+  {
+    "division": "Sylhet",
+    "division_id": "286633",
+    "district": "Sylhet",
+    "district_id": "286783",
+    "seat_name": "Sylhet-1",
+    "seat_id": "sylhet_1"
+  },
+  {
+    "division": "Sylhet",
+    "division_id": "286633",
+    "district": "Sylhet",
+    "district_id": "286783",
+    "seat_name": "Sylhet-2",
+    "seat_id": "sylhet_2"
+  },
+  {
+    "division": "Sylhet",
+    "division_id": "286633",
+    "district": "Sylhet",
+    "district_id": "286783",
+    "seat_name": "Sylhet-3",
+    "seat_id": "sylhet_3"
+  },
+  {
+    "division": "Sylhet",
+    "division_id": "286633",
+    "district": "Sylhet",
+    "district_id": "286783",
+    "seat_name": "Sylhet-4",
+    "seat_id": "sylhet_4"
+  },
+  {
+    "division": "Sylhet",
+    "division_id": "286633",
+    "district": "Sylhet",
+    "district_id": "286783",
+    "seat_name": "Sylhet-5",
+    "seat_id": "sylhet_5"
+  },
+  {
+    "division": "Sylhet",
+    "division_id": "286633",
+    "district": "Sylhet",
+    "district_id": "286783",
+    "seat_name": "Sylhet-6",
+    "seat_id": "sylhet_6"
+  }
+]
