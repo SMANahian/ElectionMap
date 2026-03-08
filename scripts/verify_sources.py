@@ -314,7 +314,7 @@ def main():
         description="Cross-verify election data between TBS News and Daily Star."
     )
     parser.add_argument(
-        "--tbs_party_by_seat", default="results/party_by_seat.csv",
+        "--tbs_party_by_seat", default="result_from_source/tbsnews_party_by_seat.csv",
         help="TBS party-by-seat CSV.",
     )
     parser.add_argument(

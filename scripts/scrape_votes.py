@@ -368,9 +368,9 @@ def main() -> None:
     parser.add_argument('--config', default='config/coalitions.json', help='Path to the coalition configuration JSON file.')
     parser.add_argument('--url', default='https://www.tbsnews.net/election-2026', help='Base URL of the TBS election portal.')
     parser.add_argument('--local_html', default='data/tbs_election_2026.html', help='Fallback HTML file to use if the live page cannot be downloaded.')
-    parser.add_argument('--output_seat_results', default='results/seat_results.csv', help='CSV path for seat-level results.')
-    parser.add_argument('--output_party_votes', default='results/party_totals.csv', help='CSV path for aggregated party vote totals.')
-    parser.add_argument('--output_party_by_seat', default='results/party_by_seat.csv', help='CSV path for party votes by constituency.')
+    parser.add_argument('--output_seat_results', default='result_from_source/result_from_tbsnews.csv', help='CSV path for seat-level results.')
+    parser.add_argument('--output_party_votes', default='result_from_source/tbsnews_party_totals.csv', help='CSV path for aggregated party vote totals.')
+    parser.add_argument('--output_party_by_seat', default='result_from_source/tbsnews_party_by_seat.csv', help='CSV path for party votes by constituency.')
     parser.add_argument('--save_html', action='store_true', help='Save the downloaded HTML to the data directory for inspection.')
     args = parser.parse_args()
 
