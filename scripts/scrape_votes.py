@@ -247,6 +247,14 @@ def compute_results(data: Dict[str, Any], coalitions: Dict[str, Dict[str, Any]])
     """
     constituencies: Dict[str, Any] = data.get('constituencies', {})
     candidates_by_seat: Dict[str, List[Dict[str, Any]]] = data.get('candidates', {})
+    # Build division/district lookup from divisions data
+    seat_geo: Dict[str, Dict[str, str]] = {}
+    for seats_list in data.get('divisions', {}).values():
+        for s in seats_list:
+            seat_geo[str(s.get('seat_id', ''))] = {
+                'division': s.get('division_name', ''),
+                'district': s.get('district_name', ''),
+            }
     seat_records: List[Dict[str, Any]] = []
     party_vote_totals: Dict[str, int] = {}
     party_by_seat_records: List[Dict[str, Any]] = []
@@ -254,12 +262,18 @@ def compute_results(data: Dict[str, Any], coalitions: Dict[str, Dict[str, Any]])
     for seat_id, seat_info in constituencies.items():
         seat_number = seat_info.get('seat_number')
         seat_name = seat_info.get('seat_name')
+        upazila = seat_info.get('upazila', '')
+        voting_finalized = seat_info.get('voting_finalized', None)
+        geo = seat_geo.get(str(seat_id), {})
+        division = geo.get('division', '')
+        district = geo.get('district', '')
         results = seat_info.get('election_results', {})
         # Normalise results to dict: keys are candidate diids
         if isinstance(results, list):
             result_dict = {}
         else:
             result_dict = results
+        has_results = len(result_dict) > 0
         total_votes = 0
         coalition_counts = {code: 0 for code in coalitions}
         seat_votes_by_party: Dict[str, int] = {}
@@ -274,6 +288,7 @@ def compute_results(data: Dict[str, Any], coalitions: Dict[str, Dict[str, Any]])
             total_votes += votes
             candidate = candidates_by_diid.get(str(diid), {})
             party_name = candidate.get('party') or 'UNKNOWN'
+            candidate_name = _extract_candidate_name(candidate)
             # Accumulate per party totals
             party_vote_totals[party_name] = party_vote_totals.get(party_name, 0) + votes
             seat_votes_by_party[party_name] = seat_votes_by_party.get(party_name, 0) + votes
@@ -282,18 +297,22 @@ def compute_results(data: Dict[str, Any], coalitions: Dict[str, Dict[str, Any]])
                 'seat_id': seat_id,
                 'seat_number': seat_number,
                 'seat_name': seat_name,
+                'division': division,
+                'district': district,
                 'party': party_name,
+                'candidate': candidate_name,
                 'votes': votes,
             })
-            candidate_name = _extract_candidate_name(candidate)
             candidate_rankings.append((votes, candidate_name, party_name))
             # Update coalition counters
             for code, meta in coalitions.items():
                 keywords = meta.get('keywords', [])
                 if party_in_coalition(party_name, keywords):
                     coalition_counts[code] += votes
-        # Compute ratios
-        if total_votes == 0:
+        # Compute ratios — use None for seats with no results
+        if not has_results:
+            ratios = {code: None for code in coalitions}
+        elif total_votes == 0:
             ratios = {code: 0.0 for code in coalitions}
         else:
             ratios = {code: (coalition_counts[code] / total_votes) for code in coalitions}
@@ -316,21 +335,26 @@ def compute_results(data: Dict[str, Any], coalitions: Dict[str, Dict[str, Any]])
             'seat_id': seat_id,
             'seat_number': seat_number,
             'seat_name': seat_name,
-            'total_votes': total_votes,
+            'division': division,
+            'district': district,
+            'upazila': upazila,
+            'voting_finalized': voting_finalized,
+            'total_votes': total_votes if has_results else None,
             'top_three_candidates': top_three_candidates,
             'top_three': top_three_parties,
         }
         for code in coalitions:
-            record[f'{code}_votes'] = coalition_counts[code]
+            record[f'{code}_votes'] = coalition_counts[code] if has_results else None
             record[f'{code}_ratio'] = ratios[code]
         seat_records.append(record)
         seat_party_votes[seat_id] = seat_votes_by_party
     # Convert to DataFrames
+    # Use None for parties not present in a seat (distinguishes from 0 actual votes)
     all_parties = sorted(party_vote_totals.keys())
     for record in seat_records:
         party_votes = seat_party_votes.get(record['seat_id'], {})
         for party_name in all_parties:
-            record[party_name] = party_votes.get(party_name, 0)
+            record[party_name] = party_votes.get(party_name)  # None if not present
     seat_results_df = pd.DataFrame(seat_records)
     # Aggregate party totals
     party_totals_df = pd.DataFrame(sorted(party_vote_totals.items(), key=lambda x: x[1], reverse=True), columns=['party', 'votes'])
@@ -384,10 +408,10 @@ def main() -> None:
     data = extract_election_data_from_html(html_text)
     # Compute results
     seat_df, party_totals_df, party_by_seat_df = compute_results(data, coalitions)
-    # Write CSVs
-    seat_df.to_csv(args.output_seat_results, index=False)
-    party_totals_df.to_csv(args.output_party_votes, index=False)
-    party_by_seat_df.to_csv(args.output_party_by_seat, index=False)
+    # Write CSVs (use '-' for missing/unavailable data)
+    seat_df.to_csv(args.output_seat_results, index=False, na_rep='-')
+    party_totals_df.to_csv(args.output_party_votes, index=False, na_rep='-')
+    party_by_seat_df.to_csv(args.output_party_by_seat, index=False, na_rep='-')
     logging.info(f"Wrote seat results to {args.output_seat_results}")
     logging.info(f"Wrote party totals to {args.output_party_votes}")
     logging.info(f"Wrote party-by-seat results to {args.output_party_by_seat}")
