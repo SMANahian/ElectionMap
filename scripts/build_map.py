@@ -422,7 +422,7 @@ def main() -> None:
     # Load coalition definitions
     coalitions = load_coalitions(args.config)
     # Load seat results
-    results_df = pd.read_csv(args.results_csv)
+    results_df = pd.read_csv(args.results_csv, na_values=["-"])
     # Load GeoJSON
     with open(args.geojson, 'r', encoding='utf-8') as f:
         geojson = json.load(f)
