@@ -18,13 +18,14 @@ def combine_vote_counts(file1, file2, output_file):
     combined_df = merged_df[['seat_name_normalized']].copy()
     combined_df.rename(columns={'seat_name_normalized': 'seat_name'}, inplace=True)
 
-    # Re-apply vital columns 
-    for col in ['total_votes', 'total_voters', 'bnp_ratio', 'jamaat_ratio', 'eleven_party_alliance_ratio']:
+    # Re-apply vital non-ratio columns
+    for col in ['total_votes', 'total_voters']:
         c1, c2 = f"{col}_source1", f"{col}_source2"
         if c1 in merged_df.columns and c2 in merged_df.columns:
-            combined_df[col] = merged_df[c2].fillna(merged_df[c1])
-        elif c1 in merged_df.columns: combined_df[col] = merged_df[c1]
-        elif c2 in merged_df.columns: combined_df[col] = merged_df[c2]
+            combined_df[col] = pd.to_numeric(merged_df[c2], errors='coerce').fillna(
+                pd.to_numeric(merged_df[c1], errors='coerce'))
+        elif c1 in merged_df.columns: combined_df[col] = pd.to_numeric(merged_df[c1], errors='coerce')
+        elif c2 in merged_df.columns: combined_df[col] = pd.to_numeric(merged_df[c2], errors='coerce')
 
     # Parties
     p1 = df1.columns.get_loc('bnp_ratio') + 1 if 'bnp_ratio' in df1.columns else -1
@@ -55,6 +56,31 @@ def combine_vote_counts(file1, file2, output_file):
             if v1_val != v2_val and v1_val > 0 and v2_val > 0:
                 comments.append(f"Discrepancy in {p_col}: source1 has {int(v1_val)}, source2 has {int(v2_val)}. Took the max.")
         discrepancy_comments.append("; ".join(comments))
+
+    # Recalculate all ratio columns from this sheet's combined vote data
+    # Also recalculate total_votes as max(source totals, sum of per-party max votes)
+    party_sum = combined_df[vote_cols].sum(axis=1)
+    combined_df['total_votes'] = pd.concat([combined_df['total_votes'], party_sum], axis=1).max(axis=1)
+
+    # Alliance vote columns from source max
+    alliance_vote_cols = [c for c in cols1 if c.endswith('_votes')]
+    for col in alliance_vote_cols:
+        if col in party_values:
+            v1, v2 = party_values[col]
+            combined_df[col] = pd.concat([v1, v2], axis=1).max(axis=1)
+
+    # Recalculate ratios
+    ratio_to_votes = {
+        'bnp_ratio': 'bnp_votes',
+        'jamaat_ratio': 'jamaat_votes',
+        'democracy_platform_ratio': 'democracy_platform_votes',
+        'eleven_party_alliance_ratio': 'eleven_party_alliance_votes',
+        'bnp_alliance_ratio': 'bnp_alliance_votes',
+        'bnp_vs_eleven_party_alliance_ratio': 'bnp_vs_eleven_party_alliance_votes',
+    }
+    for ratio_col, votes_col in ratio_to_votes.items():
+        if votes_col in combined_df.columns:
+            combined_df[ratio_col] = combined_df[votes_col] / combined_df['total_votes']
 
     combined_df['comments'] = discrepancy_comments
 
