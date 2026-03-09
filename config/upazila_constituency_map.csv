@@ -1,0 +1,746 @@
+upazila,district,constituency,constituency_number,source,type
+Abhaynagar,Jashore,Jessore-4,88,election; geocode; humdata_pop; poverty,upazila
+Abhaynagar,Jashore,Jessore-5,89,election; geocode; humdata_pop; poverty,upazila
+Adabor,Dhaka,,,humdata_pop; poverty,thana
+Adamdighi,Bogura,Bogra-3,38,election; geocode; humdata_pop; poverty,upazila
+Aditmari,Lalmonirhat,Lalmonirhat-2,17,election; geocode; humdata_pop; poverty,upazila
+Agailjhara,Barishal,Barishal-1,119,election; geocode; humdata_pop; poverty,upazila
+Ajmiriganj,Habiganj,Habiganj-2,240,election; geocode; humdata_pop; poverty,upazila
+Akbarshah,Chattogram,,,poverty,thana
+Akhaura,Brahmanbaria,Brahmanbaria-4,246,election; geocode; humdata_pop; poverty,upazila
+Akkelpur,Joypurhat,Joypurhat-2,35,election; geocode; humdata_pop; poverty,upazila
+Alamdanga,Chuadanga,Chuadanga-1,79,election; geocode; humdata_pop; poverty,upazila
+Alamdanga,Chuadanga,Chuadanga-2,80,election; geocode; humdata_pop; poverty,upazila
+Alfadanga,Faridpur,Faridpur-1,211,election; geocode; humdata_pop; poverty,upazila
+Alikadam,Bandarban,Bandarban-1,300,election; geocode; humdata_pop; poverty,upazila
+Amtali,Barguna,Barguna-1,109,election; geocode; humdata_pop; poverty,upazila
+Anowara,Chattogram,Chattogram-13,290,election; geocode; humdata_pop; poverty,upazila
+Araihazar,Narayanganj,Narayanganj-2,205,election; geocode; humdata_pop; poverty,upazila
+Ashuganj,Brahmanbaria,Brahmanbaria-2,244,election; geocode; humdata_pop; poverty,upazila
+Assasuni,Satkhira,Satkhira-3,107,election; geocode; humdata_pop; poverty,upazila
+Atgharia,Pabna,,,humdata_pop; poverty,upazila
+Atghoria,Pabna,Pabna-4,71,election; geocode,upazila
+Atpara,Netrakona,Netrokona-3,159,election; geocode; humdata_pop; poverty,upazila
+Atrai,Naogaon,Naogaon-6,51,election; geocode; humdata_pop; poverty,upazila
+Atwari,Panchagarh,Panchagarh-1,001,election; geocode; humdata_pop; poverty,upazila
+Austagram,Kishoreganj,Kishoreganj-4,165,election; geocode; humdata_pop; poverty,upazila
+Babuganj,Barishal,Barishal-3,121,election; geocode; humdata_pop; poverty,upazila
+Badalgachhi,Naogaon,Naogaon-3,48,election; geocode; humdata_pop; poverty,upazila
+Badarganj,Rangpur,Rangpur-2,20,election; geocode; humdata_pop; poverty,upazila
+Badda,Dhaka,,,humdata_pop; poverty,thana
+Bagatipara,Natore,Natore-1,58,election; geocode; humdata_pop; poverty,upazila
+Bagerhat Sadar,Bagerhat,Bagerhat-2,96,election; geocode; humdata_pop; poverty,upazila
+Bagha,Rajshahi,Rajshahi-6,57,election; geocode; humdata_pop; poverty,upazila
+Baghaichhari,Rangamati,Rangamati-1,299,election; geocode; humdata_pop; poverty,upazila
+Bagharpara,Jashore,,,poverty,upazila
+Bagherpara,Jashore,Jessore-4,88,election; geocode; humdata_pop,upazila
+Baghmara,Rajshahi,Rajshahi-4,55,election; geocode; humdata_pop; poverty,upazila
+Bahubal,Habiganj,Habiganj-1,239,election; geocode; humdata_pop; poverty,upazila
+Bajitpur,Kishoreganj,Kishoreganj-5,166,election; geocode; humdata_pop; poverty,upazila
+Bakalia,Chattogram,,,humdata_pop; poverty,thana
+Bakerganj,Barishal,Barishal-6,124,election; geocode; humdata_pop; poverty,upazila
+Bakshiganj,Jamalpur,Jamalpur-4,141,election; geocode; humdata_pop; poverty,upazila
+Balaganj,Sylhet,Sylhet-2,230,election; geocode; humdata_pop; poverty,upazila
+Balaganj,Sylhet,Sylhet-3,231,election; geocode; humdata_pop; poverty,upazila
+Baliadangi,Thakurgaon,Thakurgaon-2,4,election; geocode; humdata_pop; poverty,upazila
+Baliakandi,Rajbari,Rajbari-2,210,election; geocode; humdata_pop; poverty,upazila
+Bamna,Barguna,Barguna-2,110,election; geocode; humdata_pop; poverty,upazila
+Banani,Dhaka,,,poverty,thana
+Banaripara,Barishal,Barishal-2,120,election; geocode; humdata_pop; poverty,upazila
+Bancharampur,Brahmanbaria,Brahmanbaria-6,248,election; geocode,upazila
+Banchharampur,Brahmanbaria,,,humdata_pop; poverty,upazila
+Bandar,Narayanganj,Narayanganj-5,208,election; geocode; humdata_pop; poverty,upazila
+Bandarban Sadar,Bandarban,Bandarban-1,300,election; geocode; humdata_pop; poverty,upazila
+Bangshal,Dhaka,,,humdata_pop; poverty,thana
+Baniachong,Habiganj,Habiganj-2,240,election; geocode; humdata_pop; poverty,upazila
+Banshkhali,Chattogram,Chattogram-16,293,election; geocode; humdata_pop; poverty,upazila
+Baraigram,Natore,Natore-4,61,election; geocode; humdata_pop; poverty,upazila
+Barguna Sadar,Barguna,Barguna-1,109,election; geocode; humdata_pop; poverty,upazila
+Barhatta,Netrakona,Netrokona-2,158,election; geocode; humdata_pop; poverty,upazila
+Barishal Sadar,Barishal,Barishal-5,123,election; geocode; humdata_pop; poverty,upazila
+Barkal,Rangamati,Rangamati-1,299,election; geocode; humdata_pop; poverty,upazila
+Barlekha,Moulvibazar,Moulvibazar-1,235,election; geocode; humdata_pop; poverty,upazila
+Barura,Cumilla,Comilla-8,256,election; geocode; humdata_pop; poverty,upazila
+Basail,Tangail,Tangail-8,137,election; geocode; humdata_pop; poverty,upazila
+Basan,Gazipur,,,poverty,thana
+Batiaghata,Khulna,Khulna-1,99,election; geocode; humdata_pop; poverty,upazila
+Bauphal,Patuakhali,Patuakhali-2,112,election; geocode; humdata_pop; poverty,upazila
+Bayejid Bostami,Chattogram,,,humdata_pop; poverty,thana
+Beanibazar,Sylhet,Sylhet-5,233,election; geocode; humdata_pop; poverty,upazila
+Beanibazar,Sylhet,Sylhet-6,234,election; geocode; humdata_pop; poverty,upazila
+Begumganj,Noakhali,Noakhali-2,269,election; geocode; humdata_pop; poverty,upazila
+Begumganj,Noakhali,Noakhali-3,270,election; geocode; humdata_pop; poverty,upazila
+Belabo,Narsingdi,Narsingdi-4,202,election; geocode; humdata_pop; poverty,upazila
+Belaichhari,Rangamati,Rangamati-1,299,election; geocode; humdata_pop; poverty,upazila
+Belkuchi,Sirajganj,Sirajganj-5,66,election; geocode; humdata_pop; poverty,upazila
+Bera,Pabna,Pabna-1,68,election; geocode; humdata_pop; poverty,upazila
+Bera,Pabna,Pabna-2,69,election; geocode; humdata_pop; poverty,upazila
+Betagi,Barguna,Barguna-2,110,election; geocode; humdata_pop; poverty,upazila
+Bhairab,Kishoreganj,Kishoreganj-6,167,election; geocode; humdata_pop; poverty,upazila
+Bhaluka,Mymensingh,Mymensingh-11,156,election; geocode; humdata_pop; poverty,upazila
+Bhandaria,Pirojpur,Pirojpur-2,128,election; geocode; humdata_pop; poverty,upazila
+Bhanga,Faridpur,Faridpur-4,214,election; geocode; humdata_pop; poverty,upazila
+Bhangura,Pabna,Pabna-3,70,election; geocode; humdata_pop; poverty,upazila
+Bhasantek,Dhaka,,,poverty,thana
+Bhatara,Dhaka,,,poverty,thana
+Bhedarganj,Shariatpur,Shariatpur-3,223,election; geocode; humdata_pop; poverty,upazila
+Bheramara,Kushtia,Kushtia-2,76,election; geocode; humdata_pop; poverty,upazila
+Bhola Sadar,Bhola,Bhola-1,115,election; geocode; humdata_pop; poverty,upazila
+Bholahat,Chapainawabganj,Chapai Nawabganj-2,44,election; geocode; humdata_pop; poverty,upazila
+Bhuapur,Tangail,Tangail-2,131,election; geocode; humdata_pop; poverty,upazila
+Bhurungamari,Kurigram,Kurigram-1,25,election; geocode; humdata_pop; poverty,upazila
+Bijoynagar,Brahmanbaria,,,geocode; humdata_pop; poverty,upazila
+Biman Bandar,Dhaka,,,humdata_pop; poverty,thana
+Biral,Dinajpur,Dinajpur-2,7,election; humdata_pop,upazila
+Birampur,Dinajpur,Dinajpur-6,11,election; geocode; humdata_pop; poverty,upazila
+Birganj,Dinajpur,Dinajpur-1,6,election; geocode; humdata_pop; poverty,upazila
+Birol,Dinajpur,,,geocode; poverty,upazila
+Bishwambarpur,Sunamganj,Sunamganj-4,227,election; geocode; humdata_pop; poverty,upazila
+Bishwanath,Sylhet,Sylhet-2,230,election; geocode; humdata_pop; poverty,upazila
+Boalia,Rajshahi,,,humdata_pop; poverty,thana
+Boalkhali,Chattogram,,,geocode; humdata_pop; poverty,upazila
+Boalmari,Faridpur,Faridpur-1,211,election; geocode; humdata_pop; poverty,upazila
+Bochaganj,Dinajpur,Dinajpur-2,7,election; geocode; humdata_pop; poverty,upazila
+Boda,Panchagarh,Panchagarh-2,002,election; geocode; humdata_pop; poverty,upazila
+Bogura Sadar,Bogura,Bogra-6,41,election; geocode; humdata_pop; poverty,upazila
+Brahmanbaria Sadar,Brahmanbaria,Brahmanbaria-3,245,election; geocode; humdata_pop; poverty,upazila
+Brahmanpara,Cumilla,Comilla-4,252,election; geocode; humdata_pop; poverty,upazila
+Burhanuddin,Bhola,Bhola-2,116,election; geocode; humdata_pop; poverty,upazila
+Burichang,Cumilla,Comilla-4,252,election; geocode; humdata_pop; poverty,upazila
+Burichang,Cumilla,Comilla-5,253,election; geocode; humdata_pop; poverty,upazila
+Cantonment,Dhaka,,,humdata_pop; poverty,thana
+Chak Bazar,Dhaka,,,humdata_pop; poverty,thana
+Chakaria,Cox's Bazar,Coxs Bazar-1,294,election; geocode; humdata_pop; poverty,upazila
+Chandanaish,Chattogram,Chattogram-14,291,election; geocode; humdata_pop; poverty,upazila
+Chandgaon,Chattogram,,,humdata_pop; poverty,thana
+Chandina,Cumilla,Comilla-7,255,election; geocode; humdata_pop; poverty,upazila
+Chandpur Sadar,Chandpur,Chandpur-3,262,election; geocode; humdata_pop; poverty,upazila
+Chandrima,Rajshahi,,,poverty,thana
+Chapai Nawabganj Sadar,Chapainawabganj,Chapai Nawabganj-3,45,election,upazila
+Chapainawabganj Sadar,Chapainawabganj,,,geocode; humdata_pop; poverty,upazila
+Char Bhadrasan,Faridpur,,,humdata_pop; poverty,upazila
+Char Rajibpur,Kurigram,Kurigram-4,28,election; geocode; humdata_pop; poverty,upazila
+Charbhadrasan,Faridpur,Faridpur-4,214,election; geocode,upazila
+Charfasson,Bhola,Bhola-4,118,election; geocode; humdata_pop; poverty,upazila
+Charghat,Rajshahi,Rajshahi-6,57,election; geocode; humdata_pop; poverty,upazila
+Chatkhil,Noakhali,Noakhali-1,268,election; geocode; humdata_pop; poverty,upazila
+Chatmohar,Pabna,Pabna-3,70,election; geocode; humdata_pop; poverty,upazila
+Chauddagram,Cumilla,,,geocode; humdata_pop; poverty,upazila
+Chaugachha,Jashore,Jessore-2,86,election; geocode; humdata_pop; poverty,upazila
+Chauhali,Sirajganj,Sirajganj-5,66,election; geocode; humdata_pop,upazila
+Chawkbazar,Dhaka,,,poverty,thana
+Chhagalnaiya,Feni,Feni-1,265,election; geocode; humdata_pop; poverty,upazila
+Chhatak,Sunamganj,Sunamganj-5,228,election; geocode; humdata_pop; poverty,upazila
+Chilmari,Kurigram,Kurigram-4,28,election; geocode; humdata_pop; poverty,upazila
+Chirirbandar,Dinajpur,Dinajpur-4,9,election; geocode; humdata_pop; poverty,upazila
+Chitalmari,Bagerhat,Bagerhat-1,95,election; geocode; humdata_pop; poverty,upazila
+Chittagong City Corporation (Wards 11-14),Chattogram,Chattogram-5,282,election,upazila
+Chittagong City Corporation (Wards 11-14),Chattogram,Chattogram-8,285,election,upazila
+Chittagong City Corporation (Wards 11-14),Chattogram,Chattogram-9,286,election,upazila
+Chittagong City Corporation (Wards 11-14),Cumilla,Comilla-10,258,election,upazila
+Chittagong City Corporation (Wards 11-14),Cumilla,Comilla-11,259,election,upazila
+Chittagong Port,Chattogram,,,humdata_pop; poverty,thana
+Chouhali,Sirajganj,,,poverty,upazila
+Chuadanga Sadar,Chuadanga,Chuadanga-1,79,election; geocode; humdata_pop; poverty,upazila
+Chunarughat,Habiganj,Habiganj-4,242,election; geocode; humdata_pop; poverty,upazila
+Comilla City Corporation,Cumilla,Comilla-6,254,election,upazila
+Comilla Sadar,Cumilla,Comilla-5,253,election; geocode; humdata_pop; poverty,upazila
+Comilla Sadar,Cumilla,Comilla-6,254,election; geocode; humdata_pop; poverty,upazila
+Comilla Sadar Dakshin,Cumilla,,,geocode; humdata_pop; poverty,upazila
+Companiganj,Noakhali,Noakhali-5,272,election; geocode; humdata_pop; poverty,upazila
+Cox's Bazar Sadar,Cox's Bazar,Coxs Bazar-3,296,election; geocode; humdata_pop; poverty,upazila
+DNCC Wards 1,Dhaka,Dhaka-17,190,election,upazila
+DNCC Wards 13,Dhaka,Dhaka-15,188,election,upazila
+DNCC Wards 19,Dhaka,Dhaka-11,184,election,upazila
+DNCC Wards 25,Dhaka,Dhaka-12,185,election,upazila
+DNCC Wards 29,Dhaka,Dhaka-13,186,election,upazila
+DNCC Wards 36,Dhaka,Dhaka-18,191,election,upazila
+DNCC Wards 4,Dhaka,Dhaka-16,189,election,upazila
+DNCC Wards 7,Dhaka,Dhaka-14,187,election,upazila
+DSCC Wards 1,Dhaka,Dhaka-7,180,election,upazila
+DSCC Wards 14,Dhaka,Dhaka-8,181,election,upazila
+DSCC Wards 24,Dhaka,Dhaka-9,182,election,upazila
+DSCC Wards 29,Dhaka,Dhaka-10,183,election,upazila
+DSCC Wards 33,Dhaka,Dhaka-6,179,election,upazila
+DSCC Wards 47,Dhaka,Dhaka-4,177,election,upazila
+DSCC Wards 58,Dhaka,Dhaka-5,178,election,upazila
+Dacope,Khulna,Khulna-1,99,election; geocode; humdata_pop; poverty,upazila
+Daganbhuiyan,Feni,Feni-3,267,election; geocode; humdata_pop; poverty,upazila
+Dakshin Sunamganj,Sunamganj,,,humdata_pop,upazila
+Dakshin Surma,Sylhet,Sylhet-3,231,election; geocode; humdata_pop; poverty,upazila
+Dakshinkhan,Dhaka,,,humdata_pop; poverty,thana
+Damudya,Shariatpur,Shariatpur-2,222,election; geocode; humdata_pop; poverty,upazila
+Damurhuda,Chuadanga,Chuadanga-2,80,election; geocode; humdata_pop; poverty,upazila
+Darussalam,Dhaka,,,humdata_pop; poverty,thana
+Dasar,Madaripur,Madaripur-3,220,election; geocode; poverty,upazila
+Dashmina,Patuakhali,Patuakhali-3,113,election; geocode; humdata_pop; poverty,upazila
+Daudkandi,Cumilla,Comilla-1,249,election; geocode; humdata_pop; poverty,upazila
+Daulatkhan,Bhola,Bhola-2,116,election; geocode; humdata_pop; poverty,upazila
+Daulatpur,Kushtia,Kushtia-1,75,election; geocode; humdata_pop; poverty,upazila
+Daulatpur,Manikganj,Manikganj-1,168,election; geocode; humdata_pop; poverty,upazila
+Debhata,Satkhira,Satkhira-3,107,election; geocode; humdata_pop; poverty,upazila
+Debidwar,Cumilla,,,geocode; humdata_pop; poverty,upazila
+Debiganj,Panchagarh,Panchagarh-2,002,election; geocode; humdata_pop; poverty,upazila
+Delduar,Tangail,Tangail-6,135,election; geocode; humdata_pop; poverty,upazila
+Demra,Dhaka,,,humdata_pop; poverty,thana
+Derai,Sunamganj,Sunamganj-2,225,election; geocode; humdata_pop; poverty,upazila
+Dewanganj,Jamalpur,Jamalpur-1,138,election; geocode; humdata_pop; poverty,upazila
+Dhamoirhat,Naogaon,Naogaon-2,47,election; geocode; humdata_pop; poverty,upazila
+Dhamrai,Dhaka,Dhaka-20,193,election; geocode; humdata_pop; poverty,upazila
+Dhanbari,Tangail,Tangail-1,130,election; geocode; humdata_pop; poverty,upazila
+Dhanmondi,Dhaka,,,humdata_pop; poverty,upazila
+Dharmapasha,Sunamganj,Sunamganj-1,224,election; geocode; humdata_pop; poverty,upazila
+Dhobaura,Mymensingh,Mymensingh-1,146,election; geocode; humdata_pop; poverty,upazila
+Dhunat,Bogura,Bogra-5,40,election; geocode; humdata_pop; poverty,upazila
+Dhupchanchia,Bogura,,,humdata_pop; poverty,upazila
+Dighalia,Khulna,Khulna-3,101,election; geocode; humdata_pop; poverty,upazila
+Dighalia,Khulna,Khulna-4,102,election; geocode; humdata_pop; poverty,upazila
+Dighinala,Khagrachhari,Khagrachhari-1,298,election; geocode; humdata_pop; poverty,upazila
+Dimla,Nilphamari,Nilphamari-1,12,election; geocode; humdata_pop; poverty,upazila
+Dinajpur Sadar,Dinajpur,Dinajpur-3,8,election; geocode; humdata_pop; poverty,upazila
+Dohar,Dhaka,Dhaka-1,174,election; geocode; humdata_pop; poverty,upazila
+Domar,Nilphamari,Nilphamari-1,12,election; geocode; humdata_pop; poverty,upazila
+Double Mooring,Chattogram,,,humdata_pop; poverty,thana
+Dowarabazar,Sunamganj,Sunamganj-5,228,election; geocode; humdata_pop; poverty,upazila
+Dumki,Patuakhali,Patuakhali-1,111,election; geocode; humdata_pop; poverty,upazila
+Dumuria,Khulna,Khulna-5,103,election; geocode; humdata_pop; poverty,upazila
+Dupchanchia,Bogura,Bogra-3,38,election; geocode,upazila
+Durgapur,Rajshahi,Rajshahi-5,56,election; geocode; humdata_pop; poverty,upazila
+Durgapur,Netrakona,Netrokona-1,157,election; geocode; humdata_pop; poverty,upazila
+EPZ,Chattogram,,,poverty,thana
+Eidgaon,Coxsbazar,,,geocode; poverty,upazila
+Fakirhat,Bagerhat,Bagerhat-1,95,election; geocode; humdata_pop; poverty,upazila
+Faridganj,Chandpur,Chandpur-4,263,election; geocode; humdata_pop; poverty,upazila
+Faridpur Sadar,Pabna,Pabna-3,70,election; geocode; humdata_pop; poverty,upazila
+Faridpur Sadar,Faridpur,Faridpur-3,213,election; geocode; humdata_pop; poverty,upazila
+Fatikchhari,Chattogram,,,geocode; humdata_pop; poverty,upazila
+Fenchuganj,Sylhet,Sylhet-3,231,election; geocode; humdata_pop; poverty,upazila
+Feni Sadar,Feni,Feni-2,266,election; geocode; humdata_pop; poverty,upazila
+Fulbaria,Mymensingh,Mymensingh-6,151,election; geocode; humdata_pop; poverty,upazila
+Fulchhari,Gaibandha,Gaibandha-5,33,election; geocode; humdata_pop; poverty,upazila
+Fulgazi,Feni,Feni-1,265,election; geocode; humdata_pop; poverty,upazila
+Gabtali,Bogura,Bogra-7,42,election; geocode; humdata_pop; poverty,upazila
+Gachha,Gazipur,,,poverty,upazila
+Gaffargaon,Mymensingh,Mymensingh-10,155,election; geocode; humdata_pop; poverty,upazila
+Gaibandha Sadar,Gaibandha,Gaibandha-2,30,election; geocode; humdata_pop; poverty,upazila
+Galachipa,Patuakhali,Patuakhali-3,113,election; geocode; humdata_pop; poverty,upazila
+Gangachara,Rangpur,Rangpur-1,19,election; geocode; humdata_pop; poverty,upazila
+Gangni,Meherpur,Meherpur-2,74,election; geocode; humdata_pop; poverty,upazila
+Gauripur,Mymensingh,Mymensingh-3,148,election; geocode; humdata_pop; poverty,upazila
+Gaurnadi,Barishal,,,humdata_pop; poverty,upazila
+Gazaria,Munshiganj,Munshiganj-3,173,election; geocode; humdata_pop; poverty,upazila
+Gazipur City Corporation (Wards 1-18),Gazipur,Gazipur-1,194,election,upazila
+Gazipur City Corporation (Wards 1-18),Gazipur,Gazipur-5,198,election,upazila
+Gazipur City Corporation (Wards 19-38,Gazipur,Gazipur-2,195,election,upazila
+Gazipur Sadar,Gazipur,Gazipur-5,198,election; geocode; humdata_pop; poverty,upazila
+Gendaria,Dhaka,,,humdata_pop; poverty,thana
+Ghatail,Tangail,Tangail-3,132,election; geocode; humdata_pop; poverty,upazila
+Ghior,Manikganj,Manikganj-1,168,election; geocode; humdata_pop; poverty,upazila
+Ghoraghat,Dinajpur,Dinajpur-6,11,election; geocode; humdata_pop; poverty,upazila
+Goalandaghat,Rajbari,Rajbari-1,209,election; geocode; humdata_pop; poverty,upazila
+Gobindaganj,Gaibandha,Gaibandha-4,32,election; geocode; humdata_pop; poverty,upazila
+Godagari,Rajshahi,Rajshahi-1,52,election; geocode; humdata_pop; poverty,upazila
+Golabganj,Sylhet,Sylhet-6,234,election; geocode; humdata_pop; poverty,upazila
+Gomastapur,Chapainawabganj,Chapai Nawabganj-2,44,election; geocode; humdata_pop; poverty,upazila
+Gopalganj Sadar,Gopalganj,Gopalganj-2,216,election; geocode; humdata_pop; poverty,upazila
+Gopalpur,Tangail,Tangail-2,131,election; geocode; humdata_pop; poverty,upazila
+Gosairhat,Shariatpur,Shariatpur-2,222,election; geocode; humdata_pop; poverty,upazila
+Gournadi,Barishal,Barishal-1,119,election; geocode,upazila
+Gowainghat,Sylhet,Sylhet-4,232,election; geocode; humdata_pop; poverty,upazila
+Guimara,Khagrachhari,,,geocode; poverty,upazila
+Gulshan,Dhaka,,,humdata_pop; poverty,thana
+Gurudaspur,Natore,Natore-4,61,election; geocode; humdata_pop; poverty,upazila
+Habiganj Sadar,Habiganj,Habiganj-3,241,election; geocode; humdata_pop; poverty,upazila
+Haimchar,Chandpur,Chandpur-3,262,election; geocode; humdata_pop; poverty,upazila
+Hajiganj,Chandpur,Chandpur-5,264,election; geocode; humdata_pop; poverty,upazila
+Hajirhat,Rangpur,,,poverty,upazila
+Hakimpur,Dinajpur,Dinajpur-6,11,election; geocode; humdata_pop; poverty,upazila
+Halishahar,Chattogram,,,humdata_pop; poverty,thana
+Haluaghat,Mymensingh,Mymensingh-1,146,election; geocode; humdata_pop; poverty,upazila
+Haragachh,Rangpur,,,poverty,upazila
+Harinakunda,Jhenaidah,Jhenaidah-2,82,election; geocode; humdata_pop; poverty,upazila
+Haripur,Thakurgaon,Thakurgaon-2,4,election; geocode; humdata_pop; poverty,upazila
+Harirampur,Manikganj,Manikganj-2,169,election; geocode; humdata_pop; poverty,upazila
+Hathazari,Chattogram,Chattogram-5,282,election; geocode; humdata_pop; poverty,upazila
+Hatibandha,Lalmonirhat,Lalmonirhat-1,16,election; geocode; humdata_pop; poverty,upazila
+Hatirjheel,Dhaka,,,poverty,thana
+Hatiya,Noakhali,Noakhali-5,272,election; geocode; humdata_pop; poverty,upazila
+Hazaribagh,Dhaka,,,humdata_pop; poverty,thana
+Hizla,Barishal,Barishal-4,122,election; geocode; humdata_pop; poverty,upazila
+Homna,Cumilla,Comilla-2,250,election; geocode; humdata_pop; poverty,upazila
+Hossainpur,Kishoreganj,Kishoreganj-1,162,election; geocode; humdata_pop; poverty,upazila
+Indurkani,Pirojpur,Pirojpur-2,128,election; poverty,upazila
+Ishwardi,Pabna,Pabna-4,71,election; geocode; humdata_pop; poverty,upazila
+Ishwarganj,Mymensingh,Mymensingh-8,153,election; geocode; humdata_pop; poverty,upazila
+Islampur,Jamalpur,Jamalpur-1,138,election; geocode; humdata_pop; poverty,upazila
+Itna,Kishoreganj,Kishoreganj-4,165,election; geocode; humdata_pop; poverty,upazila
+Jagannathpur,Sunamganj,Sunamganj-3,226,election; geocode; humdata_pop; poverty,upazila
+Jaintiapur,Sylhet,Sylhet-4,232,election; geocode; humdata_pop; poverty,upazila
+Jalalabad,Sylhet,,,poverty,upazila
+Jaldhaka,Nilphamari,Nilphamari-3,14,election; geocode; humdata_pop; poverty,upazila
+Jamalganj,Sunamganj,Sunamganj-1,224,election; geocode; humdata_pop; poverty,upazila
+Jamalpur Sadar,Jamalpur,Jamalpur-5,142,election; geocode; humdata_pop; poverty,upazila
+Jashore Sadar,Jashore,,,poverty,upazila
+Jatrabari,Dhaka,,,humdata_pop; poverty,thana
+Jessore Sadar,Jashore,Jessore-3,87,election; geocode,upazila
+Jhalokati Sadar,Jhalakathi,Jhalakathi-2,126,election; geocode; humdata_pop; poverty,upazila
+Jhenaidah Sadar,Jhenaidah,Jhenaidah-2,82,election; geocode; humdata_pop; poverty,upazila
+Jhenaigati,Sherpur,Sherpur-3,145,election; geocode; humdata_pop; poverty,upazila
+Jhikargachha,Jashore,,,geocode; humdata_pop; poverty,upazila
+Jibannagar,Chuadanga,Chuadanga-2,80,election; geocode; humdata_pop; poverty,upazila
+Joypurhat Sadar,Joypurhat,Joypurhat-1,34,election; geocode; humdata_pop; poverty,upazila
+Jurai Chhari,Rangamati,Rangamati-1,299,election; humdata_pop; poverty,upazila
+Juraichari,Rangamati,,,geocode,upazila
+Juri,Moulvibazar,Moulvibazar-1,235,election; geocode; humdata_pop; poverty,upazila
+Kabirhat,Noakhali,Noakhali-6,273,election; geocode; humdata_pop; poverty,upazila
+Kachua,Bagerhat,Bagerhat-2,96,election; geocode; humdata_pop; poverty,upazila
+Kachua,Chandpur,Chandpur-1,260,election; geocode; humdata_pop; poverty,upazila
+Kadamtali,Dhaka,,,humdata_pop; poverty,thana
+Kafrul,Dhaka,,,humdata_pop; poverty,thana
+Kahaloo,Bogura,Bogra-4,39,election; geocode; humdata_pop; poverty,upazila
+Kaharole,Dinajpur,Dinajpur-1,6,election; geocode; humdata_pop; poverty,upazila
+Kala Para,Patuakhali,Patuakhali-4,114,election; geocode; humdata_pop; poverty,upazila
+Kalabagan,Dhaka,,,humdata_pop; poverty,thana
+Kalai,Joypurhat,Joypurhat-2,35,election; geocode; humdata_pop; poverty,upazila
+Kalaroa,Satkhira,Satkhira-1,105,election; geocode; humdata_pop; poverty,upazila
+Kalia,Narail,Narail-1,93,election; geocode; humdata_pop; poverty,upazila
+Kaliakair,Gazipur,Gazipur-1,194,election; geocode; humdata_pop; poverty,upazila
+Kaliganj,Lalmonirhat,Lalmonirhat-2,17,election; geocode; humdata_pop; poverty,upazila
+Kaliganj,Jhenaidah,Jhenaidah-4,84,election; geocode; humdata_pop; poverty,upazila
+Kaliganj,Satkhira,Satkhira-4,108,election; geocode; humdata_pop; poverty,upazila
+Kaliganj,Gazipur,Gazipur-4,197,election; geocode; humdata_pop; poverty,upazila
+Kalihati,Tangail,Tangail-4,133,election; geocode; humdata_pop; poverty,upazila
+Kalkini,Madaripur,Madaripur-3,220,election; geocode; humdata_pop; poverty,upazila
+Kalmakanda,Netrakona,Netrokona-1,157,election; geocode; humdata_pop; poverty,upazila
+Kalukhali,Rajbari,Rajbari-2,210,election; geocode; humdata_pop; poverty,upazila
+Kamalganj,Moulvibazar,Moulvibazar-4,238,election; geocode; humdata_pop; poverty,upazila
+Kamalnagar,Lakshmipur,Lakshmipur-4,277,election; geocode; humdata_pop; poverty,upazila
+Kamarkhanda,Sirajganj,Sirajganj-2,63,election; geocode; humdata_pop; poverty,upazila
+Kamrangichar,Dhaka,,,humdata_pop; poverty,upazila
+Kanaighat,Sylhet,Sylhet-4,232,election; geocode; humdata_pop; poverty,upazila
+Kanthalia,Jhalokati,,,humdata_pop; poverty,upazila
+Kapasia,Gazipur,Gazipur-3,196,election; geocode; humdata_pop; poverty,upazila
+Kaptai,Rangamati,Rangamati-1,299,election; geocode; humdata_pop; poverty,upazila
+Karimganj,Kishoreganj,Kishoreganj-3,164,election; geocode; humdata_pop; poverty,upazila
+Karnaphuli,Chattogram,Chattogram-13,290,election; geocode; poverty,upazila
+Kasba,Brahmanbaria,Brahmanbaria-4,246,election; geocode; humdata_pop; poverty,upazila
+Kashiadanga,Rajshahi,,,poverty,upazila
+Kashiani,Gopalganj,Gopalganj-1,215,election; geocode; humdata_pop; poverty,upazila
+Kashimpur,Gazipur,,,poverty,upazila
+Kathalia,Jhalakathi,Jhalakathi-1,125,election; geocode,upazila
+Katiadi,Kishoreganj,Kishoreganj-2,163,election; geocode; humdata_pop; poverty,upazila
+Kaunia,Rangpur,Rangpur-4,22,election; geocode; humdata_pop; poverty,upazila
+Kawkhali,Pirojpur,Pirojpur-2,128,election; geocode; humdata_pop; poverty,upazila
+Kawkhali,Rangamati,Rangamati-1,299,election; geocode; humdata_pop; poverty,upazila
+Kazipur,Sirajganj,Sirajganj-1,62,election; geocode; humdata_pop; poverty,upazila
+Kendua,Netrakona,Netrokona-3,159,election; geocode; humdata_pop; poverty,upazila
+Keraniganj,Dhaka,Dhaka-2,175,election; geocode; humdata_pop; poverty,upazila
+Keraniganj,Dhaka,Dhaka-3,176,election; geocode; humdata_pop; poverty,upazila
+Keshabpur,Jashore,Jessore-6,90,election; geocode; humdata_pop; poverty,upazila
+Khagrachhari Sadar,Khagrachhari,Khagrachhari-1,298,election; geocode; humdata_pop; poverty,upazila
+Khaliajuri,Netrakona,Netrokona-4,160,election; geocode; humdata_pop; poverty,upazila
+Khalishpur,Khulna,,,humdata_pop; poverty,thana
+Khan Jahan Ali,Khulna,,,humdata_pop; poverty,thana
+Khanjahan Ali Police Station Area,Khulna,Khulna-3,101,election,upazila
+Khansama,Dinajpur,Dinajpur-4,9,election; geocode; humdata_pop; poverty,upazila
+Khetlal,Joypurhat,Joypurhat-2,35,election; geocode; humdata_pop; poverty,upazila
+Khilgaon,Dhaka,,,humdata_pop; poverty,thana
+Khilkhet,Dhaka,,,humdata_pop; poverty,thana
+Khoksa,Kushtia,Kushtia-4,78,election; geocode; humdata_pop; poverty,upazila
+Khulna City Corporation (Wards 1-8,Khulna,Khulna-3,101,election,upazila
+Khulna City Corporation (Wards 9-14,Khulna,Khulna-2,100,election,upazila
+Khulna Sadar,Khulna,,,humdata_pop; poverty,upazila
+Khulshi,Chattogram,,,humdata_pop; poverty,thana
+Kishoreganj,Nilphamari,Nilphamari-4,15,election; geocode; humdata_pop; poverty,upazila
+Kishoreganj Sadar,Kishoreganj,Kishoreganj-1,162,election; geocode; humdata_pop; poverty,upazila
+Konabari,Gazipur,,,poverty,thana
+Kotalipara,Gopalganj,Gopalganj-2,216,election; geocode; humdata_pop; poverty,upazila
+Kotalipara,Gopalganj,Gopalganj-3,217,election; geocode; humdata_pop; poverty,upazila
+Kotchandpur,Jhenaidah,Jhenaidah-3,83,election; geocode; humdata_pop; poverty,upazila
+Kotwali,Chattogram,,,humdata_pop; poverty,thana
+Koyra,Khulna,Khulna-6,104,election; geocode; humdata_pop; poverty,upazila
+Kulaura,Moulvibazar,Moulvibazar-2,236,election; geocode; humdata_pop; poverty,upazila
+Kuliarchar,Kishoreganj,Kishoreganj-5,166,election; geocode; humdata_pop; poverty,upazila
+Kumarkhali,Kushtia,Kushtia-4,78,election; geocode; humdata_pop; poverty,upazila
+Kurigram Sadar,Kurigram,Kurigram-2,26,election; geocode; humdata_pop; poverty,upazila
+Kushtia Sadar,Kushtia,Kushtia-3,77,election; geocode; humdata_pop; poverty,upazila
+Kutubdia,Cox's Bazar,Coxs Bazar-2,295,election; geocode; humdata_pop; poverty,upazila
+Lakhai,Habiganj,,,geocode; humdata_pop; poverty,upazila
+Laksam,Cumilla,Comilla-9,257,election; geocode; humdata_pop; poverty,upazila
+Lakshmichhari,Khagrachhari,,,geocode; humdata_pop; poverty,upazila
+Lakshmipur Sadar,Lakshmipur,Lakshmipur-2,275,election; geocode; humdata_pop; poverty,upazila
+Lakshmipur Sadar,Lakshmipur,Lakshmipur-3,276,election; geocode; humdata_pop; poverty,upazila
+Lalbagh,Dhaka,,,humdata_pop; poverty,thana
+Lalmai,Cumilla,,,geocode; poverty,upazila
+Lalmohan,Bhola,Bhola-3,117,election; geocode; humdata_pop; poverty,upazila
+Lalmonirhat Sadar,Lalmonirhat,Lalmonirhat-3,18,election; geocode; humdata_pop; poverty,upazila
+Lalpur,Natore,Natore-1,58,election; geocode; humdata_pop; poverty,upazila
+Lama,Bandarban,Bandarban-1,300,election; geocode; humdata_pop; poverty,upazila
+Langadu,Rangamati,Rangamati-1,299,election; geocode; humdata_pop; poverty,upazila
+Lohagara,Narail,Narail-2,94,election; geocode; humdata_pop; poverty,upazila
+Lohagara,Chattogram,Chattogram-15,292,election; geocode; humdata_pop; poverty,upazila
+Lohajang,Munshiganj,Munshiganj-2,172,election; geocode; humdata_pop; poverty,upazila
+Madan,Netrakona,Netrokona-4,160,election; geocode; humdata_pop; poverty,upazila
+Madarganj,Jamalpur,Jamalpur-4,141,election; geocode; humdata_pop; poverty,upazila
+Madaripur Sadar,Madaripur,Madaripur-2,219,election; geocode; humdata_pop; poverty,upazila
+Madhabpur,Habiganj,Habiganj-4,242,election; geocode; humdata_pop; poverty,upazila
+Madhukhali,Faridpur,Faridpur-1,211,election; geocode; humdata_pop; poverty,upazila
+Madhupur,Tangail,Tangail-1,130,election; geocode; humdata_pop; poverty,upazila
+Madhyanagar,Sunamganj,,,geocode; poverty,thana
+Magura Sadar,Magura,Magura-1,91,election; geocode; humdata_pop; poverty,upazila
+Magura Sadar,Magura,Magura-2,92,election; geocode; humdata_pop; poverty,upazila
+Mahadebpur,Naogaon,Naogaon-3,48,election; geocode; humdata_pop; poverty,upazila
+Mahalchhari,Khagrachhari,Khagrachhari-1,298,election; geocode; humdata_pop; poverty,upazila
+Maheshkhali,Cox's Bazar,Coxs Bazar-2,295,election; geocode; humdata_pop; poverty,upazila
+Maheshpur,Jhenaidah,,,humdata_pop; poverty,upazila
+Mahiganj,Rangpur,,,poverty,thana
+Manda,Naogaon,Naogaon-4,49,election; geocode; humdata_pop; poverty,upazila
+Manikchhari,Khagrachhari,Khagrachhari-1,298,election; geocode; humdata_pop; poverty,upazila
+Manikganj Sadar,Manikganj,Manikganj-3,170,election; geocode; humdata_pop; poverty,upazila
+Manirampur,Jashore,Jessore-2,86,election; geocode; humdata_pop; poverty,upazila
+Manirampur,Jashore,Jessore-5,89,election; geocode; humdata_pop; poverty,upazila
+Manohardi,Narsingdi,,,humdata_pop; poverty,upazila
+Manoharganj,Cumilla,Comilla-9,257,election; geocode; humdata_pop; poverty,upazila
+Manpura,Bhola,Bhola-4,118,election; geocode; humdata_pop; poverty,upazila
+Mathbaria,Pirojpur,Pirojpur-3,129,election; geocode; humdata_pop; poverty,upazila
+Matihar,Rajshahi,,,humdata_pop; poverty,thana
+Matiranga,Khagrachhari,Khagrachhari-1,298,election; geocode; humdata_pop; poverty,upazila
+Matlab Dakkhin,Chandpur,,,poverty,upazila
+Matlab Dakshin,Chandpur,,,humdata_pop,upazila
+Matlab North,Chandpur,Chandpur-2,261,election; geocode,upazila
+Matlab South,Chandpur,Chandpur-2,261,election; geocode,upazila
+Matlab Uttar,Chandpur,,,humdata_pop; poverty,upazila
+Meghna,Cumilla,Comilla-1,249,election; geocode; humdata_pop; poverty,upazila
+Mehendiganj,Barishal,Barishal-4,122,election; geocode; humdata_pop; poverty,upazila
+Meherpur Sadar,Meherpur,Meherpur-1,73,election; geocode; humdata_pop; poverty,upazila
+Melandah,Jamalpur,Jamalpur-2,139,election; geocode,upazila
+Melandaha,Jamalpur,,,humdata_pop; poverty,upazila
+Mirpur,Kushtia,Kushtia-2,76,election; geocode; humdata_pop; poverty,upazila
+Mirsharai,Chattogram,Chattogram-1,278,election; geocode; humdata_pop; poverty,upazila
+Mirzaganj,Patuakhali,Patuakhali-1,111,election; geocode; humdata_pop; poverty,upazila
+Mirzapur,Tangail,Tangail-7,136,election; geocode; humdata_pop; poverty,upazila
+Mitha Pukur,Rangpur,,,humdata_pop,upazila
+Mithamain,Kishoreganj,Kishoreganj-4,165,election; geocode; humdata_pop; poverty,upazila
+Mithapukur,Rangpur,Rangpur-5,23,election; geocode; poverty,upazila
+Moglabazar,Sylhet,,,poverty,upazila
+Mohammadpur,Magura,Magura-2,92,election; geocode; humdata_pop; poverty,upazila
+Mohanganj,Netrakona,Netrokona-4,160,election; geocode; humdata_pop; poverty,upazila
+Mohanpur,Rajshahi,Rajshahi-3,54,election; geocode; humdata_pop; poverty,upazila
+Moheshpur,Jhenaidah,Jhenaidah-3,83,election; geocode,upazila
+Mollahat,Bagerhat,Bagerhat-1,95,election; geocode; humdata_pop; poverty,upazila
+Mongla,Bagerhat,Bagerhat-3,97,election; geocode; humdata_pop; poverty,upazila
+Monohardi,Narsingdi,Narsingdi-2,200,election; geocode,upazila
+Morrelganj,Bagerhat,Bagerhat-4,98,election; geocode; humdata_pop; poverty,upazila
+Motijheel,Dhaka,,,humdata_pop; poverty,thana
+Moulvibazar Sadar,Moulvibazar,Moulvibazar-3,237,election; geocode; humdata_pop; poverty,upazila
+Mugda,Dhaka,,,poverty,thana
+Mujibnagar,Meherpur,Meherpur-1,73,election; geocode; humdata_pop; poverty,upazila
+Muksudpur,Gopalganj,Gopalganj-1,215,election; geocode; humdata_pop; poverty,upazila
+Muktagachha,Mymensingh,Mymensingh-5,150,election; geocode; humdata_pop; poverty,upazila
+Muladi,Barishal,Barishal-3,121,election; geocode; humdata_pop; poverty,upazila
+Munshiganj Sadar,Munshiganj,Munshiganj-3,173,election; geocode; humdata_pop; poverty,upazila
+Muradnagar,Cumilla,Comilla-3,251,election; geocode; humdata_pop; poverty,upazila
+Mymensingh City Corporation,Mymensingh,Mymensingh-4,149,election,upazila
+Mymensingh Sadar,Mymensingh,Mymensingh-4,149,election; geocode; humdata_pop; poverty,upazila
+Nabiganj,Habiganj,Habiganj-1,239,election; geocode; humdata_pop; poverty,upazila
+Nabinagar,Brahmanbaria,Brahmanbaria-5,247,election; geocode; humdata_pop; poverty,upazila
+Nachole,Chapainawabganj,Chapai Nawabganj-2,44,election; geocode; humdata_pop; poverty,upazila
+Nagarkanda,Faridpur,Faridpur-2,212,election; geocode; humdata_pop; poverty,upazila
+Nagarpur,Tangail,Tangail-6,135,election; geocode; humdata_pop; poverty,upazila
+Nageshwari,Kurigram,Kurigram-1,25,election; geocode; humdata_pop; poverty,upazila
+Naikhongchhari,Bandarban,Bandarban-1,300,election; geocode; humdata_pop; poverty,upazila
+Nakla,Sherpur,Sherpur-2,144,election; geocode; humdata_pop; poverty,upazila
+Nalchity,Jhalakathi,Jhalakathi-2,126,election; geocode; humdata_pop; poverty,upazila
+Naldanga,Natore,Natore-2,59,election; geocode; poverty,upazila
+Nalitabari,Sherpur,Sherpur-2,144,election; geocode; humdata_pop; poverty,upazila
+Nandail,Mymensingh,Mymensingh-9,154,election; geocode; humdata_pop; poverty,upazila
+Nandigram,Bogura,Bogra-4,39,election; geocode; humdata_pop; poverty,upazila
+Nangalkot,Cumilla,,,geocode; humdata_pop; poverty,upazila
+Naniarchar,Rangamati,Rangamati-1,299,election; geocode; humdata_pop; poverty,upazila
+Naogaon Sadar,Naogaon,Naogaon-5,50,election; geocode; humdata_pop; poverty,upazila
+Narail Sadar,Narail,Narail-1,93,election; geocode; humdata_pop; poverty,upazila
+Narail Sadar,Narail,Narail-2,94,election; geocode; humdata_pop; poverty,upazila
+Narayanganj City Corporation (Wards 1-18),Narayanganj,Narayanganj-4,207,election,upazila
+Narayanganj City Corporation (Wards 1-18),Narayanganj,Narayanganj-5,208,election,upazila
+Narayanganj Sadar,Narayanganj,Narayanganj-4,207,election; geocode; humdata_pop; poverty,upazila
+Narayanganj Sadar,Narayanganj,Narayanganj-5,208,election; geocode; humdata_pop; poverty,upazila
+Naria,Shariatpur,,,geocode; humdata_pop; poverty,upazila
+Narsingdi Sadar,Narsingdi,Narsingdi-1,199,election; geocode; humdata_pop; poverty,upazila
+Narsingdi Sadar,Narsingdi,Narsingdi-5,203,election; geocode; humdata_pop; poverty,upazila
+Nasirnagar,Brahmanbaria,Brahmanbaria-1,243,election; geocode; humdata_pop; poverty,upazila
+Natore Sadar,Natore,Natore-2,59,election; geocode; humdata_pop; poverty,upazila
+Nawabganj,Dinajpur,Dinajpur-6,11,election; geocode; humdata_pop; poverty,upazila
+Nawabganj,Dhaka,Dhaka-1,174,election; geocode; humdata_pop; poverty,upazila
+Nazirpur,Pirojpur,,,geocode; humdata_pop; poverty,upazila
+Nesarabad (Swarupkati),Pirojpur,Pirojpur-1,127,election; geocode; humdata_pop; poverty,upazila
+Netrokona Sadar,Netrakona,Netrokona-2,158,election; geocode; humdata_pop; poverty,upazila
+New Market,Dhaka,,,humdata_pop; poverty,thana
+Niamatpur,Naogaon,Naogaon-1,46,election; geocode; humdata_pop; poverty,upazila
+Nikli,Kishoreganj,,,geocode; humdata_pop; poverty,upazila
+Nilphamari Sadar,Nilphamari,Nilphamari-2,13,election; geocode; humdata_pop; poverty,upazila
+Noakhali Sadar,Noakhali,Noakhali-3,270,election; geocode; humdata_pop; poverty,upazila
+Noakhali Sadar,Noakhali,Noakhali-4,271,election; geocode; humdata_pop; poverty,upazila
+Osmaninagar,Sylhet,,,geocode; poverty,upazila
+Paba,Rajshahi,Rajshahi-3,54,election; geocode; humdata_pop; poverty,upazila
+Pabna Sadar,Pabna,Pabna-5,72,election; geocode; humdata_pop; poverty,upazila
+Pahartali,Chattogram,,,humdata_pop; poverty,thana
+Paikgachha,Khulna,Khulna-6,104,election; geocode; humdata_pop; poverty,upazila
+Pakundia,Kishoreganj,Kishoreganj-2,163,election; geocode; humdata_pop; poverty,upazila
+Palash,Narsingdi,Narsingdi-2,200,election; geocode; humdata_pop; poverty,upazila
+Palashbari,Gaibandha,Gaibandha-3,31,election; geocode; humdata_pop; poverty,upazila
+Pallabi,Dhaka,,,humdata_pop; poverty,thana
+Palong,Shariatpur,Shariatpur-1,221,election,upazila
+Paltan,Dhaka,,,humdata_pop; poverty,thana
+Panchagarh Sadar,Panchagarh,Panchagarh-1,001,election; geocode; humdata_pop; poverty,upazila
+Panchbibi,Joypurhat,Joypurhat-1,34,election; geocode; humdata_pop; poverty,upazila
+Panchhari,Khagrachhari,,,geocode; humdata_pop; poverty,upazila
+Panchlaish,Chattogram,,,humdata_pop; poverty,thana
+Pangsha,Rajbari,Rajbari-2,210,election; geocode; humdata_pop; poverty,upazila
+Parbatipur,Dinajpur,Dinajpur-5,10,election; geocode; humdata_pop; poverty,upazila
+Parshuram,Feni,Feni-1,265,election; geocode; humdata_pop; poverty,upazila
+Patenga,Chattogram,,,humdata_pop; poverty,thana
+Patgram,Lalmonirhat,Lalmonirhat-1,16,election; geocode; humdata_pop; poverty,upazila
+Patharghata,Barguna,Barguna-2,110,election; geocode; humdata_pop; poverty,upazila
+Patiya,Chattogram,Chattogram-12,289,election; geocode; humdata_pop; poverty,upazila
+Patnitala,Naogaon,Naogaon-2,47,election; geocode; humdata_pop; poverty,upazila
+Patuakhali Sadar,Patuakhali,Patuakhali-1,111,election; geocode; humdata_pop; poverty,upazila
+Pekua,Cox's Bazar,Coxs Bazar-1,294,election; geocode; humdata_pop; poverty,upazila
+Phulbari,Dinajpur,Dinajpur-5,10,election; geocode; humdata_pop; poverty,upazila
+Phulbari,Kurigram,Kurigram-2,26,election; geocode; humdata_pop; poverty,upazila
+Phulpur,Mymensingh,Mymensingh-2,147,election; geocode; humdata_pop; poverty,upazila
+Phultala,Khulna,Khulna-5,103,election; geocode; humdata_pop; poverty,upazila
+Pirgachha,Rangpur,Rangpur-4,22,election; geocode; humdata_pop; poverty,upazila
+Pirganj,Thakurgaon,Thakurgaon-3,5,election; geocode; humdata_pop; poverty,upazila
+Pirganj,Rangpur,Rangpur-6,24,election; geocode; humdata_pop; poverty,upazila
+Pirojpur Sadar,Pirojpur,Pirojpur-1,127,election; geocode; humdata_pop; poverty,upazila
+Porsha,Naogaon,Naogaon-1,46,election; geocode; humdata_pop; poverty,upazila
+Pubail,Gazipur,Gazipur-5,198,election; poverty,upazila
+Purbadhala,Netrakona,Netrokona-5,161,election; geocode; humdata_pop; poverty,upazila
+Puthia,Rajshahi,Rajshahi-5,56,election; geocode; humdata_pop; poverty,upazila
+Rajapur,Jhalakathi,Jhalakathi-1,125,election; geocode; humdata_pop; poverty,upazila
+Rajarhat,Kurigram,Kurigram-2,26,election; geocode; humdata_pop; poverty,upazila
+Rajasthali,Rangamati,Rangamati-1,299,election; geocode; humdata_pop; poverty,upazila
+Rajbari Sadar,Rajbari,Rajbari-1,209,election; geocode; humdata_pop; poverty,upazila
+Rajnagar,Moulvibazar,Moulvibazar-3,237,election; geocode; humdata_pop; poverty,upazila
+Rajoir,Madaripur,,,geocode; humdata_pop; poverty,upazila
+Rajpara,Rajshahi,,,humdata_pop; poverty,thana
+Rajshahi City Corporation,Rajshahi,Rajshahi-2,53,election,upazila
+Ramganj,Lakshmipur,Lakshmipur-1,274,election; geocode; humdata_pop; poverty,upazila
+Ramgarh,Khagrachhari,Khagrachhari-1,298,election; geocode; humdata_pop; poverty,upazila
+Ramgati,Lakshmipur,Lakshmipur-4,277,election; geocode; humdata_pop; poverty,upazila
+Ramna,Dhaka,,,humdata_pop; poverty,thana
+Rampal,Bagerhat,Bagerhat-3,97,election; geocode; humdata_pop; poverty,upazila
+Rampura,Dhaka,,,humdata_pop; poverty,thana
+Ramu,Cox's Bazar,Coxs Bazar-3,296,election; geocode; humdata_pop; poverty,upazila
+Rangabali,Patuakhali,Patuakhali-4,114,election; geocode; poverty,upazila
+Rangamati Sadar,Rangamati,Rangamati-1,299,election; geocode; humdata_pop; poverty,upazila
+Rangpur City Corporation (Wards 1-8),Rangpur,Rangpur-1,19,election,upazila
+Rangpur City Corporation (Wards 1-8),Rangpur,Rangpur-3,21,election,upazila
+Rangpur Sadar,Rangpur,Rangpur-3,21,election; geocode; humdata_pop; poverty,upazila
+Rangunia,Chattogram,Chattogram-7,284,election; geocode; humdata_pop; poverty,upazila
+Raninagar,Naogaon,Naogaon-6,51,election; geocode; humdata_pop; poverty,upazila
+Ranisankail,Thakurgaon,Thakurgaon-2,4,election; geocode; humdata_pop; poverty,upazila
+Ranisankail,Thakurgaon,Thakurgaon-3,5,election; geocode; humdata_pop; poverty,upazila
+Raozan,Chattogram,Chattogram-6,283,election; geocode; humdata_pop; poverty,upazila
+Raumari,Kurigram,,,humdata_pop; poverty,upazila
+Rowangchhari,Bandarban,Bandarban-1,300,election; geocode; humdata_pop; poverty,upazila
+Rowmari,Kurigram,Kurigram-4,28,election; geocode,upazila
+Royganj,Sirajganj,Sirajganj-3,64,election; geocode; humdata_pop; poverty,upazila
+Roypur,Lakshmipur,Lakshmipur-2,275,election; geocode; humdata_pop; poverty,upazila
+Roypura,Narsingdi,Narsingdi-4,202,election; geocode; humdata_pop; poverty,upazila
+Ruma,Bandarban,,,geocode; humdata_pop; poverty,upazila
+Rupganj,Narayanganj,Narayanganj-1,204,election; geocode; humdata_pop; poverty,upazila
+Rupnagar,Dhaka,,,poverty,thana
+Rupsa,Khulna,Khulna-4,102,election; geocode; humdata_pop; poverty,upazila
+Sabujbagh,Dhaka,,,humdata_pop; poverty,thana
+Sadarghat,Chattogram,,,poverty,thana
+Sadarpur,Faridpur,,,geocode; humdata_pop; poverty,upazila
+Sadullapur,Gaibandha,Gaibandha-3,31,election; geocode; humdata_pop; poverty,upazila
+Saghatta,Gaibandha,Gaibandha-5,33,election; geocode; humdata_pop; poverty,upazila
+Saidpur,Nilphamari,Nilphamari-4,15,election; geocode; humdata_pop; poverty,upazila
+Sakhipur,Tangail,Tangail-8,137,election; geocode; humdata_pop; poverty,upazila
+Saltha,Faridpur,Faridpur-2,212,election; geocode; humdata_pop; poverty,upazila
+Sandwip,Chattogram,Chattogram-3,280,election; geocode; humdata_pop; poverty,upazila
+Santhia,Pabna,Pabna-1,68,election; geocode; humdata_pop; poverty,upazila
+Sapahar,Naogaon,Naogaon-1,46,election; geocode; humdata_pop; poverty,upazila
+Sarail,Brahmanbaria,Brahmanbaria-2,244,election; geocode; humdata_pop; poverty,upazila
+Sarankhola,Bagerhat,Bagerhat-4,98,election; geocode; humdata_pop; poverty,upazila
+Sariakandi,Bogura,Bogra-1,36,election; geocode; humdata_pop; poverty,upazila
+Sarishabari,Jamalpur,Jamalpur-3,140,election; geocode; humdata_pop; poverty,upazila
+Satkania,Chattogram,Chattogram-14,291,election; geocode; humdata_pop; poverty,upazila
+Satkania,Chattogram,Chattogram-15,292,election; geocode; humdata_pop; poverty,upazila
+Satkhira Sadar,Satkhira,Satkhira-2,106,election; geocode; humdata_pop; poverty,upazila
+Saturia,Manikganj,Manikganj-3,170,election; geocode; humdata_pop; poverty,upazila
+Savar,Dhaka,Dhaka-2,175,election; geocode; humdata_pop; poverty,upazila
+Savar,Dhaka,Dhaka-19,192,election; geocode; humdata_pop; poverty,upazila
+Senbagh,Noakhali,Noakhali-2,269,election; geocode; humdata_pop; poverty,upazila
+Serajdikhan,Munshiganj,Munshiganj-1,171,election; geocode; humdata_pop; poverty,upazila
+Shah Ali,Dhaka,,,humdata_pop; poverty,thana
+Shah Makhdum,Rajshahi,,,humdata_pop; poverty,thana
+Shahbagh,Dhaka,,,humdata_pop; poverty,thana
+Shahjadpur,Sirajganj,Sirajganj-6,67,election; geocode; humdata_pop; poverty,upazila
+Shahparan,Sylhet,,,poverty,upazila
+Shahrasti,Chandpur,Chandpur-5,264,election; geocode; humdata_pop; poverty,upazila
+Shailkupa,Jhenaidah,Jhenaidah-1,81,election; geocode; humdata_pop; poverty,upazila
+Shajahanpur,Bogura,Bogra-7,42,election; geocode; humdata_pop; poverty,upazila
+Shalikha,Magura,Magura-1,91,election; geocode; humdata_pop; poverty,upazila
+Shantiganj,Sunamganj,,,poverty,upazila
+Shariatpur Sadar,Shariatpur,Shariatpur-1,221,election; geocode; humdata_pop; poverty,upazila
+Sharsha,Jashore,Jessore-1,85,election; geocode; humdata_pop; poverty,upazila
+Shayestaganj,Habiganj,Habiganj-3,241,election; poverty,upazila
+Sher-E-Bangla Nagar,Dhaka,,,humdata_pop; poverty,thana
+Sherpur,Bogura,Bogra-5,40,election; geocode; humdata_pop; poverty,upazila
+Sherpur Sadar,Sherpur,Sherpur-1,143,election; geocode; humdata_pop; poverty,upazila
+Shib Char,Madaripur,Madaripur-1,218,election; geocode; humdata_pop; poverty,upazila
+Shibalaya,Manikganj,Manikganj-1,168,election; geocode; humdata_pop; poverty,upazila
+Shibganj,Bogura,Bogra-2,37,election; geocode; humdata_pop; poverty,upazila
+Shibganj,Chapainawabganj,Chapai Nawabganj-1,43,election; geocode; humdata_pop; poverty,upazila
+Shibpur,Narsingdi,Narsingdi-3,201,election; geocode; humdata_pop; poverty,upazila
+Shibpur,Narsingdi,Narsingdi-5,203,election; geocode; humdata_pop; poverty,upazila
+Shyamnagar,Satkhira,Satkhira-3,107,election; geocode; humdata_pop; poverty,upazila
+Shyamnagar,Satkhira,Satkhira-4,108,election; geocode; humdata_pop; poverty,upazila
+Shyampur,Dhaka,,,humdata_pop; poverty,thana
+Singair,Manikganj,Manikganj-2,169,election; geocode; humdata_pop; poverty,upazila
+Singra,Natore,Natore-3,60,election; geocode; humdata_pop; poverty,upazila
+Sirajganj Sadar,Sirajganj,Sirajganj-1,62,election; geocode; humdata_pop; poverty,upazila
+Sirajganj Sadar,Sirajganj,Sirajganj-2,63,election; geocode; humdata_pop; poverty,upazila
+Sitakunda,Chattogram,,,geocode; humdata_pop; poverty,upazila
+Sonadanga,Khulna,,,humdata_pop; poverty,thana
+Sonagazi,Feni,Feni-3,267,election; geocode; humdata_pop; poverty,upazila
+Sonaimuri,Noakhali,Noakhali-1,268,election; geocode; humdata_pop; poverty,upazila
+Sonargaon,Narayanganj,Narayanganj-3,206,election; geocode; humdata_pop; poverty,upazila
+Sonatola,Bogura,Bogra-1,36,election; geocode; humdata_pop; poverty,upazila
+South Sunamganj,Sunamganj,Sunamganj-3,226,election; geocode,upazila
+Sreebardi,Sherpur,Sherpur-3,145,election; geocode; humdata_pop; poverty,upazila
+Sreemangal,Moulvibazar,Moulvibazar-4,238,election; geocode; humdata_pop; poverty,upazila
+Sreenagar,Munshiganj,Munshiganj-1,171,election; geocode; humdata_pop; poverty,upazila
+Sreepur,Magura,Magura-2,92,election; geocode; humdata_pop; poverty,upazila
+Sreepur,Gazipur,Gazipur-3,196,election; geocode; humdata_pop; poverty,upazila
+Subarnachar,Noakhali,Noakhali-4,271,election; geocode; humdata_pop; poverty,upazila
+Sujanagar,Pabna,Pabna-2,69,election; geocode; humdata_pop; poverty,upazila
+Sulla,Sunamganj,Sunamganj-2,225,election; geocode; humdata_pop; poverty,upazila
+Sunamganj Sadar,Sunamganj,Sunamganj-4,227,election; geocode; humdata_pop; poverty,upazila
+Sundarganj,Gaibandha,Gaibandha-1,29,election; geocode; humdata_pop; poverty,upazila
+Sutrapur,Dhaka,,,humdata_pop; poverty,thana
+Sylhet City Corporation,Sylhet,Sylhet-1,229,election,upazila
+Sylhet Sadar,Sylhet,Sylhet-1,229,election; geocode; humdata_pop; poverty,upazila
+Tahirpur,Sunamganj,Sunamganj-1,224,election; geocode; humdata_pop; poverty,upazila
+Tajhat,Rangpur,,,poverty,thana
+Tala,Satkhira,Satkhira-1,105,election; geocode; humdata_pop; poverty,upazila
+Taltali,Barguna,Barguna-1,109,election; geocode; poverty,upazila
+Tangail Sadar,Tangail,Tangail-5,134,election; geocode; humdata_pop; poverty,upazila
+Tanore,Rajshahi,Rajshahi-1,52,election; geocode; humdata_pop; poverty,upazila
+Taraganj,Rangpur,Rangpur-2,20,election; geocode; humdata_pop; poverty,upazila
+Tarail,Kishoreganj,Kishoreganj-3,164,election; geocode; humdata_pop; poverty,upazila
+Tarakanda,Mymensingh,Mymensingh-2,147,election; geocode; poverty,upazila
+Tarash,Sirajganj,Sirajganj-3,64,election; geocode; humdata_pop; poverty,upazila
+Tazumuddin,Bhola,Bhola-3,117,election; geocode; humdata_pop; poverty,upazila
+Tejgaon,Dhaka,,,humdata_pop; poverty,thana
+Tejgaon Ind. Area,Dhaka,,,humdata_pop; poverty,thana
+Teknaf,Cox's Bazar,Coxs Bazar-4,297,election; geocode; humdata_pop; poverty,upazila
+Tentulia,Panchagarh,,,humdata_pop; poverty,upazila
+Terokhada,Khulna,Khulna-4,102,election; geocode; humdata_pop; poverty,upazila
+Tetulia,Panchagarh,Panchagarh-1,001,election; geocode,upazila
+Thakurgaon Sadar,Thakurgaon,Thakurgaon-1,3,election; geocode; humdata_pop; poverty,upazila
+Thanchi,Bandarban,Bandarban-1,300,election; geocode; humdata_pop; poverty,upazila
+Titas,Cumilla,Comilla-2,250,election; geocode; humdata_pop; poverty,upazila
+Tongi,Gazipur,,,poverty,thana
+Tongibari,Munshiganj,Munshiganj-2,172,election; geocode; humdata_pop; poverty,upazila
+Trishal,Mymensingh,Mymensingh-7,152,election; geocode; humdata_pop; poverty,upazila
+Tungipara,Gopalganj,Gopalganj-3,217,election; geocode; humdata_pop; poverty,upazila
+Turag,Dhaka,,,humdata_pop; poverty,thana
+Ujirpur,Barishal,,,poverty,upazila
+Ukhia,Cox's Bazar,Coxs Bazar-4,297,election; geocode; humdata_pop; poverty,upazila
+Ulipur,Kurigram,Kurigram-3,27,election; geocode; humdata_pop; poverty,upazila
+Ullahpara,Sirajganj,Sirajganj-4,65,election,upazila
+Ullapara,Sirajganj,,,geocode; humdata_pop; poverty,upazila
+Uttara,Dhaka,,,humdata_pop; poverty,thana
+Uttarkhan,Dhaka,,,humdata_pop; poverty,thana
+Wari,Dhaka,,,poverty,thana
+Wazirpur,Barishal,Barishal-2,120,election; geocode; humdata_pop,upazila
+Zakiganj,Sylhet,Sylhet-5,233,election; geocode; humdata_pop; poverty,upazila
+Zanjira,Shariatpur,Shariatpur-3,223,election; geocode; humdata_pop; poverty,upazila
+Zianagar,Pirojpur,,,geocode; humdata_pop,upazila
+Basundia Union,Jashore,Jessore-4,88,election,city_corp_ward
+16-24,Khulna,Khulna-2,100,election,city_corp_ward
+27-31),Khulna,Khulna-2,100,election,city_corp_ward
+15,Khulna,Khulna-3,101,election,city_corp_ward
+25,Khulna,Khulna-3,101,election,city_corp_ward
+26,Khulna,Khulna-3,101,election,city_corp_ward
+32),Khulna,Khulna-3,101,election,city_corp_ward
+51,Dhaka,Dhaka-4,177,election,city_corp_ward
+52,Dhaka,Dhaka-4,177,election,city_corp_ward
+53,Dhaka,Dhaka-4,177,election,city_corp_ward
+54,Dhaka,Dhaka-4,177,election,city_corp_ward
+and Shyampur Union Parishad Area,Dhaka,Dhaka-4,177,election,city_corp_ward
+59,Dhaka,Dhaka-5,178,election,city_corp_ward
+60,Dhaka,Dhaka-5,178,election,city_corp_ward
+61,Dhaka,Dhaka-5,178,election,city_corp_ward
+and Matuail Union Parishad Area,Dhaka,Dhaka-5,178,election,city_corp_ward
+34,Dhaka,Dhaka-6,179,election,city_corp_ward
+37-40,Dhaka,Dhaka-6,179,election,city_corp_ward
+42,Dhaka,Dhaka-6,179,election,city_corp_ward
+43,Dhaka,Dhaka-6,179,election,city_corp_ward
+44,Dhaka,Dhaka-6,179,election,city_corp_ward
+2,Dhaka,Dhaka-7,180,election,city_corp_ward
+3,Dhaka,Dhaka-7,180,election,city_corp_ward
+4,Dhaka,Dhaka-7,180,election,city_corp_ward
+11,Dhaka,Dhaka-7,180,election,city_corp_ward
+12,Dhaka,Dhaka-7,180,election,city_corp_ward
+13,Dhaka,Dhaka-7,180,election,city_corp_ward
+17,Dhaka,Dhaka-7,180,election,city_corp_ward
+18,Dhaka,Dhaka-7,180,election,city_corp_ward
+19,Dhaka,Dhaka-7,180,election,city_corp_ward
+20,Dhaka,Dhaka-7,180,election,city_corp_ward
+15,Dhaka,Dhaka-8,181,election,city_corp_ward
+16,Dhaka,Dhaka-8,181,election,city_corp_ward
+21,Dhaka,Dhaka-8,181,election,city_corp_ward
+22,Dhaka,Dhaka-8,181,election,city_corp_ward
+23,Dhaka,Dhaka-8,181,election,city_corp_ward
+and a portion of Ward 9 (Ramna),Dhaka,Dhaka-8,181,election,city_corp_ward
+25,Dhaka,Dhaka-9,182,election,city_corp_ward
+26,Dhaka,Dhaka-9,182,election,city_corp_ward
+27,Dhaka,Dhaka-9,182,election,city_corp_ward
+28,Dhaka,Dhaka-9,182,election,city_corp_ward
+29,Dhaka,Dhaka-9,182,election,city_corp_ward
+30,Dhaka,Dhaka-9,182,election,city_corp_ward
+38-41,Dhaka,Dhaka-10,183,election,city_corp_ward
+and a portion of Ward 9 (Dhanmondi),Dhaka,Dhaka-10,183,election,city_corp_ward
+20,Dhaka,Dhaka-11,184,election,city_corp_ward
+21,Dhaka,Dhaka-11,184,election,city_corp_ward
+23,Dhaka,Dhaka-11,184,election,city_corp_ward
+24,Dhaka,Dhaka-11,184,election,city_corp_ward
+26,Dhaka,Dhaka-12,185,election,city_corp_ward
+27,Dhaka,Dhaka-12,185,election,city_corp_ward
+28,Dhaka,Dhaka-12,185,election,city_corp_ward
+30,Dhaka,Dhaka-12,185,election,city_corp_ward
+31,Dhaka,Dhaka-12,185,election,city_corp_ward
+32,Dhaka,Dhaka-13,186,election,city_corp_ward
+33,Dhaka,Dhaka-13,186,election,city_corp_ward
+34,Dhaka,Dhaka-13,186,election,city_corp_ward
+35,Dhaka,Dhaka-13,186,election,city_corp_ward
+8,Dhaka,Dhaka-14,187,election,city_corp_ward
+9,Dhaka,Dhaka-14,187,election,city_corp_ward
+10,Dhaka,Dhaka-14,187,election,city_corp_ward
+11,Dhaka,Dhaka-14,187,election,city_corp_ward
+12,Dhaka,Dhaka-14,187,election,city_corp_ward
+14,Dhaka,Dhaka-15,188,election,city_corp_ward
+15,Dhaka,Dhaka-15,188,election,city_corp_ward
+16,Dhaka,Dhaka-15,188,election,city_corp_ward
+17,Dhaka,Dhaka-15,188,election,city_corp_ward
+18,Dhaka,Dhaka-15,188,election,city_corp_ward
+5,Dhaka,Dhaka-16,189,election,city_corp_ward
+6,Dhaka,Dhaka-16,189,election,city_corp_ward
+and Mirpur Police Station Area,Dhaka,Dhaka-16,189,election,city_corp_ward
+2,Dhaka,Dhaka-17,190,election,city_corp_ward
+3,Dhaka,Dhaka-17,190,election,city_corp_ward
+and Khilkhet Union Parishad Area,Dhaka,Dhaka-17,190,election,city_corp_ward
+37,Dhaka,Dhaka-18,191,election,city_corp_ward
+38,Dhaka,Dhaka-18,191,election,city_corp_ward
+39,Dhaka,Dhaka-18,191,election,city_corp_ward
+40,Dhaka,Dhaka-18,191,election,city_corp_ward
+41,Dhaka,Dhaka-18,191,election,city_corp_ward
+42,Dhaka,Dhaka-18,191,election,city_corp_ward
+43,Dhaka,Dhaka-18,191,election,city_corp_ward
+44,Dhaka,Dhaka-18,191,election,city_corp_ward
+43-46),Gazipur,Gazipur-2,195,election,city_corp_ward

@@ -1,0 +1,39 @@
+Upazila Cross-Verification Report
+============================================================
+
+Master upazila list: 617 entries
+Election upazila entries (non-ward): 531
+Unmatched election entries: 0
+Geocode upazilas not in election: 27
+
+Geocode Upazilas Not Found in Election Data:
+------------------------------------------------------------
+  Bijoynagar (Brahmanbaria)
+  Birol (Dinajpur)
+  Boalkhali (Chattogram)
+  Chapainawabganj Sadar (Chapainawabganj)
+  Chauddagram (Cumilla)
+  Comilla Sadar Dakshin (Cumilla)
+  Debidwar (Cumilla)
+  Eidgaon (Coxsbazar)
+  Fatikchhari (Chattogram)
+  Guimara (Khagrachhari)
+  Jhikargachha (Jashore)
+  Juraichari (Rangamati)
+  Lakhai (Habiganj)
+  Lakshmichhari (Khagrachhari)
+  Lalmai (Cumilla)
+  Nangalkot (Cumilla)
+  Naria (Shariatpur)
+  Nazirpur (Pirojpur)
+  Nikli (Kishoreganj)
+  Osmaninagar (Sylhet)
+  Panchhari (Khagrachhari)
+  Rajoir (Madaripur)
+  Ruma (Bandarban)
+  Sadarpur (Faridpur)
+  Sitakunda (Chattogram)
+  Ullapara (Sirajganj)
+  Zianagar (Pirojpur)
+
+All entries verified or mapped.
