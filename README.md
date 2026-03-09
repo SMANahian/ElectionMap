@@ -21,26 +21,18 @@ by the BBC Bangla election map).
 ## Repository structure
 
 ```
-election_site/
-├── config/             # Configuration files
-│   └── coalitions.json # Defines coalition names, keywords and colour scales
-├── data/               # Input datasets and fallback HTML
-│   ├── constituencies.geojson        # Constituency boundaries (from GRED)
-│   └── tbs_election_2026.html        # Saved TBS election page for offline scraping
-├── results/            # Generated CSV results (ignored by Git)
-├── scripts/            # Python scripts for scraping and map generation
-│   ├── scrape_votes.py
-│   ├── build_map.py
-│   └── serve.py        # Simple HTTP server for local preview
-├── site/               # Generated website (GitHub Pages artefact)
-│   └── maps/           # Individual map HTML files
-├── site_src/           # Source files for the website
-│   └── index.html
-├── .github/workflows/  # GitHub Actions workflow for auto‑deployment
-│   └── deploy.yml
-├── requirements.txt    # Python dependencies
-├── .gitignore
-└── README.md (this file)
+├── config/                 # Configuration files (coalitions.json)
+├── data/                   # Input datasets (GeoJSON boundaries, saved HTML)
+├── scripts/                # Python pipeline: scraping, merging, map generation
+├── site_src/               # Website source (index.html)
+├── result_from_source/     # Raw scraped results from TBS News & Daily Star
+├── vote_count_combined/    # Merged election results from both sources
+├── census_from_sid/        # 2022 Census data (BBS PDF extraction)
+├── humdata_pop_stats/      # Subnational population statistics (HumData COD-PS)
+├── unicef/                 # MICS6 district-level indicators (UNICEF)
+├── poverty_data/           # District/upazila poverty statistics
+├── .github/workflows/      # GitHub Actions for auto-deployment
+└── requirements.txt
 ```
 
 ## Quick start
@@ -48,7 +40,6 @@ election_site/
 1. **Install dependencies**:
 
    ```bash
-   cd election_site
    pip install -r requirements.txt
    ```
 
@@ -149,8 +140,8 @@ In addition to the interactive maps, this repository contains comprehensive data
 - **[vote_count_combined/](vote_count_combined/)** — Merged election results combining both sources (takes max votes when they disagree)
 - **[census_from_sid/](census_from_sid/)** — 2022 Population & Housing Census data extracted from the Bangladesh Bureau of Statistics PDF (64 districts, 8 divisions, 12 city corporations)
 - **[humdata_pop_stats/](humdata_pop_stats/)** — Subnational population statistics (sex and age disaggregated) from OCHA/HumData COD-PS dataset
-- **[unicef_data/](unicef_data/)** — UNICEF Bangladesh district-level indicators
-- **[poverty_data/](poverty_data/)** — Poverty statistics by district
+- **[unicef/](unicef/)** — UNICEF MICS6 district-level indicators (wealth, education, health, sanitation for 64 districts)
+- **[poverty_data/](poverty_data/)** — Poverty statistics by district and upazila
 
 Each folder contains its own README with detailed column descriptions and regeneration instructions. The [scripts/](scripts/) folder documents the full pipeline.
 

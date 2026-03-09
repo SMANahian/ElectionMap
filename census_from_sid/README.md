@@ -64,7 +64,7 @@ python census_from_sid/extract_census_data.py
 | `dwelling_units_urban` | A-1.13 | Urban dwelling units |
 | `dwelling_units_total` | A-1.13 | Total dwelling units |
 
-### census_division.csv (8 divisions, 134 columns)
+### census_division.csv (8 divisions, 163 columns)
 
 All district-level columns above (aggregated at division level), plus:
 
@@ -83,16 +83,29 @@ All district-level columns above (aggregated at division level), plus:
 | `dependency_ratio_total` | A-1.8 | Dependency ratio (total) |
 | `dependency_ratio_rural` | A-1.8 | Dependency ratio (rural) |
 | `dependency_ratio_urban` | A-1.8 | Dependency ratio (urban) |
-| `mobile_users_total_pct` | A-1.9 | % mobile phone users (total) |
-| `mobile_users_male_pct` | A-1.9 | % mobile phone users (male) |
-| `mobile_users_female_pct` | A-1.9 | % mobile phone users (female) |
-| `mobile_users_rural_*_pct` | A-1.9 | Rural mobile users (total/male/female) |
-| `mobile_users_urban_*_pct` | A-1.9 | Urban mobile users (total/male/female) |
-| `internet_users_total_pct` | A-1.10 | % internet users (total) |
-| `internet_users_male_pct` | A-1.10 | % internet users (male) |
-| `internet_users_female_pct` | A-1.10 | % internet users (female) |
-| `internet_users_rural_*_pct` | A-1.10 | Rural internet users (total/male/female) |
-| `internet_users_urban_*_pct` | A-1.10 | Urban internet users (total/male/female) |
+| `mobile_5plus_total_pct` | A-1.9 | % mobile phone users 5+ (total) |
+| `mobile_5plus_male_pct` | A-1.9 | % mobile phone users 5+ (male) |
+| `mobile_5plus_female_pct` | A-1.9 | % mobile phone users 5+ (female) |
+| `mobile_5plus_rural_*_pct` | A-1.9 | Rural mobile users 5+ (total/male/female) |
+| `mobile_5plus_urban_*_pct` | A-1.9 | Urban mobile users 5+ (total/male/female) |
+| `mobile_18plus_*_pct` | A-1.9 | Mobile phone users 18+ (same breakdown as 5+) |
+| `internet_5plus_total_pct` | A-1.10 | % internet users 5+ (total) |
+| `internet_5plus_male_pct` | A-1.10 | % internet users 5+ (male) |
+| `internet_5plus_female_pct` | A-1.10 | % internet users 5+ (female) |
+| `internet_5plus_rural_*_pct` | A-1.10 | Rural internet users 5+ (total/male/female) |
+| `internet_5plus_urban_*_pct` | A-1.10 | Urban internet users 5+ (total/male/female) |
+| `internet_18plus_*_pct` | A-1.10 | Internet users 18+ (same breakdown as 5+) |
+| `marital_never_married_pct` | 2.15 | % never married (combined sex) |
+| `marital_currently_married_pct` | 2.15 | % currently married |
+| `marital_widowed_pct` | 2.15 | % widow/widower |
+| `marital_divorced_pct` | 2.15 | % divorced |
+| `marital_separated_pct` | 2.15 | % separated |
+| `literacy_rural_total` | 2.17 | Literacy rate rural (total) |
+| `literacy_rural_male` | 2.17 | Literacy rate rural (male) |
+| `literacy_rural_female` | 2.17 | Literacy rate rural (female) |
+| `literacy_urban_total` | 2.17 | Literacy rate urban (total) |
+| `literacy_urban_male` | 2.17 | Literacy rate urban (male) |
+| `literacy_urban_female` | 2.17 | Literacy rate urban (female) |
 | `growth_rate_2022` | 2.4 | Annual avg. population growth rate |
 | `sex_ratio_1974..2022` | 2.5 | Historical sex ratio (1974-2022) |
 | `dwelling_total_pop` | 2.9 | Total pop. by dwelling type |

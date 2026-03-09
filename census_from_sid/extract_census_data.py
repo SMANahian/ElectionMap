@@ -3,7 +3,7 @@ Extract census data from PHC Preliminary Report 2022 PDF.
 
 Produces:
   - census_district.csv: All district-level data (Annex Tables A-1.1 to A-1.13)
-  - census_division.csv: Division-level data (body Tables + Annex Tables A-1.5, A-1.8-A-1.10)
+  - census_division.csv: Division-level data (body Tables 2.4-2.18, 3.3-3.8 + Annex A-1.5, A-1.8-A-1.10)
 
 Source: PHC_Preliminary_Report_August_2022.pdf
 """
@@ -262,8 +262,10 @@ def main():
             div_data[name]['dependency_ratio_rural'] = nums[7]
             div_data[name]['dependency_ratio_urban'] = nums[11]
 
-    # Table A-1.9: Mobile Phone Users (division-level)
+    # Table A-1.9: Mobile Phone Users (division-level) — has 5+ and 18+ sections
     collecting = False
+    age_section = None  # '5plus' or '18plus'
+    seen_divisions_mobile = set()
     for line in lines:
         if 'Table A-1.9' in line:
             collecting = True
@@ -272,22 +274,35 @@ def main():
             break
         if not collecting:
             continue
-        name, nums = parse_line(line.strip())
-        if name in DIVISIONS and len(nums) >= 3:
-            div_data[name]['mobile_users_total_pct'] = nums[0]
-            div_data[name]['mobile_users_male_pct'] = nums[1]
-            div_data[name]['mobile_users_female_pct'] = nums[2]
+        stripped = line.strip()
+        if '5 Years and Above' in stripped:
+            age_section = '5plus'
+            seen_divisions_mobile = set()
+            continue
+        if '18 Years and Above' in stripped:
+            age_section = '18plus'
+            seen_divisions_mobile = set()
+            continue
+        name, nums = parse_line(stripped)
+        if name in DIVISIONS and name not in seen_divisions_mobile and len(nums) >= 3:
+            seen_divisions_mobile.add(name)
+            prefix = f'mobile_{age_section}_' if age_section else 'mobile_'
+            div_data[name][f'{prefix}total_pct'] = nums[0]
+            div_data[name][f'{prefix}male_pct'] = nums[1]
+            div_data[name][f'{prefix}female_pct'] = nums[2]
             if len(nums) >= 6:
-                div_data[name]['mobile_users_rural_total_pct'] = nums[3]
-                div_data[name]['mobile_users_rural_male_pct'] = nums[4]
-                div_data[name]['mobile_users_rural_female_pct'] = nums[5]
+                div_data[name][f'{prefix}rural_total_pct'] = nums[3]
+                div_data[name][f'{prefix}rural_male_pct'] = nums[4]
+                div_data[name][f'{prefix}rural_female_pct'] = nums[5]
             if len(nums) >= 9:
-                div_data[name]['mobile_users_urban_total_pct'] = nums[6]
-                div_data[name]['mobile_users_urban_male_pct'] = nums[7]
-                div_data[name]['mobile_users_urban_female_pct'] = nums[8]
+                div_data[name][f'{prefix}urban_total_pct'] = nums[6]
+                div_data[name][f'{prefix}urban_male_pct'] = nums[7]
+                div_data[name][f'{prefix}urban_female_pct'] = nums[8]
 
-    # Table A-1.10: Internet Users (division-level)
+    # Table A-1.10: Internet Users (division-level) — has 5+ and 18+ sections
     collecting = False
+    age_section = None
+    seen_divisions_internet = set()
     for line in lines:
         if 'Table A-1.10' in line:
             collecting = True
@@ -296,19 +311,30 @@ def main():
             break
         if not collecting:
             continue
-        name, nums = parse_line(line.strip())
-        if name in DIVISIONS and len(nums) >= 3:
-            div_data[name]['internet_users_total_pct'] = nums[0]
-            div_data[name]['internet_users_male_pct'] = nums[1]
-            div_data[name]['internet_users_female_pct'] = nums[2]
+        stripped = line.strip()
+        if '5 Years and Above' in stripped:
+            age_section = '5plus'
+            seen_divisions_internet = set()
+            continue
+        if '18 Years and Above' in stripped:
+            age_section = '18plus'
+            seen_divisions_internet = set()
+            continue
+        name, nums = parse_line(stripped)
+        if name in DIVISIONS and name not in seen_divisions_internet and len(nums) >= 3:
+            seen_divisions_internet.add(name)
+            prefix = f'internet_{age_section}_' if age_section else 'internet_'
+            div_data[name][f'{prefix}total_pct'] = nums[0]
+            div_data[name][f'{prefix}male_pct'] = nums[1]
+            div_data[name][f'{prefix}female_pct'] = nums[2]
             if len(nums) >= 6:
-                div_data[name]['internet_users_rural_total_pct'] = nums[3]
-                div_data[name]['internet_users_rural_male_pct'] = nums[4]
-                div_data[name]['internet_users_rural_female_pct'] = nums[5]
+                div_data[name][f'{prefix}rural_total_pct'] = nums[3]
+                div_data[name][f'{prefix}rural_male_pct'] = nums[4]
+                div_data[name][f'{prefix}rural_female_pct'] = nums[5]
             if len(nums) >= 9:
-                div_data[name]['internet_users_urban_total_pct'] = nums[6]
-                div_data[name]['internet_users_urban_male_pct'] = nums[7]
-                div_data[name]['internet_users_urban_female_pct'] = nums[8]
+                div_data[name][f'{prefix}urban_total_pct'] = nums[6]
+                div_data[name][f'{prefix}urban_male_pct'] = nums[7]
+                div_data[name][f'{prefix}urban_female_pct'] = nums[8]
 
     # Body Table 2.4: Growth Rate
     collecting = False
@@ -374,6 +400,52 @@ def main():
             div_data[name]['child_woman_ratio_total'] = nums[0]
             div_data[name]['child_woman_ratio_rural'] = nums[1]
             div_data[name]['child_woman_ratio_urban'] = nums[2]
+
+    # Table 2.15: Marital Status combined (division-level)
+    collecting = False
+    for line in lines:
+        if 'Table 2.15' in line and 'Marital' in line and '...' not in line:
+            collecting = True
+            continue
+        if collecting and ('Table 2.15' in line or 'The marital' in line or 'Table 2.16' in line):
+            break
+        if not collecting:
+            continue
+        name, nums = parse_line(line.strip())
+        if name in DIVISIONS and len(nums) >= 6:
+            # nums: total(100), never_married, currently_married, widow/widower, divorced, separated
+            div_data[name]['marital_never_married_pct'] = nums[1]
+            div_data[name]['marital_currently_married_pct'] = nums[2]
+            div_data[name]['marital_widowed_pct'] = nums[3]
+            div_data[name]['marital_divorced_pct'] = nums[4]
+            div_data[name]['marital_separated_pct'] = nums[5]
+
+    # Table 2.17: Literacy Rate with rural/urban detail (division-level)
+    collecting = False
+    is_2022 = True
+    for line in lines:
+        if 'Table 2.17' in line and 'Literacy' in line and '...' not in line:
+            collecting = True
+            continue
+        if collecting and ('Table 2.17 shows' in line or 'Table 2.18' in line):
+            break
+        if not collecting:
+            continue
+        stripped = line.strip()
+        if '2011' in stripped and len(stripped) < 10:
+            is_2022 = False
+            continue
+        if not is_2022:
+            continue
+        name, nums = parse_line(stripped)
+        if name in DIVISIONS and len(nums) >= 9:
+            # Total(m+f), male, female, hijra, rural_total, rural_male, rural_female, rural_hijra, urban_total...
+            div_data[name]['literacy_rural_total'] = nums[4] if len(nums) > 4 else None
+            div_data[name]['literacy_rural_male'] = nums[5] if len(nums) > 5 else None
+            div_data[name]['literacy_rural_female'] = nums[6] if len(nums) > 6 else None
+            div_data[name]['literacy_urban_total'] = nums[8] if len(nums) > 8 else None
+            div_data[name]['literacy_urban_male'] = nums[9] if len(nums) > 9 else None
+            div_data[name]['literacy_urban_female'] = nums[10] if len(nums) > 10 else None
 
     # Table 2.18: Persons with Disabilities (division-level)
     collecting = False
