@@ -141,6 +141,19 @@ their names (or abbreviations) to the appropriate ``keywords`` list.
   (<https://smanahian.com>) with tooling support from ChatGPT agent
   and GitHub Copilot.
 
+## Data repository
+
+In addition to the interactive maps, this repository contains comprehensive datasets on Bangladesh:
+
+- **[result_from_source/](result_from_source/)** — Raw scraped election results from TBS News and The Daily Star, plus cross-source verification reports
+- **[vote_count_combined/](vote_count_combined/)** — Merged election results combining both sources (takes max votes when they disagree)
+- **[census_from_sid/](census_from_sid/)** — 2022 Population & Housing Census data extracted from the Bangladesh Bureau of Statistics PDF (64 districts, 8 divisions, 12 city corporations)
+- **[humdata_pop_stats/](humdata_pop_stats/)** — Subnational population statistics (sex and age disaggregated) from OCHA/HumData COD-PS dataset
+- **[unicef_data/](unicef_data/)** — UNICEF Bangladesh district-level indicators
+- **[poverty_data/](poverty_data/)** — Poverty statistics by district
+
+Each folder contains its own README with detailed column descriptions and regeneration instructions. The [scripts/](scripts/) folder documents the full pipeline.
+
 ## Credits
 
 * **Project author** – S M A Nahian (<https://smanahian.com>).
