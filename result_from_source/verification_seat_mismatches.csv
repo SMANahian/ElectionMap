@@ -1,62 +1,62 @@
-seat_name,field,tbs_value,ds_value,diff,issue
-Bagerhat-3,bnp_votes,102661,103711,1050,DS bnp_votes exceeds TBS
-Bagerhat-3,jamaat_votes,83550,83705,155,DS jamaat_votes exceeds TBS
-Bagerhat-3,eleven_party_alliance_votes,83550,83705,155,DS eleven_party_alliance_votes exceeds TBS
-Bagerhat-3,bnp_alliance_votes,102661,103711,1050,DS bnp_alliance_votes exceeds TBS
-Dinajpur-2,bnp_votes,139622,144317,4695,DS bnp_votes exceeds TBS
-Dinajpur-2,bnp_alliance_votes,139622,144317,4695,DS bnp_alliance_votes exceeds TBS
-Faridpur-1,jamaat_votes,154145,154772,627,DS jamaat_votes exceeds TBS
-Faridpur-1,eleven_party_alliance_votes,154145,154772,627,DS eleven_party_alliance_votes exceeds TBS
-Gaibandha-3,total_votes,302321,303321,1000,DS partial total exceeds TBS full total
-Gaibandha-3,jamaat_votes,162457,163457,1000,DS jamaat_votes exceeds TBS
-Gaibandha-3,eleven_party_alliance_votes,162457,163457,1000,DS eleven_party_alliance_votes exceeds TBS
-Habiganj-3,total_votes,187916,208883,20967,DS partial total exceeds TBS full total
-Jamalpur-1,total_votes,265776,271476,5700,DS partial total exceeds TBS full total
-Jamalpur-1,bnp_votes,172115,173656,1541,DS bnp_votes exceeds TBS
-Jamalpur-1,jamaat_votes,93661,97820,4159,DS jamaat_votes exceeds TBS
-Jamalpur-1,eleven_party_alliance_votes,93661,97820,4159,DS eleven_party_alliance_votes exceeds TBS
-Jamalpur-1,bnp_alliance_votes,172115,173656,1541,DS bnp_alliance_votes exceeds TBS
-Jessore-2,total_votes,334861,334891,30,DS partial total exceeds TBS full total
-Kurigram-3,total_votes,140975,187282,46307,DS partial total exceeds TBS full total
-Kurigram-3,bnp_votes,672,79352,78680,DS bnp_votes exceeds TBS
-Kurigram-3,jamaat_votes,106923,107930,1007,DS jamaat_votes exceeds TBS
-Kurigram-3,eleven_party_alliance_votes,106923,107930,1007,DS eleven_party_alliance_votes exceeds TBS
-Kurigram-3,bnp_alliance_votes,672,79352,78680,DS bnp_alliance_votes exceeds TBS
-Kurigram-4,bnp_votes,83762,84423,661,DS bnp_votes exceeds TBS
-Kurigram-4,jamaat_votes,106347,108210,1863,DS jamaat_votes exceeds TBS
-Kurigram-4,eleven_party_alliance_votes,106347,108210,1863,DS eleven_party_alliance_votes exceeds TBS
-Kurigram-4,bnp_alliance_votes,83762,84423,661,DS bnp_alliance_votes exceeds TBS
-Lalmonirhat-2,total_votes,226245,241198,14953,DS partial total exceeds TBS full total
-Lalmonirhat-2,bnp_votes,118359,123946,5587,DS bnp_votes exceeds TBS
-Lalmonirhat-2,jamaat_votes,107886,117252,9366,DS jamaat_votes exceeds TBS
-Lalmonirhat-2,eleven_party_alliance_votes,107886,117252,9366,DS eleven_party_alliance_votes exceeds TBS
-Lalmonirhat-2,bnp_alliance_votes,118359,123946,5587,DS bnp_alliance_votes exceeds TBS
-Patuakhali-1,total_votes,258994,259294,300,DS partial total exceeds TBS full total
-Patuakhali-1,eleven_party_alliance_votes,46010,46310,300,DS eleven_party_alliance_votes exceeds TBS
-Rajshahi-2,total_votes,231065,288916,57851,DS partial total exceeds TBS full total
-Rajshahi-2,bnp_votes,128546,188546,60000,DS bnp_votes exceeds TBS
-Rajshahi-2,bnp_alliance_votes,128546,188546,60000,DS bnp_alliance_votes exceeds TBS
-Sherpur-1,total_votes,206153,269980,63827,DS partial total exceeds TBS full total
-Sherpur-1,eleven_party_alliance_votes,127811,128267,456,DS eleven_party_alliance_votes exceeds TBS
-Sirajganj-1,bnp_votes,115132,116613,1481,DS bnp_votes exceeds TBS
-Sirajganj-1,jamaat_votes,106732,108815,2083,DS jamaat_votes exceeds TBS
-Sirajganj-1,eleven_party_alliance_votes,106732,108815,2083,DS eleven_party_alliance_votes exceeds TBS
-Sirajganj-1,bnp_alliance_votes,116302,116613,311,DS bnp_alliance_votes exceeds TBS
-Sirajganj-4,total_votes,323150,327274,4124,DS partial total exceeds TBS full total
-Sylhet-2,total_votes,154143,156591,2448,DS partial total exceeds TBS full total
-Sylhet-2,bnp_votes,116697,117956,1259,DS bnp_votes exceeds TBS
-Sylhet-2,eleven_party_alliance_votes,37446,38635,1189,DS eleven_party_alliance_votes exceeds TBS
-Sylhet-2,bnp_alliance_votes,116697,117956,1259,DS bnp_alliance_votes exceeds TBS
-Sylhet-3,total_votes,187869,189064,1195,DS partial total exceeds TBS full total
-Sylhet-3,bnp_votes,114255,115450,1195,DS bnp_votes exceeds TBS
-Sylhet-3,bnp_alliance_votes,114255,115450,1195,DS bnp_alliance_votes exceeds TBS
-Sylhet-4,total_votes,247385,258237,10852,DS partial total exceeds TBS full total
-Sylhet-4,bnp_votes,181609,186846,5237,DS bnp_votes exceeds TBS
-Sylhet-4,jamaat_votes,65776,71391,5615,DS jamaat_votes exceeds TBS
-Sylhet-4,eleven_party_alliance_votes,65776,71391,5615,DS eleven_party_alliance_votes exceeds TBS
-Sylhet-4,bnp_alliance_votes,181609,186846,5237,DS bnp_alliance_votes exceeds TBS
-Sylhet-6,total_votes,206360,211486,5126,DS partial total exceeds TBS full total
-Sylhet-6,bnp_votes,108612,109917,1305,DS bnp_votes exceeds TBS
-Sylhet-6,jamaat_votes,97748,101569,3821,DS jamaat_votes exceeds TBS
-Sylhet-6,eleven_party_alliance_votes,97748,101569,3821,DS eleven_party_alliance_votes exceeds TBS
-Sylhet-6,bnp_alliance_votes,108612,109917,1305,DS bnp_alliance_votes exceeds TBS
+seat_name,field,tbs_value,ds_value,diff,diff_pct,is_significant,issue
+Bagerhat 3,bnp_votes,102661,103711,1050,1.02%,True,DS bnp_votes exceeds TBS
+Bagerhat 3,jamaat_votes,83550,83705,155,0.19%,False,DS jamaat_votes exceeds TBS
+Bagerhat 3,eleven_party_alliance_votes,83550,83705,155,0.19%,False,DS eleven_party_alliance_votes exceeds TBS
+Bagerhat 3,bnp_alliance_votes,102661,103711,1050,1.02%,True,DS bnp_alliance_votes exceeds TBS
+Dinajpur 2,bnp_votes,139622,144317,4695,3.36%,True,DS bnp_votes exceeds TBS
+Dinajpur 2,bnp_alliance_votes,139622,144317,4695,3.36%,True,DS bnp_alliance_votes exceeds TBS
+Faridpur 1,jamaat_votes,154145,154772,627,0.41%,False,DS jamaat_votes exceeds TBS
+Faridpur 1,eleven_party_alliance_votes,154145,154772,627,0.41%,False,DS eleven_party_alliance_votes exceeds TBS
+Gaibandha 3,total_votes,302321,303321,1000,0.33%,False,DS partial total exceeds TBS full total
+Gaibandha 3,jamaat_votes,162457,163457,1000,0.62%,False,DS jamaat_votes exceeds TBS
+Gaibandha 3,eleven_party_alliance_votes,162457,163457,1000,0.62%,False,DS eleven_party_alliance_votes exceeds TBS
+Habiganj 3,total_votes,187916,208883,20967,11.16%,True,DS partial total exceeds TBS full total
+Jamalpur 1,total_votes,265776,271476,5700,2.14%,True,DS partial total exceeds TBS full total
+Jamalpur 1,bnp_votes,172115,173656,1541,0.90%,False,DS bnp_votes exceeds TBS
+Jamalpur 1,jamaat_votes,93661,97820,4159,4.44%,True,DS jamaat_votes exceeds TBS
+Jamalpur 1,eleven_party_alliance_votes,93661,97820,4159,4.44%,True,DS eleven_party_alliance_votes exceeds TBS
+Jamalpur 1,bnp_alliance_votes,172115,173656,1541,0.90%,False,DS bnp_alliance_votes exceeds TBS
+Jashore 2,total_votes,334861,334891,30,0.01%,False,DS partial total exceeds TBS full total
+Kurigram 3,total_votes,140975,187282,46307,32.85%,True,DS partial total exceeds TBS full total
+Kurigram 3,bnp_votes,672,79352,78680,11708.33%,True,DS bnp_votes exceeds TBS
+Kurigram 3,jamaat_votes,106923,107930,1007,0.94%,False,DS jamaat_votes exceeds TBS
+Kurigram 3,eleven_party_alliance_votes,106923,107930,1007,0.94%,False,DS eleven_party_alliance_votes exceeds TBS
+Kurigram 3,bnp_alliance_votes,672,79352,78680,11708.33%,True,DS bnp_alliance_votes exceeds TBS
+Kurigram 4,bnp_votes,83762,84423,661,0.79%,False,DS bnp_votes exceeds TBS
+Kurigram 4,jamaat_votes,106347,108210,1863,1.75%,True,DS jamaat_votes exceeds TBS
+Kurigram 4,eleven_party_alliance_votes,106347,108210,1863,1.75%,True,DS eleven_party_alliance_votes exceeds TBS
+Kurigram 4,bnp_alliance_votes,83762,84423,661,0.79%,False,DS bnp_alliance_votes exceeds TBS
+Lalmonirhat 2,total_votes,226245,241198,14953,6.61%,True,DS partial total exceeds TBS full total
+Lalmonirhat 2,bnp_votes,118359,123946,5587,4.72%,True,DS bnp_votes exceeds TBS
+Lalmonirhat 2,jamaat_votes,107886,117252,9366,8.68%,True,DS jamaat_votes exceeds TBS
+Lalmonirhat 2,eleven_party_alliance_votes,107886,117252,9366,8.68%,True,DS eleven_party_alliance_votes exceeds TBS
+Lalmonirhat 2,bnp_alliance_votes,118359,123946,5587,4.72%,True,DS bnp_alliance_votes exceeds TBS
+Patuakhali 1,total_votes,258994,259294,300,0.12%,False,DS partial total exceeds TBS full total
+Patuakhali 1,eleven_party_alliance_votes,46010,46310,300,0.65%,False,DS eleven_party_alliance_votes exceeds TBS
+Rajshahi 2,total_votes,231065,288916,57851,25.04%,True,DS partial total exceeds TBS full total
+Rajshahi 2,bnp_votes,128546,188546,60000,46.68%,True,DS bnp_votes exceeds TBS
+Rajshahi 2,bnp_alliance_votes,128546,188546,60000,46.68%,True,DS bnp_alliance_votes exceeds TBS
+Sherpur 1,total_votes,206153,269980,63827,30.96%,True,DS partial total exceeds TBS full total
+Sherpur 1,eleven_party_alliance_votes,127811,128267,456,0.36%,False,DS eleven_party_alliance_votes exceeds TBS
+Sirajganj 1,bnp_votes,115132,116613,1481,1.29%,True,DS bnp_votes exceeds TBS
+Sirajganj 1,jamaat_votes,106732,108815,2083,1.95%,True,DS jamaat_votes exceeds TBS
+Sirajganj 1,eleven_party_alliance_votes,106732,108815,2083,1.95%,True,DS eleven_party_alliance_votes exceeds TBS
+Sirajganj 1,bnp_alliance_votes,116302,116613,311,0.27%,False,DS bnp_alliance_votes exceeds TBS
+Sirajganj 4,total_votes,323150,327274,4124,1.28%,True,DS partial total exceeds TBS full total
+Sylhet 2,total_votes,154143,156591,2448,1.59%,True,DS partial total exceeds TBS full total
+Sylhet 2,bnp_votes,116697,117956,1259,1.08%,True,DS bnp_votes exceeds TBS
+Sylhet 2,eleven_party_alliance_votes,37446,38635,1189,3.18%,True,DS eleven_party_alliance_votes exceeds TBS
+Sylhet 2,bnp_alliance_votes,116697,117956,1259,1.08%,True,DS bnp_alliance_votes exceeds TBS
+Sylhet 3,total_votes,187869,189064,1195,0.64%,False,DS partial total exceeds TBS full total
+Sylhet 3,bnp_votes,114255,115450,1195,1.05%,True,DS bnp_votes exceeds TBS
+Sylhet 3,bnp_alliance_votes,114255,115450,1195,1.05%,True,DS bnp_alliance_votes exceeds TBS
+Sylhet 4,total_votes,247385,258237,10852,4.39%,True,DS partial total exceeds TBS full total
+Sylhet 4,bnp_votes,181609,186846,5237,2.88%,True,DS bnp_votes exceeds TBS
+Sylhet 4,jamaat_votes,65776,71391,5615,8.54%,True,DS jamaat_votes exceeds TBS
+Sylhet 4,eleven_party_alliance_votes,65776,71391,5615,8.54%,True,DS eleven_party_alliance_votes exceeds TBS
+Sylhet 4,bnp_alliance_votes,181609,186846,5237,2.88%,True,DS bnp_alliance_votes exceeds TBS
+Sylhet 6,total_votes,206360,211486,5126,2.48%,True,DS partial total exceeds TBS full total
+Sylhet 6,bnp_votes,108612,109917,1305,1.20%,True,DS bnp_votes exceeds TBS
+Sylhet 6,jamaat_votes,97748,101569,3821,3.91%,True,DS jamaat_votes exceeds TBS
+Sylhet 6,eleven_party_alliance_votes,97748,101569,3821,3.91%,True,DS eleven_party_alliance_votes exceeds TBS
+Sylhet 6,bnp_alliance_votes,108612,109917,1305,1.20%,True,DS bnp_alliance_votes exceeds TBS

@@ -42,69 +42,57 @@ import pandas as pd
 
 
 # Normalize Daily Star party names to match TBS naming convention.
-PARTY_NAME_MAP = {
-    "BNP": "Bangladesh Nationalist Party (BNP)",
-    "Bangladesh Jamaat-e-Islami": "Bangladesh Jamaat-e-Islami (Jamaat)",
-    "Independent": "Independent Candidate (Independent)",
-    "National Citizens Party - NCP": "National Citizen Party (NCP)",
-    "Islamic Andolon Bangladesh": "Islami Andolan Bangladesh (IAB)",
-    "Bangladesh Islamic Front": "Bangladesh Islami Front (BIF)",
-    "Bangladesh Khilafat Majlis": "Bangladesh Khelafat Majlish (BKM)",
-    "Khilafat Majlis": "Khelafat Majlis",
-    "Liberal Democratic Party - LDP": "Bangladesh Liberal Democratic Party (LDP)",
-    "Jatiya Party": "Jatiya Party (JaPa)",
-    "Jatiya Party - JAPA": "Jatiya Party (JaPa)",
-    "Gono Odhikar Parishad": "Gono Odhikar Parishad (GOP)",
-    "Gono Odhikar Porishad- GOP": "Gono Odhikar Parishad (GOP)",
-    "Amar Bangladesh Party (AB Party)": "Amar Bangladesh Party (AB)",
-    "Bangladesh Development Party - BDP": "Bangladesh Development Party (BDP)",
-    "Bangladesh National Party - BJP": "Bangladesh Jatiya Party (BJP)",
-    "Jamiat Ulama-e-Islam Bangladesh": "Jamiat Ulema-e-Islam Bangladesh (JUIB)",
-    "Gono Forum": "Gono Forum (GF)",
-    "Gano Forum": "Gono Forum (GF)",
-    "Bangladesh Supreme Party - BSP": "Bangladesh Supreme Party (BSP)",
-    "Zaker Party": "Zaker Party (ZP)",
-    "Bangladesh Jasod": "Bangladesh Jatiya Samajtantrik Dal (Bangladesh JaSad)",
-    "Jatiya Samajtantrik Dal (JSD)": "Jatiya Samajtantrik Dal (JSD)",
-    "Jatiya Samajtantrik Dal (JSD Rab)": "Jatiya Samajtantrik Dal-JASAD",
-    "Ganosamhati Andolon": "Ganosanhati Andolan (GSA)",
-    "Bangladesh Muslim League - BML": "Bangladesh Muslim League (BML)",
-    "Bangladesh Nezam e Islam Party": "Bangladesh Nezame Islam Party (BNIP)",
-    "Bangladesh Nezam Islam Party": "Bangladesh Nezame Islam Party (BNIP)",
-    "Nagorik Oikya": "Nagorik Oikya (NO)",
-    "Nagorik Oikko": "Nagorik Oikya (NO)",
-    "Bangladesh Republican Party - BRP": "Bangladesh Republican Party (BRP)",
-    "Communist Party of Bangladesh": "Communist Party of Bangladesh (CPB)",
-    "Bangladesh Samajtantrik Dal": "Bangladesh Samajtantrik Dal (Basad)",
-    "Insaniat Biplob Bangladesh - Insaniat Biplob": "Insaniyat Biplob Bangladesh (IBB)",
-    "Nationalist Democratic Movement - NDM": "Nationalist Democratic Movement (NDM)",
-    "Ganatantri Party": "Ganatantri Party (GP)",
-    "Janatar Dal": "Janotar Dol",
-    "Amjanatar Dal": "Amjanatar Dol",
-    "Islamic Front Bangladesh - IFB": "Islamic Front Bangladesh (IFB)",
-    "Bangladesher Biplobi Workers Party": "Revolutionary Workers Party of Bangladesh (RWPB)",
-    "Bangladesh Revolutionary Workers Party": "Revolutionary Workers Party of Bangladesh (RWPB)",
-    "Bangladesh Khelafat Andolon": "Bangladesh Khelafat Andolon (BKA)",
-    "Bangladesh Sangskritik Muktijote": "Bangladesh Sangskritik Muktijote (BSM)",
-    "Bangladesher Samajtantrik Dal (BSD)": "Bangladesh Samajtantrik Dal (Basad)",
-    "Bangladesher Samajtantrik Dal (Marxist)": "Socialist Party of Bangladesh (Marxist) (SPB-M)",
-    "Bangladesh Nationalist Front - BNF": "Bangladesh Nationalist Front (BNF)",
-    "Bangladesh Kalyan Party": "Bangladesh Kallyan Party (BKP)",
-    "Bangladesh Labor Party": "Bangladesh Labour Party",
-    "Bangladesh Minority Janata Party - BMJP": "Bangladesh Minority Janata Party (BMJP)",
-    "Bangladesh Nap": "Bangladesh National Awami Party–Bangladesh NAP (BNAP)",
-    "Bangladesh Gonofront": "Gono Front (GF)",
-    "Bangladesh Equal Rights Party": "Bangladesh Somo Odhikar Party (BEP)",
-    "Islamic Oikkojot": "Islami Oikya Jote (IOJ)",
-    "National People's Party - NPP": "National People's Party (NPP)",
-    "National Democratic Party - JDP": "Jatiya Ganatantrik Party (JAGPA)",
-    "Islamic Front Bangladesh": "Islamic Front Bangladesh (IFB)",
+from normalize import normalize_party, normalize_seat_name, normalize_location_name, normalize_candidate_name
+
+SYMBOL_TO_PARTY = {
+    "dhaner_shish.jpg": "Bangladesh Nationalist Party (BNP)",
+    "daripalla.jpg": "Bangladesh Jamaat-e-Islami (Jamaat)",
+    "shapla_koli.jpg": "National Citizen Party (NCP)",
+    "hatapakha.png": "Islami Andolan Bangladesh (IAB)",
+    "rickshaw.jpg": "Bangladesh Khelafat Majlish (BKM)",
+    "langol.png": "Jatiya Party (JaPa)",
+    "deyal_ghori.png": "Khelafat Majlis",
+    "khejur_gach.png": "Jamiat Ulema-e-Islam Bangladesh (JUIB)",
+    "chair.png": "Bangladesh Islami Front (BIF)",
+    "chata.jpeg": "Bangladesh Liberal Democratic Party (LDP)",
+    "truck.jpeg": "Gono Odhikar Parishad (GOP)",
+    "eagle.jpg": "Amar Bangladesh Party (AB)",
+    "fulkopi.jpg": "Bangladesh Development Party (BDP)",
+    "ghorur_gari.png": "Bangladesh Jatiya Party (BJP)",
+    "kathal.png": "Bangladesh Jatiya Party (BJP)",
+    "mathal.jpg": "Ganosanhati Andolan (GSA)",
+    "kaste.png": "Communist Party of Bangladesh (CPB)",
+    "moi.png": "Bangladesh Samajtantrik Dal (Basad)",
+    "kodal.png": "Revolutionary Workers Party of Bangladesh (RWPB)",
+    "tara.png": "Jatiya Samajtantrik Dal (JSD)",
+    "mombati.png": "Islamic Front Bangladesh (IFB)",
+    "boi.jpeg": "Bangladesh Nezame Islam Party (BNIP)",
+    "apple.jpeg": "Insaniyat Biplob Bangladesh (IBB)",
+    "bicycle.jpg": "Jatiya Party (Manju) (JP–Manju)",
+    "ektara.jpg": "Bangladesh Supreme Party (BSP)",
+    "ektrara.jpg": "Bangladesh Supreme Party (BSP)",
+    "hati.jpg": "Bangladesh Republican Party (BRP)",
+    "kolom.jpg": "Janotar Dol",
+    "golap_ful.png": "Zaker Party (ZP)",
+    "motor_gari.jpg": "Bangladesh Jatiya Samajtantrik Dal (Bangladesh JaSad)",
+    "kaci.jpg": "Socialist Party of Bangladesh (Marxist) (SPB-M)",
+    "hurricane_lamp.png": "Bangladesh Muslim League (BML)",
+    "hat_panja.png": "Bangladesh Muslim League (BML)",
+    "rocket.jpg": "Bangladesh Minority Janata Party (BMJP)",
+    "dab.jpg": "Bangladesh Congress",
+    "ketly.jpg": "Nagorik Oikya (NO)",
+    "bot_gach.png": "Bangladesh Khelafat Andolon (BKA)",
+    "aam.png": "National People's Party (NPP)",
+    "gavi.png": "Bangladesh National Awami Party–Bangladesh NAP (BNAP)",
+    "udioman_surjo.png": "Gono Forum",
+    "chori.png": "Bangladesh Sangskritik Muktijote (BSM)",
+    "projapoti.jpeg": "Amjanatar Dol",
+    "singho.jpg": "Nationalist Democratic Movement (NDM)",
+    "television.png": "Bangladesh Nationalist Front (BNF)",
+    "minar.png": "Islami Oikya Jote (IOJ)",
+    "hookah.jpg": "Independent Candidate (Independent)",
+    "kula.png": "Independent Candidate (Independent)",
 }
-
-
-def normalize_party(name: str) -> str:
-    """Normalize a DS party name to match TBS convention."""
-    return PARTY_NAME_MAP.get(name, name)
 
 
 def load_coalitions(config_path: str) -> dict[str, dict[str, Any]]:
@@ -151,23 +139,24 @@ def extract_seat_from_card(card) -> dict | None:
     # --- Seat name from the winner banner or metadata ---
     seat_span = card.find("span", class_="text-green-600")
     if seat_span:
-        seat_name = seat_span.get_text(strip=True)
+        seat_name = normalize_seat_name(seat_span.get_text(strip=True))
     else:
         # No winner (postponed election) — get seat name from metadata
         card_text = card.get_text("\n", strip=True)
         seat_match = re.search(r"Seat\n(.+)", card_text)
         if not seat_match:
             return None
-        seat_name = seat_match.group(1).strip()
+        seat_name = normalize_seat_name(seat_match.group(1).strip())
 
     # --- Winner info from the banner ---
     winner_h3 = card.find("h3", class_=lambda c: c and "text-2xl" in c)
-    winner_name = winner_h3.get_text(strip=True) if winner_h3 else ""
+    winner_name = normalize_candidate_name(winner_h3.get_text(strip=True)) if winner_h3 else ""
 
     winner_party_span = card.find(
         "span", class_=lambda c: c and "text-gray-700" in c and "bg-white" in c
     )
-    winner_party = normalize_party(winner_party_span.get_text(strip=True)) if winner_party_span else ""
+    winner_party_text = winner_party_span.get_text(strip=True) if winner_party_span else ""
+    winner_party = normalize_party(winner_party_text)
 
     # Winner votes from banner
     winner_votes_span = card.find(
@@ -199,7 +188,7 @@ def extract_seat_from_card(card) -> dict | None:
     # If winner wasn't found in grid, add from banner
     if not seen_winner and winner_name:
         candidates.insert(0, {
-            "name": winner_name,
+            "name": normalize_candidate_name(winner_name),
             "party": winner_party,
             "votes": winner_votes,
         })
@@ -208,6 +197,7 @@ def extract_seat_from_card(card) -> dict | None:
     total_voters = 0
     male_voters = 0
     female_voters = 0
+    hijra_voters = 0
 
     card_text = card.get_text(" ", strip=True)
     tv_match = re.search(r"Total Voters\s*:?\s*([\d,]+)", card_text)
@@ -222,15 +212,19 @@ def extract_seat_from_card(card) -> dict | None:
     if female_match:
         female_voters = int(female_match.group(1).replace(",", ""))
 
+    hijra_match = re.search(r"Hijra\s*:?\s*([\d,]+)", card_text)
+    if hijra_match:
+        hijra_voters = int(hijra_match.group(1).replace(",", ""))
+
     # --- Division / District from card metadata ---
     division = ""
     district = ""
     div_match = re.search(r"Division\s+(\w[\w\s]*?)(?=\s+District)", card_text)
     if div_match:
-        division = div_match.group(1).strip()
+        division = normalize_location_name(div_match.group(1).strip())
     dist_match = re.search(r"District\s+(\w[\w\s]*?)(?=\s+Seat)", card_text)
     if dist_match:
-        district = dist_match.group(1).strip()
+        district = normalize_location_name(dist_match.group(1).strip())
 
     return {
         "seat_name": seat_name,
@@ -239,6 +233,7 @@ def extract_seat_from_card(card) -> dict | None:
         "total_voters": total_voters,
         "male_voters": male_voters,
         "female_voters": female_voters,
+        "hijra_voters": hijra_voters,
         "candidates": candidates,
     }
 
@@ -249,11 +244,22 @@ def _parse_candidate_card(cdiv, text_parts: str) -> dict | None:
     h3 = cdiv.find("h3")
     if not h3:
         return None
-    name = h3.get_text(strip=True)
+    name = normalize_candidate_name(h3.get_text(strip=True))
+
+    # Find the symbol image to potentially override the party text
+    symbol_img = cdiv.find("img", alt="Party Symbol")
+    symbol_file = os.path.basename(symbol_img["src"]) if symbol_img and symbol_img.has_attr("src") else ""
+    mapped_party = SYMBOL_TO_PARTY.get(symbol_file)
 
     # Find party (p tag with party info)
     party_p = cdiv.find("p")
-    party = normalize_party(party_p.get_text(strip=True)) if party_p else ""
+    text_party = normalize_party(party_p.get_text(strip=True)) if party_p else ""
+    
+    # If the image maps perfectly to an established party, trust the image mapping over the text
+    if mapped_party:
+        party = mapped_party
+    else:
+        party = text_party
 
     # Find votes if present (None means data not available)
     votes = None
@@ -348,6 +354,7 @@ def compute_results(
             "total_voters": seat["total_voters"] or None,
             "male_voters": seat["male_voters"] or None,
             "female_voters": seat["female_voters"] or None,
+            "hijra_voters": seat.get("hijra_voters") or None,
             "total_votes": total_votes,
             "top_three_candidates": top_three_candidates,
             "top_three": top_three_parties,

@@ -84,25 +84,7 @@ def interpolate_color(hex_start: str, hex_end: str, t: float) -> str:
     return f"#{r:02X}{g:02X}{b:02X}"
 
 
-def normalize_seat_name(name: str) -> str:
-    """Normalize seat names to a common form for matching."""
-    if not name:
-        return ''
-    norm = str(name).strip().lower()
-    norm = norm.replace('chattogram', 'chittagong')
-    norm = norm.replace('barishal', 'barisal')
-    norm = norm.replace('chapai nawabganj', 'chapai nababganj')
-    norm = norm.replace('jhalakathi', 'jhalokathi')
-    norm = norm.replace('moulvibazar', 'maulvibazar')
-    norm = norm.replace('netrokona', 'netrakona')
-    norm = norm.replace('khagrachhari', 'khagrachari')
-    if norm.startswith('parbatya '):
-        norm = norm.replace('parbatya ', '', 1)
-        if '-' not in norm:
-            norm = f"{norm}-1"
-    norm = re.sub(r"[^a-z0-9\- ]", '', norm)
-    norm = re.sub(r"\s+", ' ', norm)
-    return norm
+from normalize import normalize_seat_name
 
 
 def build_map(geojson: Dict[str, Any], results_df: pd.DataFrame, coalition_code: str, coalition_meta: Dict[str, Any], output_path: str) -> None:

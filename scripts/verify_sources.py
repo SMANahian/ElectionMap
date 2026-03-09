@@ -29,102 +29,11 @@ import re
 
 import pandas as pd
 
+from normalize import normalize_party, normalize_seat_name
+
 
 # Mapping of Daily Star party names to TBS party names.
-PARTY_NAME_MAP = {
-    # Major parties
-    "BNP": "Bangladesh Nationalist Party (BNP)",
-    "Bangladesh Jamaat-e-Islami": "Bangladesh Jamaat-e-Islami (Jamaat)",
-    "Independent": "Independent Candidate (Independent)",
-    "National Citizens Party - NCP": "National Citizen Party (NCP)",
-    "Islamic Andolon Bangladesh": "Islami Andolan Bangladesh (IAB)",
-    "Bangladesh Islamic Front": "Bangladesh Islami Front (BIF)",
-    "Bangladesh Khilafat Majlis": "Bangladesh Khelafat Majlish (BKM)",
-    "Khilafat Majlis": "Khelafat Majlis",
-    "Liberal Democratic Party - LDP": "Bangladesh Liberal Democratic Party (LDP)",
-    "Jatiya Party": "Jatiya Party (JaPa)",
-    "Jatiya Party - JAPA": "Jatiya Party (JaPa)",
-    "Gono Odhikar Parishad": "Gono Odhikar Parishad (GOP)",
-    "Gono Odhikar Porishad- GOP": "Gono Odhikar Parishad (GOP)",
-    "Amar Bangladesh Party (AB Party)": "Amar Bangladesh Party (AB)",
-    "Bangladesh Development Party - BDP": "Bangladesh Development Party (BDP)",
-    "Bangladesh National Party - BJP": "Bangladesh Jatiya Party (BJP)",
-    "Jamiat Ulama-e-Islam Bangladesh": "Jamiat Ulema-e-Islam Bangladesh (JUIB)",
-    "Gono Forum": "Gono Forum (GF)",
-    "Gano Forum": "Gono Forum (GF)",
-    "Bangladesh Supreme Party - BSP": "Bangladesh Supreme Party (BSP)",
-    "Zaker Party": "Zaker Party (ZP)",
-    "Bangladesh Jasod": "Bangladesh Jatiya Samajtantrik Dal (Bangladesh JaSad)",
-    "Bangladesh Congress": "Bangladesh Congress",
-    "Jatiya Samajtantrik Dal (JSD)": "Jatiya Samajtantrik Dal (JSD)",
-    "Jatiya Samajtantrik Dal (JSD Rab)": "Jatiya Samajtantrik Dal-JASAD",
-    "Ganosamhati Andolon": "Ganosanhati Andolan (GSA)",
-    "Bangladesh Muslim League": "Bangladesh Muslim League",
-    "Bangladesh Muslim League - BML": "Bangladesh Muslim League (BML)",
-    "Bangladesh Nezam e Islam Party": "Bangladesh Nezame Islam Party (BNIP)",
-    "Bangladesh Nezam Islam Party": "Bangladesh Nezame Islam Party (BNIP)",
-    "Nagorik Oikya": "Nagorik Oikya (NO)",
-    "Nagorik Oikko": "Nagorik Oikya (NO)",
-    "Bangladesh Republican Party - BRP": "Bangladesh Republican Party (BRP)",
-    "Communist Party of Bangladesh": "Communist Party of Bangladesh (CPB)",
-    "Bangladesh Samajtantrik Dal": "Bangladesh Samajtantrik Dal (Basad)",
-    "Insaniat Biplob Bangladesh - Insaniat Biplob": "Insaniyat Biplob Bangladesh (IBB)",
-    "Nationalist Democratic Movement - NDM": "Nationalist Democratic Movement (NDM)",
-    "Ganatantri Party": "Ganatantri Party (GP)",
-    "Janotar Dol": "Janotar Dol",
-    "Janatar Dal": "Janotar Dol",
-    "Amjanatar Dal": "Amjanatar Dol",
-    "Islamic Front Bangladesh - IFB": "Islamic Front Bangladesh (IFB)",
-    "Islamic Front Bangladesh": "Islamic Front Bangladesh (IFB)",
-    "Bangladesher Biplobi Workers Party": "Revolutionary Workers Party of Bangladesh (RWPB)",
-    "Bangladesh Revolutionary Workers Party": "Revolutionary Workers Party of Bangladesh (RWPB)",
-    "Bangladesh Khelafat Andolon": "Bangladesh Khelafat Andolon (BKA)",
-    "Bangladesh Sangskritik Muktijote": "Bangladesh Sangskritik Muktijote (BSM)",
-    "Bangladesher Samajtantrik Dal (BSD)": "Bangladesh Samajtantrik Dal (Basad)",
-    "Bangladesher Samajtantrik Dal (Marxist)": "Socialist Party of Bangladesh (Marxist) (SPB-M)",
-    "Bangladesh Nationalist Front - BNF": "Bangladesh Nationalist Front (BNF)",
-    "Bangladesh Kalyan Party": "Bangladesh Kallyan Party (BKP)",
-    "Bangladesh Labor Party": "Bangladesh Labour Party",
-    "Bangladesh Minority Janata Party - BMJP": "Bangladesh Minority Janata Party (BMJP)",
-    "Bangladesh Nap": "Bangladesh National Awami Party–Bangladesh NAP (BNAP)",
-    "Bangladesh Gonofront": "Gono Front (GF)",
-    "Bangladesh Equal Rights Party": "Bangladesh Somo Odhikar Party (BEP)",
-    "Islamic Oikkojot": "Islami Oikya Jote (IOJ)",
-    "National People's Party - NPP": "National People's Party (NPP)",
-    "National Democratic Party - JDP": "Jatiya Ganatantrik Party (JAGPA)",
-    "Democratic Party": "Democratic Party",
-}
-
 # Known alternative spellings between TBS and Daily Star
-SEAT_NAME_ALIASES = {
-    "bogra": "bogura",
-    "comilla": "cumilla",
-    "jessore": "jashore",
-    "jhalakathi": "jhalokathi",
-    "netrokona": "netrakona",
-    "chapai nawabganj": "chapainawabganj",
-    "cox's bazar": "coxs bazar",
-}
-
-
-def normalize_seat_name(name: str) -> str:
-    """Normalize seat name for matching between sources."""
-    name = name.strip().lower()
-    name = re.sub(r"[-–—]", " ", name)
-    name = re.sub(r"[''']s\b", "s", name)
-    name = re.sub(r"\s+", " ", name)
-    for old, new in SEAT_NAME_ALIASES.items():
-        if name.startswith(old + " "):
-            name = new + name[len(old):]
-            break
-    return name
-
-
-def map_ds_party(ds_party: str) -> str:
-    """Map a Daily Star party name to TBS equivalent."""
-    return PARTY_NAME_MAP.get(ds_party, ds_party)
-
-
 def normalize_candidate_name(name: str) -> str:
     """Normalize candidate name for fuzzy matching."""
     name = str(name).strip().lower()
@@ -207,12 +116,16 @@ def compare_seat_results(tbs_path: str, ds_path: str, output_dir: str):
         t_total = t.get("total_votes")
         d_total = d.get("total_votes")
         if pd.notna(t_total) and pd.notna(d_total) and d_total > t_total:
+            diff = int(d_total - t_total)
+            diff_pct = (diff / float(t_total) * 100) if t_total > 0 else 100.0
             mismatches.append({
                 "seat_name": seat,
                 "field": "total_votes",
                 "tbs_value": int(t_total),
                 "ds_value": int(d_total),
-                "diff": int(d_total - t_total),
+                "diff": diff,
+                "diff_pct": f"{diff_pct:.2f}%",
+                "is_significant": diff_pct > 1.0,
                 "issue": "DS partial total exceeds TBS full total",
             })
 
@@ -221,12 +134,16 @@ def compare_seat_results(tbs_path: str, ds_path: str, output_dir: str):
             tv = t.get(col)
             dv = d.get(col)
             if pd.notna(tv) and pd.notna(dv) and dv > tv:
+                diff = int(dv - tv)
+                diff_pct = (diff / float(tv) * 100) if tv > 0 else 100.0
                 mismatches.append({
                     "seat_name": seat,
                     "field": col,
                     "tbs_value": int(tv),
                     "ds_value": int(dv),
-                    "diff": int(dv - tv),
+                    "diff": diff,
+                    "diff_pct": f"{diff_pct:.2f}%",
+                    "is_significant": diff_pct > 1.0,
                     "issue": f"DS {col} exceeds TBS",
                 })
 
@@ -262,7 +179,7 @@ def compare_party_totals(tbs_path: str, ds_path: str, output_dir: str):
     logging.info(f"TBS parties: {len(tbs)}, DS parties: {len(ds)}")
 
     # Map DS party names
-    ds["_mapped"] = ds["party"].apply(map_ds_party)
+    ds["_mapped"] = ds["party"].apply(normalize_party)
 
     # Merge on mapped party name
     merged = tbs.merge(ds, left_on="party", right_on="_mapped", how="outer",
@@ -281,12 +198,15 @@ def compare_party_totals(tbs_path: str, ds_path: str, output_dir: str):
             matched_count += 1
             # DS totals are partial (top 2 only), so DS <= TBS expected
             diff = int(ds_votes - tbs_votes)
+            diff_pct = (abs(diff) / float(tbs_votes) * 100) if tbs_votes > 0 else 100.0
             mismatches.append({
                 "party_tbs": tbs_party,
                 "party_ds": ds_party,
                 "tbs_votes": int(tbs_votes),
                 "ds_votes": int(ds_votes),
                 "diff": diff,
+                "diff_pct": f"{diff_pct:.2f}%",
+                "is_significant": diff > 0 and diff_pct > 1.0,
                 "ds_pct_of_tbs": f"{ds_votes / tbs_votes * 100:.1f}%" if tbs_votes > 0 else "-",
                 "issue": "DS exceeds TBS" if diff > 0 else "Expected (DS partial)",
             })
@@ -297,6 +217,8 @@ def compare_party_totals(tbs_path: str, ds_path: str, output_dir: str):
                 "tbs_votes": int(tbs_votes),
                 "ds_votes": "-",
                 "diff": "-",
+                "diff_pct": "-",
+                "is_significant": True,
                 "ds_pct_of_tbs": "-",
                 "issue": "Only in TBS",
             })
@@ -307,6 +229,8 @@ def compare_party_totals(tbs_path: str, ds_path: str, output_dir: str):
                 "tbs_votes": "-",
                 "ds_votes": int(ds_votes),
                 "diff": "-",
+                "diff_pct": "-",
+                "is_significant": True,
                 "ds_pct_of_tbs": "-",
                 "issue": "Only in DS (mapping needed?)",
             })
@@ -358,7 +282,7 @@ def compare_vote_counts(tbs_pbs_path: str, ds_pbs_path: str, output_dir: str):
 
     tbs["_norm_seat"] = tbs["seat_name"].apply(normalize_seat_name)
     ds["_norm_seat"] = ds["seat_name"].apply(normalize_seat_name)
-    ds["_party_mapped"] = ds["party"].apply(map_ds_party)
+    ds["_party_mapped"] = ds["party"].apply(normalize_party)
 
     common_seats = set(tbs["_norm_seat"]) & set(ds["_norm_seat"])
 
@@ -421,6 +345,10 @@ def compare_vote_counts(tbs_pbs_path: str, ds_pbs_path: str, output_dir: str):
     for _, ds_row in ds_with_votes.iterrows():
         norm_seat = ds_row["_norm_seat"]
         mapped_party = ds_row["_party_mapped"]
+        if 'Independent' in mapped_party:
+            continue
+        if 'Independent' in mapped_party:
+            continue
         ds_votes = int(ds_row["votes"])
 
         tbs_match = tbs[
@@ -453,6 +381,8 @@ def compare_vote_counts(tbs_pbs_path: str, ds_pbs_path: str, output_dir: str):
                 "tbs_votes": "-",
                 "ds_votes": ds_votes,
                 "diff": "-",
+                "diff_pct": "-",
+                "is_significant": True,
                 "issue": "Party not found in TBS for this seat",
             })
             continue
@@ -464,6 +394,7 @@ def compare_vote_counts(tbs_pbs_path: str, ds_pbs_path: str, output_dir: str):
 
         if tbs_votes != ds_votes:
             diff = ds_votes - tbs_votes
+            diff_pct = (abs(diff) / float(tbs_votes) * 100) if tbs_votes > 0 else 100.0
             all_mismatches.append({
                 "seat_name": ds_row["seat_name"],
                 "candidate_ds": ds_row.get("candidate", ""),
@@ -472,6 +403,8 @@ def compare_vote_counts(tbs_pbs_path: str, ds_pbs_path: str, output_dir: str):
                 "tbs_votes": tbs_votes,
                 "ds_votes": ds_votes,
                 "diff": diff,
+                "diff_pct": f"{diff_pct:.2f}%",
+                "is_significant": diff_pct > 1.0,
                 "issue": "Vote count mismatch",
             })
 

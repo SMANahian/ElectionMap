@@ -1,53 +1,52 @@
-party_tbs,party_ds,tbs_votes,ds_votes,diff,ds_pct_of_tbs,issue
-Amar Bangladesh Party (AB),Amar Bangladesh Party (AB),207120,190590,-16530,92.0%,Expected (DS partial)
-Amjanatar Dol,-,4164,-,-,-,Only in TBS
-Bangladesh Congress,Bangladesh Congress,5772,1036,-4736,17.9%,Expected (DS partial)
-Bangladesh Development Party (BDP),Bangladesh Development Party (BDP),128519,128519,0,100.0%,Expected (DS partial)
-Bangladesh Islami Front (BIF),Bangladesh Islami Front (BIF),312237,208404,-103833,66.7%,Expected (DS partial)
-Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),23582777,22716478,-866299,96.3%,Expected (DS partial)
-Bangladesh Jatiya Party (BJP),Bangladesh Jatiya Party (BJP),105918,105543,-375,99.6%,Expected (DS partial)
-Bangladesh Jatiya Party (Matin),-,212,-,-,-,Only in TBS
-Bangladesh Jatiya Samajtantrik Dal (Bangladesh JaSad),Bangladesh Jatiya Samajtantrik Dal (Bangladesh JaSad),10277,1334,-8943,13.0%,Expected (DS partial)
-Bangladesh Kallyan Party (BKP),-,589,-,-,-,Only in TBS
-Bangladesh Khelafat Andolon (BKA),Bangladesh Khelafat Andolon (BKA),4901,310,-4591,6.3%,Expected (DS partial)
-Bangladesh Khelafat Majlish (BKM),Bangladesh Khelafat Majlish (BKM),1670060,1271703,-398357,76.1%,Expected (DS partial)
-Bangladesh Labour Party,-,3748,-,-,-,Only in TBS
-Bangladesh Liberal Democratic Party (LDP),Bangladesh Liberal Democratic Party (LDP),258817,255115,-3702,98.6%,Expected (DS partial)
-Bangladesh Minority Janata Party (BMJP),-,6158,-,-,-,Only in TBS
-Bangladesh Muslim League,-,6357,-,-,-,Only in TBS
-Bangladesh Muslim League (BML),Bangladesh Muslim League (BML),3543,829,-2714,23.4%,Expected (DS partial)
-Bangladesh National Awami Party–Bangladesh NAP (BNAP),-,4477,-,-,-,Only in TBS
-Bangladesh Nationalist Front (BNF),Bangladesh Nationalist Front (BNF),1469,233,-1236,15.9%,Expected (DS partial)
-Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),37097895,36313433,-784462,97.9%,Expected (DS partial)
-Bangladesh Nezame Islam Party (BNIP),-,26890,-,-,-,Only in TBS
-Bangladesh Republican Party (BRP),Bangladesh Republican Party (BRP),15994,1492,-14502,9.3%,Expected (DS partial)
-Bangladesh Samajtantrik Dal (Basad),Bangladesh Samajtantrik Dal (Basad),37536,2038,-35498,5.4%,Expected (DS partial)
-Bangladesh Sangskritik Muktijote (BSM),Bangladesh Sangskritik Muktijote (BSM),4172,616,-3556,14.8%,Expected (DS partial)
-Bangladesh Somo Odhikar Party (BEP),-,169,-,-,-,Only in TBS
-Bangladesh Supreme Party (BSP),-,18286,-,-,-,Only in TBS
-Communist Party of Bangladesh (CPB),Communist Party of Bangladesh (CPB),51345,695,-50650,1.4%,Expected (DS partial)
-Ganatantri Party (GP),-,191,-,-,-,Only in TBS
-Ganosanhati Andolan (GSA),Ganosanhati Andolan (GSA),102928,95806,-7122,93.1%,Expected (DS partial)
-Gono Forum (GF),-,4429,-,-,-,Only in TBS
-Gono Front (GF),-,579,-,-,-,Only in TBS
-Gono Odhikar Parishad (GOP),Gono Odhikar Parishad (GOP),237526,204489,-33037,86.1%,Expected (DS partial)
-Independent Candidate (Independent),Independent Candidate (Independent),4370634,2443393,-1927241,55.9%,Expected (DS partial)
-Insaniyat Biplob Bangladesh (IBB),Insaniyat Biplob Bangladesh (IBB),21312,623,-20689,2.9%,Expected (DS partial)
-Islami Andolan Bangladesh (IAB),Islami Andolan Bangladesh (IAB),1981403,591204,-1390199,29.8%,Expected (DS partial)
-Islami Oikya Jote (IOJ),-,2611,-,-,-,Only in TBS
-Islamic Front Bangladesh (IFB),Islamic Front Bangladesh (IFB),28325,844,-27481,3.0%,Expected (DS partial)
-Jamiat Ulema-e-Islam Bangladesh (JUIB),Jamiat Ulema-e-Islam Bangladesh (JUIB),349886,348987,-899,99.7%,Expected (DS partial)
-Janotar Dol,Janotar Dol,15463,283,-15180,1.8%,Expected (DS partial)
-Jatiya Ganatantrik Party (JAGPA),-,1772,-,-,-,Only in TBS
-Jatiya Party (JaPa),Jatiya Party (JaPa),553671,208929,-344742,37.7%,Expected (DS partial)
-Jatiya Party (Manju) (JP–Manju),-,19143,-,-,-,Only in TBS
-Jatiya Samajtantrik Dal (JSD),-,31467,-,-,-,Only in TBS
-Jatiya Samajtantrik Dal-JASAD,-,315,-,-,-,Only in TBS
-Khelafat Majlis,Khelafat Majlis,455447,508707,53260,111.7%,DS exceeds TBS
-Nagorik Oikya (NO),-,5713,-,-,-,Only in TBS
-National Citizen Party (NCP),National Citizen Party (NCP),2312450,2173172,-139278,94.0%,Expected (DS partial)
-National People's Party (NPP),-,4826,-,-,-,Only in TBS
-Nationalist Democratic Movement (NDM),-,1542,-,-,-,Only in TBS
-Revolutionary Workers Party of Bangladesh (RWPB),Revolutionary Workers Party of Bangladesh (RWPB),33000,32034,-966,97.1%,Expected (DS partial)
-Socialist Party of Bangladesh (Marxist) (SPB-M),-,10124,-,-,-,Only in TBS
-Zaker Party (ZP),-,13486,-,-,-,Only in TBS
+party_tbs,party_ds,tbs_votes,ds_votes,diff,diff_pct,is_significant,ds_pct_of_tbs,issue
+Amar Bangladesh Party (AB),Amar Bangladesh Party (AB),207120,190590,-16530,7.98%,False,92.0%,Expected (DS partial)
+Amjanatar Dol,-,4164,-,-,-,True,-,Only in TBS
+Bangladesh Congress,Bangladesh Congress,5772,1036,-4736,82.05%,False,17.9%,Expected (DS partial)
+Bangladesh Development Party (BDP),Bangladesh Development Party (BDP),128519,128519,0,0.00%,False,100.0%,Expected (DS partial)
+Bangladesh Islami Front (BIF),Bangladesh Islami Front (BIF),312237,844,-311393,99.73%,False,0.3%,Expected (DS partial)
+Bangladesh Jamaat-e-Islami (Jamaat),Bangladesh Jamaat-e-Islami (Jamaat),23582777,22716478,-866299,3.67%,False,96.3%,Expected (DS partial)
+Bangladesh Jatiya Party (BJP),Bangladesh Jatiya Party (BJP),105918,105543,-375,0.35%,False,99.6%,Expected (DS partial)
+Bangladesh Jatiya Party (Matin),-,212,-,-,-,True,-,Only in TBS
+Bangladesh Jatiya Samajtantrik Dal (Bangladesh JaSad),Bangladesh Jatiya Samajtantrik Dal (Bangladesh JaSad),10277,1334,-8943,87.02%,False,13.0%,Expected (DS partial)
+Bangladesh Kallyan Party (BKP),-,589,-,-,-,True,-,Only in TBS
+Bangladesh Khelafat Andolon (BKA),Bangladesh Khelafat Andolon (BKA),4901,310,-4591,93.67%,False,6.3%,Expected (DS partial)
+Bangladesh Khelafat Majlish (BKM),Bangladesh Khelafat Majlish (BKM),1670060,1256718,-413342,24.75%,False,75.2%,Expected (DS partial)
+Bangladesh Labour Party,-,3748,-,-,-,True,-,Only in TBS
+Bangladesh Liberal Democratic Party (LDP),Bangladesh Liberal Democratic Party (LDP),258817,255115,-3702,1.43%,False,98.6%,Expected (DS partial)
+Bangladesh Minority Janata Party (BMJP),-,6158,-,-,-,True,-,Only in TBS
+Bangladesh Muslim League (BML),Bangladesh Muslim League (BML),9900,829,-9071,91.63%,False,8.4%,Expected (DS partial)
+Bangladesh National Awami Party–Bangladesh NAP (BNAP),-,4477,-,-,-,True,-,Only in TBS
+Bangladesh Nationalist Front (BNF),Bangladesh Nationalist Front (BNF),1469,233,-1236,84.14%,False,15.9%,Expected (DS partial)
+Bangladesh Nationalist Party (BNP),Bangladesh Nationalist Party (BNP),37097895,36483428,-614467,1.66%,False,98.3%,Expected (DS partial)
+Bangladesh Nezame Islam Party (BNIP),-,26890,-,-,-,True,-,Only in TBS
+Bangladesh Republican Party (BRP),Bangladesh Republican Party (BRP),15994,1492,-14502,90.67%,False,9.3%,Expected (DS partial)
+Bangladesh Samajtantrik Dal (Basad),Bangladesh Samajtantrik Dal (Basad),37536,2038,-35498,94.57%,False,5.4%,Expected (DS partial)
+Bangladesh Sangskritik Muktijote (BSM),Bangladesh Sangskritik Muktijote (BSM),4172,616,-3556,85.23%,False,14.8%,Expected (DS partial)
+Bangladesh Somo Odhikar Party (BEP),-,169,-,-,-,True,-,Only in TBS
+Bangladesh Supreme Party (BSP),-,18286,-,-,-,True,-,Only in TBS
+Communist Party of Bangladesh (CPB),Communist Party of Bangladesh (CPB),51345,695,-50650,98.65%,False,1.4%,Expected (DS partial)
+Ganatantri Party (GP),-,191,-,-,-,True,-,Only in TBS
+Ganosanhati Andolan (GSA),Ganosanhati Andolan (GSA),102928,95806,-7122,6.92%,False,93.1%,Expected (DS partial)
+Gono Forum (GF),-,4429,-,-,-,True,-,Only in TBS
+Gono Front (GF),-,579,-,-,-,True,-,Only in TBS
+Gono Odhikar Parishad (GOP),Gono Odhikar Parishad (GOP),237526,204489,-33037,13.91%,False,86.1%,Expected (DS partial)
+Independent Candidate (Independent),Independent Candidate (Independent),4370634,2443393,-1927241,44.10%,False,55.9%,Expected (DS partial)
+Insaniyat Biplob Bangladesh (IBB),Insaniyat Biplob Bangladesh (IBB),21312,623,-20689,97.08%,False,2.9%,Expected (DS partial)
+Islami Andolan Bangladesh (IAB),Islami Andolan Bangladesh (IAB),1981403,591204,-1390199,70.16%,False,29.8%,Expected (DS partial)
+Islami Oikya Jote (IOJ),-,2611,-,-,-,True,-,Only in TBS
+Islamic Front Bangladesh (IFB),Islamic Front Bangladesh (IFB),28325,208404,180079,635.76%,True,735.8%,DS exceeds TBS
+Jamiat Ulema-e-Islam Bangladesh (JUIB),Jamiat Ulema-e-Islam Bangladesh (JUIB),349886,348987,-899,0.26%,False,99.7%,Expected (DS partial)
+Janotar Dol,Janotar Dol,15463,283,-15180,98.17%,False,1.8%,Expected (DS partial)
+Jatiya Ganatantrik Party (JAGPA),-,1772,-,-,-,True,-,Only in TBS
+Jatiya Party (JaPa),Jatiya Party (JaPa),553671,33248,-520423,93.99%,False,6.0%,Expected (DS partial)
+Jatiya Party (Manju) (JP–Manju),Jatiya Party (Manju) (JP–Manju),19143,5686,-13457,70.30%,False,29.7%,Expected (DS partial)
+Jatiya Samajtantrik Dal (JSD),-,31467,-,-,-,True,-,Only in TBS
+Jatiya Samajtantrik Dal-JASAD,-,315,-,-,-,True,-,Only in TBS
+Khelafat Majlis,Khelafat Majlis,455447,523692,68245,14.98%,True,115.0%,DS exceeds TBS
+Nagorik Oikya (NO),-,5713,-,-,-,True,-,Only in TBS
+National Citizen Party (NCP),National Citizen Party (NCP),2312450,2173172,-139278,6.02%,False,94.0%,Expected (DS partial)
+National People's Party (NPP),-,4826,-,-,-,True,-,Only in TBS
+Nationalist Democratic Movement (NDM),-,1542,-,-,-,True,-,Only in TBS
+Revolutionary Workers Party of Bangladesh (RWPB),Revolutionary Workers Party of Bangladesh (RWPB),33000,32034,-966,2.93%,False,97.1%,Expected (DS partial)
+Socialist Party of Bangladesh (Marxist) (SPB-M),-,10124,-,-,-,True,-,Only in TBS
+Zaker Party (ZP),-,13486,-,-,-,True,-,Only in TBS

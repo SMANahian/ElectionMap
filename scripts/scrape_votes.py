@@ -62,6 +62,7 @@ import json
 import logging
 import os
 import re
+from normalize import normalize_party, normalize_seat_name, normalize_location_name, normalize_candidate_name
 from typing import Dict, Any, Tuple, List, Optional
 
 import requests
@@ -216,7 +217,7 @@ def _extract_candidate_name(candidate: Dict[str, Any]) -> str:
     for key in ('candidate_name', 'name', 'candidate', 'full_name', 'candidateName'):
         value = candidate.get(key)
         if value:
-            return str(value).strip()
+            return normalize_candidate_name(str(value).strip())
     return 'Unknown'
 
 
@@ -252,8 +253,8 @@ def compute_results(data: Dict[str, Any], coalitions: Dict[str, Dict[str, Any]])
     for seats_list in data.get('divisions', {}).values():
         for s in seats_list:
             seat_geo[str(s.get('seat_id', ''))] = {
-                'division': s.get('division_name', ''),
-                'district': s.get('district_name', ''),
+                'division': normalize_location_name(s.get('division_name', '')),
+                'district': normalize_location_name(s.get('district_name', '')),
             }
     seat_records: List[Dict[str, Any]] = []
     party_vote_totals: Dict[str, int] = {}
@@ -261,7 +262,8 @@ def compute_results(data: Dict[str, Any], coalitions: Dict[str, Dict[str, Any]])
     seat_party_votes: Dict[str, Dict[str, int]] = {}
     for seat_id, seat_info in constituencies.items():
         seat_number = seat_info.get('seat_number')
-        seat_name = seat_info.get('seat_name')
+        raw_seat_name = seat_info.get('seat_name') or ''
+        seat_name = normalize_seat_name(raw_seat_name)
         upazila = seat_info.get('upazila', '')
         voting_finalized = seat_info.get('voting_finalized', None)
         geo = seat_geo.get(str(seat_id), {})
@@ -287,8 +289,8 @@ def compute_results(data: Dict[str, Any], coalitions: Dict[str, Dict[str, Any]])
                 continue
             total_votes += votes
             candidate = candidates_by_diid.get(str(diid), {})
-            party_name = candidate.get('party') or 'UNKNOWN'
             candidate_name = _extract_candidate_name(candidate)
+            party_name = normalize_party(candidate.get('party') or 'UNKNOWN')
             # Accumulate per party totals
             party_vote_totals[party_name] = party_vote_totals.get(party_name, 0) + votes
             seat_votes_by_party[party_name] = seat_votes_by_party.get(party_name, 0) + votes
