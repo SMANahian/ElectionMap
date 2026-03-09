@@ -1,0 +1,36 @@
+In the compressed WINZIP folder you will find the MICS6 datasets for the selected Bangladesh. Six SPSS data files were produced, 
+ corresponding to the units of analysis: 
+1. Households - hh.sav 
+2. Household members - hl.sav
+3. Women in reproductive age (15-49 years of age) – wm.sav
+4. Birth history - bh.sav 
+5. Mothers or primary caretakers of children under the age of five – ch.sav
+6. Mothers or primary caretakers of children 5-17 – fs.sav
+
+The characteristics of the data such as sample size, weights, variable labels and information on recoded or imputed variables 
+ can be found within the survey archive which will be made available shortly on http://mics.unicef.org/surveys. 
+ The survey archive will also contain the questionnaires and information on the sampling and implementation of the survey.
+
+Access Conditions:
+Survey datasets are distributed at no cost for legitimate research, with the condition that we receive a description of the objectives 
+ of any research project that will be using the data prior to authorizing their distribution.
+Copies of all reports and publications based on the requested data must be sent to the following:
+
+
+1. Name: Md. Mashud Alam
+Affiliation: Director,Demography and Health Wing,
+             Bangladesh Bureau of Statistics
+
+Address: Parishankhyan Bhaban, E-27/A, Agargaon
+         Sher-e-Bangla Nagar, Dhaka-1207, 
+         Bangladesh.
+         email: mashud.alam@bbs.gov.bd / mashud2003@yahoo.com
+
+2. Name: Deepak Kumar Dey 
+Affiliation: Statistics and Monitoring Specialist, UNICEF Bangladesh
+
+Address: BSL Office Complex, 
+         1 Minto Rd, Dhaka 1000, Bangladesh
+         email: dkdey@unicef.org
+
+
