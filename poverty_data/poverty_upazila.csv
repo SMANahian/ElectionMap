@@ -1,0 +1,591 @@
+division,district,name,population,quintile_2022,poverty_rate_2022,se_2022,quintile_2010,poverty_rate_2010,se_2010,extreme_poverty_category,poverty_change_2010_2022
+Barishal,Barguna,Amtali,211015,Low (Q2),14.9,5.0,Low (Q2),25.8,4.2,Moderate,-10.9
+Barishal,Barguna,Bamna,77419,Moderate (Q3),20.2,10.5,Low (Q2),22.9,8.5,High,-2.7
+Barishal,Barguna,Barguna Sadar,288426,Moderate (Q3),18.6,3.0,Low (Q2),23.7,4.3,Moderate,-5.1
+Barishal,Barguna,Betagi,124379,High (Q4),22.3,10.2,Low (Q2),29.8,4.5,High,-7.5
+Barishal,Barguna,Patharghata,175873,High (Q4),23.5,2.2,Very Low (Q1),20.0,5.3,High,3.5
+Barishal,Barguna,Taltali,115609,High (Q4),23.3,9.6,Low (Q2),25.7,5.9,High,-2.4
+Barishal,Barishal,Agailjhara,153523,High (Q4),24.9,4.7,High (Q4),42.7,5.5,High,-17.8
+Barishal,Barishal,Babuganj,150640,Low (Q2),13.7,5.0,Very High (Q5),51.9,12.1,Moderate,-38.2
+Barishal,Barishal,Bakerganj,346151,High (Q4),27.1,3.4,Very High (Q5),61.1,5.7,High,-34.0
+Barishal,Barishal,Banaripara,167200,Very High (Q5),38.4,4.1,Very High (Q5),59.9,5.1,High,-21.5
+Barishal,Barishal,Gaurnadi,202870,Very High (Q5),33.3,4.0,Very High (Q5),55.6,3.9,High,-22.3
+Barishal,Barishal,Hijla,148102,Very High (Q5),35.7,13.3,Very High (Q5),69.0,9.8,High,-33.3
+Barishal,Barishal,Barishal Sadar,617993,Moderate (Q3),18.5,1.4,High (Q4),43.5,2.7,Moderate,-25.0
+Barishal,Barishal,Mehendiganj,280553,Moderate (Q3),19.2,3.8,Very High (Q5),68.1,4.4,High,-48.9
+Barishal,Barishal,Muladi,178483,Very High (Q5),31.2,5.4,Very High (Q5),64.2,4.9,High,-33.0
+Barishal,Barishal,Ujirpur,251110,Very High (Q5),32.2,3.7,Very High (Q5),56.3,10.7,High,-24.1
+Barishal,Bhola,Bhola Sadar,434440,Moderate (Q3),20.7,3.3,High (Q4),43.1,4.0,High,-22.4
+Barishal,Bhola,Borhanuddin,261842,Very High (Q5),44.2,5.1,Moderate (Q3),39.7,6.4,High,4.5
+Barishal,Bhola,Charfasson,514341,Moderate (Q3),19.8,3.3,Low (Q2),31.3,5.4,High,-11.5
+Barishal,Bhola,Daulatkhan,180248,Very High (Q5),39.4,5.0,Low (Q2),27.7,4.8,High,11.7
+Barishal,Bhola,Lalmohan,292169,High (Q4),23.5,5.7,Low (Q2),30.8,5.1,High,-7.3
+Barishal,Bhola,Monpura,88973,High (Q4),27.6,6.1,Moderate (Q3),38.0,12.6,High,-10.4
+Barishal,Bhola,Tazumuddin,132345,Very High (Q5),32.3,8.2,Moderate (Q3),34.0,10.9,High,-1.7
+Barishal,Jhalokati,Jhalokati Sadar,209894,High (Q4),21.9,3.4,High (Q4),46.5,3.3,High,-24.6
+Barishal,Jhalokati,Kanthalia,110496,Very High (Q5),31.2,5.4,High (Q4),41.3,10.2,High,-10.1
+Barishal,Jhalokati,Nalchhity,184777,Very High (Q5),53.8,4.1,Moderate (Q3),36.9,4.2,High,16.9
+Barishal,Jhalokati,Rajapur,142000,High (Q4),26.0,5.2,High (Q4),43.7,6.6,High,-17.7
+Barishal,Patuakhali,Bauphal,322609,Very High (Q5),35.5,4.3,Low (Q2),26.1,3.7,High,9.4
+Barishal,Patuakhali,Dashmina,128549,Moderate (Q3),20.4,3.8,Moderate (Q3),38.5,10.2,High,-18.1
+Barishal,Patuakhali,Dumki,78579,Moderate (Q3),18.8,3.4,Low (Q2),30.7,11.0,High,-11.9
+Barishal,Patuakhali,Galachipa,295095,Very High (Q5),28.5,3.9,High (Q4),45.0,5.3,High,-16.5
+Barishal,Patuakhali,Kalapara,277035,Very Low (Q1),7.7,2.6,Moderate (Q3),33.1,4.1,Low,-25.4
+Barishal,Patuakhali,Mirzaganj,124976,Moderate (Q3),17.1,3.4,Low (Q2),30.7,8.9,Moderate,-13.6
+Barishal,Patuakhali,Patuakhali Sadar,343505,Low (Q2),14.0,2.4,High (Q4),41.5,4.7,Moderate,-27.5
+Barishal,Patuakhali,Rangabali,117102,Moderate (Q3),17.5,4.1,Moderate (Q3),40.2,10.5,Moderate,-22.7
+Barishal,Pirojpur,Bhandaria,160364,Very High (Q5),30.1,4.2,Moderate (Q3),37.3,6.1,High,-7.2
+Barishal,Pirojpur,Pirojpur Sadar,69085,Very High (Q5),41.4,14.3,High (Q4),45.1,7.2,High,-3.7
+Barishal,Pirojpur,Mathbaria,272481,Very High (Q5),39.2,5.3,High (Q4),49.4,6.9,High,-10.2
+Barishal,Pirojpur,Nazirpur,185143,Very High (Q5),33.4,5.7,Very High (Q5),51.1,6.5,High,-17.7
+Barishal,Pirojpur,Pirojpur Sadar,176647,Very High (Q5),47.7,3.8,High (Q4),45.1,7.2,High,2.6
+Barishal,Pirojpur,Nesarabad (Swarupkathi),224752,Very High (Q5),36.6,5.8,High (Q4),45.2,5.1,High,-8.6
+Barishal,Pirojpur,Indurkani,83367,Very High (Q5),38.9,6.2,Very High (Q5),52.6,10.2,High,-13.7
+Chattogram,Bandarban,Alikadam,59162,High (Q4),27.7,13.9,Moderate (Q3),36.9,5.8,High,-9.2
+Chattogram,Bandarban,Bandarban Sadar,100447,Moderate (Q3),18.3,6.6,Low (Q2),30.3,7.0,Moderate,-12.0
+Chattogram,Bandarban,Lama,133515,High (Q4),23.7,15.2,Moderate (Q3),40.5,5.7,High,-16.8
+Chattogram,Bandarban,Naikkhongchhari,74509,Very High (Q5),30.8,4.2,High (Q4),43.6,5.4,High,-12.8
+Chattogram,Bandarban,Rowangchhari,26069,High (Q4),23.4,14.9,Moderate (Q3),37.5,9.6,High,-14.1
+Chattogram,Bandarban,Ruma,30065,Very High (Q5),28.7,13.7,Moderate (Q3),41.1,7.6,High,-12.4
+Chattogram,Bandarban,Thanchi,26925,Very High (Q5),32.8,15.6,Very High (Q5),53.4,12.8,High,-20.6
+Chattogram,Brahmanbaria,Akhaura,164102,Moderate (Q3),16.8,9.0,Moderate (Q3),37.1,3.8,Moderate,-20.3
+Chattogram,Brahmanbaria,Banchharampur,327327,Very Low (Q1),3.6,2.9,Very Low (Q1),15.7,5.4,Low,-12.1
+Chattogram,Brahmanbaria,Bijoynagar,286164,Moderate (Q3),19.7,14.7,Moderate (Q3),37.0,9.1,Moderate,-17.3
+Chattogram,Brahmanbaria,Brahmanbaria Sadar,645099,Low (Q2),13.8,3.0,Low (Q2),25.7,3.9,Moderate,-11.9
+Chattogram,Brahmanbaria,Ashuganj,203505,Moderate (Q3),17.3,9.6,Low (Q2),28.1,4.3,Moderate,-10.8
+Chattogram,Brahmanbaria,Kasba,352248,Low (Q2),13.9,10.1,Low (Q2),28.4,9.3,Moderate,-14.5
+Chattogram,Brahmanbaria,Nabinagar,546739,High (Q4),26.1,3.8,Moderate (Q3),41.0,4.8,High,-14.9
+Chattogram,Brahmanbaria,Nasirnagar,344111,Very High (Q5),45.9,6.0,Moderate (Q3),37.7,7.1,High,8.2
+Chattogram,Brahmanbaria,Sarail,358607,High (Q4),22.7,13.7,Moderate (Q3),38.6,4.9,High,-15.9
+Chattogram,Chandpur,Chandpur Sadar,516696,Very High (Q5),34.0,2.2,High (Q4),42.8,5.1,High,-8.8
+Chattogram,Chandpur,Faridganj,426082,Low (Q2),14.0,3.6,High (Q4),43.8,5.4,Moderate,-29.8
+Chattogram,Chandpur,Haimchar,123584,Very High (Q5),36.5,4.6,Very High (Q5),58.2,13.7,High,-21.7
+Chattogram,Chandpur,Hajiganj,351981,High (Q4),24.0,14.9,Very High (Q5),55.1,4.8,High,-31.1
+Chattogram,Chandpur,Kachua,396813,Very Low (Q1),7.6,4.3,High (Q4),47.5,5.5,Moderate,-39.9
+Chattogram,Chandpur,Matlab Dakkhin,221770,High (Q4),25.2,11.9,High (Q4),49.8,9.1,High,-24.6
+Chattogram,Chandpur,Matlab Uttar,292872,Very High (Q5),40.7,4.7,Very High (Q5),51.3,5.2,High,-10.6
+Chattogram,Chandpur,Shahrasti,250930,High (Q4),26.0,14.7,Very High (Q5),55.3,5.1,High,-29.3
+Chattogram,Chattogram,Akbarshah,146436,Low (Q2),12.7,1.7,Very Low (Q1),4.4,2.3,Low,8.3
+Chattogram,Chattogram,Anwara,311458,Very High (Q5),34.3,4.4,Very Low (Q1),19.4,9.1,High,14.9
+Chattogram,Chattogram,Bayejid Bostami,373753,Very Low (Q1),8.9,3.1,Very Low (Q1),10.2,1.8,Low,-1.3
+Chattogram,Chattogram,Banshkhali,526717,High (Q4),21.4,5.3,Moderate (Q3),33.0,4.0,High,-11.6
+Chattogram,Chattogram,Bakalia,218922,Low (Q2),12.7,3.1,Very Low (Q1),5.6,3.9,Low,7.1
+Chattogram,Chattogram,Boalkhali,253856,Low (Q2),11.5,5.3,Very Low (Q1),11.7,5.3,Moderate,-0.2
+Chattogram,Chattogram,Chalk Bazar,107160,Very Low (Q1),2.5,1.3,Very Low (Q1),1.6,1.3,Low,0.9
+Chattogram,Chattogram,Chandanaish,246282,Low (Q2),13.3,7.7,Low (Q2),21.0,4.1,Moderate,-7.7
+Chattogram,Chattogram,Chandgaon,297492,Very Low (Q1),8.0,1.5,Very Low (Q1),6.1,1.4,Low,1.9
+Chattogram,Chattogram,Chattogram Port,166861,Very Low (Q1),6.7,1.4,Very Low (Q1),3.9,2.9,Low,2.8
+Chattogram,Chattogram,Double Mooring,236454,Very Low (Q1),1.1,1.6,Very Low (Q1),1.0,1.1,Low,0.1
+Chattogram,Chattogram,EPZ,237441,Very Low (Q1),2.6,1.1,Very Low (Q1),3.3,0.7,Low,-0.7
+Chattogram,Chattogram,Fatikchhari,621041,Moderate (Q3),17.3,9.2,Very Low (Q1),16.8,4.1,Moderate,0.5
+Chattogram,Chattogram,Halishahar,223012,Very Low (Q1),6.0,1.5,Very Low (Q1),4.1,1.2,Low,1.9
+Chattogram,Chattogram,Hathazari,470083,Low (Q2),13.6,2.4,Very Low (Q1),8.7,4.6,Moderate,4.9
+Chattogram,Chattogram,Karnaphuli,198192,Moderate (Q3),15.4,6.8,Very Low (Q1),15.9,7.8,Moderate,-0.5
+Chattogram,Chattogram,Kotwali,206959,Very Low (Q1),6.7,1.4,Very Low (Q1),1.4,1.1,Low,5.3
+Chattogram,Chattogram,Khulshi,193239,Very Low (Q1),5.8,2.1,Very Low (Q1),2.5,2.2,Low,3.3
+Chattogram,Chattogram,Lohagara,318359,Low (Q2),13.2,3.5,Low (Q2),24.3,4.2,Low,-11.1
+Chattogram,Chattogram,Mirsarai,458898,High (Q4),25.0,3.9,Very Low (Q1),6.8,3.3,High,18.2
+Chattogram,Chattogram,Pahartali,184488,Very Low (Q1),8.4,2.3,Very Low (Q1),4.6,4.1,Low,3.8
+Chattogram,Chattogram,Panchlaish,199014,Very Low (Q1),1.6,1.9,Very Low (Q1),3.0,3.2,Low,-1.4
+Chattogram,Chattogram,Patiya,387531,Low (Q2),12.5,3.0,Very Low (Q1),20.3,3.5,Moderate,-7.8
+Chattogram,Chattogram,Patenga,155542,Very Low (Q1),4.3,1.8,Very Low (Q1),2.4,1.4,Low,1.9
+Chattogram,Chattogram,Rangunia,382940,Very Low (Q1),4.1,3.1,Very Low (Q1),15.0,6.5,Low,-10.9
+Chattogram,Chattogram,Raozan,383740,Low (Q2),9.8,5.3,Very Low (Q1),14.3,2.8,Moderate,-4.5
+Chattogram,Chattogram,Sadarghat,102931,Very Low (Q1),3.7,2.1,Very Low (Q1),3.6,2.6,Low,0.1
+Chattogram,Chattogram,Sandwip,324425,Low (Q2),10.8,3.5,Very Low (Q1),19.5,3.6,Moderate,-8.7
+Chattogram,Chattogram,Satkania,440129,Low (Q2),14.1,7.3,Very Low (Q1),18.4,3.4,Moderate,-4.3
+Chattogram,Chattogram,Sitakunda,439732,Very Low (Q1),5.3,3.0,Very Low (Q1),14.2,6.2,Low,-8.9
+Chattogram,Cumilla,Barura,443946,Very High (Q5),28.4,3.7,High (Q4),43.4,5.6,High,-15.0
+Chattogram,Cumilla,Brahmanpara,228514,Moderate (Q3),15.9,10.1,Moderate (Q3),35.8,5.5,Moderate,-19.9
+Chattogram,Cumilla,Burichang,339299,High (Q4),21.5,3.5,Moderate (Q3),33.9,11.3,Moderate,-12.4
+Chattogram,Cumilla,Chandina,387382,Moderate (Q3),15.2,11.0,High (Q4),42.9,5.7,Moderate,-27.7
+Chattogram,Cumilla,Chauddagram,492696,Low (Q2),12.3,3.4,Low (Q2),30.6,6.0,Moderate,-18.3
+Chattogram,Cumilla,Sadar Dakkhin,319134,Very Low (Q1),6.0,2.4,Low (Q2),31.0,8.0,Low,-25.0
+Chattogram,Cumilla,Daudkandi,386757,Low (Q2),14.8,10.4,Low (Q2),30.4,5.5,Moderate,-15.6
+Chattogram,Cumilla,Debidwar,459951,Very Low (Q1),6.1,2.8,Low (Q2),31.3,5.6,Low,-25.2
+Chattogram,Cumilla,Homna,222303,Moderate (Q3),18.1,10.6,High (Q4),41.7,8.7,Moderate,-23.6
+Chattogram,Cumilla,Adarsha Sadar,629199,Very Low (Q1),7.0,1.8,Low (Q2),28.6,2.8,Low,-21.6
+Chattogram,Cumilla,Laksam,324287,Moderate (Q3),16.3,12.0,High (Q4),45.7,4.6,Moderate,-29.4
+Chattogram,Cumilla,Lalmai,211912,Low (Q2),10.3,2.9,Moderate (Q3),33.2,11.3,Low,-22.9
+Chattogram,Cumilla,Manoharganj,270903,Moderate (Q3),16.1,10.9,Moderate (Q3),40.9,11.5,Moderate,-24.8
+Chattogram,Cumilla,Meghna,116211,Moderate (Q3),17.5,13.6,High (Q4),42.9,10.2,Moderate,-25.4
+Chattogram,Cumilla,Muradnagar,565030,Very Low (Q1),9.3,3.9,Moderate (Q3),38.4,5.8,Low,-29.1
+Chattogram,Cumilla,Nangalkot,420035,Low (Q2),10.1,3.3,Very High (Q5),53.0,5.0,Low,-42.9
+Chattogram,Cumilla,Titas,199621,Moderate (Q3),15.4,12.9,High (Q4),41.4,9.5,Moderate,-26.0
+Chattogram,Cox's Bazar,Chakaria,557613,Very High (Q5),43.3,4.2,Low (Q2),21.2,4.1,High,22.1
+Chattogram,Cox's Bazar,Cox's Bazar Sadar,389067,Low (Q2),10.3,4.6,Low (Q2),30.0,3.2,High,-19.7
+Chattogram,Cox's Bazar,Eidgaon,146687,Low (Q2),11.7,5.1,Low (Q2),23.8,9.5,Low,-12.1
+Chattogram,Cox's Bazar,Kutubdia,142012,Very High (Q5),31.9,13.5,Moderate (Q3),34.4,12.6,High,-2.5
+Chattogram,Cox's Bazar,Maheshkhali,381522,Very High (Q5),32.7,15.8,High (Q4),41.2,5.2,High,-8.5
+Chattogram,Cox's Bazar,Pekua,210325,High (Q4),25.5,4.9,Moderate (Q3),33.2,12.3,Moderate,-7.7
+Chattogram,Cox's Bazar,Ramu,326071,Very High (Q5),30.3,15.8,Low (Q2),31.0,6.0,High,-0.7
+Chattogram,Cox's Bazar,Teknaf,328551,High (Q4),21.2,5.6,Moderate (Q3),40.2,13.3,Moderate,-19.0
+Chattogram,Cox's Bazar,Ukhia,258313,High (Q4),27.4,16.9,Moderate (Q3),34.1,12.3,High,-6.7
+Chattogram,Feni,Chhagalnaiya,201576,Very Low (Q1),8.0,5.2,Very Low (Q1),16.1,6.4,Low,-8.1
+Chattogram,Feni,Daganbhuiyan,271383,Low (Q2),11.7,2.2,Very Low (Q1),12.1,2.4,Moderate,-0.4
+Chattogram,Feni,Feni Sadar,599797,Very Low (Q1),9.4,5.6,Very Low (Q1),17.3,3.5,Low,-7.9
+Chattogram,Feni,Fulgazi,121600,Very Low (Q1),4.1,3.1,Very Low (Q1),20.1,10.5,Low,-16.0
+Chattogram,Feni,Parashuram,110357,Low (Q2),11.3,7.4,Low (Q2),20.9,3.6,Moderate,-9.6
+Chattogram,Feni,Sonagazi,285071,Moderate (Q3),15.6,10.3,Moderate (Q3),35.0,5.1,Moderate,-19.4
+Chattogram,Khagrachhari,Dighinala,111170,Moderate (Q3),17.9,10.5,Very Low (Q1),18.9,4.4,High,-1.0
+Chattogram,Khagrachhari,Guimara,51700,Low (Q2),12.9,7.1,Moderate (Q3),36.3,11.5,Moderate,-23.4
+Chattogram,Khagrachhari,Khagrachhari Sadar,129429,Low (Q2),12.9,6.0,Low (Q2),22.9,6.9,Moderate,-10.0
+Chattogram,Khagrachhari,Lakkhichhari,26394,Moderate (Q3),20.5,13.6,Moderate (Q3),34.2,14.5,High,-13.7
+Chattogram,Khagrachhari,Mahalchhari,47695,Moderate (Q3),16.6,10.1,Low (Q2),30.3,5.6,Moderate,-13.7
+Chattogram,Khagrachhari,Manikchhari,74971,Moderate (Q3),15.0,7.9,Low (Q2),30.3,10.9,Moderate,-15.3
+Chattogram,Khagrachhari,Matiranga,123878,Moderate (Q3),19.4,11.9,Moderate (Q3),32.3,4.3,High,-12.9
+Chattogram,Khagrachhari,Panchhari,67200,Low (Q2),14.1,8.3,Low (Q2),26.9,9.0,Moderate,-12.8
+Chattogram,Khagrachhari,Ramgarh,58367,Low (Q2),14.7,6.7,Low (Q2),28.1,5.2,Moderate,-13.4
+Chattogram,Lakshmipur,Kamalnagar,213870,High (Q4),22.7,15.0,Moderate (Q3),35.1,7.4,High,-12.4
+Chattogram,Lakshmipur,Lakshmipur Sadar,792380,Low (Q2),10.0,2.3,Moderate (Q3),38.6,4.5,Low,-28.6
+Chattogram,Lakshmipur,Raipur,307672,Low (Q2),14.4,7.0,Low (Q2),23.0,4.3,Moderate,-8.6
+Chattogram,Lakshmipur,Ramganj,305344,Moderate (Q3),17.0,2.8,Low (Q2),27.3,6.4,Moderate,-10.3
+Chattogram,Lakshmipur,Ramgati,275294,High (Q4),25.9,15.1,Low (Q2),30.3,4.7,High,-4.4
+Chattogram,Noakhali,Begumganj,590796,Very Low (Q1),2.5,1.4,Very Low (Q1),6.8,2.0,Low,-4.3
+Chattogram,Noakhali,Chatkhil,252207,Very Low (Q1),3.6,3.5,Very Low (Q1),9.3,2.2,Low,-5.7
+Chattogram,Noakhali,Companiganj,296351,Low (Q2),13.8,2.1,Very Low (Q1),9.0,5.7,Moderate,4.8
+Chattogram,Noakhali,Hatiya,532493,Very Low (Q1),3.9,5.3,Very Low (Q1),10.9,3.7,Low,-7.0
+Chattogram,Noakhali,Kabirhat,236512,Very Low (Q1),7.2,5.7,Very Low (Q1),13.8,7.1,Low,-6.6
+Chattogram,Noakhali,Senbag,305673,Very Low (Q1),4.3,5.8,Very Low (Q1),7.0,4.0,Low,-2.7
+Chattogram,Noakhali,Sonaimuri,357940,Very Low (Q1),6.1,1.6,Very Low (Q1),7.1,3.8,Low,-1.0
+Chattogram,Noakhali,Subarnachar,352355,Low (Q2),14.2,11.4,Very Low (Q1),18.7,8.9,Moderate,-4.5
+Chattogram,Noakhali,Noakhali Sadar,617373,Very Low (Q1),4.8,2.1,Very Low (Q1),9.8,2.2,Low,-5.0
+Chattogram,Rangamati,Baghaichhari,102413,Moderate (Q3),16.6,9.2,Very Low (Q1),16.5,4.3,Moderate,0.1
+Chattogram,Rangamati,Barkal,47544,Moderate (Q3),15.3,11.5,Low (Q2),24.5,11.6,Moderate,-9.2
+Chattogram,Rangamati,Kawkhali,63366,Low (Q2),12.5,3.6,Very Low (Q1),11.0,3.5,Moderate,1.5
+Chattogram,Rangamati,Belaichhari,27773,High (Q4),26.3,12.2,Moderate (Q3),34.5,13.4,Moderate,-8.2
+Chattogram,Rangamati,Kaptai,51897,Moderate (Q3),16.4,7.3,Very Low (Q1),16.8,3.9,Moderate,-0.4
+Chattogram,Rangamati,Jurachhari,25942,Moderate (Q3),15.6,11.9,Low (Q2),22.1,10.9,Moderate,-6.5
+Chattogram,Rangamati,Langadu,88254,Low (Q2),12.5,13.9,Moderate (Q3),37.5,5.4,Moderate,-25.0
+Chattogram,Rangamati,Naniarchar,47947,Low (Q2),12.9,10.2,Very Low (Q1),18.9,9.4,Moderate,-6.0
+Chattogram,Rangamati,Rajasthali,25927,Very Low (Q1),9.5,8.8,Low (Q2),22.4,8.5,Low,-12.9
+Chattogram,Rangamati,Rangamati Sadar,135027,Low (Q2),12.4,3.3,Very Low (Q1),14.3,2.0,Low,-1.9
+Dhaka,Dhaka,Adabar,198174,Low (Q2),9.8,2.0,Very Low (Q1),17.5,5.7,Low,-7.7
+Dhaka,Dhaka,Badda,342175,Very Low (Q1),7.4,1.9,Very Low (Q1),16.5,6.8,Low,-9.1
+Dhaka,Dhaka,Bangshal,141268,Very Low (Q1),4.2,2.6,Very Low (Q1),15.4,3.8,Low,-11.2
+Dhaka,Dhaka,Bimanbandar,5787,Very Low (Q1),1.4,1.0,Low (Q2),23.1,2.5,Low,-21.7
+Dhaka,Dhaka,Banani,155737,Low (Q2),11.3,4.1,Very Low (Q1),19.5,6.3,Low,-8.2
+Dhaka,Dhaka,Cantonment,121394,Very Low (Q1),2.9,1.4,Very Low (Q1),12.8,4.0,Low,-9.9
+Dhaka,Dhaka,Chawkbazar,103441,Very Low (Q1),7.5,3.1,Very Low (Q1),15.2,5.0,Low,-7.7
+Dhaka,Dhaka,Dakkhinkhan,373870,Low (Q2),9.8,1.7,Low (Q2),26.5,10.0,Low,-16.7
+Dhaka,Dhaka,Darussalam,193718,Low (Q2),11.0,5.0,Very Low (Q1),15.5,6.5,Low,-4.5
+Dhaka,Dhaka,Demra,264541,Low (Q2),13.0,2.3,Very Low (Q1),15.1,2.8,Low,-2.1
+Dhaka,Dhaka,Dhamrai,497575,Moderate (Q3),18.3,3.4,Low (Q2),32.0,4.2,Low,-13.7
+Dhaka,Dhaka,Dhanmondi,86965,Very Low (Q1),1.5,0.9,Very Low (Q1),11.1,3.2,Low,-9.6
+Dhaka,Dhaka,Dohar,242900,Moderate (Q3),15.6,5.2,High (Q4),43.7,4.8,Low,-28.1
+Dhaka,Dhaka,Bhasantek,113348,Moderate (Q3),16.2,4.9,Very Low (Q1),16.8,7.8,Moderate,-0.6
+Dhaka,Dhaka,Bhatara,281518,Very Low (Q1),4.5,2.3,Very Low (Q1),15.7,2.8,Low,-11.2
+Dhaka,Dhaka,Gendaria,126731,Very Low (Q1),2.4,1.5,Very Low (Q1),10.1,5.0,Low,-7.7
+Dhaka,Dhaka,Gulshan,93066,Very Low (Q1),3.2,2.0,Very Low (Q1),13.7,3.6,Low,-10.5
+Dhaka,Dhaka,Hatirjheel,72061,Very Low (Q1),5.6,2.9,Very Low (Q1),11.1,4.8,Low,-5.5
+Dhaka,Dhaka,Hazaribag,187043,Very Low (Q1),6.3,3.8,Low (Q2),20.5,2.4,Low,-14.2
+Dhaka,Dhaka,Jatrabari,452493,Very Low (Q1),9.4,1.5,Very Low (Q1),14.3,5.9,Low,-4.9
+Dhaka,Dhaka,Kafrul,305702,Very Low (Q1),7.2,3.3,Very Low (Q1),14.0,4.2,Low,-6.8
+Dhaka,Dhaka,Kadamtali,400295,Very Low (Q1),8.3,1.8,Very Low (Q1),15.7,6.8,Low,-7.4
+Dhaka,Dhaka,Kalabagan,95247,Very Low (Q1),3.4,1.7,Very Low (Q1),11.9,4.0,Low,-8.5
+Dhaka,Dhaka,Kamrangichar,352807,Moderate (Q3),19.1,3.3,Low (Q2),22.8,3.3,Low,-3.7
+Dhaka,Dhaka,Khilgaon,358729,Very Low (Q1),6.1,1.9,Very Low (Q1),13.4,5.3,Low,-7.3
+Dhaka,Dhaka,Khilkhet,157142,Very Low (Q1),7.7,3.8,Low (Q2),23.4,6.4,Low,-15.7
+Dhaka,Dhaka,Keraniganj,953448,Very Low (Q1),8.1,2.1,Moderate (Q3),41.0,12.4,Low,-32.9
+Dhaka,Dhaka,Kotwali,36413,Very Low (Q1),2.9,1.9,Very Low (Q1),11.2,2.6,Low,-8.3
+Dhaka,Dhaka,Lalbag,168410,Very Low (Q1),8.9,1.8,Very Low (Q1),19.7,2.8,Low,-10.8
+Dhaka,Dhaka,Mirpur,500942,Low (Q2),12.6,1.5,Very Low (Q1),13.9,2.4,Moderate,-1.3
+Dhaka,Dhaka,Mohammadpur,469673,Very Low (Q1),4.6,1.8,Very Low (Q1),10.2,2.8,Moderate,-5.6
+Dhaka,Dhaka,Motijheel,61101,Very Low (Q1),3.6,2.2,Very Low (Q1),19.1,2.8,Low,-15.5
+Dhaka,Dhaka,Mugda,196074,Very Low (Q1),6.7,4.1,Very Low (Q1),14.4,6.0,Low,-7.7
+Dhaka,Dhaka,Nawabganj,342963,Moderate (Q3),18.3,3.1,Moderate (Q3),40.4,4.5,Low,-22.1
+Dhaka,Dhaka,Newmarket,39372,Very Low (Q1),1.7,1.0,Very Low (Q1),7.9,2.5,Low,-6.2
+Dhaka,Dhaka,Pallabi,562094,Very Low (Q1),6.6,1.6,Very Low (Q1),20.1,2.2,Low,-13.5
+Dhaka,Dhaka,Paltan,43063,Very Low (Q1),1.0,1.1,Very Low (Q1),7.1,1.9,Low,-6.1
+Dhaka,Dhaka,Ramna,178049,Very Low (Q1),4.4,1.3,Very Low (Q1),7.4,2.2,Low,-3.0
+Dhaka,Dhaka,Rampura,146398,Very Low (Q1),6.3,2.5,Very Low (Q1),10.7,3.8,Low,-4.4
+Dhaka,Dhaka,Sabujbag,247294,Very Low (Q1),5.1,2.0,Very Low (Q1),12.9,5.4,Low,-7.8
+Dhaka,Dhaka,Rupnagar,168599,Low (Q2),11.3,4.8,Very Low (Q1),16.7,7.1,Low,-5.4
+Dhaka,Dhaka,Savar,2186852,Very Low (Q1),7.6,1.1,Moderate (Q3),33.9,7.3,Low,-26.3
+Dhaka,Dhaka,Shahjahanpur,104866,Very Low (Q1),3.6,2.2,Very Low (Q1),12.0,4.5,Low,-8.4
+Dhaka,Dhaka,Shah Ali,141522,Very Low (Q1),8.2,2.7,Very Low (Q1),16.1,5.9,Low,-7.9
+Dhaka,Dhaka,Shahbag,31108,Very Low (Q1),1.9,1.2,Very Low (Q1),13.8,2.7,Low,-11.9
+Dhaka,Dhaka,Shyampur,157327,Very Low (Q1),9.4,4.4,Very Low (Q1),13.0,2.1,Low,-3.6
+Dhaka,Dhaka,Sher-E-Bangla Nagar,131262,Very Low (Q1),2.7,1.4,Very Low (Q1),13.9,3.3,Low,-11.2
+Dhaka,Dhaka,Sutrapur,70805,Very Low (Q1),2.8,1.9,Very Low (Q1),7.9,3.3,Low,-5.1
+Dhaka,Dhaka,Tejgaon,101421,Very Low (Q1),6.5,2.9,Very Low (Q1),8.8,1.5,Low,-2.3
+Dhaka,Dhaka,Tejgaon Shilpa Elaka,84440,Low (Q2),9.9,2.5,Low (Q2),21.4,5.0,Low,-11.5
+Dhaka,Dhaka,Turag,243751,Low (Q2),11.7,6.6,Moderate (Q3),38.9,10.2,Low,-27.2
+Dhaka,Dhaka,Uttara Pashchim,159728,Very Low (Q1),1.1,0.9,Very Low (Q1),15.0,3.1,Low,-13.9
+Dhaka,Dhaka,Uttara Purba,30309,Very Low (Q1),2.7,1.3,Very Low (Q1),10.7,2.6,Low,-8.0
+Dhaka,Dhaka,Uttarkhan,121029,Very Low (Q1),8.1,4.4,Very Low (Q1),17.8,6.7,Low,-9.7
+Dhaka,Dhaka,Wari,112309,Very Low (Q1),3.3,1.2,Very Low (Q1),9.1,3.7,Low,-5.8
+Dhaka,Faridpur,Alfadanga,117076,High (Q4),24.3,6.8,Very High (Q5),50.6,10.1,Low,-26.3
+Dhaka,Faridpur,Bhanga,288007,Very High (Q5),28.5,3.8,High (Q4),45.7,5.0,Low,-17.2
+Dhaka,Faridpur,Boalmari,263237,High (Q4),27.6,6.3,Very High (Q5),52.1,5.3,Low,-24.5
+Dhaka,Faridpur,Char Bhadrasan,69039,High (Q4),26.6,6.2,Very High (Q5),60.2,12.0,Moderate,-33.6
+Dhaka,Faridpur,Faridpur Sadar,540415,High (Q4),27.0,3.7,Very High (Q5),55.4,5.2,Moderate,-28.4
+Dhaka,Faridpur,Madhukhali,228342,High (Q4),24.4,6.6,Moderate (Q3),41.0,5.1,Low,-16.6
+Dhaka,Faridpur,Nagarkanda,217717,High (Q4),26.8,8.7,Very High (Q5),65.2,5.8,Low,-38.4
+Dhaka,Faridpur,Sadarpur,197185,High (Q4),24.9,4.0,Very High (Q5),69.6,5.4,Low,-44.7
+Dhaka,Faridpur,Saltha,182786,Very High (Q5),31.2,9.3,Very High (Q5),64.3,9.5,Moderate,-33.1
+Dhaka,Gazipur,Basan,248269,Very High (Q5),30.9,8.9,Low (Q2),30.1,9.9,Moderate,0.8
+Dhaka,Gazipur,Gachha,371985,Moderate (Q3),15.5,4.5,Low (Q2),27.8,9.8,Low,-12.3
+Dhaka,Gazipur,Gazipur Sadar,326460,Low (Q2),11.3,2.8,Low (Q2),27.0,8.8,Low,-15.7
+Dhaka,Gazipur,Kaliakair,670497,Moderate (Q3),16.0,3.9,Low (Q2),30.7,4.3,Low,-14.7
+Dhaka,Gazipur,Kaliganj,300548,Moderate (Q3),19.1,5.9,Low (Q2),26.9,5.0,High,-7.8
+Dhaka,Gazipur,Kapasia,367153,Moderate (Q3),19.4,4.6,Moderate (Q3),36.3,4.9,Low,-16.9
+Dhaka,Gazipur,Kashimpur,365270,Moderate (Q3),20.9,6.2,Low (Q2),29.0,8.1,Moderate,-8.1
+Dhaka,Gazipur,Konabari,274149,Very High (Q5),34.8,6.2,Low (Q2),31.4,11.9,High,3.4
+Dhaka,Gazipur,Pubail,101250,Very High (Q5),31.1,5.7,Low (Q2),23.7,8.4,Moderate,7.4
+Dhaka,Gazipur,Sreepur,807297,Moderate (Q3),17.1,3.2,Low (Q2),28.8,3.9,Moderate,-11.7
+Dhaka,Gazipur,Tongi Pashchim,292180,Very High (Q5),40.4,4.9,Very Low (Q1),17.9,4.1,High,22.5
+Dhaka,Gazipur,Tongi Purba,422338,Very High (Q5),30.0,4.9,Low (Q2),29.3,3.8,Moderate,0.7
+Dhaka,Gazipur,Joydebpur,435758,Very Low (Q1),9.1,4.4,Very Low (Q1),17.6,4.0,Low,-8.5
+Dhaka,Gopalganj,Gopalganj Sadar,377396,High (Q4),23.7,6.5,Very High (Q5),57.2,3.3,Low,-33.5
+Dhaka,Gopalganj,Kashiani,222582,High (Q4),27.4,3.4,High (Q4),48.1,4.9,Low,-20.7
+Dhaka,Gopalganj,Kotalipara,239436,Very High (Q5),29.2,8.2,Very High (Q5),75.2,5.7,Moderate,-46.0
+Dhaka,Gopalganj,Muksudpur,301921,High (Q4),24.0,4.4,Very High (Q5),80.9,4.8,Low,-56.9
+Dhaka,Gopalganj,Tungipara,110388,High (Q4),26.7,7.8,Very High (Q5),76.3,5.7,Low,-49.6
+Dhaka,Kishoreganj,Austagram,150455,Very High (Q5),40.8,10.9,High (Q4),42.5,5.7,Moderate,-1.7
+Dhaka,Kishoreganj,Bajitpur,264987,Very High (Q5),36.3,7.6,High (Q4),43.5,9.2,Moderate,-7.2
+Dhaka,Kishoreganj,Bhairab,350749,Very High (Q5),39.6,3.3,Moderate (Q3),36.9,4.0,High,2.7
+Dhaka,Kishoreganj,Hossainpur,199122,Very High (Q5),28.4,7.1,High (Q4),42.0,9.4,Moderate,-13.6
+Dhaka,Kishoreganj,Itna,167396,Very High (Q5),45.0,9.9,High (Q4),50.0,10.8,Moderate,-5.0
+Dhaka,Kishoreganj,Karimganj,323638,Very High (Q5),41.7,5.1,Very High (Q5),53.3,4.5,Moderate,-11.6
+Dhaka,Kishoreganj,Katiadi,346608,Very High (Q5),31.6,7.2,High (Q4),42.9,10.7,Moderate,-11.3
+Dhaka,Kishoreganj,Kishoreganj Sadar,485082,High (Q4),26.4,4.2,High (Q4),46.0,4.7,Moderate,-19.6
+Dhaka,Kishoreganj,Kuliarchar,198422,Very High (Q5),33.5,7.4,High (Q4),45.5,4.3,Moderate,-12.0
+Dhaka,Kishoreganj,Mithamain,123910,Very High (Q5),47.4,8.7,Very High (Q5),50.3,11.1,High,-2.9
+Dhaka,Kishoreganj,Nikli,144400,Very High (Q5),47.3,7.6,High (Q4),46.6,12.8,High,0.7
+Dhaka,Kishoreganj,Pakundia,277847,High (Q4),26.5,3.9,Low (Q2),25.9,4.4,Low,0.6
+Dhaka,Kishoreganj,Tarail,168679,Very High (Q5),36.6,8.4,High (Q4),41.6,12.9,Moderate,-5.0
+Dhaka,Madaripur,Dasar,72243,Very High (Q5),63.2,10.6,High (Q4),46.6,11.5,High,16.6
+Dhaka,Madaripur,Kalkini,215564,Very High (Q5),56.3,4.4,Very High (Q5),64.4,4.8,High,-8.1
+Dhaka,Madaripur,Madaripur Sadar,385852,Very High (Q5),50.0,8.0,Very High (Q5),58.6,4.8,High,-8.6
+Dhaka,Madaripur,Rajoir,241539,Very High (Q5),56.0,9.0,Very High (Q5),60.4,6.2,High,-4.4
+Dhaka,Madaripur,Shibchar,343864,Very High (Q5),55.1,4.7,Moderate (Q3),35.5,2.9,High,19.6
+Dhaka,Manikganj,Daulatpur,166375,Very High (Q5),31.4,8.6,High (Q4),49.2,9.3,Moderate,-17.8
+Dhaka,Manikganj,Ghior,159852,Very High (Q5),34.6,3.6,Moderate (Q3),32.3,5.5,Low,2.3
+Dhaka,Manikganj,Harirampur,154342,High (Q4),23.8,8.3,High (Q4),41.3,10.2,Low,-17.5
+Dhaka,Manikganj,Manikganj Sadar,350775,Moderate (Q3),20.9,6.2,Moderate (Q3),35.7,5.0,Low,-14.8
+Dhaka,Manikganj,Saturia,190219,Moderate (Q3),17.6,3.6,Moderate (Q3),34.8,5.9,Low,-17.2
+Dhaka,Manikganj,Shibalay,185720,High (Q4),25.6,8.2,High (Q4),48.1,4.6,Low,-22.5
+Dhaka,Manikganj,Singair,319428,Low (Q2),12.6,3.6,Moderate (Q3),37.0,4.7,Low,-24.4
+Dhaka,Munshiganj,Gazaria,175861,Very Low (Q1),8.0,4.2,High (Q4),49.7,9.0,Low,-41.7
+Dhaka,Munshiganj,Louhajang,171256,Low (Q2),12.8,4.1,High (Q4),45.5,6.3,Low,-32.7
+Dhaka,Munshiganj,Munshiganj Sadar,417880,Low (Q2),14.2,3.0,Very High (Q5),55.4,5.1,Moderate,-41.2
+Dhaka,Munshiganj,Sirajdikhan,305545,Low (Q2),10.7,5.1,High (Q4),48.3,5.2,Low,-37.6
+Dhaka,Munshiganj,Sreenagar,286464,Very Low (Q1),9.1,3.5,High (Q4),46.7,7.0,Low,-37.6
+Dhaka,Munshiganj,Tongibari,206772,Low (Q2),11.1,2.2,Very High (Q5),51.5,14.1,Low,-40.4
+Dhaka,Narayanganj,Araihazar,454760,Moderate (Q3),19.1,5.8,Very High (Q5),53.5,4.4,Low,-34.4
+Dhaka,Narayanganj,Sonargaon,522461,Low (Q2),12.2,2.4,Moderate (Q3),38.8,5.1,Low,-26.6
+Dhaka,Narayanganj,Bandar,399643,Moderate (Q3),17.1,4.6,Moderate (Q3),33.2,4.7,Moderate,-16.1
+Dhaka,Narayanganj,Narayanganj Sadar,1691248,Very Low (Q1),8.9,1.6,Moderate (Q3),36.0,5.4,Low,-27.1
+Dhaka,Narayanganj,Rupganj,672723,Moderate (Q3),21.1,2.2,High (Q4),45.8,4.3,Moderate,-24.7
+Dhaka,Narsingdi,Belabo,211270,Very High (Q5),49.5,11.2,Moderate (Q3),36.4,6.8,High,13.1
+Dhaka,Narsingdi,Manohardi,293145,Very High (Q5),40.4,5.6,High (Q4),43.4,5.4,Moderate,-3.0
+Dhaka,Narsingdi,Narsingdi Sadar,807445,Very High (Q5),43.1,4.5,Moderate (Q3),37.0,4.5,High,6.1
+Dhaka,Narsingdi,Palash,237799,Very High (Q5),38.3,7.7,Low (Q2),27.7,5.6,Moderate,10.6
+Dhaka,Narsingdi,Raipura,602531,Very High (Q5),47.6,4.5,Very High (Q5),50.3,3.1,High,-2.7
+Dhaka,Narsingdi,Shibpur,347500,Very High (Q5),41.4,11.1,Low (Q2),25.5,6.1,Moderate,15.9
+Dhaka,Rajbari,Baliakandi,226764,Very High (Q5),40.8,4.0,Very High (Q5),69.8,6.1,Low,-29.0
+Dhaka,Rajbari,Goalanda,127252,Very High (Q5),32.3,10.0,Very High (Q5),74.1,8.1,Low,-41.8
+Dhaka,Rajbari,Kalukhali,170266,High (Q4),21.8,10.4,Very High (Q5),69.2,10.8,Low,-47.4
+Dhaka,Rajbari,Pangsha,270222,High (Q4),25.2,4.8,Very High (Q5),70.2,3.3,Low,-45.0
+Dhaka,Rajbari,Rajbari Sadar,375169,High (Q4),23.0,7.4,Very High (Q5),58.2,3.8,Low,-35.2
+Dhaka,Shariatpur,Bhedarganj,275042,High (Q4),21.7,4.7,Very High (Q5),78.0,4.0,Moderate,-56.3
+Dhaka,Shariatpur,Damudya,121584,High (Q4),22.0,9.6,Very High (Q5),67.7,10.6,Low,-45.7
+Dhaka,Shariatpur,Gosairhat,172163,Very High (Q5),31.9,9.6,Very High (Q5),77.1,4.8,Moderate,-45.2
+Dhaka,Shariatpur,Naria,256101,High (Q4),21.7,8.1,Very High (Q5),64.4,4.1,Low,-42.7
+Dhaka,Shariatpur,Shariatpur Sadar,233540,Very High (Q5),36.2,3.4,Very High (Q5),72.5,4.3,Moderate,-36.3
+Dhaka,Shariatpur,Zajira,213016,Very High (Q5),29.6,8.9,Very High (Q5),76.3,9.0,Moderate,-46.7
+Dhaka,Tangail,Basail,187434,Low (Q2),11.4,4.0,Moderate (Q3),39.8,7.8,Low,-28.4
+Dhaka,Tangail,Bhuanpur,214250,Very Low (Q1),7.1,2.5,Very High (Q5),63.0,4.8,Low,-55.9
+Dhaka,Tangail,Delduar,215610,Low (Q2),11.8,4.2,High (Q4),44.6,9.2,Low,-32.8
+Dhaka,Tangail,Dhanbari,185144,Low (Q2),12.1,4.1,High (Q4),45.4,7.1,Low,-33.3
+Dhaka,Tangail,Ghatail,442113,Low (Q2),11.9,4.2,High (Q4),45.8,3.8,Low,-33.9
+Dhaka,Tangail,Gopalpur,267817,Moderate (Q3),15.0,3.8,High (Q4),44.4,8.3,Low,-29.4
+Dhaka,Tangail,Kalihati,440553,Low (Q2),14.0,4.8,Very High (Q5),51.5,5.7,Low,-37.5
+Dhaka,Tangail,Madhupur,330527,Moderate (Q3),17.3,3.3,High (Q4),41.5,4.3,Low,-24.2
+Dhaka,Tangail,Mirzapur,462991,Very Low (Q1),8.7,3.0,High (Q4),43.0,5.4,Low,-34.3
+Dhaka,Tangail,Nagarpur,316524,Low (Q2),13.5,5.4,High (Q4),45.8,5.3,Low,-32.3
+Dhaka,Tangail,Sakhipur,315037,Moderate (Q3),18.9,2.7,Moderate (Q3),36.8,5.6,Low,-17.9
+Dhaka,Tangail,Tangail Sadar,578331,Low (Q2),14.9,4.4,Moderate (Q3),33.4,4.5,Low,-18.5
+Khulna,Bagerhat,Bagerhat Sadar,282229,Low (Q2),14.3,2.3,High (Q4),43.7,7.9,Low,-29.4
+Khulna,Bagerhat,Chitalmari,152338,Low (Q2),14.9,6.4,High (Q4),44.7,5.9,Moderate,-29.8
+Khulna,Bagerhat,Fakirhat,157097,Low (Q2),11.4,2.8,High (Q4),46.7,5.8,Low,-35.3
+Khulna,Bagerhat,Kachua,106532,Low (Q2),14.7,5.4,Very High (Q5),53.7,9.9,Moderate,-39.0
+Khulna,Bagerhat,Mollahat,141170,Moderate (Q3),17.1,5.8,Very High (Q5),55.4,9.2,Moderate,-38.3
+Khulna,Bagerhat,Mongla,153932,Very Low (Q1),7.4,2.1,Very High (Q5),56.6,4.9,Low,-49.2
+Khulna,Bagerhat,Morelganj,301874,Low (Q2),11.2,3.4,Very High (Q5),52.5,6.3,Moderate,-41.3
+Khulna,Bagerhat,Rampal,168597,Low (Q2),12.6,5.3,Very High (Q5),61.9,6.5,Low,-49.3
+Khulna,Bagerhat,Sharankhola,118821,High (Q4),24.3,2.7,Very High (Q5),57.5,9.1,High,-33.2
+Khulna,Chuadanga,Alamdanga,365195,High (Q4),24.8,3.8,Low (Q2),29.4,4.3,Moderate,-4.6
+Khulna,Chuadanga,Chuadanga Sadar,344072,Moderate (Q3),15.5,2.7,Low (Q2),24.3,3.7,Moderate,-8.8
+Khulna,Chuadanga,Damurhuda,314172,High (Q4),21.2,6.9,Low (Q2),29.3,5.3,Moderate,-8.1
+Khulna,Chuadanga,Jibannagar,195597,High (Q4),22.8,4.5,Low (Q2),32.0,5.5,Moderate,-9.2
+Khulna,Jashore,Abhaynagar,283395,High (Q4),27.2,3.4,High (Q4),42.8,5.3,Moderate,-15.6
+Khulna,Jashore,Bagharpara,236314,High (Q4),24.6,6.5,High (Q4),45.2,8.3,Moderate,-20.6
+Khulna,Jashore,Chaugachha,246548,Low (Q2),11.8,3.8,High (Q4),41.1,5.0,Low,-29.3
+Khulna,Jashore,Jhikargachha,327869,High (Q4),26.4,3.0,Moderate (Q3),38.5,5.6,Moderate,-12.1
+Khulna,Jashore,Keshabpur,277655,Very High (Q5),33.4,4.6,Very High (Q5),50.9,5.4,Moderate,-17.5
+Khulna,Jashore,Jashore Sadar,804026,Low (Q2),13.2,2.9,Moderate (Q3),34.9,5.3,Low,-21.7
+Khulna,Jashore,Manirampur,445492,Moderate (Q3),20.4,2.9,Moderate (Q3),41.0,6.0,Moderate,-20.6
+Khulna,Jashore,Sharsha,382940,Moderate (Q3),15.5,3.1,High (Q4),44.2,5.1,Low,-28.7
+Khulna,Jhenaidah,Harinakundu,216994,High (Q4),21.9,7.0,Low (Q2),29.8,4.6,Moderate,-7.9
+Khulna,Jhenaidah,Jhenaidah Sadar,528242,High (Q4),21.7,2.4,Very Low (Q1),20.1,3.6,Moderate,1.6
+Khulna,Jhenaidah,Kaliganj,305392,Low (Q2),14.9,3.0,Very Low (Q1),19.0,4.1,High,-4.1
+Khulna,Jhenaidah,Kotchandpur,155335,Moderate (Q3),16.1,4.7,Low (Q2),21.1,5.4,Moderate,-5.0
+Khulna,Jhenaidah,Maheshpur,367678,Moderate (Q3),20.3,4.5,Low (Q2),27.2,3.6,Moderate,-6.9
+Khulna,Jhenaidah,Shailkupa,396074,High (Q4),27.7,4.4,Low (Q2),26.0,4.9,Moderate,1.7
+Khulna,Khulna,Batiaghata,226308,Very Low (Q1),9.5,2.8,High (Q4),45.0,6.6,Low,-35.5
+Khulna,Khulna,Dacope,158167,Low (Q2),12.8,4.9,High (Q4),45.3,4.6,Moderate,-32.5
+Khulna,Khulna,Daulatpur,97544,Very Low (Q1),5.2,1.4,Moderate (Q3),32.3,9.1,Moderate,-27.1
+Khulna,Khulna,Dumuria,338760,Low (Q2),9.9,2.8,High (Q4),47.2,6.4,Low,-37.3
+Khulna,Khulna,Dighalia,161129,Very Low (Q1),8.5,2.9,Moderate (Q3),40.5,6.7,Low,-32.0
+Khulna,Khulna,Khalishpur,150929,Very Low (Q1),5.5,0.7,Moderate (Q3),39.0,3.6,Low,-33.5
+Khulna,Khulna,Khan Jahan Ali,6229,Very Low (Q1),5.3,2.7,Moderate (Q3),32.6,8.9,Low,-27.3
+Khulna,Khulna,Khulna Sadar,231396,Very Low (Q1),4.6,0.7,Low (Q2),30.9,4.2,Low,-26.3
+Khulna,Khulna,Koyra,219343,Low (Q2),13.1,6.1,High (Q4),48.0,6.2,Moderate,-34.9
+Khulna,Khulna,Paikgachha,284525,Moderate (Q3),17.0,3.1,High (Q4),46.7,5.8,Moderate,-29.7
+Khulna,Khulna,Phultala,144063,Moderate (Q3),15.8,2.1,Moderate (Q3),36.5,6.6,Moderate,-20.7
+Khulna,Khulna,Rupsa,204055,Low (Q2),11.8,4.4,High (Q4),42.4,6.5,Low,-30.6
+Khulna,Khulna,Sonadanga,185025,Very Low (Q1),3.7,0.7,Low (Q2),20.5,5.4,Low,-16.8
+Khulna,Khulna,Terokhada,128096,Low (Q2),10.6,3.8,High (Q4),45.8,5.5,Low,-35.2
+Khulna,Kushtia,Bheramara,222524,Moderate (Q3),18.2,5.7,Very Low (Q1),4.5,2.7,Moderate,13.7
+Khulna,Kushtia,Daulatpur,479263,High (Q4),23.7,2.9,Very Low (Q1),6.5,1.9,Moderate,17.2
+Khulna,Kushtia,Khoksa,142999,High (Q4),21.6,7.1,Very Low (Q1),6.4,3.0,Moderate,15.2
+Khulna,Kushtia,Kumarkhali,371800,High (Q4),26.6,3.2,Very Low (Q1),3.7,2.4,Moderate,22.9
+Khulna,Kushtia,Kushtia Sadar,543631,Low (Q2),10.2,2.5,Very Low (Q1),4.6,1.4,Moderate,5.6
+Khulna,Kushtia,Mirpur,359031,Low (Q2),11.6,2.4,Very Low (Q1),3.3,1.7,Moderate,8.3
+Khulna,Magura,Magura Sadar,417455,High (Q4),21.3,3.9,High (Q4),47.5,4.2,Moderate,-26.2
+Khulna,Magura,Mohammadpur,240505,High (Q4),24.8,8.4,Very High (Q5),55.3,5.1,Moderate,-30.5
+Khulna,Magura,Shalikha,176615,Moderate (Q3),20.4,3.4,Moderate (Q3),41.0,7.1,Moderate,-20.6
+Khulna,Magura,Sreepur,182558,High (Q4),26.0,7.6,High (Q4),47.2,6.8,Moderate,-21.2
+Khulna,Meherpur,Gangni,320627,Low (Q2),10.3,2.1,Very Low (Q1),19.0,3.6,Moderate,-8.7
+Khulna,Meherpur,Mujibnagar,104180,Very Low (Q1),9.7,2.2,Very Low (Q1),12.6,3.7,Moderate,-2.9
+Khulna,Meherpur,Meherpur Sadar,274670,Very Low (Q1),9.3,3.1,Very Low (Q1),10.2,2.9,Moderate,-0.9
+Khulna,Narail,Kalia,239764,Moderate (Q3),20.4,2.7,Very Low (Q1),18.9,4.3,Moderate,1.5
+Khulna,Narail,Lohagara,244063,Low (Q2),10.5,2.9,Low (Q2),28.1,3.2,Low,-17.6
+Khulna,Narail,Narail Sadar,291049,Low (Q2),14.0,6.1,Low (Q2),26.1,3.2,Low,-12.1
+Khulna,Satkhira,Ashashuni,279404,High (Q4),22.4,4.1,Very High (Q5),50.8,4.9,Moderate,-28.4
+Khulna,Satkhira,Debhata,131972,Very Low (Q1),9.5,2.5,High (Q4),42.9,7.4,Moderate,-33.4
+Khulna,Satkhira,Kalaroa,259539,Low (Q2),12.7,5.9,High (Q4),45.0,4.8,Low,-32.3
+Khulna,Satkhira,Kaliganj,302056,Moderate (Q3),17.8,2.9,High (Q4),45.3,5.5,High,-27.5
+Khulna,Satkhira,Satkhira Sadar,511808,Low (Q2),13.0,3.0,High (Q4),43.7,3.6,Moderate,-30.7
+Khulna,Satkhira,Shyamnagar,361034,High (Q4),25.4,3.5,Very High (Q5),52.5,4.6,Moderate,-27.1
+Khulna,Satkhira,Tala,323504,Moderate (Q3),17.2,3.6,High (Q4),43.7,5.7,Moderate,-26.5
+Mymensingh,Jamalpur,Bakshiganj,238190,Very High (Q5),29.5,6.0,Very High (Q5),64.6,5.0,High,-35.1
+Mymensingh,Jamalpur,Dewanganj,286519,High (Q4),24.8,3.7,Very High (Q5),80.7,5.0,High,-55.9
+Mymensingh,Jamalpur,Islampur,317720,Low (Q2),11.4,3.5,Very High (Q5),70.0,8.6,Moderate,-58.6
+Mymensingh,Jamalpur,Jamalpur Sadar,656989,Low (Q2),9.8,2.7,Very High (Q5),65.6,4.0,Moderate,-55.8
+Mymensingh,Jamalpur,Madarganj,284981,Low (Q2),12.4,3.6,Very High (Q5),66.0,4.7,Moderate,-53.6
+Mymensingh,Jamalpur,Melandaha,350023,High (Q4),26.8,4.1,Very High (Q5),62.7,5.2,High,-35.9
+Mymensingh,Jamalpur,Sarishabari,341113,High (Q4),27.9,3.2,Very High (Q5),56.1,5.3,High,-28.2
+Mymensingh,Mymensingh,Bhaluka,556443,Very Low (Q1),9.0,1.6,High (Q4),49.3,3.6,Moderate,-40.3
+Mymensingh,Mymensingh,Dhobaura,214858,High (Q4),28.1,4.5,Very High (Q5),80.3,7.3,High,-52.2
+Mymensingh,Mymensingh,Fulbaria,488207,Low (Q2),9.9,4.0,Very High (Q5),79.8,3.2,Moderate,-69.9
+Mymensingh,Mymensingh,Gafargaon,455687,Low (Q2),10.0,2.5,Very High (Q5),63.8,4.3,Moderate,-53.8
+Mymensingh,Mymensingh,Gouripur,350958,Very High (Q5),52.9,3.7,Very High (Q5),76.5,3.7,High,-23.6
+Mymensingh,Mymensingh,Haluaghat,312807,Very High (Q5),59.6,3.5,Very High (Q5),77.9,5.6,High,-18.3
+Mymensingh,Mymensingh,Ishwarganj,398271,High (Q4),27.5,3.6,Very High (Q5),86.7,4.1,High,-59.2
+Mymensingh,Mymensingh,Mymensingh Sadar,935481,Very Low (Q1),5.5,2.3,Very High (Q5),64.4,2.9,Low,-58.9
+Mymensingh,Mymensingh,Muktagachha,446165,Very Low (Q1),7.2,2.8,Very High (Q5),72.7,3.6,Low,-65.5
+Mymensingh,Mymensingh,Nandail,416623,High (Q4),25.4,2.8,Very High (Q5),73.8,3.8,High,-48.4
+Mymensingh,Mymensingh,Fulpur,345021,Very High (Q5),32.8,4.1,Very High (Q5),76.4,6.8,High,-43.6
+Mymensingh,Mymensingh,Tarakanda,335104,High (Q4),23.3,5.0,Very High (Q5),73.1,3.4,High,-49.8
+Mymensingh,Mymensingh,Trishal,481755,High (Q4),22.2,3.1,Very High (Q5),63.2,3.6,High,-41.0
+Mymensingh,Netrakona,Atpara,142125,Very High (Q5),34.0,12.5,Very High (Q5),62.2,6.3,High,-28.2
+Mymensingh,Netrakona,Barhatta,180071,Very High (Q5),36.6,17.2,Very High (Q5),55.4,5.2,High,-18.8
+Mymensingh,Netrakona,Durgapur,237111,Very High (Q5),47.6,4.7,Very High (Q5),61.8,11.3,Moderate,-14.2
+Mymensingh,Netrakona,Khaliajuri,95533,Very High (Q5),47.2,19.2,Very High (Q5),68.9,8.6,High,-21.7
+Mymensingh,Netrakona,Kalmakanda,268277,Very High (Q5),32.6,3.2,Very High (Q5),59.7,6.1,High,-27.1
+Mymensingh,Netrakona,Kendua,312852,High (Q4),23.5,5.8,Very High (Q5),58.6,5.5,High,-35.1
+Mymensingh,Netrakona,Madan,147946,Very High (Q5),38.8,15.9,Very High (Q5),62.2,5.5,High,-23.4
+Mymensingh,Netrakona,Mohanganj,164212,Very High (Q5),34.2,4.2,Very High (Q5),62.6,10.3,High,-28.4
+Mymensingh,Netrakona,Netrakona Sadar,407278,Very High (Q5),45.8,3.9,Very High (Q5),56.7,4.3,High,-10.9
+Mymensingh,Netrakona,Purbadhala,325616,Low (Q2),12.4,4.4,Very High (Q5),58.6,11.1,Moderate,-46.2
+Mymensingh,Sherpur,Jhenaigati,175800,Low (Q2),10.8,4.1,Very High (Q5),68.1,10.2,Moderate,-57.3
+Mymensingh,Sherpur,Nakla,206798,High (Q4),28.0,9.7,Very High (Q5),70.9,4.7,High,-42.9
+Mymensingh,Sherpur,Nalitabari,268656,High (Q4),27.5,4.9,Very High (Q5),64.0,4.6,High,-36.5
+Mymensingh,Sherpur,Sherpur Sadar,553264,Moderate (Q3),18.3,2.4,Very High (Q5),75.1,3.2,High,-56.8
+Mymensingh,Sherpur,Sreebardi,277918,Moderate (Q3),15.6,4.2,Very High (Q5),66.1,4.6,Moderate,-50.5
+Rajshahi,Bogura,Adamdighi,203653,Very Low (Q1),9.4,4.8,Low (Q2),24.3,4.2,Moderate,-14.9
+Rajshahi,Bogura,Bogura Sadar,619584,Very Low (Q1),6.9,1.1,Low (Q2),22.0,2.9,Low,-15.1
+Rajshahi,Bogura,Dhunat,305280,Low (Q2),11.1,3.7,High (Q4),42.7,5.6,Moderate,-31.6
+Rajshahi,Bogura,Dupchachia,191034,Very Low (Q1),7.0,5.5,Low (Q2),25.9,5.7,Low,-18.9
+Rajshahi,Bogura,Gabtali,340500,Low (Q2),14.5,3.5,Low (Q2),30.2,4.4,Moderate,-15.7
+Rajshahi,Bogura,Kahaloo,232354,Low (Q2),10.2,2.4,Low (Q2),24.4,4.7,Moderate,-14.2
+Rajshahi,Bogura,Nandigram,197429,Low (Q2),12.2,6.9,Moderate (Q3),32.6,5.5,Moderate,-20.4
+Rajshahi,Bogura,Sariakandi,274313,Very High (Q5),30.1,4.2,High (Q4),46.0,4.5,High,-15.9
+Rajshahi,Bogura,Shajahanpur,321601,Very Low (Q1),4.5,2.0,Low (Q2),24.2,5.6,Low,-19.7
+Rajshahi,Bogura,Sherpur,377535,Moderate (Q3),17.0,4.3,Moderate (Q3),33.6,7.1,High,-16.6
+Rajshahi,Bogura,Shibganj,397401,Low (Q2),10.0,2.9,Moderate (Q3),33.0,4.4,High,-23.0
+Rajshahi,Bogura,Sonatala,191233,Moderate (Q3),15.6,9.7,Moderate (Q3),34.9,4.1,Moderate,-19.3
+Rajshahi,Joypurhat,Akkelpur,142453,Low (Q2),11.0,3.3,Moderate (Q3),34.5,5.8,Moderate,-23.5
+Rajshahi,Joypurhat,Joypurhat Sadar,305288,Moderate (Q3),15.7,5.6,Low (Q2),31.6,3.7,Moderate,-15.9
+Rajshahi,Joypurhat,Kalai,144692,High (Q4),22.3,2.8,Moderate (Q3),41.0,3.5,High,-18.7
+Rajshahi,Joypurhat,Khetlal,110148,Moderate (Q3),15.3,7.5,Moderate (Q3),35.4,7.4,Moderate,-20.1
+Rajshahi,Joypurhat,Panchbibi,235529,Low (Q2),12.5,3.5,Moderate (Q3),34.9,4.6,Moderate,-22.4
+Rajshahi,Naogaon,Atrai,199340,Moderate (Q3),16.7,9.4,Low (Q2),25.6,4.0,High,-8.9
+Rajshahi,Naogaon,Badalgachhi,205188,High (Q4),25.7,3.6,Very Low (Q1),20.3,5.3,High,5.4
+Rajshahi,Naogaon,Dhamoirhat,191550,Moderate (Q3),15.3,8.2,Low (Q2),23.7,3.9,High,-8.4
+Rajshahi,Naogaon,Manda,377730,Low (Q2),12.2,2.5,Low (Q2),21.7,3.5,Moderate,-9.5
+Rajshahi,Naogaon,Mahadebpur,303069,Moderate (Q3),16.5,9.2,Low (Q2),23.2,4.4,High,-6.7
+Rajshahi,Naogaon,Naogaon Sadar,431886,Very Low (Q1),7.3,2.7,Low (Q2),22.2,4.0,Low,-14.9
+Rajshahi,Naogaon,Niamatpur,267524,Low (Q2),12.7,4.1,Low (Q2),23.4,2.8,Moderate,-10.7
+Rajshahi,Naogaon,Patnitala,246650,Moderate (Q3),17.9,3.5,Low (Q2),21.5,6.6,High,-3.6
+Rajshahi,Naogaon,Porsha,141195,High (Q4),23.2,8.9,Very Low (Q1),20.0,6.7,High,3.2
+Rajshahi,Naogaon,Raninagar,188634,Moderate (Q3),16.6,8.5,Very Low (Q1),16.7,4.1,High,-0.1
+Rajshahi,Naogaon,Sapahar,179151,Very High (Q5),32.2,4.7,Low (Q2),25.3,6.1,High,6.9
+Rajshahi,Natore,Bagatipara,137075,High (Q4),21.6,10.1,High (Q4),49.6,4.6,High,-28.0
+Rajshahi,Natore,Baraigram,305580,High (Q4),23.7,4.6,Moderate (Q3),39.9,4.7,High,-16.2
+Rajshahi,Natore,Gurudaspur,229210,Very High (Q5),40.2,5.8,Very High (Q5),50.5,6.6,High,-10.3
+Rajshahi,Natore,Lalpur,303782,High (Q4),23.1,11.4,High (Q4),47.1,5.1,High,-24.0
+Rajshahi,Natore,Naldanga,134133,Moderate (Q3),16.5,4.8,High (Q4),49.3,4.6,Moderate,-32.8
+Rajshahi,Natore,Natore Sadar,343908,High (Q4),22.2,11.4,Moderate (Q3),40.5,4.2,High,-18.3
+Rajshahi,Natore,Singra,374370,High (Q4),22.4,4.0,High (Q4),45.6,6.0,High,-23.2
+Rajshahi,Chapainawabganj,Bholahat,112715,Very High (Q5),31.9,5.5,Low (Q2),26.3,7.2,High,5.6
+Rajshahi,Chapainawabganj,Gomastapur,300418,Very High (Q5),36.6,14.2,Moderate (Q3),32.1,4.8,High,4.5
+Rajshahi,Chapainawabganj,Nachole,165910,Moderate (Q3),19.9,6.0,Low (Q2),29.8,7.5,High,-9.9
+Rajshahi,Chapainawabganj,Chapainawabganj Sadar,573178,High (Q4),27.2,3.3,Low (Q2),31.9,4.0,High,-4.7
+Rajshahi,Chapainawabganj,Shibganj,664254,Very High (Q5),44.6,4.9,Moderate (Q3),33.0,4.4,High,11.6
+Rajshahi,Pabna,Atgharia,176663,Low (Q2),11.6,6.3,High (Q4),44.3,4.6,Moderate,-32.7
+Rajshahi,Pabna,Bera,298608,Moderate (Q3),17.7,3.4,High (Q4),47.4,6.2,High,-29.7
+Rajshahi,Pabna,Bhangura,134879,Low (Q2),13.9,7.3,High (Q4),41.2,6.9,Moderate,-27.3
+Rajshahi,Pabna,Chatmohar,329279,Moderate (Q3),15.3,3.2,Moderate (Q3),36.6,5.5,Moderate,-21.3
+Rajshahi,Pabna,Faridpur,139141,Low (Q2),12.3,4.0,Moderate (Q3),37.9,7.1,Moderate,-25.6
+Rajshahi,Pabna,Ishwardi,378350,Low (Q2),11.9,4.7,Low (Q2),31.7,4.0,Moderate,-19.8
+Rajshahi,Pabna,Pabna Sadar,685156,Very Low (Q1),7.2,1.9,Moderate (Q3),40.8,3.8,Low,-33.6
+Rajshahi,Pabna,Santhia,407301,Low (Q2),12.3,3.5,Low (Q2),30.3,4.7,Moderate,-18.0
+Rajshahi,Pabna,Sujanagar,302873,Low (Q2),13.6,7.4,High (Q4),48.0,5.9,Moderate,-34.4
+Rajshahi,Rajshahi,Bagha,194242,Low (Q2),12.7,3.9,Moderate (Q3),33.9,4.0,Moderate,-21.2
+Rajshahi,Rajshahi,Bagmara,371140,Low (Q2),13.5,3.4,Low (Q2),30.0,4.8,Moderate,-16.5
+Rajshahi,Rajshahi,Boalia,177894,Very Low (Q1),5.3,1.2,Moderate (Q3),32.7,4.6,Low,-27.4
+Rajshahi,Rajshahi,Chandrima,58144,Low (Q2),10.8,5.8,Moderate (Q3),35.5,5.5,Low,-24.7
+Rajshahi,Rajshahi,Charghat,222754,Low (Q2),13.1,7.2,Moderate (Q3),35.5,6.6,Moderate,-22.4
+Rajshahi,Rajshahi,Durgapur,196570,Moderate (Q3),15.4,2.9,Moderate (Q3),40.1,4.2,Moderate,-24.7
+Rajshahi,Rajshahi,Godagari,372994,High (Q4),23.9,3.8,Moderate (Q3),38.0,3.6,High,-14.1
+Rajshahi,Rajshahi,Kashiadanga,42410,Very Low (Q1),9.7,2.4,Moderate (Q3),34.4,6.3,Low,-24.7
+Rajshahi,Rajshahi,Matihar,59116,Moderate (Q3),15.7,2.7,Moderate (Q3),37.0,4.7,Low,-21.3
+Rajshahi,Rajshahi,Mohanpur,185120,Low (Q2),14.4,8.9,Moderate (Q3),35.0,4.4,Moderate,-20.6
+Rajshahi,Rajshahi,Paba,361328,Moderate (Q3),19.3,3.7,Moderate (Q3),37.5,4.3,Moderate,-18.2
+Rajshahi,Rajshahi,Puthia,222489,Low (Q2),13.5,7.6,Low (Q2),31.4,6.3,Moderate,-17.9
+Rajshahi,Rajshahi,Rajpara,106376,Low (Q2),12.7,1.8,Low (Q2),24.0,4.6,Low,-11.3
+Rajshahi,Rajshahi,Shah Makhdum,34954,Very Low (Q1),9.5,5.2,High (Q4),41.2,4.7,Low,-31.7
+Rajshahi,Rajshahi,Tanore,211001,Moderate (Q3),19.1,4.0,Moderate (Q3),40.7,4.1,High,-21.6
+Rajshahi,Sirajganj,Belkuchi,390526,High (Q4),23.9,2.4,Very High (Q5),51.2,5.4,High,-27.3
+Rajshahi,Sirajganj,Chouhali,136727,Low (Q2),14.5,6.4,Very High (Q5),61.7,8.9,Moderate,-47.2
+Rajshahi,Sirajganj,Kamarkhanda,152314,Very Low (Q1),8.3,5.0,High (Q4),48.7,8.4,Low,-40.4
+Rajshahi,Sirajganj,Kazipur,278279,Moderate (Q3),18.3,2.3,Very High (Q5),56.4,4.1,High,-38.1
+Rajshahi,Sirajganj,Rayganj,340876,Very Low (Q1),3.6,2.8,Very High (Q5),56.5,8.4,Low,-52.9
+Rajshahi,Sirajganj,Shahjadpur,592610,Moderate (Q3),15.7,2.0,Very High (Q5),54.2,5.2,Moderate,-38.5
+Rajshahi,Sirajganj,Sirajganj Sadar,608583,Very Low (Q1),3.8,2.2,High (Q4),48.1,5.0,Low,-44.3
+Rajshahi,Sirajganj,Tarash,209096,Very Low (Q1),3.7,2.1,Very High (Q5),59.0,6.1,Low,-55.3
+Rajshahi,Sirajganj,Ullapara,580839,Very Low (Q1),7.9,2.1,High (Q4),48.7,6.0,Moderate,-40.8
+Rangpur,Dinajpur,Birampur,180549,Very High (Q5),36.5,3.9,High (Q4),43.5,5.0,High,-7.0
+Rangpur,Dinajpur,Birganj,350512,High (Q4),23.2,4.2,High (Q4),42.5,11.5,High,-19.3
+Rangpur,Dinajpur,Birol,279378,High (Q4),27.9,10.9,Very High (Q5),53.1,6.6,High,-25.2
+Rangpur,Dinajpur,Bochaganj,168980,Very High (Q5),44.6,4.6,High (Q4),41.8,9.4,High,2.8
+Rangpur,Dinajpur,Chirirbandar,318152,High (Q4),21.2,5.2,Very Low (Q1),18.6,4.0,High,2.6
+Rangpur,Dinajpur,Fulbari,190033,High (Q4),27.0,8.1,Moderate (Q3),36.4,9.7,High,-9.4
+Rangpur,Dinajpur,Ghoraghat,128040,High (Q4),28.0,9.2,Moderate (Q3),39.8,10.7,High,-11.8
+Rangpur,Dinajpur,Hakimpur,93438,Moderate (Q3),19.5,3.8,Moderate (Q3),35.2,8.1,Moderate,-15.7
+Rangpur,Dinajpur,Kaharole,171854,Very High (Q5),29.5,10.6,Moderate (Q3),37.2,6.1,High,-7.7
+Rangpur,Dinajpur,Khansama,195852,High (Q4),27.4,4.5,High (Q4),41.5,12.3,High,-14.1
+Rangpur,Dinajpur,Dinajpur Sadar,516003,High (Q4),24.5,2.9,Low (Q2),25.2,3.2,High,-0.7
+Rangpur,Dinajpur,Nababganj,250292,High (Q4),24.4,10.4,High (Q4),49.4,4.6,High,-25.0
+Rangpur,Dinajpur,Parbatipur,393568,Moderate (Q3),16.7,5.0,Moderate (Q3),38.2,13.5,Moderate,-21.5
+Rangpur,Gaibandha,Fulchhari,165143,Moderate (Q3),19.8,4.9,Very High (Q5),52.9,13.1,High,-33.1
+Rangpur,Gaibandha,Gaibandha Sadar,486698,Very High (Q5),31.0,4.1,High (Q4),42.9,5.1,High,-11.9
+Rangpur,Gaibandha,Gobindaganj,537752,Moderate (Q3),17.1,3.0,Moderate (Q3),33.2,4.6,High,-16.1
+Rangpur,Gaibandha,Palashbari,264626,Very High (Q5),41.7,3.8,High (Q4),47.1,4.5,High,-5.4
+Rangpur,Gaibandha,Sadullapur,310342,Moderate (Q3),20.9,3.8,High (Q4),46.2,14.4,High,-25.3
+Rangpur,Gaibandha,Saghata,286413,High (Q4),23.0,7.8,Very High (Q5),54.9,5.6,High,-31.9
+Rangpur,Gaibandha,Sundarganj,478385,High (Q4),21.9,2.9,Very High (Q5),51.4,5.7,High,-29.5
+Rangpur,Kurigram,Bhurungamari,254439,Very High (Q5),37.6,4.7,Moderate (Q3),32.8,6.5,High,4.8
+Rangpur,Kurigram,Rajibpur,78013,Very High (Q5),38.5,8.6,Very High (Q5),68.1,14.2,High,-29.6
+Rangpur,Kurigram,Chilmari,130830,Very High (Q5),31.5,10.8,Very High (Q5),61.6,13.6,High,-30.1
+Rangpur,Kurigram,Phulbari,184805,High (Q4),24.5,5.0,Very High (Q5),65.8,6.8,High,-41.3
+Rangpur,Kurigram,Kurigram Sadar,351118,Very High (Q5),39.0,4.6,Very High (Q5),54.6,10.3,High,-15.6
+Rangpur,Kurigram,Nageshwari,441325,Very High (Q5),35.5,4.2,Very High (Q5),68.2,3.2,High,-32.7
+Rangpur,Kurigram,Rajarhat,201720,Very High (Q5),28.6,13.6,Very High (Q5),53.1,11.6,High,-24.5
+Rangpur,Kurigram,Roumari,226313,Very High (Q5),30.2,5.1,Very High (Q5),69.6,6.0,High,-39.4
+Rangpur,Kurigram,Ulipur,437277,Moderate (Q3),20.5,5.2,Very High (Q5),68.8,5.1,High,-48.3
+Rangpur,Lalmonirhat,Aditmari,248355,Moderate (Q3),16.5,4.1,Low (Q2),22.1,4.8,Moderate,-5.6
+Rangpur,Lalmonirhat,Hatibandha,261862,Very Low (Q1),9.6,3.3,Moderate (Q3),35.7,11.4,Moderate,-26.1
+Rangpur,Lalmonirhat,Kaliganj,274407,High (Q4),26.5,3.5,High (Q4),42.9,3.2,High,-16.4
+Rangpur,Lalmonirhat,Lalmonirhat Sadar,368234,Moderate (Q3),21.1,7.2,Moderate (Q3),39.4,5.2,High,-18.3
+Rangpur,Lalmonirhat,Patgram,260597,High (Q4),25.2,3.4,Moderate (Q3),40.2,12.1,High,-15.0
+Rangpur,Nilphamari,Dimla,314675,Moderate (Q3),20.9,3.8,High (Q4),43.6,5.2,High,-22.7
+Rangpur,Nilphamari,Domar,279296,Moderate (Q3),18.4,4.7,Moderate (Q3),38.8,5.3,Moderate,-20.4
+Rangpur,Nilphamari,Jaldhaka,383369,Very High (Q5),29.1,4.0,Moderate (Q3),41.0,5.6,High,-11.9
+Rangpur,Nilphamari,Kishoreganj,265897,High (Q4),25.9,7.7,Low (Q2),28.7,5.5,High,-2.8
+Rangpur,Nilphamari,Nilphamari Sadar,515038,Moderate (Q3),17.7,2.9,Low (Q2),30.6,4.9,Moderate,-12.9
+Rangpur,Nilphamari,Saidpur,306299,High (Q4),22.9,5.1,Moderate (Q3),34.6,8.1,High,-11.7
+Rangpur,Panchagarh,Atowari,139976,Very High (Q5),29.4,12.5,Low (Q2),21.1,4.6,High,8.3
+Rangpur,Panchagarh,Boda,272127,Very High (Q5),48.2,5.5,Moderate (Q3),40.3,4.6,High,7.9
+Rangpur,Panchagarh,Debiganj,263429,Very High (Q5),30.3,5.3,Moderate (Q3),39.4,5.1,High,-9.1
+Rangpur,Panchagarh,Panchagarh Sadar,328199,Very High (Q5),31.6,10.8,Low (Q2),20.8,5.0,High,10.8
+Rangpur,Panchagarh,Tentulia,157044,Moderate (Q3),19.0,4.5,Very Low (Q1),20.0,4.8,High,-1.0
+Rangpur,Rangpur,Badarganj,310599,High (Q4),21.5,4.8,Very High (Q5),59.0,5.4,High,-37.5
+Rangpur,Rangpur,Gangachara,283675,Moderate (Q3),15.3,4.7,Very High (Q5),73.2,5.5,Moderate,-57.9
+Rangpur,Rangpur,Hajirhat,76167,Very High (Q5),38.2,7.3,High (Q4),47.9,14.6,High,-9.7
+Rangpur,Rangpur,Haragachh,61660,Very High (Q5),42.0,8.0,High (Q4),48.4,14.6,High,-6.4
+Rangpur,Rangpur,Kaunia,236988,High (Q4),24.7,6.6,High (Q4),50.3,12.0,High,-25.6
+Rangpur,Rangpur,Kotwali,310859,High (Q4),22.4,4.5,Very Low (Q1),19.8,2.9,Low,2.6
+Rangpur,Rangpur,Rangpur Sadar,176621,Moderate (Q3),20.5,3.9,Very High (Q5),63.1,6.9,High,-42.6
+Rangpur,Rangpur,Mahiganj,54689,Very High (Q5),29.9,7.3,Moderate (Q3),40.7,6.7,High,-10.8
+Rangpur,Rangpur,Mithapukur,533435,Moderate (Q3),20.3,4.0,Moderate (Q3),38.8,6.4,High,-18.5
+Rangpur,Rangpur,Parshuram,68773,Very High (Q5),30.6,7.9,Moderate (Q3),38.6,10.3,High,-8.0
+Rangpur,Rangpur,Pirgachha,323670,Low (Q2),14.1,3.6,High (Q4),45.2,6.4,Moderate,-31.1
+Rangpur,Rangpur,Pirganj,407669,High (Q4),22.3,4.4,Moderate (Q3),37.2,5.4,High,-14.9
+Rangpur,Rangpur,Tajhat,79421,Very High (Q5),31.6,7.5,High (Q4),41.1,8.6,High,-9.5
+Rangpur,Rangpur,Taraganj,158212,High (Q4),22.5,7.7,Very High (Q5),58.9,5.7,High,-36.4
+Rangpur,Thakurgaon,Baliadangi,205904,Very High (Q5),30.9,5.2,Low (Q2),31.0,12.7,High,-0.1
+Rangpur,Thakurgaon,Haripur,158103,High (Q4),23.5,9.9,Low (Q2),29.0,4.9,High,-5.5
+Rangpur,Thakurgaon,Pirganj,260952,High (Q4),24.0,3.6,Low (Q2),28.8,4.3,High,-4.8
+Rangpur,Thakurgaon,Ranishankail,239193,Moderate (Q3),17.0,5.1,Low (Q2),23.0,4.9,Moderate,-6.0
+Rangpur,Thakurgaon,Thakurgaon Sadar,641387,High (Q4),22.8,4.1,Low (Q2),22.5,4.2,High,0.3
+Sylhet,Habiganj,Ajmiriganj,125661,Low (Q2),12.4,6.4,High (Q4),47.1,5.4,Moderate,-34.7
+Sylhet,Habiganj,Bahubal,216474,Moderate (Q3),20.3,1.7,Moderate (Q3),38.6,8.5,High,-18.3
+Sylhet,Habiganj,Baniachong,353339,Low (Q2),11.7,2.7,Low (Q2),32.0,6.3,Low,-20.3
+Sylhet,Habiganj,Chunarughat,338982,Low (Q2),11.1,1.6,Moderate (Q3),39.1,3.7,Moderate,-28.0
+Sylhet,Habiganj,Habiganj Sadar,296592,Very Low (Q1),7.4,1.3,Low (Q2),29.1,5.6,Low,-21.7
+Sylhet,Habiganj,Lakhai,157465,Low (Q2),10.2,2.3,High (Q4),41.5,9.1,Low,-31.3
+Sylhet,Habiganj,Madhabpur,376071,Very Low (Q1),9.1,1.9,Low (Q2),25.5,3.6,Low,-16.4
+Sylhet,Habiganj,Nabiganj,363472,Low (Q2),10.0,1.7,Moderate (Q3),37.2,7.3,Low,-27.2
+Sylhet,Habiganj,Shayestaganj,93042,Very Low (Q1),6.2,3.3,Low (Q2),30.5,3.6,Low,-24.3
+Sylhet,Moulvibazar,Baralekha,278828,Low (Q2),12.1,2.7,Low (Q2),27.1,3.0,Moderate,-15.0
+Sylhet,Moulvibazar,Juri,161181,High (Q4),25.8,6.7,High (Q4),41.8,7.1,High,-16.0
+Sylhet,Moulvibazar,Kamalganj,286682,High (Q4),22.0,2.1,Moderate (Q3),39.0,3.6,High,-17.0
+Sylhet,Moulvibazar,Kulaura,394156,High (Q4),26.5,2.5,Moderate (Q3),40.1,3.4,High,-13.6
+Sylhet,Moulvibazar,Moulvibazar Sadar,365077,Low (Q2),11.0,2.4,Low (Q2),26.0,4.1,Low,-15.0
+Sylhet,Moulvibazar,Rajnagar,248235,Low (Q2),12.8,3.1,Moderate (Q3),40.3,5.3,Moderate,-27.5
+Sylhet,Moulvibazar,Sreemangal,354710,Very High (Q5),31.3,2.4,High (Q4),45.4,4.7,High,-14.1
+Sylhet,Sunamganj,Bishwambharpur,189574,Very High (Q5),46.7,5.2,High (Q4),43.5,5.1,High,3.2
+Sylhet,Sunamganj,Chhatak,442203,Very High (Q5),29.3,2.4,High (Q4),42.2,4.0,High,-12.9
+Sylhet,Sunamganj,Derai,252129,Moderate (Q3),19.1,4.4,Very High (Q5),61.5,4.4,Moderate,-42.4
+Sylhet,Sunamganj,Dharmapasha,132247,High (Q4),25.7,10.7,High (Q4),44.3,8.5,High,-18.6
+Sylhet,Sunamganj,Dowarabazar,258969,High (Q4),22.9,3.4,High (Q4),45.6,7.4,Moderate,-22.7
+Sylhet,Sunamganj,Jagannathpur,261626,Very High (Q5),28.9,4.0,Moderate (Q3),37.9,5.9,High,-9.0
+Sylhet,Sunamganj,Jamalganj,185134,Very High (Q5),30.2,4.4,Moderate (Q3),39.6,4.3,High,-9.4
+Sylhet,Sunamganj,Madhyanagar,95248,High (Q4),25.5,9.5,High (Q4),42.4,6.2,High,-16.9
+Sylhet,Sunamganj,Shalla,116907,Very High (Q5),34.8,4.9,High (Q4),41.4,5.8,High,-6.6
+Sylhet,Sunamganj,Shantiganj,203664,High (Q4),28.2,11.7,High (Q4),41.2,8.1,High,-13.0
+Sylhet,Sunamganj,Sunamganj Sadar,313964,Moderate (Q3),20.0,3.9,Low (Q2),29.3,4.8,Moderate,-9.3
+Sylhet,Sunamganj,Tahirpur,223551,High (Q4),22.7,4.6,Moderate (Q3),39.2,5.1,Moderate,-16.5
+Sylhet,Sylhet,Airport,87535,Very Low (Q1),9.2,2.7,Very Low (Q1),15.3,3.8,Low,-6.1
+Sylhet,Sylhet,Balaganj,122741,Moderate (Q3),17.1,7.8,Low (Q2),25.9,4.3,Moderate,-8.8
+Sylhet,Sylhet,Beanibazar,254846,Moderate (Q3),20.0,2.7,Low (Q2),23.0,3.4,Moderate,-3.0
+Sylhet,Sylhet,Bishwanath,234310,Moderate (Q3),19.8,3.5,Low (Q2),25.6,5.5,Moderate,-5.8
+Sylhet,Sylhet,Companiganj,191183,Moderate (Q3),19.5,3.5,Very Low (Q1),42.9,7.6,Moderate,-23.4
+Sylhet,Sylhet,Dakkhin Surma,294637,Very Low (Q1),9.1,2.4,Low (Q2),22.0,4.9,Low,-12.9
+Sylhet,Sylhet,Fenchuganj,112362,Moderate (Q3),16.9,3.2,Low (Q2),27.0,6.2,Moderate,-10.1
+Sylhet,Sylhet,Golapganj,327314,High (Q4),22.2,2.3,Low (Q2),29.3,4.3,Moderate,-7.1
+Sylhet,Sylhet,Gowainghat,353502,Moderate (Q3),19.1,3.6,High (Q4),45.0,5.5,Moderate,-25.9
+Sylhet,Sylhet,Jalalabad,30081,Very Low (Q1),7.9,2.6,Very Low (Q1),17.2,3.7,Low,-9.3
+Sylhet,Sylhet,Jaintapur,197738,Low (Q2),12.3,4.0,Low (Q2),28.8,6.0,Moderate,-16.5
+Sylhet,Sylhet,Kotwali,238680,Very Low (Q1),9.3,1.6,Very Low (Q1),16.2,2.5,Low,-6.9
+Sylhet,Sylhet,Moglabazar,19921,Moderate (Q3),15.9,6.8,Very Low (Q1),18.1,4.0,Low,-2.2
+Sylhet,Sylhet,Kanaighat,315777,Low (Q2),9.9,2.9,High (Q4),46.4,5.0,Low,-36.5
+Sylhet,Sylhet,Osmaninagar,212394,Moderate (Q3),20.2,3.1,Low (Q2),27.2,7.5,Moderate,-7.0
+Sylhet,Sylhet,Sylhet Sadar,418670,Moderate (Q3),20.1,2.0,Low (Q2),25.5,4.1,High,-5.4
+Sylhet,Sylhet,Shahparan,76022,Very Low (Q1),8.3,1.9,Very Low (Q1),11.5,2.5,Low,-3.2
+Sylhet,Sylhet,Zakiganj,263617,Low (Q2),13.5,3.5,Very High (Q5),53.0,5.4,Moderate,-39.5
