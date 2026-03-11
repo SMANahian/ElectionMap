@@ -7,7 +7,7 @@ BSS only has winner and runner-up per seat.
 Output: pipeline/bss_candidates.csv
 """
 
-import csv, os, sys
+import csv, os, re, sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 from normalize import normalize_party, normalize_seat_name
@@ -35,13 +35,22 @@ def main():
             # Extract winner and runner-up from the same row
             for prefix in ("winner", "runner"):
                 name = row.get(f"{prefix}_name", "").strip()
-                if name:
-                    results.append({
-                        "seat_name": seat,
-                        "candidate": name,
-                        "party": normalize_party(row.get(f"{prefix}_party", "").strip()),
-                        "votes": parse_votes(row.get(f"{prefix}_votes", "")),
-                    })
+                if not name:
+                    continue
+                # Strip status markers like "( Won )", "( Closest )"
+                name = re.sub(r"\(\s*(Won|Closest)\s*\)", "", name).strip()
+                party = normalize_party(row.get(f"{prefix}_party", "").strip())
+                # BSS sometimes has "Unknown" party — use winner/runner position as hint
+                if party == "Unknown" and prefix == "winner":
+                    party = "Unknown (Winner)"
+                elif party == "Unknown" and prefix == "runner":
+                    party = "Unknown (Runner-up)"
+                results.append({
+                    "seat_name": seat,
+                    "candidate": name,
+                    "party": party,
+                    "votes": parse_votes(row.get(f"{prefix}_votes", "")),
+                })
 
     with open(OUTPUT, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=FIELDS)
