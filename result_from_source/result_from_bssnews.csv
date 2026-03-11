@@ -1,0 +1,301 @@
+seat_number,seat_name,winner_name,winner_party,winner_votes,runner_name,runner_party,runner_votes
+1,Panchagarh 1,Muhammad Naushad Zamir,Bangladesh Nationalist Party (BNP),176169,Md. Sarjis Alam,National Citizen Party (NCP),168049
+2,Panchagarh 2,Farhad Hossain Azad,Bangladesh Nationalist Party (BNP),174650,Md. Safiul Alam,Bangladesh Jamaat-e-Islami (Jamaat),128862
+3,Thakurgaon 1,Mirza Fakhrul Islam Alamgir,Bangladesh Nationalist Party (BNP),238836,Delawar Hossain,Bangladesh Jamaat-e-Islami (Jamaat),141017
+4,Thakurgaon 2,Md. Abdus Salam,Bangladesh Nationalist Party (BNP),121017,Md. Abdul Hakim,Bangladesh Jamaat-e-Islami (Jamaat),115707
+5,Thakurgaon 3,Md. Zahidur Rahman,Bangladesh Nationalist Party (BNP),132797,Md. Mizanur Rahman,Bangladesh Jamaat-e-Islami (Jamaat),91934
+6,Dinajpur 1,Md. Manjurul Islam,Bangladesh Nationalist Party (BNP),179314,Md. Matiur Rahman,Bangladesh Jamaat-e-Islami (Jamaat),117481
+7,Dinajpur 2,Md. Sadiq Riaz,Bangladesh Nationalist Party (BNP),144317,"A, K, M Afzalul Anam",Bangladesh Jamaat-e-Islami (Jamaat),101831
+8,Dinajpur 3,Syed Jahangir Alam,Bangladesh Nationalist Party (BNP),139207,Md. Mainul Alam,Bangladesh Jamaat-e-Islami (Jamaat),134618
+9,Dinajpur 4,Md. Akhtaruzzaman Mia,Bangladesh Nationalist Party (BNP),165577,Md. Aftab Uddin Mollah,Bangladesh Jamaat-e-Islami (Jamaat),127666
+10,Dinajpur 5,"A, Z, M, Rezwanul Haque",Independent Candidate (Independent),113650,Md. Abdul Ahad,National Citizen Party (NCP),108948
+11,Dinajpur 6,Abu Zafar Md. Zahid Hossain,Bangladesh Nationalist Party (BNP),203887,Md. Anwarul Islam,Bangladesh Jamaat-e-Islami (Jamaat),188719
+12,Nilphamari 1,Md. Abdus Sattar,Bangladesh Jamaat-e-Islami (Jamaat),149224,Maulana Md. Manjurul Islam,Jamiat Ulema-e-Islam Bangladesh (JUIB),118160
+13,Nilphamari 2,Alfaruq Abdul Latif,Bangladesh Jamaat-e-Islami (Jamaat),145202,Shahreen Islam,Bangladesh Nationalist Party (BNP),134579
+14,Nilphamari 3,Obaidullah Salafi,Bangladesh Jamaat-e-Islami (Jamaat),108560,Alhaj Syed Ali,Bangladesh Nationalist Party (BNP),89102
+15,Nilphamari 4,Abdul Muntakim,Bangladesh Jamaat-e-Islami (Jamaat),124865,Md. Abdul Gafur Sarkar,Bangladesh Nationalist Party (BNP),81526
+16,Lalmonirhat 1,Md Hasan Rajeev Pradhan,Bangladesh Nationalist Party (BNP),138686,Md. Anwarul Islam Raju,Bangladesh Jamaat-e-Islami (Jamaat),129572
+17,Lalmonirhat 2,Md. Rokon Uddin Babul,Bangladesh Nationalist Party (BNP),123946,Md. Feroz Haider,Bangladesh Jamaat-e-Islami (Jamaat),6694
+18,Lalmonirhat 3,Asadul Habib Dulu,Bangladesh Nationalist Party (BNP),139657,Md. Abu Taher,Bangladesh Jamaat-e-Islami (Jamaat),56244
+19,Rangpur 1,Md Raihan Sirazi,Bangladesh Jamaat-e-Islami (Jamaat),145088,Md Mokarram Hossain Sujan,Bangladesh Nationalist Party (BNP),69407
+20,Rangpur 2,ATM Azharul Islam,Bangladesh Jamaat-e-Islami (Jamaat),43076,Muhammad Ali Sarkar,Bangladesh Nationalist Party (BNP),22100
+21,Rangpur 3,Md Mahbubur Rahman (Belal),Bangladesh Jamaat-e-Islami (Jamaat),175827,Md. Samsuzzaman Samu,Bangladesh Nationalist Party (BNP),84578
+22,Rangpur 4,Akhtar Hossain,National Citizen Party (NCP),147947,Mohammad Emdadul Haque Bharsa,Bangladesh Nationalist Party (BNP),139616
+23,Rangpur 5,Md. Golam Rabbani,Bangladesh Jamaat-e-Islami (Jamaat),175208,Md. Golam Rabbani,Bangladesh Nationalist Party (BNP),114141
+24,Rangpur 6,Md. Nurul Amin,Bangladesh Jamaat-e-Islami (Jamaat),118890,Md. Saiful Islam,Bangladesh Nationalist Party (BNP),116919
+25,Kurigram 1,Md. Anwarul Islam,Bangladesh Jamaat-e-Islami (Jamaat),141090,Saifur Rahman Rana,Bangladesh Nationalist Party (BNP),123025
+26,Kurigram 2,Atiqur Rahman Mojahid,National Citizen Party (NCP),178869,Md. Sohail Hosnain Kaykobad,Bangladesh Nationalist Party (BNP),170335
+27,Kurigram 3,Md. Mahbubul Alam,Bangladesh Jamaat-e-Islami (Jamaat),106923,Dr. Md. Akkach Ali Sarkar,Islami Andolan Bangladesh (IAB),33380
+28,Kurigram 4,Md. Mostafizur Rahman,Bangladesh Jamaat-e-Islami (Jamaat),108210,Md. Azizur Rahman,Bangladesh Nationalist Party (BNP),84423
+29,Gaibandha 1,Md Majedur Rahman,Bangladesh Jamaat-e-Islami (Jamaat),140726,Khandkar Ziaul Islam Mohammad Ali,Bangladesh Nationalist Party (BNP),37997
+30,Gaibandha 2,Md. Abdul Karim,Bangladesh Jamaat-e-Islami (Jamaat),122630,Md. Anisuzzaman Khan Babu,Bangladesh Nationalist Party (BNP),92890
+31,Gaibandha 3,Abul Kauchar Mohammad Nazrul Islam,Bangladesh Jamaat-e-Islami (Jamaat),162457,Professor Dr. Syed Mainul Hasan Sadiq,Bangladesh Nationalist Party (BNP),139864
+32,Gaibandha 4,Mohammad Shamim Qaiser,Bangladesh Nationalist Party (BNP),142772,Md Abdur Rahim Sarkar,Bangladesh Jamaat-e-Islami (Jamaat),139738
+33,Gaibandha 5,Md. Abdul Waresh,Bangladesh Jamaat-e-Islami (Jamaat),89274,Md Farooq Alam Sarkar,Bangladesh Nationalist Party (BNP),73483
+34,Joypurhat 1,Md. Fazlur Rahman Sayeed,Bangladesh Jamaat-e-Islami (Jamaat),165192,Md. Masud Rana Pradhan,Bangladesh Nationalist Party (BNP),155309
+35,Joypurhat 2,Md. Abdul Bari,Bangladesh Nationalist Party (BNP),158065,SM Rashedul Alam,Bangladesh Jamaat-e-Islami (Jamaat),92517
+36,Bogura 1,Kazi Rafiqul Islam,Bangladesh Nationalist Party (BNP),171440,Md. Shahabuddin,Bangladesh Jamaat-e-Islami (Jamaat),57959
+37,Bogura 2,Mir Shahe Alam,Bangladesh Nationalist Party (BNP),145024,Abul Azad Mohammad Shahaduzzaman,Bangladesh Jamaat-e-Islami (Jamaat),93548
+38,Bogura 3,Md. Abdul Mohit Talukder,Bangladesh Nationalist Party (BNP),127406,Noor Mohammad,Bangladesh Jamaat-e-Islami (Jamaat),111026
+39,Bogura 4,Md. Mosharraf Hossain,Bangladesh Nationalist Party (BNP),155339,Md. Mustafa Faisal,Bangladesh Jamaat-e-Islami (Jamaat),108978
+40,Bogura 5,Ghulam Mohammad Siraj,Bangladesh Nationalist Party (BNP),248841,Md Dabibur Rahman,Bangladesh Jamaat-e-Islami (Jamaat),143329
+41,Bogura 6,Tariq Rahman,Bangladesh Nationalist Party (BNP),216284,Md. Abidur Rahman,Bangladesh Jamaat-e-Islami (Jamaat),97626
+42,Bogura 7,Morshed Milton,Bangladesh Nationalist Party (BNP),264212,Md. Golam Rabbani,Bangladesh Jamaat-e-Islami (Jamaat),116665
+43,Chapainawabganj 1,Md. Keramat Ali,Bangladesh Jamaat-e-Islami (Jamaat),206893,Md. Shahjahan Mia,Bangladesh Nationalist Party (BNP),162515
+44,Chapainawabganj 2,Md. Mizanur Rahman,Bangladesh Jamaat-e-Islami (Jamaat),171227,Md. Aminul Islam,Bangladesh Nationalist Party (BNP),155119
+45,Chapainawabganj 3,Md. Nurul Islam,Bangladesh Jamaat-e-Islami (Jamaat),189640,Md. Harunur Rashid,Bangladesh Nationalist Party (BNP),127037
+46,Naogaon 1,Md. Mostafizur Rahman,Bangladesh Nationalist Party (BNP),173864,Moha: Mahbubul Alam,Bangladesh Jamaat-e-Islami (Jamaat),153816
+47,Naogaon 2,Md. Enamul Haque,Bangladesh Jamaat-e-Islami (Jamaat),141526,Md. Samsujjoha Khan,Bangladesh Nationalist Party (BNP),134533
+48,Naogaon 3,Md. Fazle Huda,Bangladesh Nationalist Party (BNP),166889,Md. Mahfuzur Rahman,Bangladesh Jamaat-e-Islami (Jamaat),119421
+49,Naogaon 4,Ikramul Bari Tipu,Bangladesh Nationalist Party (BNP),133924,Md. Abdur Rakib,Bangladesh Jamaat-e-Islami (Jamaat),97585
+50,Naogaon 5,Md. Zahidul Islam Dhulu,Bangladesh Nationalist Party (BNP),129385,Abu Sadat Md. Sayem,Bangladesh Jamaat-e-Islami (Jamaat),104747
+51,Naogaon 6,Sheikh Md. Rezaul Islam,Bangladesh Nationalist Party (BNP),108866,Md. Khabirul Islam,Bangladesh Jamaat-e-Islami (Jamaat),97629
+52,Rajshahi 1,Md. Mujibur Rahman,Bangladesh Jamaat-e-Islami (Jamaat),171786,Md. Sharif Uddin,Bangladesh Nationalist Party (BNP),169902
+53,Rajshahi 2,Md. Mizanur Rahman Minu,Bangladesh Nationalist Party (BNP),128546,Mohammad Jahangir,Bangladesh Jamaat-e-Islami (Jamaat),100370
+54,Rajshahi 3,Mohammad Shafiqul Haque Milon,Bangladesh Nationalist Party (BNP),176318,Md. Abul Kalam Azad,Bangladesh Jamaat-e-Islami (Jamaat),137927
+55,Rajshahi 4,Md. Abdul Bari Sardar,Bangladesh Jamaat-e-Islami (Jamaat),115226,"D, M, D Ziaur Rahman",Bangladesh Nationalist Party (BNP),109461
+56,Rajshahi 5,Professor Nazrul Islam,Bangladesh Nationalist Party (BNP),153425,Manzoor Rahman,Bangladesh Jamaat-e-Islami (Jamaat),73445
+57,Rajshahi 6,Md. Abu Said Chand,Bangladesh Nationalist Party (BNP),148672,Md. Nazmul Haque,Bangladesh Jamaat-e-Islami (Jamaat),92965
+58,Natore 1,Farzana Sharmin,Bangladesh Nationalist Party (BNP),102726,Md. Abul Kalam Azad,Bangladesh Jamaat-e-Islami (Jamaat),90568
+59,Natore 2,"M, Ruhul Quddus Talukdar Dulu",Bangladesh Nationalist Party (BNP),162841,Md Yunus Ali,Bangladesh Jamaat-e-Islami (Jamaat),130066
+60,Natore 3,Md. Anwarul Islam,Bangladesh Nationalist Party (BNP),119768,Md Daudar Mahmud,Independent Candidate (Independent),66492
+61,Natore 4,Md. Abdul Aziz,Bangladesh Nationalist Party (BNP),170551,Md. Abdul Hakim,Bangladesh Jamaat-e-Islami (Jamaat),135386
+62,Sirajganj 1,Md. Salim Reza,Bangladesh Nationalist Party (BNP),116613,Md. Shahinur Alam,Bangladesh Jamaat-e-Islami (Jamaat),108815
+63,Sirajganj 2,Iqbal Hasan Mahmud,Bangladesh Nationalist Party (BNP),176638,Muhammad Zahidul Islam,Bangladesh Jamaat-e-Islami (Jamaat),136595
+64,Sirajganj 3,Md. Aynul Haque,Bangladesh Nationalist Party (BNP),174430,Muha: Abdur Rauf Sarkar,Bangladesh Khelafat Majlish (BKM),116802
+65,Sirajganj 4,Md. Rafiqul Islam Khan,Bangladesh Jamaat-e-Islami (Jamaat),161872,"M, Akbar Ali",Bangladesh Nationalist Party (BNP),161278
+66,Sirajganj 5,Md. Amirul Islam Khan,Bangladesh Nationalist Party (BNP),134197,Md. Ali Alam,Bangladesh Jamaat-e-Islami (Jamaat),105188
+67,Sirajganj 6,MA Muhit,Bangladesh Nationalist Party (BNP),171508,SM Saif Mostafiz,National Citizen Party (NCP),103884
+68,Pabna 1,Mohammad Najibur Rahman,Bangladesh Jamaat-e-Islami (Jamaat),129974,Md. Shamsur Rahman,Bangladesh Nationalist Party (BNP),104245
+69,Pabna 2,"A, K, M, Salim Reza Habib",Bangladesh Nationalist Party (BNP),215406,Md. Hesab Uddin,Bangladesh Jamaat-e-Islami (Jamaat),77242
+70,Pabna 3,Muhammad Ali Ashgar,Bangladesh Jamaat-e-Islami (Jamaat),147475,Md Hasan Zafir Tuhin,Bangladesh Nationalist Party (BNP),144206
+71,Pabna 4,Md. Abu Taleb Mandal,Bangladesh Jamaat-e-Islami (Jamaat),137675,Md Habibur Rahman (Habib),Bangladesh Nationalist Party (BNP),133874
+72,Pabna 5,Md. Shamchur Rahman Shimul Biswas,Bangladesh Nationalist Party (BNP),181925,Md. Iqbal Hossain,Bangladesh Jamaat-e-Islami (Jamaat),164994
+73,Meherpur 1,Md. Tajuddin Khan,Bangladesh Jamaat-e-Islami (Jamaat),123271,Masood Arun,Bangladesh Nationalist Party (BNP),105441
+74,Meherpur 2,Md. Nazmul Huda,Bangladesh Jamaat-e-Islami (Jamaat),96306,Md. Amjad Hossain,Bangladesh Nationalist Party (BNP),85988
+75,Kushtia 1,Reza Ahmed,Bangladesh Nationalist Party (BNP),165909,Md. Belal Uddin,Bangladesh Jamaat-e-Islami (Jamaat),86682
+76,Kushtia 2,Md. Abdul Ghafoor,Bangladesh Jamaat-e-Islami (Jamaat),192083,Ragib Rauf Chowdhury,Bangladesh Nationalist Party (BNP),143821
+77,Kushtia 3,Md. Amir Hamza,Bangladesh Jamaat-e-Islami (Jamaat),182476,Md. Zakir Hossain Sarkar,Bangladesh Nationalist Party (BNP),127559
+78,Kushtia 4,Md. Afzal Hossain,Bangladesh Jamaat-e-Islami (Jamaat),148201,Syed Mehdi Ahmed Rumi,Bangladesh Nationalist Party (BNP),139603
+79,Chuadanga 1,Md. Masood Parvez,Bangladesh Jamaat-e-Islami (Jamaat),211041,Md. Sharifuzzaman,Bangladesh Nationalist Party (BNP),153193
+80,Chuadanga 2,Md. Ruhul Amin,Bangladesh Jamaat-e-Islami (Jamaat),208011,Mahmud Hasan Khan,Bangladesh Nationalist Party (BNP),163877
+81,Jhenaidah 1,Md. Asaduzzaman,Bangladesh Nationalist Party (BNP),173381,Abu Saleh Md. Matiur Rahman,Bangladesh Jamaat-e-Islami (Jamaat),57055
+82,Jhenaidah 2,Ali Azam Md. Abu Bakr,Bangladesh Jamaat-e-Islami (Jamaat),195702,Md. Abdul Majeed,Bangladesh Nationalist Party (BNP),175984
+83,Jhenaidah 3,Md. Motiyar Rahman,Bangladesh Jamaat-e-Islami (Jamaat),175857,Mohammad Mehdi Hasan,Bangladesh Nationalist Party (BNP),149821
+84,Jhenaidah 4,Md. Abu Talib,Bangladesh Jamaat-e-Islami (Jamaat),105999,Md. Saiful Islam Feroze,Independent Candidate (Independent),77104
+85,Jashore 1,Muhammad Azizur Rahman.,Bangladesh Jamaat-e-Islami (Jamaat),119093,Md Nuruzzaman Liton,Bangladesh Nationalist Party (BNP),93542
+86,Jashore 2,Mohammad Moslehuddin Farid,Bangladesh Jamaat-e-Islami (Jamaat),180965,Deleted: Sabira Sultana,Bangladesh Nationalist Party (BNP),146447
+87,Jashore 3,Anindya Islam Amit,Bangladesh Nationalist Party (BNP),201339,Md. Abdul Quader,Bangladesh Jamaat-e-Islami (Jamaat),187463
+88,Jashore 4,Md. Gholam Rashul,Bangladesh Jamaat-e-Islami (Jamaat),176912,মতিয়ার রহমান ফারাজী,Bangladesh Nationalist Party (BNP),131917
+89,Jashore 5,Gazi Enamul Haque,Bangladesh Jamaat-e-Islami (Jamaat),132876,Shahid Md. Iqbal Hossain,Independent Candidate (Independent),85045
+90,Jashore 6,Md. Mokhtar Ali,Bangladesh Jamaat-e-Islami (Jamaat),92234,Md. Abul Hossain Azad,Bangladesh Nationalist Party (BNP),80141
+91,Magura 1,Md. Monowar Hossain,Bangladesh Nationalist Party (BNP),185338,Abdul Mateen,Bangladesh Jamaat-e-Islami (Jamaat),89691
+92,Magura 2,Nitai Roy Chowdhury,Bangladesh Nationalist Party (BNP),147896,Md. Mushtarshed Billah,Bangladesh Jamaat-e-Islami (Jamaat),117018
+93,Narail 1,Biswas Jahangir Alam,Bangladesh Nationalist Party (BNP),99975,Md. Obaidullah,Bangladesh Jamaat-e-Islami (Jamaat),75225
+94,Narail 2,Md. Ataur Rahman,Bangladesh Jamaat-e-Islami (Jamaat),118142,Md. Monirul Islam,Independent Candidate (Independent),78457
+95,Bagerhat 1,Md. Moshiur Rahman Khan,Bangladesh Jamaat-e-Islami (Jamaat),117527,Kapil Krishna Mandal,Bangladesh Nationalist Party (BNP),114323
+96,Bagerhat 2,Sheikh Manjurul Haque (Rahad),Bangladesh Jamaat-e-Islami (Jamaat),117709,Sheikh Mohammad Zakir Hossain,Bangladesh Nationalist Party (BNP),66409
+97,Bagerhat 3,Sheikh Faridul Islam,Bangladesh Nationalist Party (BNP),102661,Mohammad Abdul Wadud Sheikh,Bangladesh Jamaat-e-Islami (Jamaat),83550
+98,Bagerhat 4,Md. Abdul Alim,Bangladesh Jamaat-e-Islami (Jamaat),116067,Som Nath De,Bangladesh Nationalist Party (BNP),98326
+99,Khulna 1,Ameer Ejaz Khan,Bangladesh Nationalist Party (BNP),121352,Krishna Nandi,Bangladesh Jamaat-e-Islami (Jamaat),70346
+100,Khulna 2,Sheikh Jahangir Hussain Helal,Bangladesh Jamaat-e-Islami (Jamaat),93789,Nazrul Islam Manju,Bangladesh Nationalist Party (BNP),88197
+101,Khulna 3,Rakibul Islam,Bangladesh Nationalist Party (BNP),74845,Mohammad Mahfuzur Rahman,Bangladesh Jamaat-e-Islami (Jamaat),66010
+102,Khulna 4,SK Azizul Bari,Bangladesh Nationalist Party (BNP),123162,SM Sakhawat Hossain,Khelafat Majlis,109530
+103,Khulna 5,Mohammad Ali Asghar,Bangladesh Nationalist Party (BNP),148854,Mia Golam Parwar,Bangladesh Jamaat-e-Islami (Jamaat),146246
+104,Khulna 6,Md. Abul Kalam Azad,Bangladesh Jamaat-e-Islami (Jamaat),150724,SM Monirul Hasan (Bappi),Bangladesh Nationalist Party (BNP),124710
+105,Satkhira 1,Md. Izzatullah,Bangladesh Jamaat-e-Islami (Jamaat),193772,Md. Habibul Islam Habib,Bangladesh Nationalist Party (BNP),169995
+106,Satkhira 2,Muhammad Abdul Khaliq,Bangladesh Jamaat-e-Islami (Jamaat),266959,Md Abdur Rauf,Bangladesh Nationalist Party (BNP),116293
+107,Satkhira 3,Hafez Muha: Rabiul Bashar,Bangladesh Jamaat-e-Islami (Jamaat),184233,Md. Shahidul Alam,Independent Candidate (Independent),105379
+108,Satkhira 4,"G, M, Nazrul Islam",Bangladesh Jamaat-e-Islami (Jamaat),106913,Md. Moniruzzaman,Bangladesh Nationalist Party (BNP),85426
+109,Barguna 1,Md. Ali Ullah,Islami Andolan Bangladesh (IAB),140291,Md. Nazrul Islam Mollah,Bangladesh Nationalist Party (BNP),136145
+110,Barguna 2,Md. Nurul Islam,Bangladesh Nationalist Party (BNP),90643,Dr. Sultan Ahmad,Bangladesh Jamaat-e-Islami (Jamaat),85247
+111,Patuakhali 1,Altaf Hossain Chowdhury,Bangladesh Nationalist Party (BNP),152087,Md Feroze Alam,Islami Andolan Bangladesh (IAB),58161
+112,Patuakhali 2,Md. Shafiqul Islam,Bangladesh Jamaat-e-Islami (Jamaat),100750,Md. Sahidul Alam Talukder,Bangladesh Nationalist Party (BNP),72676
+113,Patuakhali 3,Md. Nurul Haque,Gono Odhikar Parishad (GOP),97323,Md Hasan Mamun,Independent Candidate (Independent),81361
+114,Patuakhali 4,ABM Mosharraf Hossain,Bangladesh Nationalist Party (BNP),124013,Mostafizur Rahman,Islami Andolan Bangladesh (IAB),70127
+115,Bhola 1,Andaliv Rahman,Bangladesh Jatiya Party (BJP),105543,Md. Nazrul Islam,Bangladesh Jamaat-e-Islami (Jamaat),75337
+116,Bhola 2,Md. Hafiz Ibrahim,Bangladesh Nationalist Party (BNP),119085,Mohammad Fazlul Karim,Bangladesh Jamaat-e-Islami (Jamaat),93703
+117,Bhola 3,Hafiz Uddin Ahmad Bir Bikram,Bangladesh Nationalist Party (BNP),145990,Muha: Nizamul Haque,Bangladesh Development Party (BDP),57351
+118,Bhola 4,Mohammad Nurul Islam,Bangladesh Nationalist Party (BNP),189351,Mohammad Mustafa Kamal,Bangladesh Jamaat-e-Islami (Jamaat),81437
+119,Barishal 1,Zahir Uddin Swapan,Bangladesh Nationalist Party (BNP),100522,Md. Kamrul Islam Khan,Bangladesh Jamaat-e-Islami (Jamaat),46263
+120,Barishal 2,Sardar Sarfuddin Ahmed,Bangladesh Nationalist Party (BNP),141622,Abdul Mannan,Bangladesh Jamaat-e-Islami (Jamaat),74082
+121,Barishal 3,Zainul Abedin,Bangladesh Nationalist Party (BNP),80930,Mohammad Asaduzzaman Bhuiyan,Amar Bangladesh Party (AB),61192
+122,Barishal 4,Md. Rajib Ahsan,Bangladesh Nationalist Party (BNP),128322,Mohammad Abdul Jabbar,Bangladesh Jamaat-e-Islami (Jamaat),74684
+123,Barishal 5,Md. Mujibur Rahman Sarwar,Bangladesh Nationalist Party (BNP),135146,Mufti Syed Md. Faizul Karim,Islami Andolan Bangladesh (IAB),95044
+124,Barishal 6,Abul Hossain Khan,Bangladesh Nationalist Party (BNP),82217,Md. Mahmudunnabi,Bangladesh Jamaat-e-Islami (Jamaat),55988
+125,Jhalokathi 1,Rafiqul Islam Jamal,Bangladesh Nationalist Party (BNP),62010,Faizul Haque,Bangladesh Jamaat-e-Islami (Jamaat),55120
+126,Jhalokathi 2,Israt Sultana Ilein Bhutto,Bangladesh Nationalist Party (BNP),113419,SM Neyamul Karim,Bangladesh Jamaat-e-Islami (Jamaat),70556
+127,Pirojpur 1,Masood Saidi,Bangladesh Jamaat-e-Islami (Jamaat),132659,Alamgir Hossain,Bangladesh Nationalist Party (BNP),107105
+128,Pirojpur 2,Ahmad Sohail Manzoor,Bangladesh Nationalist Party (BNP),105185,Shamim Saidi,Bangladesh Jamaat-e-Islami (Jamaat),96897
+129,Pirojpur 3,Md. Ruhul Amin Dulal,Bangladesh Nationalist Party (BNP),63791,Md. Shamim Hamidi,National Citizen Party (NCP),36616
+130,Tangail 1,Fakir Mahbub Anam,Bangladesh Nationalist Party (BNP),153932,Muhammad Abdullah Kafi,Bangladesh Jamaat-e-Islami (Jamaat),94462
+131,Tangail 2,Md. Abdus Salam Pintu,Bangladesh Nationalist Party (BNP),198213,Md. Humayun Kabir,Bangladesh Jamaat-e-Islami (Jamaat),60871
+132,Tangail 3,Md. Lutfar Rahman Khan Azad,Independent Candidate (Independent),107901,SM Obaidul Haque,Bangladesh Nationalist Party (BNP),82769
+133,Tangail 4,Md. Lutfar Rahman,Bangladesh Nationalist Party (BNP),105342,Abdul Latif Siddiqui,Independent Candidate (Independent),62509
+134,Tangail 5,Sultan Saladin Tuku,Bangladesh Nationalist Party (BNP),131279,Ahsan Habib,Bangladesh Jamaat-e-Islami (Jamaat),80283
+135,Tangail 6,Md Rabiul Awal,Bangladesh Nationalist Party (BNP),150952,"AK, M Abdul Hamid",Bangladesh Jamaat-e-Islami (Jamaat),91914
+136,Tangail 7,Abul Kalam Azad Siddiqui,Bangladesh Nationalist Party (BNP),141253,Mohammad Abdullah ibn Abul Hossain,Bangladesh Jamaat-e-Islami (Jamaat),71040
+137,Tangail 8,Ahmed Azam Khan,Bangladesh Nationalist Party (BNP),114217,Salahuddin Alamgir,Independent Candidate (Independent),77130
+138,Jamalpur 1,M Rashiduzzaman Millat,Bangladesh Nationalist Party (BNP),173656,Muhammad Nazmul Haque Saeedee,Bangladesh Jamaat-e-Islami (Jamaat),97820
+139,Jamalpur 2,"A, E, Sultan Mahmud Babu",Bangladesh Nationalist Party (BNP),95860,Md. Shamiul Haque,Bangladesh Jamaat-e-Islami (Jamaat),62434
+140,Jamalpur 3,Md. Mostafizur Rahman Babul,Bangladesh Nationalist Party (BNP),207412,Md. Mujibur Rahman Azadi,Bangladesh Jamaat-e-Islami (Jamaat),81430
+141,Jamalpur 4,Md. Faridul Kabir Talukder,Bangladesh Nationalist Party (BNP),147406,Mohammad Abdul Awal,Bangladesh Jamaat-e-Islami (Jamaat),44947
+142,Jamalpur 5,Shah Md Waresh Ali Mamun,Bangladesh Nationalist Party (BNP),199344,Muhammad Abdus Sattar,Bangladesh Jamaat-e-Islami (Jamaat),113201
+143,Sherpur 1,Md. Rashedul Islam Rashed,Bangladesh Jamaat-e-Islami (Jamaat),127811,Sansila Zebrin,Bangladesh Nationalist Party (BNP),78342
+144,Sherpur 2,Mohammad Fahim Chowdhury,Bangladesh Nationalist Party (BNP),118472,Md Golam Kibria,Bangladesh Jamaat-e-Islami (Jamaat),108335
+145,Sherpur 3,Md. Mahmudul Haque Rubel,Bangladesh Nationalist Party (BNP),0,Mohammad Nuruzzaman,Bangladesh Jamaat-e-Islami (Jamaat),0
+146,Mymensingh 1,Mohammed Salman Omar,Independent Candidate (Independent),108265,Syed Imran Saleh,Bangladesh Nationalist Party (BNP),101926
+147,Mymensingh 2,Muhammadullah,Bangladesh Khelafat Majlish (BKM),146202,Motahar Hossain Talukder,Bangladesh Nationalist Party (BNP),118438
+148,Mymensingh 3,M Iqbal Hossain,Bangladesh Nationalist Party (BNP),75320,Ahmad Taibur Rahman,Independent Candidate (Independent),65995
+149,Mymensingh 4,Md. Abu Wahab Akand Wahid,Bangladesh Nationalist Party (BNP),179668,Mohammad Kamrul Ahsan,Bangladesh Jamaat-e-Islami (Jamaat),171880
+150,Mymensingh 5,Mohammad Zakir Hossain,Bangladesh Nationalist Party (BNP),128896,Md. Matiur Rahman Akand,Bangladesh Jamaat-e-Islami (Jamaat),102228
+151,Mymensingh 6,Md. Kamrul Hasan,Bangladesh Jamaat-e-Islami (Jamaat),77325,Akhtar Sultana,Unique - Akhtar Sultana,53331
+152,Mymensingh 7,Dr. Md. Mahabubur Rahman,Bangladesh Nationalist Party (BNP),99049,Md. Achaduzzaman,Bangladesh Jamaat-e-Islami (Jamaat),84851
+153,Mymensingh 8,Lutfullahel Majed,Bangladesh Nationalist Party (BNP),108685,Md. Aurangzeb Belal,Bangladesh Liberal Democratic Party (LDP),46515
+154,Mymensingh 9,Yasser Khan Chowdhury,Bangladesh Nationalist Party (BNP),85761,AKM Anwarul Islam,Bangladesh Development Party (BDP),71168
+155,Mymensingh 10,Mohammad Aktaruzzaman,Bangladesh Nationalist Party (BNP),75585,Abu Bakr Siddiqur Rahman,Independent Candidate (Independent),67013
+156,Mymensingh 11,Fakhruddin Ahmed,Bangladesh Nationalist Party (BNP),111230,Muhammad Morshed Alam,Independent Candidate (Independent),66016
+157,Netrakona 1,Barrister Kaiser Kamal,Bangladesh Nationalist Party (BNP),158343,Golam Rabbani,Bangladesh Khelafat Majlish (BKM),87488
+158,Netrakona 2,Md. Anwarul Haque,Bangladesh Nationalist Party (BNP),171399,Md. Fahim Rahman Khan Pathan,National Citizen Party (NCP),67367
+159,Netrakona 3,Rafiqul Islam Hilali,Bangladesh Nationalist Party (BNP),118469,Md Delwar Hossain Bhuya,Independent Candidate (Independent),68961
+160,Netrakona 4,Md. Lutfuzzaman Babar,Bangladesh Nationalist Party (BNP),160801,Md. Al-Helal,Bangladesh Jamaat-e-Islami (Jamaat),39840
+161,Netrakona 5,Machum Mustafa,Bangladesh Jamaat-e-Islami (Jamaat),82177,Md. Abu Taher Talukdar,Bangladesh Nationalist Party (BNP),79412
+162,Kishoreganj 1,Mazharul Islam,Bangladesh Nationalist Party (BNP),124035,Hedayatullah Hadi,Bangladesh Khelafat Majlish (BKM),101132
+163,Kishoreganj 2,Advocate Md. Jalal Uddin,Bangladesh Nationalist Party (BNP),143669,Md. Shafiqul Islam,Bangladesh Jamaat-e-Islami (Jamaat),120975
+164,Kishoreganj 3,Dr. Muhammad Osman Farooq,Bangladesh Nationalist Party (BNP),112466,Jehad Khan,Bangladesh Jamaat-e-Islami (Jamaat),102476
+165,Kishoreganj 4,Md. Fazlur Rahman,Bangladesh Nationalist Party (BNP),132472,Md. Rokan Reza Sheikh,Bangladesh Jamaat-e-Islami (Jamaat),57829
+166,Kishoreganj 5,Sheikh Mujibur Rahman Iqbal,Independent Candidate (Independent),79604,Syed Ehsanul Huda,Bangladesh Nationalist Party (BNP),66450
+167,Kishoreganj 6,Md. Shariful Alam,Bangladesh Nationalist Party (BNP),187159,Mohammad Mucha Khan,Islami Andolan Bangladesh (IAB),2411
+168,Manikganj 1,SA Jinnah Kabir,Bangladesh Nationalist Party (BNP),137773,Md. Tozammel Haque,Independent Candidate (Independent),77818
+169,Manikganj 2,Moinul Islam Khan,Bangladesh Nationalist Party (BNP),175776,Md. Salah Uddin,Khelafat Majlis,81531
+170,Manikganj 3,Afroza Khanam,Bangladesh Nationalist Party (BNP),167345,Muhammad Said Noor,Bangladesh Khelafat Majlish (BKM),64242
+171,Munshiganj 1,Md. Abdullah,Bangladesh Nationalist Party (BNP),167562,AKM Fakhruddin agreed,Bangladesh Jamaat-e-Islami (Jamaat),101568
+172,Munshiganj 2,Abdus Salam Azad,Bangladesh Nationalist Party (BNP),121154,Majedul Islam,National Citizen Party (NCP),58573
+173,Munshiganj 3,Md. Kamruzzaman,Bangladesh Nationalist Party (BNP),124691,Mohiuddin,Independent Candidate (Independent),88936
+174,Dhaka 1,Khondkar Abu Ashfaq,Bangladesh Nationalist Party (BNP),173781,Mohammad Nazrul Islam,Bangladesh Jamaat-e-Islami (Jamaat),112622
+175,Dhaka 2,Md. Amanullah Aman,Bangladesh Nationalist Party (BNP),163793,Md. Abdul Haque,Bangladesh Jamaat-e-Islami (Jamaat),80053
+176,Dhaka 3,Gayeshwar Chandra Roy,Bangladesh Nationalist Party (BNP),99163,Md. Shahinur Islam,Bangladesh Jamaat-e-Islami (Jamaat),83264
+177,Dhaka 4,Syed Zainul Abedin,Bangladesh Jamaat-e-Islami (Jamaat),77367,Tanveer Ahmed,Bangladesh Nationalist Party (BNP),74447
+178,Dhaka 5,Mohammad Kamal Hossain,Bangladesh Jamaat-e-Islami (Jamaat),96641,Md Nabi Ulla,Bangladesh Nationalist Party (BNP),87491
+179,Dhaka 6,Ishraq Hossain,Bangladesh Nationalist Party (BNP),78850,Md. Abdul Mannan,Bangladesh Jamaat-e-Islami (Jamaat),55697
+180,Dhaka 7,Hamidur Rahman,Bangladesh Nationalist Party (BNP),104666,Md. Enayat Ulla,Bangladesh Jamaat-e-Islami (Jamaat),98483
+181,Dhaka 8,Mirza Abbas Uddin Ahmed,Bangladesh Nationalist Party (BNP),59366,Muhammad Nasiruddin Patwari,National Citizen Party (NCP),54127
+182,Dhaka 9,Habibur Rashid,Bangladesh Nationalist Party (BNP),111212,Mohammad Javed Mia,National Citizen Party (NCP),53460
+183,Dhaka 10,Sheikh Rabiul Alam,Bangladesh Nationalist Party (BNP),80436,Md. Jasim Uddin Sarkar,Bangladesh Jamaat-e-Islami (Jamaat),77136
+184,Dhaka 11,Md. Nahid Islam,National Citizen Party (NCP),93872,"M, A, Qayyum",Bangladesh Nationalist Party (BNP),91833
+185,Dhaka 12,Md. Saiful Alam,Bangladesh Jamaat-e-Islami (Jamaat),53773,Saiful Haque,Revolutionary Workers Party of Bangladesh (RWPB),30963
+186,Dhaka 13,Bobby Hajjaz,Bangladesh Nationalist Party (BNP),88387,Md. Mamunul Haque,Bangladesh Khelafat Majlish (BKM),86067
+187,Dhaka 14,Mir Ahmad Binkasem,Bangladesh Jamaat-e-Islami (Jamaat),101113,Sanjida Islam,Bangladesh Nationalist Party (BNP),83323
+188,Dhaka 15,Md. Shafiqur Rahman,Bangladesh Jamaat-e-Islami (Jamaat),85131,Md. Shafiqul Islam Khan,Bangladesh Nationalist Party (BNP),63513
+189,Dhaka 16,Md. Abdul Baten,Bangladesh Jamaat-e-Islami (Jamaat),88828,Md. Aminul Haque,Bangladesh Nationalist Party (BNP),85467
+190,Dhaka 17,Tariq Rahman,Bangladesh Nationalist Party (BNP),72699,S. M. Khaliduzzaman,Bangladesh Jamaat-e-Islami (Jamaat),68300
+191,Dhaka 18,"S, M, Jahangir Hossain",Bangladesh Nationalist Party (BNP),144715,Ariful Islam,National Citizen Party (NCP),111297
+192,Dhaka 19,Dewan Mohammad Salauddin,Bangladesh Nationalist Party (BNP),190976,Dilshana Parul,National Citizen Party (NCP),123283
+193,Dhaka 20,Md. Tamiz Uddin,Bangladesh Nationalist Party (BNP),162504,Nabila Tasnid,National Citizen Party (NCP),57787
+194,Gazipur 1,Md. Mojibur Rahman,Bangladesh Nationalist Party (BNP),208688,Md. Shah Alam Bakshi,Bangladesh Jamaat-e-Islami (Jamaat),149553
+195,Gazipur 2,M. Manjurul Karim Roni,Bangladesh Nationalist Party (BNP),188606,Ali Nacher Khan,National Citizen Party (NCP),140950
+196,Gazipur 3,"SM, Rafiqul Islam",Bangladesh Nationalist Party (BNP),162343,Muhammad Ehsanul Haque,Bangladesh Khelafat Majlish (BKM),100539
+197,Gazipur 4,Salah Uddin,Bangladesh Jamaat-e-Islami (Jamaat),101779,Shah Riazul Hannan,Bangladesh Nationalist Party (BNP),90390
+198,Gazipur 5,"A, K, M, Fazlul Haque Milon",Bangladesh Nationalist Party (BNP),133869,Md. Khairul Hasan,Bangladesh Jamaat-e-Islami (Jamaat),78123
+199,Narsingdi 1,Khairul Kabir Khokon,Bangladesh Nationalist Party (BNP),161405,Md. Ibrahim Bhuya,Bangladesh Jamaat-e-Islami (Jamaat),95349
+200,Narsingdi 2,Dr. Abdul Moin Khan,Bangladesh Nationalist Party (BNP),92739,Md. Amjad Hossain,Bangladesh Jamaat-e-Islami (Jamaat),55920
+201,Narsingdi 3,Manzoor Elahi,Bangladesh Nationalist Party (BNP),82061,Md. Arif-ul-Islam Mridha,Independent Candidate (Independent),45682
+202,Narsingdi 4,Sardar Md Sakhawat Hossain,Bangladesh Nationalist Party (BNP),163392,Md. Jahangir Alam,Bangladesh Jamaat-e-Islami (Jamaat),78744
+203,Narsingdi 5,Md. Ashraf Uddin,Bangladesh Nationalist Party (BNP),137690,Tajul Islam,Bangladesh Khelafat Majlish (BKM),44981
+204,Narayanganj 1,Mustafizur Rahman Bhuiyan,Bangladesh Nationalist Party (BNP),158358,Md. Anwar Hossain Molla,Bangladesh Jamaat-e-Islami (Jamaat),91690
+205,Narayanganj 2,Md. Nazrul Islam Azad,Bangladesh Nationalist Party (BNP),124291,Md Ilyach Molla,Bangladesh Jamaat-e-Islami (Jamaat),81054
+206,Narayanganj 3,Azharul Islam Mannan,Bangladesh Nationalist Party (BNP),155400,Md. Iqbal Hossain Bhuiyan,Bangladesh Jamaat-e-Islami (Jamaat),134918
+207,Narayanganj 4,Abdullah Al Amin,National Citizen Party (NCP),106171,Monir Hossain,Jamiat Ulema-e-Islam Bangladesh (JUIB),80619
+208,Narayanganj 5,Abul Kalam,Bangladesh Nationalist Party (BNP),114799,ABM Sirajul Mamun,Khelafat Majlis,101196
+209,Rajbari 1,Ali Newaz Mahmud Khayyam,Bangladesh Nationalist Party (BNP),154541,Md. Nurul Islam,Bangladesh Jamaat-e-Islami (Jamaat),101092
+210,Rajbari 2,Md. Haroon-or-Rashid,Bangladesh Nationalist Party (BNP),237254,Jamil Hijazi,National Citizen Party (NCP),67299
+211,Faridpur 1,Md. Elias Molla,Bangladesh Jamaat-e-Islami (Jamaat),154145,Khandokar Nasirul Islam,Bangladesh Nationalist Party (BNP),126476
+212,Faridpur 2,Shama Obaid Islam,Bangladesh Nationalist Party (BNP),121694,Md. Akram Ali,Bangladesh Khelafat Majlish (BKM),89305
+213,Faridpur 3,Nayab Yusuf Ahmed,Bangladesh Nationalist Party (BNP),148545,Md. Abdut Tawab,Bangladesh Jamaat-e-Islami (Jamaat),124115
+214,Faridpur 4,Md. Shahidul Islam,Bangladesh Nationalist Party (BNP),127443,Md. Sarwar Hossain,Bangladesh Jamaat-e-Islami (Jamaat),75805
+215,Gopalganj 1,Md. Selimuzzaman Molya,Bangladesh Nationalist Party (BNP),69462,Md. Kabir Miya,Gono Odhikar Parishad (GOP),54329
+216,Gopalganj 2,KM Babar,Bangladesh Nationalist Party (BNP),40048,"M, H Khan Manju",Independent Candidate (Independent),33039
+217,Gopalganj 3,"S, M, Jilani",Bangladesh Nationalist Party (BNP),60991,গোবিন্দ চন্দ্র প্রামাণিক,Unique - Govinda Chandra Pramanik,34339
+218,Madaripur 1,Syed Uddin Ahmad Hanzala,Bangladesh Khelafat Majlish (BKM),64909,Nadira Akhter,Bangladesh Nationalist Party (BNP),64524
+219,Madaripur 2,Md. Jahandar Ali Mia,Bangladesh Nationalist Party (BNP),61744,Milton baiddo,Independent Candidate (Independent),46476
+220,Madaripur 3,Anishur Rahman,Bangladesh Nationalist Party (BNP),96188,Md. Rafiqul Islam,Bangladesh Jamaat-e-Islami (Jamaat),84646
+221,Shariatpur 1,Saeed Ahmed,Bangladesh Nationalist Party (BNP),77398,Jalaluddin Ahmad,Bangladesh Khelafat Majlish (BKM),62717
+222,Shariatpur 2,Md. Safiqur Rahman (Kiran),Bangladesh Nationalist Party (BNP),129814,Mahmud Hossain,Bangladesh Jamaat-e-Islami (Jamaat),70892
+223,Shariatpur 3,Mia Nuruddin Ahmed Apu,Bangladesh Nationalist Party (BNP),107516,Muhammad Azharul Islam,Bangladesh Jamaat-e-Islami (Jamaat),69684
+224,Sunamganj 1,Kamruzzaman Kamrul,Bangladesh Nationalist Party (BNP),161774,Tofail Ahmed,Bangladesh Jamaat-e-Islami (Jamaat),92966
+225,Sunamganj 2,Md. Nashir Chowdhury,Bangladesh Nationalist Party (BNP),99522,Mohammad Shishir Monir,Bangladesh Jamaat-e-Islami (Jamaat),63220
+226,Sunamganj 3,Mohammad Kaishar Ahmed,Bangladesh Nationalist Party (BNP),97313,Hussain Ahmed,Independent Candidate (Independent),42226
+227,Sunamganj 4,Nurul Islam,Bangladesh Nationalist Party (BNP),98092,Md. Samach Uddin,Bangladesh Jamaat-e-Islami (Jamaat),75735
+228,Sunamganj 5,Kalim Uddin Ahmed,Bangladesh Nationalist Party (BNP),151915,Abu Tahir Muhammad Abdus Salam,Bangladesh Jamaat-e-Islami (Jamaat),102121
+229,Sylhet 1,Khandaker Abdul Muktadir,Bangladesh Nationalist Party (BNP),173932,Maulana Habibur Rahman,Bangladesh Jamaat-e-Islami (Jamaat),134983
+230,Sylhet 2,Deleted by Tahsina Rushdie,Bangladesh Nationalist Party (BNP),117956,Muhammad Muntashir Ali,Khelafat Majlis,38635
+231,Sylhet 3,Mohammad Abdul Malik,Bangladesh Nationalist Party (BNP),115450,Musleh Uddin Raju,Bangladesh Khelafat Majlish (BKM),73614
+232,Sylhet 4,Ariful Haque Chowdhury,Bangladesh Nationalist Party (BNP),186846,Md Zainal Abedin,Bangladesh Jamaat-e-Islami (Jamaat),71391
+233,Sylhet 5,Mohammad Abul Hasan,Khelafat Majlis,79355,Ubaidullah Farooq,Jamiat Ulema-e-Islam Bangladesh (JUIB),69774
+234,Sylhet 6,Emran Ahmed Chowdhury,Bangladesh Nationalist Party (BNP),109917,Mohammad Salim Uddin,Bangladesh Jamaat-e-Islami (Jamaat),101569
+235,Moulvibazar 1,Nasir Uddin Ahmed,Bangladesh Nationalist Party (BNP),98282,Mohammad Aminul Islam,Bangladesh Jamaat-e-Islami (Jamaat),83013
+236,Moulvibazar 2,Md Shawkatul Islam,Bangladesh Nationalist Party (BNP),88381,Md. Syed Ali,Bangladesh Jamaat-e-Islami (Jamaat),53458
+237,Moulvibazar 3,Nasser Rahman,Bangladesh Nationalist Party (BNP),156757,Md. Abdul Mannan,Bangladesh Jamaat-e-Islami (Jamaat),77636
+238,Moulvibazar 4,Md. Mujibur Rahman Chowdhury,Bangladesh Nationalist Party (BNP),169608,Sheikh Nur Alam Hamidi,Bangladesh Khelafat Majlish (BKM),49189
+239,Habiganj 1,Reza Kibria,Bangladesh Nationalist Party (BNP),111999,Maulana Sirajul Islam,Bangladesh Khelafat Majlish (BKM),56132
+240,Habiganj 2,Abu Mansoor Sakhawat Hasan,Bangladesh Nationalist Party (BNP),126583,Abdul Bachit Azad,Khelafat Majlis,65762
+241,Habiganj 3,Alhaj Md. G. K. Gouch,Bangladesh Nationalist Party (BNP),142348,Qazi Mohsin Ahmad,Bangladesh Jamaat-e-Islami (Jamaat),45568
+242,Habiganj 4,"S, M, Faisal",Bangladesh Nationalist Party (BNP),188072,Md Ghiyas Uddin,Bangladesh Islami Front (BIF),84323
+243,Brahmanbaria 1,"M, A, Hannan",Bangladesh Nationalist Party (BNP),68092,"A, K, M, Aminul Islam",Bangladesh Jamaat-e-Islami (Jamaat),35220
+244,Brahmanbaria 2,Rumin Farhana,Independent Candidate (Independent),118547,Mohammad Junaid Al Habib,Jamiat Ulema-e-Islam Bangladesh (JUIB),80434
+245,Brahmanbaria 3,Md. Khaled Hossain Mahbub,Bangladesh Nationalist Party (BNP),209636,Ataullah,National Citizen Party (NCP),62547
+246,Brahmanbaria 4,Mushfiqur Rahman,Bangladesh Nationalist Party (BNP),139842,Md. Ataur Rahman Sarkar,Bangladesh Jamaat-e-Islami (Jamaat),91796
+247,Brahmanbaria 5,Md. Abdul Mannan,Bangladesh Nationalist Party (BNP),85769,Kazi Nazmul Hossain,Independent Candidate (Independent),84708
+248,Brahmanbaria 6,Md. Jonaid Abdur Rahim Saki,Ganosanhati Andolan (GSA),95342,Md. Mohsin,Bangladesh Jamaat-e-Islami (Jamaat),39976
+249,Cumilla 1,Dr. Khandkar Mosharraf Hossain,Bangladesh Nationalist Party (BNP),141440,Md. Moniruzzaman,Bangladesh Jamaat-e-Islami (Jamaat),94845
+250,Cumilla 2,Md. Salim Bhuiyan,Bangladesh Nationalist Party (BNP),77037,Md. Abdul Matin,Independent Candidate (Independent),63045
+251,Cumilla 3,Qazi Shah Mofazzal Hossain (Kaikobad),Bangladesh Nationalist Party (BNP),159291,Md Yusuf Sohail,Bangladesh Jamaat-e-Islami (Jamaat),109599
+252,Cumilla 4,Md. Abul Hasnat,National Citizen Party (NCP),166583,Md. Jasim Uddin,Gono Odhikar Parishad (GOP),49885
+253,Cumilla 5,Md. Jasim Uddin,Bangladesh Nationalist Party (BNP),134485,Mubarak Hossain,Bangladesh Jamaat-e-Islami (Jamaat),124587
+254,Cumilla 6,Md. Monirul Haque Chowdhury,Bangladesh Nationalist Party (BNP),201706,Qazi Deen Mohammad,Bangladesh Jamaat-e-Islami (Jamaat),119851
+255,Cumilla 7,Atiqul Alam,Independent Candidate (Independent),91690,Redwan Ahmed,Bangladesh Nationalist Party (BNP),48509
+256,Cumilla 8,Zakaria Taher,Bangladesh Nationalist Party (BNP),169178,Md. Shafiqul Alam Helal,Bangladesh Jamaat-e-Islami (Jamaat),45091
+257,Cumilla 9,Md. Abul Kalam,Bangladesh Nationalist Party (BNP),170008,Chayed AKM Sarwar Uddin Siddiqui,Bangladesh Jamaat-e-Islami (Jamaat),118961
+258,Cumilla 10,Md. Mobashwer Alam Bhuiya,Bangladesh Nationalist Party (BNP),163667,মুহাম্মদ ইয়াছিন আরাফাত,Bangladesh Jamaat-e-Islami (Jamaat),123733
+259,Cumilla 11,Syed Abdullah Mohammad Taher,Bangladesh Jamaat-e-Islami (Jamaat),133308,Md. Kamrul Huda,Bangladesh Nationalist Party (BNP),76638
+260,Chandpur 1,A n m Ehsanul Haque Milon,Bangladesh Nationalist Party (BNP),133032,Abu Nashar Mohammad Maqbool Ahmad,Bangladesh Jamaat-e-Islami (Jamaat),70368
+261,Chandpur 2,Md. Jalal Uddin,Bangladesh Nationalist Party (BNP),172506,Md. Billal Hossain,Bangladesh Liberal Democratic Party (LDP),57473
+262,Chandpur 3,Sheikh Farid Ahmed,Bangladesh Nationalist Party (BNP),165404,Md. Shahjahan Mia,Bangladesh Jamaat-e-Islami (Jamaat),100865
+263,Chandpur 4,Md. Abdul Hannan,Independent Candidate (Independent),74175,Md. Harunur Rashid,Bangladesh Nationalist Party (BNP),69155
+264,Chandpur 5,Md. Mominul Haque,Bangladesh Nationalist Party (BNP),185404,Md. Neyamul Bashir,Bangladesh Liberal Democratic Party (LDP),75660
+265,Feni 1,Munshi Rafiqul Alam,Bangladesh Nationalist Party (BNP),119904,SM Kamaluddin,Bangladesh Jamaat-e-Islami (Jamaat),85615
+266,Feni 2,Zainal Abdin,Bangladesh Nationalist Party (BNP),131210,Mohammad Mojibur Rahman Bhunya,Amar Bangladesh Party (AB),80058
+267,Feni 3,Abdul Awal Mintu,Bangladesh Nationalist Party (BNP),157425,Mohammad Fakhruddin,Bangladesh Jamaat-e-Islami (Jamaat),108160
+268,Noakhali 1,AM Mahbub Uddin,Bangladesh Nationalist Party (BNP),126833,Md. Chaif ​​Ulyah,Bangladesh Jamaat-e-Islami (Jamaat),98036
+269,Noakhali 2,Zainul Abdin Farooq,Bangladesh Nationalist Party (BNP),83982,Sultan Muhammad Zakaria Majumdar,National Citizen Party (NCP),67054
+270,Noakhali 3,Md. Barkat Ullah Bulu,Bangladesh Nationalist Party (BNP),141031,Md. Borhan Uddin,Bangladesh Jamaat-e-Islami (Jamaat),123941
+271,Noakhali 4,Md. Shahjahan,Bangladesh Nationalist Party (BNP),219182,Md. Ishaq Khandkar,Bangladesh Jamaat-e-Islami (Jamaat),148989
+272,Noakhali 5,Mohammad Fakhrul Islam,Bangladesh Nationalist Party (BNP),147808,Mohammad Belayet Hossain,Bangladesh Jamaat-e-Islami (Jamaat),120453
+273,Noakhali 6,Abdul Hannan Masood,National Citizen Party (NCP),91899,Mohammad Mahbuber Rahman,Bangladesh Nationalist Party (BNP),64021
+274,Lakshmipur 1,Md. Shahadat Hossain,Bangladesh Nationalist Party (BNP),86811,Md. Mahbub Alam,National Citizen Party (NCP),59265
+275,Lakshmipur 2,Md. Abul Khair Bhuiyan,Bangladesh Nationalist Party (BNP),146321,"S, U, M, Ruhul Amin Bhuiyan",Bangladesh Jamaat-e-Islami (Jamaat),133698
+276,Lakshmipur 3,Md. Shahiduddin Chowdhury Annie,Bangladesh Nationalist Party (BNP),135612,Md. Rezaul Karim,Bangladesh Jamaat-e-Islami (Jamaat),122802
+277,Lakshmipur 4,"A,B,M Ashraf Uddin (Nijan)",Bangladesh Nationalist Party (BNP),115199,Md. Ashrafur Rahman Hafizulya,Bangladesh Jamaat-e-Islami (Jamaat),73756
+278,Chattogram 1,Nurul Amin,Bangladesh Nationalist Party (BNP),128799,Mohammad Chaifur Rahman,Bangladesh Jamaat-e-Islami (Jamaat),84538
+279,Chattogram 2,Mohammad Nurul Amin,Bangladesh Jamaat-e-Islami (Jamaat),0,Mohammad Zulfikar Ali Mannan,Islami Andolan Bangladesh (IAB),0
+280,Chattogram 3,Mustafa Kamal Pasha,Bangladesh Nationalist Party (BNP),73037,Muhammad Ala Uddin,Bangladesh Jamaat-e-Islami (Jamaat),39662
+281,Chattogram 4,Mohammad Aslam Chowdhury,Bangladesh Nationalist Party (BNP),0,Md. Anwar Siddique,Bangladesh Jamaat-e-Islami (Jamaat),0
+282,Chattogram 5,Mir Mohammad Helal Uddin,Bangladesh Nationalist Party (BNP),147054,Md. Nasir Uddin,Bangladesh Khelafat Majlish (BKM),46589
+283,Chattogram 6,Gias Uddin Quader Chowdhury,Bangladesh Nationalist Party (BNP),112237,Mohammad Ilyach Noori,Bangladesh Islami Front (BIF),27146
+284,Chattogram 7,Humam Quader Chowdhury,Bangladesh Nationalist Party (BNP),101445,ATM Rezaul Karim,Bangladesh Jamaat-e-Islami (Jamaat),41719
+285,Chattogram 8,Ershad Ullah,Bangladesh Nationalist Party (BNP),152969,Md. Abu Nasser,Bangladesh Jamaat-e-Islami (Jamaat),53564
+286,Chattogram 9,Mohammad Abu Sufyan,Bangladesh Nationalist Party (BNP),109388,Dr. AKM Fazlul Haque,Bangladesh Jamaat-e-Islami (Jamaat),53807
+287,Chattogram 10,Saeed Al Noman,Bangladesh Nationalist Party (BNP),122978,Muhammad Shamsuzzaman Helali,Bangladesh Jamaat-e-Islami (Jamaat),76919
+288,Chattogram 11,Amir Khosru Mahmud Chowdhury,Bangladesh Nationalist Party (BNP),115999,Mohammad Shafiul Alam,Bangladesh Jamaat-e-Islami (Jamaat),76681
+289,Chattogram 12,Mohammad Enamul Haque,Bangladesh Nationalist Party (BNP),135044,Syed Air Mohammad Payaru,Bangladesh Islami Front (BIF),28999
+290,Chattogram 13,Sarwar Jamal Nizam,Bangladesh Nationalist Party (BNP),126192,"S, M, Shah Jahan",Bangladesh Islami Front (BIF),51450
+291,Chattogram 14,Alhaj Jasim Uddin Ahmed,Bangladesh Nationalist Party (BNP),76493,Omar Farooq,Bangladesh Liberal Democratic Party (LDP),75467
+292,Chattogram 15,Shahjahan Chowdhury,Bangladesh Jamaat-e-Islami (Jamaat),181238,Nazmul Mustafa Amin,Bangladesh Nationalist Party (BNP),130661
+293,Chattogram 16,Mohammad Zahirul Islam,Bangladesh Jamaat-e-Islami (Jamaat),93167,Mishkatul Islam Chowdhury,Bangladesh Nationalist Party (BNP),83105
+294,Cox's Bazar 1,Salahuddin Ahmed,Bangladesh Nationalist Party (BNP),222019,Abdullah Al Farooq,Bangladesh Jamaat-e-Islami (Jamaat),129728
+295,Cox's Bazar 2,Alamgir Muhammad Mahfuz Ullah Farid,Bangladesh Nationalist Party (BNP),125543,"A, H, M Hamidur Rahman Azad",Bangladesh Jamaat-e-Islami (Jamaat),91889
+296,Cox's Bazar 3,Lutfur Rahman,Bangladesh Nationalist Party (BNP),182096,Shahidul Alam (Bahadur),Bangladesh Jamaat-e-Islami (Jamaat),161827
+297,Cox's Bazar 4,Shahjahan Chowdhury,Bangladesh Nationalist Party (BNP),123582,Noor Ahmad Anwari,Bangladesh Jamaat-e-Islami (Jamaat),122033
+298,Khagrachhari 1,Abdul Wadud Bhunya,Bangladesh Nationalist Party (BNP),151040,Dharma Jyoti Chakma,Independent Candidate (Independent),68315
+299,Rangamati 1,Deepen Dewan,Bangladesh Nationalist Party (BNP),201544,Pahel Chakma,Independent Candidate (Independent),31222
+300,Bandarban 1,Sachin Ms,Bangladesh Nationalist Party (BNP),141455,Abu Saeed Md Suja Uddin,National Citizen Party (NCP),26162
