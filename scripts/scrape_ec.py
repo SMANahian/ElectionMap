@@ -42,11 +42,15 @@ MAX_RETRIES = 3
 
 async def fetch_json(session, url, cache_path, sem):
     """Fetch JSON with cache check, semaphore, and retry."""
-    # Skip if already cached
+    # Skip if already cached (but re-fetch if it's an error response)
     if os.path.exists(cache_path):
         try:
             with open(cache_path, encoding="utf-8") as f:
-                return json.load(f)
+                cached = json.load(f)
+            if isinstance(cached, dict) and "error" in cached:
+                pass  # Re-fetch error responses
+            else:
+                return cached
         except (json.JSONDecodeError, IOError):
             pass  # Re-fetch if corrupt
 
@@ -140,7 +144,7 @@ async def main():
                 continue
             center_list = data.get("data", []) if isinstance(data, dict) else data
             for center in center_list:
-                detail_id = center.get("id")
+                detail_id = center.get("v_c_id")
                 if detail_id:
                     all_detail_ids.append((c, detail_id))
 
