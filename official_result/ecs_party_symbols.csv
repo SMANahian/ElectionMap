@@ -1,0 +1,64 @@
+reg_no,name_en,name_bn,symbol_bn,symbol_en,status
+০০১,Liberal Democratic Party - LDP,লিবারেল ডেমোক্রেটিক পার্টি - এলডিপি,ছাতা,ছাতা,active
+০০২,National Party - JP,জাতীয় পার্টি - জেপি,বাইসাইকেল,বাইসাইকেল,active
+০০৩,Bangladesher Samyabadi Dal (ML),বাংলাদেশের সাম্যবাদী দল (এম.এল),চাকা,চাকা,active
+০০৪,Krishok Shromik Jonota League,কৃষক শ্রমিক জনতা লীগ,গামছা,গামছা,active
+০০৫,Communist Party of Bangladesh,বাংলাদেশের কমিউনিস্ট পার্টি,কাস্তে,কাস্তে,active
+০০৬,Bangladesh Awami League (Suspended),বাংলাদেশ আওয়ামী লীগ (স্থগিত),-,-,active
+০০৭,Bangladesh Nationalist Party - BNP,বাংলাদেশ জাতীয়তাবাদী দল - বি.এন.পি,ধানের শীষ,ধানের শীষ,active
+০০৮,Ganotantri Party,গণতন্ত্রী পার্টি,কবুতর,কবুতর,active
+০০৯,Bangladesh National Awami Party,বাংলাদেশ ন্যাশনাল আওয়ামী পার্টি,কুঁড়ে ঘর,কুঁড়ে ঘর,active
+০১০,Workers Party of Bangladesh,বাংলাদেশের ওয়ার্কার্স পার্টি,হাতুড়ি,হাতুড়ি,active
+০১১,Bikalpadhara Bangladesh,বিকল্পধারা বাংলাদেশ,কুলা,কুলা,active
+০১২,Jatiya Party,জাতীয় পার্টি,লাঙ্গল,লাঙ্গল,active
+০১৩,Jatiya Samajtantrik Dal - JASAD,জাতীয় সমাজতান্ত্রিক দল-জাসদ,মশাল,মশাল,active
+০১৪,Bangladesh Jamaat-e-Islami,বাংলাদেশ জামায়াতে ইসলামী,দাঁড়িপাল্লা,দাঁড়িপাল্লা,active
+০১৫,Jatiya Samajtantrik Dal - JSD,জাতীয় সমাজতান্ত্রিক দল-জেএসডি,তারা,তারা,active
+০১৬,Zaker Party,জাকের পার্টি,গোলাপ ফুল,গোলাপ ফুল,active
+০১৭,Bangladesh Samajtantrik Dal - BASAD,বাংলাদেশের সমাজতান্ত্রিক দল-বাসদ,মই,মই,active
+০১৮,Bangladesh Jatiya Party - BJP,বাংলাদেশ জাতীয় পার্টি-বিজেপি,গরুর গাড়ি,গরুর গাড়ি,active
+০১৯,Bangladesh Tariqat Federation,বাংলাদেশ তরিকত ফেডারেশন,ফুলের মালা,ফুলের মালা,active
+০২০,Bangladesh Khilafat Andolan,বাংলাদেশ খেলাফত আন্দোলন,বটগাছ,বটগাছ,active
+০২১,Bangladesh Muslim League,বাংলাদেশ মুসলিম লীগ,হারিকেন,হারিকেন,active
+০২২,National Peoples Party - NPP,ন্যাশনাল পিপলস্‌ পার্টি (এনপিপি),আম,আম,active
+০২৩,Jamiate Ulama-e-Islam Bangladesh,জমিয়তে উলামায়ে ইসলাম বাংলাদেশ,খেজুর গাছ,খেজুর গাছ,active
+০২৪,Gonoforum,গণফোরাম,উদীয়মান সূর্য,উদীয়মান সূর্য,active
+০২৫,Gonofront,গণফ্রন্ট,মাছ,মাছ,active
+০২৬,-,-,-,-,active
+০২৭,Bangladesh National Awami Party - Bangladesh NAP,বাংলাদেশ ন্যাশনাল আওয়ামী পার্টি-বাংলাদেশ ন্যাপ,গাভী,গাভী,active
+০২৮,Bangladesh Jatiya Party,বাংলাদেশ জাতীয় পার্টি,কাঁঠাল,কাঁঠাল,active
+০২৯,-,-,--,--,active
+০৩০,Islamic Front Bangladesh,ইসলামিক ফ্রন্ট বাংলাদেশ,চেয়ার,চেয়ার,active
+০৩১,Bangladesh Kallyan Party,বাংলাদেশ কল্যাণ পার্টি,হাতঘড়ি,হাতঘড়ি,active
+০৩২,Islami Oikyajote,ইসলামী ঐক্যজোট,মিনার,মিনার,active
+০৩৩,Bangladesh Khelafat Majlis,বাংলাদেশ খেলাফত মজলিস,রিকশা,রিকশা,active
+০৩৪,Islamic Andolan Bangladesh,ইসলামী আন্দোলন বাংলাদেশ,হাতপাখা,হাতপাখা,active
+০৩৫,Bangladesh Islami Front,বাংলাদেশ ইসলামী ফ্রন্ট,মোমবাতি,মোমবাতি,active
+০৩৬,Jatiya Ganatantrik Party - JAGPA,জাতীয় গণতান্ত্রিক পার্টি-জাগপা,চশমা,চশমা,active
+০৩৭,Biplabi Workers Party,বাংলাদেশের বিপ্লবী ওয়ার্কার্স পার্টি,কোদাল,কোদাল,active
+০৩৮,Khelafat Majlis,খেলাফত মজলিস,দেওয়াল ঘড়ি,দেওয়াল ঘড়ি,active
+০৩৯,---,---,---,---,active
+০৪০,Bangladesh Muslim League - BML,বাংলাদেশ মুসলিম লীগ-বিএমএল,হাত (পাঞ্জা),হাত (পাঞ্জা),active
+০৪১,Bangladesh Shanskritik Muktijot (Muktijot),বাংলাদেশ সাংস্কৃতিক মুক্তিজোট (মুক্তিজোট),ছড়ি,ছড়ি,active
+০৪২,Bangladesh Nationalist Front - BNF,বাংলাদেশ ন্যাশনালিস্ট ফ্রন্ট-বিএনএফ,টেলিভিশন,টেলিভিশন,active
+০৪৩,Jatiyatabadi Ganotantrik Andolon - NDM,জাতীয়তাবাদী গণতান্ত্রিক আন্দোলন-এনডিএম,সিংহ,সিংহ,active
+০৪৪,Bangladesh Congress,বাংলাদেশ কংগ্রেস,ডাব,ডাব,active
+০৪৫,Trinomool BNP,তৃণমূল বিএনপি,সোনালী আঁশ,সোনালী আঁশ,active
+০৪৬,Insaniyat Biplob Bangladesh,ইনসানিয়াত বিপ্লব বাংলাদেশ,আপেল,আপেল,active
+০৪৭,Bangladesh Jatiyo Samajtantrik Dal - Jasod,বাংলাদেশ জাতীয় সমাজতান্ত্রিক দল-বাংলাদেশ জাসদ,মোটরগাড়ি (কার),মোটরগাড়ি (কার),active
+০৪৮,Bangladesh Jatiyatabadi Andolon - BNM,বাংলাদেশ জাতীয়তাবাদী আন্দোলন-বিএনএম,নোঙ্গর,নোঙ্গর,active
+০৪৯,Bangladesh Supreme Party - BSP,বাংলাদেশ সুপ্রীম পার্টি (বি.এস.পি),একতারা,একতারা,active
+০৫০,Amar Bangladesh Party - AB Party,আমার বাংলাদেশ পার্টি (এবি পার্টি),ঈগল,ঈগল,active
+০৫১,Gonodhikar Parishad - GOP,গণঅধিকার পরিষদ (জিওপি),ট্রাক,ট্রাক,active
+০৫২,Nagorik Oikko,নাগরিক ঐক্য,কেটলি,কেটলি,active
+০৫৩,Gonoshonghoti Andolon,গণসংহতি আন্দোলন,মাথাল,মাথাল,active
+০৫৪,Bangladesh Development Party,বাংলাদেশ ডেভেলপমেন্ট পার্টি,ফুলকপি,ফুলকপি,active
+০৫৫,Bangladesh Minority Janta Party - BMJP,বাংলাদেশ মাইনরিটি জনতা পার্টি (বিএমজেপি),রকেট,রকেট,active
+০৫৬,Bangladesh Labour Party,বাংলাদেশ লেবার পার্টি,আনারস,আনারস,active
+০৫৭,Bangladesh Republican Party - BRP,বাংলাদেশ রিপাবলিকান পার্টি (বিআরপি),হাতি,হাতি,active
+০৫৮,Jatiyo Nagorik Party - NCP,জাতীয় নাগরিক পার্টি-এনসিপি,শাপলা কলি,শাপলা কলি,active
+০৫৯,Bangladesh Samajtantrik Dal (Marxist),বাংলাদেশের সমাজতান্ত্রিক দল (মার্কসবাদী),কাঁচি,Kanchi,active
+০৬০,Jonotar Dol,জনতার দল,কলম,কলম,active
+০৬১,Amjanatar Dol,আমজনতার দল,প্রজাপতি,প্রজাপতি,active
+০৬২,Bangladesh Samadhikar Party - BEP,বাংলাদেশ সমঅধিকার পার্টি (বিইপি),দোয়াত কলম,দোয়াত কলম,active
+০৬৩,Bangladesh Nezame Islam Party,বাংলাদেশ নেজামে ইসলাম পার্টি,বই,বই,active

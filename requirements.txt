@@ -3,3 +3,4 @@ requests
 pandas
 folium
 jinja2
+aiohttp

@@ -1,0 +1,455 @@
+# Bangladesh BBS Population and Housing Census Dataset 2022 (Admin 2)
+
+This README file provides an overview of the columns in the `bangladesh_bbs_population-and-housing-census-dataset_2022_admin-02.xlsx` dataset.
+
+**Disclaimer:** The descriptions provided below are inferred from the column names and may not be completely accurate. For precise definitions, please refer to the official documentation from the Bangladesh Bureau of Statistics (BBS).
+
+## Columns
+
+- **Division**: Name of the administrative division.
+- **District**: Name of the administrative district.
+- **Division_Geocode**: Geocode for the division.
+- **District_Geocode**: Geocode for the district.
+- **Household_Total**: Total number of households.
+- **Population_Total**: Total population.
+- **Household_Excluding_Slum_Floating**: Total number of households, excluding those in slum areas or floating households.
+- **Population_Excluding_Slum_Floating**: Total population, excluding those in slum areas or floating households.
+- **Household_Slum**: Number of households in slum areas.
+- **Population_Slum**: Population in slum areas.
+- **Household_Floating**: Number of floating households.
+- **Population_Floating**: Floating population.
+- **Population Density**: Population density.
+- **Type of Household_Household_total_except_floating_#**: Total number of households, excluding floating ones.
+- **Type of Household_Population__except_floating_#**: Total population, excluding floating ones.
+- **Type of Household_Household_General_#**: Number of general households.
+- **Type of Household_Population_General_#**: Population in general households.
+- **Type of Household_Household_Institutional**: Number of institutional households.
+- **Type of Household_Population_Institutional_#**: Population in institutional households.
+- **Type of Household_Household_Other_#**: Number of other types of households.
+- **Type of Household_Population_Other_#**: Population in other types of households.
+- **Type of Dwelling, Sex & Dist_Population_Total_#**: Total population by type of dwelling and sex.
+- **Type of Dwelling, Sex & Dist_Population_Male_#**: Male population by type of dwelling and sex.
+- **Type of Dwelling, Sex & Dist_Population_Female_#**: Female population by type of dwelling and sex.
+- **Type of Dwelling, Sex & Dist_Population_Hijra_#**: Hijra population by type of dwelling and sex.
+- **Population by Sex, Dist & Loca_Population_Total_#**: Total population by sex, district, and location.
+- **Literacy Rate_7year+_Overall**: Overall literacy rate for population aged 7 years and above.
+- **Main Source of Drinking Water_Tap/pipe (Supply)_%**: Percentage of households using tap/pipe water as the main source of drinking water.
+- **Main Source of Electricity_National Grid_%**: Percentage of households connected to the national electricity grid.
+- **Main Source of Cooking Fuel_Supply Gas_%**: Percentage of households using supplied gas as the main source of cooking fuel.
+
+- **Type of Dwelling, Sex & Dist_Population_Excluding_Slum_Floating_Total_#**: Total population excluding slum and floating population by type of dwelling and sex.
+- **Type of Dwelling, Sex & Dist_Population_Excluding_Slum_Floating_Male_#**: Male population excluding slum and floating population by type of dwelling and sex.
+- **Type of Dwelling, Sex & Dist_Population_Excluding_Slum_Floating_Female_#**: Female population excluding slum and floating population by type of dwelling and sex.
+- **Type of Dwelling, Sex & Dist_Population_Excluding_Slum_Floating_Hijra_#**: Hijra population excluding slum and floating population by type of dwelling and sex.
+- **Type of Dwelling, Sex & Dist_Population_Slum_Total_#**: Total slum population by type of dwelling and sex.
+- **Type of Dwelling, Sex & Dist_Population_Slum_Male_#**: Male slum population by type of dwelling and sex.
+- **Type of Dwelling, Sex & Dist_Population_Slum_Female_#**: Female slum population by type of dwelling and sex.
+- **Type of Dwelling, Sex & Dist_Population_Slum_Hijra_#**: Hijra slum population by type of dwelling and sex.
+- **Type of Dwelling, Sex & Dist_Population_Floating_Total_#**: Total floating population by type of dwelling and sex.
+- **Type of Dwelling, Sex & Dist_Population_Floating_Male_#**: Male floating population by type of dwelling and sex.
+- **Type of Dwelling, Sex & Dist_Population_Floating_Female_#**: Female floating population by type of dwelling and sex.
+- **Type of Dwelling, Sex & Dist_Population_Floating_Hijra_#**: Hijra floating population by type of dwelling and sex.
+- **Population by Sex, Dist & Loca_Population_Male_#**: Male population by sex, district, and location.
+- **Population by Sex, Dist & Loca_Population_Female_#**: Female population by sex, district, and location.
+- **Population by Sex, Dist & Loca_Population_Hijra_#**: Hijra population by sex, district, and location.
+- **Population by Sex, Dist & Loca_Population_rural_Total_#**: Total rural population by sex, district, and location.
+- **Population by Sex, Dist & Loca_Population_rural_Male_#**: Male rural population by sex, district, and location.
+- **Population by Sex, Dist & Loca_Population_rural_Female_#**: Female rural population by sex, district, and location.
+- **Population by Sex, Dist & Loca_Population_rural_Hijra_#**: Hijra rural population by sex, district, and location.
+- **Population by Sex, Dist & Loca_Population_Urban_Total_#**: Total urban population by sex, district, and location.
+- **Population by Sex, Dist & Loca_Population_Urban_Male_#**: Male urban population by sex, district, and location.
+- **Population by Sex, Dist & Loca_Population_Urban_Female_#**: Female urban population by sex, district, and location.
+- **Population by Sex, Dist & Loca_Population_Urban_Hijra_#**: Hijra urban population by sex, district, and location.
+- **Type of Household, Dist and Loca_# Population**: Population by type of household, district, and location.
+- **Type of Household, Dist and Loca_# Population_ General HH**: Population in general households by district and location.
+- **Type of Household, Dist and Loca_# Population_ Institutional HH**: Population in institutional households by district and location.
+- **Type of Household, Dist and Loca_# Population_other HH**: Population in other households by district and location.
+- **Type of Household, Dist and Loca_% Population_General HH**: Percentage of population in general households by district and location.
+- **Type of Household, Dist and Loca_% Population_Institutional HH**: Percentage of population in institutional households by district and location.
+- **Type of Household, Dist and Loca_% Population_other HH**: Percentage of population in other households by district and location.
+- **Type of Household, Loca_Rural_# Population_Rural**: Rural population by type of household and location.
+- **Type of Household, Loca_Rural_# Population_ General HH_Rural**: Rural population in general households by location.
+- **Type of Household, Loca_Rural_# Population_Institutional HH_Rural**: Rural population in institutional households by location.
+- **Type of Household, Loca_Rural_# Population_other HH_Rural**: Rural population in other households by location.
+- **Type of Household, Loca_Rural_% Population_General HH_Rural**: Percentage of rural population in general households by location.
+- **Type of Household, Loca_Rural_% Population_Institutional HH_Rural**: Percentage of rural population in institutional households by location.
+- **Type of Household, Loca_Rural_% Population_other HH_Rural**: Percentage of rural population in other households by location.
+- **Type of Household, Loca_Urban.# Population_Urban**: Urban population by type of household and location.
+- **Type of Household, Loca_Urban.# Population_ General HH_Urban**: Urban population in general households by location.
+- **Type of Household, Loca_Urban.# Population_Institutional HH_Urban**: Urban population in institutional households by location.
+- **Type of Household, Loca_Urban.# Population_other HH_Urban**: Urban population in other households by location.
+- **Type of Household, Loca_Urban.% Population_General HH_Urban**: Percentage of urban population in general households by location.
+- **Type of Household, Loca_Urban.% Population_Institutional HH_Urban**: Percentage of urban population in institutional households by location.
+- **Type of Household, Loca_Urban.% Population_other HH_Urban**: Percentage of urban population in other households by location.
+- **10 Yrs & above by Mar Sta_Sex_# population**: Population aged 10 years and above by marital status and sex.
+- **10 Yrs & above by Mar Sta_Sex_# Male**: Male population aged 10 years and above by marital status.
+- **10 Yrs & above by Mar Sta_Sex_# female**: Female population aged 10 years and above by marital status.
+- **10 Yrs & above by Mar Sta_Sex_# Never married population**: Never married population aged 10 years and above by sex.
+- **10 Yrs & above by Mar Sta_Sex_# Never married population_male**: Never married male population aged 10 years and above.
+- **10 Yrs & above by Mar Sta_Sex_# Never married population_female**: Never married female population aged 10 years and above.
+- **10 Yrs & above by Mar Sta_Sex_# Currently married population**: Currently married population aged 10 years and above by sex.
+- **10 Yrs & above by Mar Sta_Sex_# Currently married population_male**: Currently married male population aged 10 years and above.
+- **10 Yrs & above by Mar Sta_Sex_# Currently married population_female**: Currently married female population aged 10 years and above.
+- **10 Yrs & above by Mar Sta_Sex_# Widow/Widower population**: Widowed population aged 10 years and above by sex.
+- **10 Yrs & above by Mar Sta_Sex_# Widow/Widower population_male**: Widowed male population aged 10 years and above.
+- **10 Yrs & above by Mar Sta_Sex_# Widow/Widower population_female**: Widowed female population aged 10 years and above.
+- **10 Yrs & above by Mar Sta_Sex_# Divorced population**: Divorced population aged 10 years and above by sex.
+- **10 Yrs & above by Mar Sta_Sex_# Divorced population_male**: Divorced male population aged 10 years and above.
+- **10 Yrs & above by Mar Sta_Sex_# Divorced population_female**: Divorced female population aged 10 years and above.
+- **10 Yrs & above by Mar Sta_Sex_# Separated population**: Separated population aged 10 years and above by sex.
+- **10 Yrs & above by Mar Sta_Sex_# Separated population_male**: Separated male population aged 10 years and above.
+- **10 Yrs & above by Mar Sta_Sex_# Separated population_female**: Separated female population aged 10 years and above.
+- **Population by Religion, Sex_# Total_Muslim**: Total Muslim population by sex.
+- **Population by Religion, Sex_# Male_Muslim**: Male Muslim population.
+- **Population by Religion, Sex_# Female_Muslim**: Female Muslim population.
+- **Population by Religion, Sex_# Total_Hindu**: Total Hindu population by sex.
+- **Population by Religion, Sex_# Male_Hindu**: Male Hindu population.
+- **Population by Religion, Sex_# Female_Hindu**: Female Hindu population.
+- **Population by Religion, Sex_# Total_Christian**: Total Christian population by sex.
+- **Population by Religion, Sex_# Male_Christian**: Male Christian population.
+- **Population by Religion, Sex_# Female_Christian**: Female Christian population.
+- **Population by Religion, Sex_# Total_Buddhist**: Total Buddhist population by sex.
+- **Population by Religion, Sex_# Male_Buddhist**: Male Buddhist population.
+- **Population by Religion, Sex_# Female_Buddhist**: Female Buddhist population.
+- **Population by Religion, Sex_# Total_Others**: Total population of other religions by sex.
+- **Population by Religion, Sex_# Male_Others**: Male population of other religions.
+- **Population by Religion, Sex_# Female_Others**: Female population of other religions.
+- **Population Growth Rate, Sex Rat_Overall_Avg_Population Growth**: Overall average population growth rate.
+- **Population Growth Rate, Sex Rat_Overall_Sex_Ratio**: Overall sex ratio.
+- **Population Growth Rate, Sex Rat_Overall_Dependeny_Ratio**: Overall dependency ratio.
+- **Population Growth Rate, Sex Rat_Overall_Child-Woman Ratio**: Overall child-woman ratio.
+- **Population Growth Rate, Sex Rat_Rural_Avg. Population Growth**: Rural average population growth rate.
+- **Population Growth Rate, Sex Rat_Rural_Sex_Ratio**: Rural sex ratio.
+- **Population Growth Rate, Sex Rat_Rural_Dependeny_Ratio**: Rural dependency ratio.
+- **Population Growth Rate, Sex Rat_Rural_Child-Woman Ratio**: Rural child-woman ratio.
+- **Population Growth Rate, Sex Rat_Urban_Avg__Population Growth**: Urban average population growth rate.
+- **Population Growth Rate, Sex Rat_Urban_Sex_Ratio**: Urban sex ratio.
+- **Population Growth Rate, Sex Rat_Urban_Dependeny_Ratio**: Urban dependency ratio.
+- **Population Growth Rate, Sex Rat_Urban_Child-Woman Ratio**: Urban child-woman ratio.
+- **Person With Disablity (Except Hijra)_Total_Persons_With_Disability_#**: Total number of persons with disability (excluding Hijra).
+- **Person With Disablity (Except Hijra)_Autism or Autism Spectrum Disorders_#**: Number of persons with autism or autism spectrum disorders.
+- **Person With Disablity (Except Hijra)_Physical Disability_#**: Number of persons with physical disability.
+- **Person With Disablity (Except Hijra)_Mental Illness Leading to Disability_#**: Number of persons with mental illness leading to disability.
+- **Person With Disablity (Except Hijra)_Visual Disability_#**: Number of persons with visual disability.
+- **Person With Disablity (Except Hijra)_Speech Disability_#**: Number of persons with speech disability.
+- **Person With Disablity (Except Hijra)_Intellectual Disability_#**: Number of persons with intellectual disability.
+- **Person With Disablity (Except Hijra)_Hearing Disability_#**: Number of persons with hearing disability.
+- **Person With Disablity (Except Hijra)_Deaf- Blindness_#**: Number of persons with deaf-blindness.
+- **Person With Disablity (Except Hijra)_Cerebral Palsy_#**: Number of persons with cerebral palsy.
+- **Person With Disablity (Except Hijra)_Down Syndrome_#**: Number of persons with Down syndrome.
+- **Person With Disablity (Except Hijra)_Multiple Disabilities_#**: Number of persons with multiple disabilities.
+- **Person With Disablity (Except Hijra)_Other Disability_#**: Number of persons with other disabilities.
+- **Literacy Rate_5year+_Overall**: Overall literacy rate for population aged 5 years and above.
+- **Literacy Rate_5year+_Male**: Male literacy rate for population aged 5 years and above.
+- **Literacy Rate_5year+_Female**: Female literacy rate for population aged 5 years and above.
+- **Rural_Literacy Rate_5year+_Overall**: Overall rural literacy rate for population aged 5 years and above.
+- **Rural_Literacy Rate_5year+_Male**: Male rural literacy rate for population aged 5 years and above.
+- **Rural_Literacy Rate_5year+_Female**: Female rural literacy rate for population aged 5 years and above.
+- **Urban_Literacy Rate_5year+_Overall**: Overall urban literacy rate for population aged 5 years and above.
+- **Urban_Literacy Rate_5year+_Male**: Male urban literacy rate for population aged 5 years and above.
+- **Urban_Literacy Rate_5year+_Female**: Female urban literacy rate for population aged 5 years and above.
+- **Literacy Rate_7year+_Male**: Male literacy rate for population aged 7 years and above.
+- **Literacy Rate_7year+_Female**: Female literacy rate for population aged 7 years and above.
+- **Rural_Literacy Rate_7year+_Overall**: Overall rural literacy rate for population aged 7 years and above.
+- **Rural_Literacy Rate_7year+_Male**: Male rural literacy rate for population aged 7 years and above.
+- **Rural_Literacy Rate_7year+_Female**: Female rural literacy rate for population aged 7 years and above.
+- **Urban_Literacy Rate_7year+_Overall**: Overall urban literacy rate for population aged 7 years and above.
+- **Urban_Literacy Rate_7year+_Male**: Male urban literacy rate for population aged 7 years and above.
+- **Urban_Literacy Rate_7year+_Female**: Female urban literacy rate for population aged 7 years and above.
+- **Literacy Rate_Aged 7 Yrs Ab_Re_Muslim**: Literacy rate of Muslims aged 7 years and above.
+- **Literacy Rate_Aged 7 Yrs Ab_Re_Hindu**: Literacy rate of Hindus aged 7 years and above.
+- **Literacy Rate_Aged 7 Yrs Ab_Re_Christian**: Literacy rate of Christians aged 7 years and above.
+- **Literacy Rate_Aged 7 Yrs Ab_Re_Buddist**: Literacy rate of Buddhists aged 7 years and above.
+- **Literacy Rate_Aged 7 Yrs Ab_Re_others**: Literacy rate of other religions aged 7 years and above.
+- **Literacy Rate_Aged 7 Yrs Ab_Re_Muslim_Male**: Male literacy rate of Muslims aged 7 years and above.
+- **Literacy Rate_Aged 7 Yrs Ab_Re_Hindu_Male**: Male literacy rate of Hindus aged 7 years and above.
+- **Literacy Rate_Aged 7 Yrs Ab_Re_Christian_Male**: Male literacy rate of Christians aged 7 years and above.
+- **Literacy Rate_Aged 7 Yrs Ab_Re_Buddist_Male**: Male literacy rate of Buddhists aged 7 years and above.
+- **Literacy Rate_Aged 7 Yrs Ab_Re_others_Male**: Male literacy rate of other religions aged 7 years and above.
+- **Literacy Rate_Aged 7 Yrs Ab_Re_Muslim_Female**: Female literacy rate of Muslims aged 7 years and above.
+- **Literacy Rate_Aged 7 Yrs Ab_Re_Hindu_Female**: Female literacy rate of Hindus aged 7 years and above.
+- **Literacy Rate_Aged 7 Yrs Ab_Re_Christian_Female**: Female literacy rate of Christians aged 7 years and above.
+- **Literacy Rate_Aged 7 Yrs Ab_Re_Buddist_Female**: Female literacy rate of Buddhists aged 7 years and above.
+- **Literacy Rate_Aged 7 Yrs Ab_Re_others_Female**: Female literacy rate of other religions aged 7 years and above.
+- **Total_Male_Student_5-29 years_#**: Total male students aged 5-29 years.
+- **Total_Female_Student_5-29 years_#**: Total female students aged 5-29 years.
+- **5-9 Year_Male_Student_#**: Male students aged 5-9 years.
+- **5-9 Year_Female_Student_#**: Female students aged 5-9 years.
+- **10-14 Years_Male_Student_#**: Male students aged 10-14 years.
+- **10-14 Years_Female_Student_#**: Female students aged 10-14 years.
+- **15-19 Years_Male_Student_#**: Male students aged 15-19 years.
+- **15-19 Years_Female_Student_#**: Female students aged 15-19 years.
+- **20-24 Years_Female_Student_#**: Female students aged 20-24 years.
+- **20-24 Years_Male_Student_#**: Male students aged 20-24 years.
+- **25-29 Years_Male_Student_#**: Male students aged 25-29 years.
+- **25-29 Years_Female_Student_#**: Female students aged 25-29 years.
+- **Overall_Working_Status_5 Year+_#**: Overall working status for population aged 5 years and above.
+- **Overall_Working_Status_5 Year+_Male_#**: Male working status for population aged 5 years and above.
+- **Overall_Working_Status_5 Year+_Female_#**: Female working status for population aged 5 years and above.
+- **Overall_Employed_Working_Status_5 Year+_#**: Employed working status for population aged 5 years and above.
+- **Overall_Employed_Working_Status_5 Year+_Male_#**: Male employed working status for population aged 5 years and above.
+- **Overall_Employed_Working_Status_5 Year+_Female_#**: Female employed working status for population aged 5 years and above.
+- **Overall_Household Work_Working_Status_5 Year+_#**: Household work as working status for population aged 5 years and above.
+- **Overall_Household Work_Working_Status_5 Year+_Male_#**: Male household work as working status for population aged 5 years and above.
+- **Overall_Household Work_Working_Status_5 Year+_Female_#**: Female household work as working status for population aged 5 years and above.
+- **Overall_Looking for work_Working_Status_5 Year+_#**: "Looking for work" as working status for population aged 5 years and above.
+- **Overall_Looking for work_Working_Status_5 Year+_Male_#**: Male "Looking for work" as working status for population aged 5 years and above.
+- **Overall_Looking for work_Working_Status_5 Year+_Female_#**: Female "Looking for work" as working status for population aged 5 years and above.
+- **Overall_Do not Work_Working_Status_5 Year+_#**: "Do not work" as working status for population aged 5 years and above.
+- **Overall_Do not Work_Working_Status_5 Year+_Male_#**: Male "Do not work" as working status for population aged 5 years and above.
+- **Overall_Do not Work_Working_Status_5 Year+_Female_#**: Female "Do not work" as working status for population aged 5 years and above.
+- **Type of Work_Total_Employed_Population_#**: Total employed population by type of work.
+- **Type of Work_Male_Employed_Population _#**: Male employed population by type of work.
+- **Type of Work_Female_Employed_Population_#**: Female employed population by type of work.
+- **Type of Work_Total_Salary/Wage_#**: Total population with salary/wage as type of work.
+- **Type of Work_Male_Salary/Wage_#**: Male population with salary/wage as type of work.
+- **Type of Work_Female_Salary/Wage_#**: Female population with salary/wage as type of work.
+- **Type of Work_Total_Profit_#**: Total population with profit as type of work.
+- **Type of Work_Male_Profit_#**: Male population with profit as type of work.
+- **Type of Work_Female_Profit_#**: Female population with profit as type of work.
+- **Type of Work_Total_Household Use/Consumption_#**: Total population with household use/consumption as type of work.
+- **Type of Work_Male_Household Use/Consumption_#**: Male population with household use/consumption as type of work.
+- **Type of Work_Female_Household Use/Consumption_#**: Female population with household use/consumption as type of work.
+- **Type of Work_Total_Apprenticeship_#**: Total population with apprenticeship as type of work.
+- **Type of Work_Male_Apprenticeship_#**: Male population with apprenticeship as type of work.
+- **Type of Work_Female_Apprenticeship_#**: Female population with apprenticeship as type of work.
+- **Total_Employed_Population_#**: Total employed population.
+- **Employed Population by Sector_Male_#**: Male employed population by sector.
+- **Employed Population by Sector_Female_#**: Female employed population by sector.
+- **Employed Population by Sector_Total_Agriculture_#**: Total employed population in agriculture sector.
+- **Employed Population by Sector_Male_Agriculture_#**: Male employed population in agriculture sector.
+- **Employed Population by Sector_Female_Agriculture_#**: Female employed population in agriculture sector.
+- **Employed Population by Sector_Total_Industry_#**: Total employed population in industry sector.
+- **Employed Population by Sector_Male_Industry_#**: Male employed population in industry sector.
+- **Employed Population by Sector_Female_Industry_#**: Female employed population in industry sector.
+- **Employed Population by Sector_Total_Service_#**: Total employed population in service sector.
+- **Employed Population by Sector_Male_Service_#**: Male employed population in service sector.
+- **Employed Population by Sector_Female_Service_#**: Female employed population in service sector.
+- **15-24 Years NEET_%_Overall**: Overall percentage of population aged 15-24 years not in education, employment, or training (NEET).
+- **15-24 Years NEET_%_male_Overall**: Overall percentage of male population aged 15-24 years (NEET).
+- **15-24 Years NEET_%_female_Overall**: Overall percentage of female population aged 15-24 years (NEET).
+- **15-24 Years NEET_%_rural_Overall**: Overall percentage of rural population aged 15-24 years (NEET).
+- **15-24 Years NEET_%_male_rural_Overall**: Overall percentage of male rural population aged 15-24 years (NEET).
+- **15-24 Years NEET_%_female_rural_Overall**: Overall percentage of female rural population aged 15-24 years (NEET).
+- **15-24 Years NEET_%_urban_Overall**: Overall percentage of urban population aged 15-24 years (NEET).
+- **15-24 Years NEET_%_male_urban_Overall**: Overall percentage of male urban population aged 15-24 years (NEET).
+- **15-24 Years NEET_%_female_urban_Overall**: Overall percentage of female urban population aged 15-24 years (NEET).
+- **15-24 Years NEET_%_15_19 year_overall**: Overall percentage of population aged 15-19 years (NEET).
+- **15-24 Years NEET_%_male_15_19 year**: Overall percentage of male population aged 15-19 years (NEET).
+- **15-24 Years NEET_%_female_15_19 year**: Overall percentage of female population aged 15-19 years (NEET).
+- **15-24 Years NEET_%_rural_15_19 year**: Overall percentage of rural population aged 15-19 years (NEET).
+- **15-24 Years NEET_%_male_rural_15_19 year**: Overall percentage of male rural population aged 15-19 years (NEET).
+- **15-24 Years NEET_%_female_rural_15_19 year**: Overall percentage of female rural population aged 15-19 years (NEET).
+- **15-24 Years NEET_%_urban_15_19 year**: Overall percentage of urban population aged 15-19 years (NEET).
+- **15-24 Years NEET_%_male_urban_15_19 year**: Overall percentage of male urban population aged 15-19 years (NEET).
+- **15-24 Years NEET_%_female_urban_15_19 year**: Overall percentage of female urban population aged 15-19 years (NEET).
+- **15-24 Years NEET_%_20_24 year_overall**: Overall percentage of population aged 20-24 years (NEET).
+- **15-24 Years NEET_%_male_20_24 year**: Overall percentage of male population aged 20-24 years (NEET).
+- **15-24 Years NEET_%_female_20_24 year**: Overall percentage of female population aged 20-24 years (NEET).
+- **15-24 Years NEET_%_rural_20_24 year**: Overall percentage of rural population aged 20-24 years (NEET).
+- **15-24 Years NEET_%_male_rural_20_24 year**: Overall percentage of male rural population aged 20-24 years (NEET).
+- **15-24 Years NEET_%_female_rural_20_24 year**: Overall percentage of female rural population aged 20-24 years (NEET).
+- **15-24 Years NEET_%_urban_20_24 year**: Overall percentage of urban population aged 20-24 years (NEET).
+- **15-24 Years NEET_%_male_urban_20_24 year**: Overall percentage of male urban population aged 20-24 years (NEET).
+- **15-24 Years NEET_%_female_urban_20_24 year**: Overall percentage of female urban population aged 20-24 years (NEET).
+- **%_Mobile Phone_Total_5year+**: Percentage of population aged 5 years and above with a mobile phone.
+- **%_Mobile Phone_Male_5year+**: Percentage of male population aged 5 years and above with a mobile phone.
+- **%_Mobile Phone_Female_5year+**: Percentage of female population aged 5 years and above with a mobile phone.
+- **%_Mobile Phone_Rural_Total_5year+**: Percentage of rural population aged 5 years and above with a mobile phone.
+- **%_Mobile Phone_Rural_Male_5year+**: Percentage of male rural population aged 5 years and above with a mobile phone.
+- **%_Mobile Phone_Rural_female_5year+**: Percentage of female rural population aged 5 years and above with a mobile phone.
+- **%_Mobile Phone_urban_Total_5year+**: Percentage of urban population aged 5 years and above with a mobile phone.
+- **%_Mobile Phone_urban_Male_5year+**: Percentage of male urban population aged 5 years and above with a mobile phone.
+- **%_Mobile Phone_urban_female_5year+**: Percentage of female urban population aged 5 years and above with a mobile phone.
+- **%_Mobile Phone_Total_15 year+**: Percentage of population aged 15 years and above with a mobile phone.
+- **%_Mobile Phone_Male_15 year+**: Percentage of male population aged 15 years and above with a mobile phone.
+- **%_Mobile Phone_Female_15 year+**: Percentage of female population aged 15 years and above with a mobile phone.
+- **%_Mobile Phone_Rural_Total_15 year+**: Percentage of rural population aged 15 years and above with a mobile phone.
+- **%_Mobile Phone_Rural_Male_15 year+**: Percentage of male rural population aged 15 years and above with a mobile phone.
+- **%_Mobile Phone_Rural_female_15 year+**: Percentage of female rural population aged 15 years and above with a mobile phone.
+- **%_Mobile Phone_urban_Total_15 year+**: Percentage of urban population aged 15 years and above with a mobile phone.
+- **%_Mobile Phone_urban_Male_15 year+**: Percentage of male urban population aged 15 years and above with a mobile phone.
+- **%_Mobile Phone_urban_female_15 year+**: Percentage of female urban population aged 15 years and above with a mobile phone.
+- **%_Inernet_Total_5year+**: Percentage of population aged 5 years and above with internet access.
+- **%_Inernet_Male_5year+**: Percentage of male population aged 5 years and above with internet access.
+- **%_Inernet_Female_5year+**: Percentage of female population aged 5 years and above with internet access.
+- **%_Inernet_Rural_Total_5year+**: Percentage of rural population aged 5 years and above with internet access.
+- **%_Inernet_Rural_Male_5year+**: Percentage of male rural population aged 5 years and above with internet access.
+- **%_Inernet_Rural_female_5year+**: Percentage of female rural population aged 5 years and above with internet access.
+- **%_Inernet_urban_Total_5year+**: Percentage of urban population aged 5 years and above with internet access.
+- **%_Inernet_urban_Male_5year+**: Percentage of male urban population aged 5 years and above with internet access.
+- **%_Inernet_urban_female_5year+**: Percentage of female urban population aged 5 years and above with internet access.
+- **%_Inernet_Total_15 year+**: Percentage of population aged 15 years and above with internet access.
+- **%_Inernet_Male_15 year+**: Percentage of male population aged 15 years and above with internet access.
+- **%_Inernet_Female_15 year+**: Percentage of female population aged 15 years and above with internet access.
+- **%_Inernet_Rural_Total_15 year+**: Percentage of rural population aged 15 years and above with internet access.
+- **%_Inernet_Rural_Male_15 year+**: Percentage of male rural population aged 15 years and above with internet access.
+- **%_Inernet_Rural_female_15 year+**: Percentage of female rural population aged 15 years and above with internet access.
+- **%_Inernet_urban_Total_15 year+**: Percentage of urban population aged 15 years and above with internet access.
+- **%_Inernet_urban_Male_15 year+**: Percentage of male urban population aged 15 years and above with internet access.
+- **%_Inernet_urban_female_15 year+**: Percentage of female urban population aged 15 years and above with internet access.
+- **%_Have financial account_Overall**: Overall percentage of population with a financial account.
+- **%_Have financial account_Male**: Percentage of male population with a financial account.
+- **%_Have financial account_Female**: Percentage of female population with a financial account.
+- **%_Have financial account_Rural**: Percentage of rural population with a financial account.
+- **%_Have financial account_Rural_Male**: Percentage of male rural population with a financial account.
+- **%_Have financial account_Rural_Female**: Percentage of female rural population with a financial account.
+- **%_Have financial account_Urban**: Percentage of urban population with a financial account.
+- **%_Have financial account_Urban_Male**: Percentage of male urban population with a financial account.
+- **%_Have financial account_Urban_Female**: Percentage of female urban population with a financial account.
+- **%_Mobile Bank Account_Overall**: Overall percentage of population with a mobile bank account.
+- **%_Mobile Bank Account_Male**: Percentage of male population with a mobile bank account.
+- **%_Mobile Bank Account_Female**: Percentage of female population with a mobile bank account.
+- **%_Mobile Bank Account_Rural**: Percentage of rural population with a mobile bank account.
+- **%_Mobile Bank Account_Rural_Male**: Percentage of male rural population with a mobile bank account.
+- **%_Mobile Bank Account_Rural_Female**: Percentage of female rural population with a mobile bank account.
+- **%_Mobile Bank Account_Urban**: Percentage of urban population with a mobile bank account.
+- **%_Mobile Bank Account_Urban_Male**: Percentage of male urban population with a mobile bank account.
+- **%_Mobile Bank Account_Urban_Female**: Percentage of female urban population with a mobile bank account.
+- **# Overall_Ethnic Population**: Overall ethnic population.
+- **# Male _Ethnic Population**: Male ethnic population.
+- **% Male_Ethnic Population**: Percentage of male ethnic population.
+- **# Female_Ethnic Population**: Female ethnic population.
+- **% Female_Ethnic Population**: Percentage of female ethnic population.
+- **# Overall_Bangladeshi_National**: Overall Bangladeshi nationals.
+- **% Overall_Bangladeshi_National**: Percentage of overall Bangladeshi nationals.
+- **# Male_Bangladeshi_National**: Male Bangladeshi nationals.
+- **% Male_Bangladeshi_National**: Percentage of male Bangladeshi nationals.
+- **# Female_Bangladeshi_National**: Female Bangladeshi nationals.
+- **% Female_Bangladeshi_National**: Percentage of female Bangladeshi nationals.
+- **# Hizra_Bangladeshi_National**: Hijra Bangladeshi nationals.
+- **% Hizra_Bangladeshi_National**: Percentage of Hijra Bangladeshi nationals.
+- **Number_Returned_Migrant**: Number of returned migrants.
+- **Percent_Returned_Migrant**: Percentage of returned migrants.
+- **Household by Type of Dwelling_# of HH**: Number of households by type of dwelling.
+- **Household by Type of Dwelling_# Rural HH**: Number of rural households by type of dwelling.
+- **Household by Type of Dwelling_# of Urban HH**: Number of urban households by type of dwelling.
+- **Household by Type of Dwelling_# of HH excluding slum and floating**: Number of households by type of dwelling (excluding slum and floating).
+- **Household by Type of Dwelling_# of HH excluding slum and floating_rural**: Number of rural households by type of dwelling (excluding slum and floating).
+- **Household by Type of Dwelling_# of HH excluding slum and floating_urban**: Number of urban households by type of dwelling (excluding slum and floating).
+- **Household by Type of Dwelling_# of Slum HH**: Number of slum households by type of dwelling.
+- **Household by Type of Dwelling_# of Slum HH _rural**: Number of rural slum households by type of dwelling.
+- **Household by Type of Dwelling_# of Slum HH _urban**: Number of urban slum households by type of dwelling.
+- **Household by Type of Dwelling_# of Floating HH**: Number of floating households by type of dwelling.
+- **Household by Type of Dwelling_# of Floating HH _rural**: Number of rural floating households by type of dwelling.
+- **Household by Type of Dwelling_# of Floating HH _urban**: Number of urban floating households by type of dwelling.
+- **type of HH_# of HH**: Number of households by type.
+- **type of HH_# Rural HH**: Number of rural households by type.
+- **type of HH_# of Urban HH**: Number of urban households by type.
+- **type of HH_# of General HH**: Number of general households by type.
+- **type of HH_# of General HH_Rural**: Number of rural general households by type.
+- **type of HH_# of General HH_Urban**: Number of urban general households by type.
+- **type of HH_# of Institutional Household**: Number of institutional households by type.
+- **type of HH_# of Institutional Household_Rural**: Number of rural institutional households by type.
+- **type of HH_# of Institutional Household_Urban**: Number of urban institutional households by type.
+- **type of HH_# of Other Household**: Number of other households by type.
+- **type of HH_# of Other Household_Rural**: Number of rural other households by type.
+- **type of HH_# of Other Household_Urban**: Number of urban other households by type.
+- **Household by Wall Material_#Wall_Total**: Total households by wall material.
+- **Household by Wall Material_#Wall_Cement/Concrete/Brick/Terracotta**: Households with cement/concrete/brick/terracotta walls.
+- **Household by Wall Material_#Wall_Ceramic Tiles**: Households with ceramic tile walls.
+- **Household by Wall Material_#Wall_Metal sheet/CI sheet/Corrugated Iron she**: Households with metal sheet/CI sheet/corrugated iron sheet walls.
+- **Household by Wall Material_#Wall_Wood/Bamboo/Mat/Palm Tree/Betal Nut Trun**: Households with wood/bamboo/mat/palm tree/betal nut trunk walls.
+- **Household by Wall Material_#Wall_Straw/ Chhan/Golpata/Palm Leaf/Bichali/P**: Households with straw/chhan/golpata/palm leaf/bichali/polyethene walls.
+- **Household by Wall Material_#Wall_Soil/ Mud**: Households with soil/mud walls.
+- **Household by Wall Material_#Wall_Other Materials**: Households with other wall materials.
+- **Household by Wall Material_# No Wall**: Households with no walls.
+- **Household by Wall Material_Cement/Concrete/Brick/Terracotta_Wall_%**: Percentage of households with cement/concrete/brick/terracotta walls.
+- **Household by Wall Material_Ceramic Tiles_Wall_%**: Percentage of households with ceramic tile walls.
+- **Household by Wall Material_Metal sheet/CI sheet/Corrugated Iron sheet_Wal**: Percentage of households with metal sheet/CI sheet/corrugated iron sheet walls.
+- **Household by Wall Material_Wood/Bamboo/Mat/Palm Tree/Betal Nut Trunk_Wall**: Percentage of households with wood/bamboo/mat/palm tree/betal nut trunk walls.
+- **Household by Wall Material_Straw/ Chhan/Golpata/Palm Leaf/Bichali/Polythe**: Percentage of households with straw/chhan/golpata/palm leaf/bichali/polyethene walls.
+- **Household by Wall Material_Soil/ Mud_Wall_%**: Percentage of households with soil/mud walls.
+- **Household by Wall Material_Other Materials__Wall_%**: Percentage of households with other wall materials.
+- **Household by Wall Material_No wall %**: Percentage of households with no walls.
+- **Household by Roof Material_# roof_Total**: Total households by roof material.
+- **Household by Roof Material_# roof_Cement/Concrete/Tile**: Households with cement/concrete/tile roofs.
+- **Household by Roof Material_# roof_Metal Sheet/ CI Sheet/Corrugated Iron S**: Households with metal sheet/CI sheet/corrugated iron sheet roofs.
+- **Household by Roof Material_# roof_Wood/Bamboo/Bichali/Golpata Palm Leaf/P**: Households with wood/bamboo/bichali/golpata/palm leaf/polyethene roofs.
+- **Household by Roof Material_# roof_Hand-made Tiles/Tile**: Households with hand-made tiles/tile roofs.
+- **Household by Roof Material_# roof_Other Materials**: Households with other roof materials.
+- **Household by Roof Material_# No Roof**: Households with no roof.
+- **Household by Roof Material_Cement/Concrete/Tile_roof_%**: Percentage of households with cement/concrete/tile roofs.
+- **Household by Roof Material_Metal Sheet/ CI Sheet/Corrugated Iron Sheet_ro**: Percentage of households with metal sheet/CI sheet/corrugated iron sheet roofs.
+- **Household by Roof Material_Wood/Bamboo/Bichali/Golpata Palm Leaf/Polythen**: Percentage of households with wood/bamboo/bichali/golpata/palm leaf/polyethene roofs.
+- **Household by Roof Material_Hand-made Tiles/Tile_roof_%**: Percentage of households with hand-made tiles/tile roofs.
+- **Household by Roof Material_Other Materials_roof_%**: Percentage of households with other roof materials.
+- **Household by Roof Material_No_roof_%**: Percentage of households with no roof.
+- **Household by Floor Material_# floor_Total**: Total households by floor material.
+- **Household by Floor Material_# floor_Cement/Concrete/Brick/Terracotta**: Households with cement/concrete/brick/terracotta floors.
+- **Household by Floor Material_# floor_Tiles/Mosaic**: Households with tiles/mosaic floors.
+- **Household by Floor Material_# floor_Wood/Bamboo/Mat/Palm Tree/Betel Nut T**: Households with wood/bamboo/mat/palm tree/betel nut trunk floors.
+- **Household by Floor Material_# floor_Soil/Sand/Mud**: Households with soil/sand/mud floors.
+- **Household by Floor Material_# floor_Other Materials**: Households with other floor materials.
+- **Household by Floor Material_Cement/Concrete/Brick/Terracotta_floor_%**: Percentage of households with cement/concrete/brick/terracotta floors.
+- **Household by Floor Material_Tiles/Mosaic_floor_%**: Percentage of households with tiles/mosaic floors.
+- **Household by Floor Material_Wood/Bamboo/Mat/Palm Tree/Betel Nut Trunk_flo**: Percentage of households with wood/bamboo/mat/palm tree/betel nut trunk floors.
+- **Household by Floor Material_Soil/Sand/Mud_floor_%**: Percentage of households with soil/sand/mud floors.
+- **Household by Floor Material_Other Materials_floor_%**: Percentage of households with other floor materials.
+- **Household by Structure_#_Total**: Total households by structure.
+- **Household by Structure_#_Pucca**: Households with pucca structure.
+- **Household by Structure_#_Semi-pucca**: Households with semi-pucca structure.
+- **Household by Structure_#_Kancha**: Households with kancha structure.
+- **Household by Structure_#_Jhupri**: Households with jhupri structure.
+- **Household by Structure_Total_%**: Percentage of households by structure.
+- **Household by Structure_Pucca_%**: Percentage of households with pucca structure.
+- **Household by Structure_Semi-pucca_%**: Percentage of households with semi-pucca structure.
+- **Household by Structure_Kancha_%**: Percentage of households with kancha structure.
+- **Household by Structure_Jhupri_%**: Percentage of households with jhupri structure.
+- **Household by Ownership Status_Own dwelling unit_%**: Percentage of households with own dwelling unit.
+- **Household by Ownership Status_Rented but having own dwelling unit elsewhere_%**: Percentage of households rented but having own dwelling unit elsewhere.
+- **Household by Ownership Status_Rented and having no own dwelling unit_%**: Percentage of households rented and having no own dwelling unit.
+- **Household by Ownership Status_Rent free but having own dwelling unit elsewhere_%**: Percentage of households rent-free but having own dwelling unit elsewhere.
+- **Household by Ownership Status_Rent free and having no own dwelling unit elsewhere_%**: Percentage of households rent-free and having no own dwelling unit elsewhere.
+- **Main Source of Drinking Water_Tube-well (Deep/Shallow)_%**: Percentage of households using tube-well (deep/shallow) as main source of drinking water.
+- **Main Source of Drinking Water_Bottled/Jar Water_%**: Percentage of households using bottled/jar water as main source of drinking water.
+- **Main Source of Drinking Water_Well_%**: Percentage of households using well as main source of drinking water.
+- **Main Source of Drinking Water_Pond/River/Canal/Lake_%**: Percentage of households using pond/river/canal/lake as main source of drinking water.
+- **Main Source of Drinking Water_Spring_%**: Percentage of households using spring as main source of drinking water.
+- **Main Source of Drinking Water_Rain Water_%**: Percentage of households using rain water as main source of drinking water.
+- **Main Source of Drinking Water_Others_%**: Percentage of households using other sources as main source of drinking water.
+- **Toilet Facilities_Safe Disposal with Flushing/ Pouring Water_%**: Percentage of households with safe disposal with flushing/pouring water toilet facilities.
+- **Toilet Facilities_Safe Disposal with Flushing/ Pouring Water_%2**: Percentage of households with safe disposal with flushing/pouring water toilet facilities.
+- **Toilet Facilities_Safe Disposal with Flushing/ Pouring Water_%3**: Percentage of households with safe disposal with flushing/pouring water toilet facilities.
+- **Toilet Facilities_Pit Latrine Without Slab/ Open_%\nPit**: Percentage of households with pit latrine without slab/open pit toilet facilities.
+- **Toilet Facilities_Raw/Open/ Hanging Latrine (Permanent/ Temporary)_%**: Percentage of households with raw/open/hanging latrine (permanent/temporary) toilet facilities.
+- **Toilet Facilities_Open Defecation/ No Latrine Available_%**: Percentage of households with open defecation/no latrine available toilet facilities.
+- **Type of Toilet Use_Toilet_Not-Toilet_Shared_%**: Percentage of households with shared toilet facilities (not toilet).
+- **Type of Toilet Use_Toilet_Shared_%**: Percentage of households with shared toilet facilities (toilet).
+- **Type of Toilet Use_Rural_Toilet_Not-Toilet_Shared_%**: Percentage of rural households with shared toilet facilities (not toilet).
+- **Type of Toilet Use_Rural_Toilet_Shared_%**: Percentage of rural households with shared toilet facilities (toilet).
+- **Type of Toilet Use_urban_Toilet_Not-Toilet_Shared_%**: Percentage of urban households with shared toilet facilities (not toilet).
+- **Type of Toilet Use_urban_Toilet_Shared_%**: Percentage of urban households with shared toilet facilities (toilet).
+- **Handwashing Facilities_Soap & Water_%**: Percentage of households with soap and water handwashing facilities.
+- **Handwashing Facilities_Only Soap_%**: Percentage of households with only soap handwashing facilities.
+- **Handwashing Facilities_Only Water_%**: Percentage of households with only water handwashing facilities.
+- **Handwashing Facilities_No Separate Arrangement_%**: Percentage of households with no separate arrangement for handwashing.
+- **Main Source of Electricity_Solar Power_%**: Percentage of households with solar power as main source of electricity.
+- **Main Source of Electricity_Others_%**: Percentage of households with other sources as main source of electricity.
+- **Main Source of Electricity_No Electricity Connection_%**: Percentage of households with no electricity connection.
+- **Main Source of Cooking Fuel_Straw/ Leaf/ Bran/ Husk_%**: Percentage of households with straw/leaf/bran/husk as main source of cooking fuel.
+- **Main Source of Cooking Fuel_Wood/ Chalk/ Chopped Wood_%**: Percentage of households with wood/chalk/chopped wood as main source of cooking fuel.
+- **Main Source of Cooking Fuel_Wood-coal/ Charcoal/ Dried Dung_%**: Percentage of households with wood-coal/charcoal/dried dung as main source of cooking fuel.
+- **Main Source of Cooking Fuel_Kerosene/ Paraffin_%**: Percentage of households with kerosene/paraffin as main source of cooking fuel.
+- **Main Source of Cooking Fuel_Petrol/ Diesel_%**: Percentage of households with petrol/diesel as main source of cooking fuel.
+- **Main Source of Cooking Fuel_Electricty_%**: Percentage of households with electricity as main source of cooking fuel.
+- **Main Source of Cooking Fuel_ LP Gas_%**: Percentage of households with LP gas as main source of cooking fuel.
+- **Main Source of Cooking Fuel_Biogas_%**: Percentage of households with biogas as main source of cooking fuel.
+- **Main Source of Cooking Fuel_Others_%**: Percentage of households with other sources as main source of cooking fuel.
+- **Foreign Remittance Recipient_Total_HH #**: Total households receiving foreign remittance.
+- **Foreign Remittance Recipient_Rural_HH #**: Rural households receiving foreign remittance.
+- **Foreign Remittance Recipient_Urban_HH #**: Urban households receiving foreign remittance.
+- **Number of Person & Avg HH Size_Total_HH #**: Total number of households by number of persons.
+- **Number of Person & Avg HH Size_# of HH with 1-Person**: Number of households with 1 person.
+- **Number of Person & Avg HH Size_# of HH with 2-Person**: Number of households with 2 persons.
+- **Number of Person & Avg HH Size_# of HH with 3-Person**: Number of households with 3 persons.
+- **Number of Person & Avg HH Size_# of HH with 4-Person**: Number of households with 4 persons.
+- **Number of Person & Avg HH Size_# of HH with 5-Person**: Number of households with 5 persons.
+- **Number of Person & Avg HH Size_# of HH with 6-Person**: Number of households with 6 persons.
+- **Number of Person & Avg HH Size_# of HH with 7-Person**: Number of households with 7 persons.
+- **Number of Person & Avg HH Size_# of HH with 8-Person**: Number of households with 8 persons.
+- **Number of Person & Avg HH Size_# of HH with 9-Person**: Number of households with 9 persons.
+- **Number of Person & Avg HH Size_# of HH with 10-Person**: Number of households with 10 persons.
+- **Number of Person & Avg HH Size_# of HH with 10-Person +**: Number of households with 10 or more persons.
+- **Number of Person & Avg HH Size_Average Household Size**: Average household size.
+

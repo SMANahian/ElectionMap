@@ -1,0 +1,203 @@
+seat,ec_id,ec_valid,our_tvc,our_known,tvc_diff,known_diff,ec_ncand,our_ncand,ec_winner_party,ec_winner_votes,our_winner,our_winner_votes,winner_vote_diff
+Thakurgaon 1,3,380670,383804,383804,3134,3134,3,3,Bangladesh Nationalist Party - BNP,237178,Mirza Fakhrul Islam Alamgir,238836,1658
+Thakurgaon 2,4,240715,242711,242711,1996,1996,7,7,Bangladesh Nationalist Party - BNP,120306,Md. Abdus Salam,121017,711
+Thakurgaon 3,5,254517,256834,256834,2317,2317,10,10,Bangladesh Nationalist Party - BNP,131887,Md. Zahidur Rahman,132797,910
+Dinajpur 1,6,302221,304095,304095,1874,1874,6,6,Bangladesh Nationalist Party - BNP,178489,Md. Manzurul Islam,179314,825
+Dinajpur 2,7,269107,271205,275900,2098,6793,8,8,Bangladesh Nationalist Party - BNP,138878,Md. Sadik Riyaz,144317,5439
+Dinajpur 3,8,280512,283628,283628,3116,3116,8,8,Bangladesh Nationalist Party - BNP,139207,Syed Jahangir Alam,140608,1401
+Dinajpur 4,9,298034,300624,300624,2590,2590,4,4,Bangladesh Nationalist Party - BNP,165577,Md. Akhtaruzzaman Mia,166717,1140
+Dinajpur 5,10,330053,333045,333045,2992,2992,7,7,Independent,113650,A. Z. M. Rezwanul Haque,114484,834
+Dinajpur 6,11,397922,401188,401188,3266,3266,7,7,Bangladesh Nationalist Party - BNP,203887,Abu Jafar Md. Zahid Hossain,205118,1231
+Nilphamari 1,12,290779,293530,293530,2751,2751,8,8,Bangladesh Jamaat-e-Islami,149214,Md. Abdus Sattar,150824,1610
+Nilphamari 2,13,283845,285959,285959,2114,2114,6,6,Bangladesh Jamaat-e-Islami,145202,Al Faruq Abdul Latif,146430,1228
+Nilphamari 3,14,202009,203874,203874,1865,1865,4,4,Bangladesh Jamaat-e-Islami,108560,Obaidullah Salafi,109686,1126
+Nilphamari 4,15,287879,290197,290397,2318,2518,9,9,Bangladesh Jamaat-e-Islami,124865,Abdul Muttakim,126222,1357
+Lalmonirhat 1,16,282613,284981,284981,2368,2368,9,9,Bangladesh Nationalist Party - BNP,137677,Md. Hasan Razib Prodhan,138686,1009
+Lalmonirhat 2,17,271796,241198,241198,-30598,-30598,7,7,Bangladesh Nationalist Party - BNP,123343,Md. Rokon Uddin Babul,123946,603
+Lalmonirhat 3,18,201051,201656,202622,605,1571,6,6,Bangladesh Nationalist Party - BNP,138691,Asadul Habib Dulu,139657,966
+Rangpur 1,19,220874,214495,214495,-6379,-6379,5,6,Bangladesh Jamaat-e-Islami,145543,Md. Raihan Siraji,145088,-455
+Rangpur 2,20,253874,65176,84869,-188698,-169005,5,5,Bangladesh Jamaat-e-Islami,134187,A. T. M. Azharul Islam,43076,-91111
+Rangpur 3,21,313919,269507,298338,-44412,-15581,8,8,Bangladesh Jamaat-e-Islami,175827,Md. Mahbubur Rahman (Belal),175827,0
+Rangpur 4,22,326770,288062,291029,-38708,-35741,9,8,National Citizens Party - NCP,147947,Akhter Hossain,149966,2019
+Rangpur 5,23,308813,304464,306642,-4349,-2171,10,10,Bangladesh Jamaat-e-Islami,174149,Md. Golam Rabbani,176411,2262
+Rangpur 6,24,239898,235809,237831,-4089,-2067,8,8,Bangladesh Jamaat-e-Islami,118890,Md. Nurul Amin,120128,1238
+Gaibandha 1,29,240833,191669,227026,-49164,-13807,8,8,Bangladesh Jamaat-e-Islami,138945,Md. Mazedur Rahman,140726,1781
+Gaibandha 2,30,239881,239881,242148,0,2267,7,7,Bangladesh Jamaat-e-Islami,121073,Md. Abdul Karim,122630,1557
+Gaibandha 3,31,309352,303321,306737,-6031,-2615,10,10,Bangladesh Jamaat-e-Islami,160552,Abul Kauchar Mohammad Nazrul Islam,162457,1905
+Gaibandha 4,32,285505,282510,285269,-2995,-236,6,6,Bangladesh Nationalist Party - BNP,141712,Mohammad Shamim Qaiser,142772,1060
+Gaibandha 5,33,213252,208261,210115,-4991,-3137,9,9,Bangladesh Jamaat-e-Islami,87913,Md. Abdul Wareth,89274,1361
+Chapainawabganj 1,43,368767,373757,373757,4990,4990,6,6,Bangladesh Jamaat-e-Islami,203442,Md. Keramat Ali,206893,3451
+Chapainawabganj 2,44,332560,336216,336216,3656,3656,5,5,Bangladesh Jamaat-e-Islami,168821,Md. Mizanur Rahman,171227,2406
+Chapainawabganj 3,45,312933,318495,318495,5562,5562,5,5,Bangladesh Jamaat-e-Islami,185166,Md. Nurul Islam,189640,4474
+Naogaon 1,46,356567,359069,359069,2502,2502,5,5,Bangladesh Nationalist Party - BNP,173043,Md. Mostafizur Rahman,173864,821
+Naogaon 2,47,276991,278639,278739,1648,1748,3,3,Bangladesh Jamaat-e-Islami,140447,Md. Enamul Haque,141526,1079
+Naogaon 3,48,311152,314202,314202,3050,3050,8,8,Bangladesh Nationalist Party - BNP,165646,Md. Fazle Huda,166889,1243
+Naogaon 4,49,234610,236470,236474,1860,1864,6,6,Bangladesh Nationalist Party - BNP,133191,Ekramul Bari Tipu,133928,737
+Naogaon 5,50,238502,234105,241150,-4397,2648,5,5,Bangladesh Nationalist Party - BNP,128366,Md. Zahidul Islam Dhalu,129385,1019
+Naogaon 6,51,225787,228521,228521,2734,2734,5,5,Bangladesh Nationalist Party - BNP,108070,Sheikh Md. Rezaul Islam,108866,796
+Rajshahi 1,52,340920,343858,343858,2938,2938,5,5,Bangladesh Jamaat-e-Islami,169784,Md. Mujibur Rahman,171786,2002
+Rajshahi 2,53,227761,231442,231452,3681,3691,6,6,Bangladesh Nationalist Party - BNP,126997,Md. Mizanur Rahman Minu,128546,1549
+Rajshahi 3,54,317098,319261,319261,2163,2163,6,6,Bangladesh Nationalist Party - BNP,175570,Mohammad Shafiqul Haque Milon,176318,748
+Rajshahi 4,55,224580,227116,227116,2536,2536,4,4,Bangladesh Jamaat-e-Islami,113567,Md. Abdul Bari Sardar,115226,1659
+Rajshahi 5,56,236050,237798,237798,1748,1748,7,7,Bangladesh Nationalist Party - BNP,152677,Professor Nazrul Islam,153425,748
+Rajshahi 6,57,243242,246195,246195,2953,2953,4,4,Bangladesh Nationalist Party - BNP,147359,Md. Abu Sayeed Chand,148672,1313
+Natore 1,58,267353,269338,269338,1985,1985,10,11,Bangladesh Nationalist Party - BNP,102197,Farzana Sharmin,102726,529
+Natore 2,59,296955,299336,299336,2381,2381,6,6,Bangladesh Nationalist Party - BNP,161896,M. Ruhul Quddus Talukder Dulu,162841,945
+Natore 3,60,227108,228563,228563,1455,1455,6,6,Bangladesh Nationalist Party - BNP,119170,Md. Anwarul Islam,119768,598
+Natore 4,61,310878,312840,312840,1962,1962,5,5,Bangladesh Nationalist Party - BNP,169847,Md. Abdul Aziz,170551,704
+Sirajganj 1,62,227882,229416,229416,1534,1534,6,6,Bangladesh Nationalist Party - BNP,116061,Md. Selim Reza,116613,552
+Sirajganj 2,63,318050,320766,320766,2716,2716,7,7,Bangladesh Nationalist Party - BNP,176585,Iqbal Hassan Mahmud,177578,993
+Sirajganj 3,64,291961,293896,293896,1935,1935,4,4,Bangladesh Nationalist Party - BNP,173514,Md. Aynul Haque,174430,916
+Sirajganj 4,65,324253,327274,327274,3021,3021,5,5,Bangladesh Nationalist Party - BNP,160458,Md. Rafiqul Islam Khan,161872,1414
+Sirajganj 5,66,246828,241794,241794,-5034,-5034,6,6,Bangladesh Nationalist Party - BNP,134197,Md. Amirul Islam Khan,134989,792
+Sirajganj 6,67,279901,282810,282810,2909,2909,11,11,Bangladesh Nationalist Party - BNP,170129,M. A. Muhit,171508,1379
+Pabna 1,68,234257,236366,236366,2109,2109,4,4,Bangladesh Jamaat-e-Islami,128467,Mohammad Najibur Rahman,129974,1507
+Pabna 2,69,297907,301125,301125,3218,3218,5,5,Bangladesh Nationalist Party - BNP,213840,A. K. M. Selim Reza Habib,215406,1566
+Pabna 3,70,332618,335128,335128,2510,2510,8,8,Bangladesh Jamaat-e-Islami,145837,Muhammad Ali Ashgar,147475,1638
+Pabna 4,71,301709,303777,303807,2068,2098,7,7,Bangladesh Jamaat-e-Islami,136287,Md. Abu Taleb Mondol,137675,1388
+Pabna 5,72,349031,351629,351629,2598,2598,4,4,Bangladesh Nationalist Party - BNP,181169,Md. Shamshur Rahman Shimul Biswas,181925,756
+Meherpur 1,73,228419,230933,230933,2514,2514,4,4,Bangladesh Jamaat-e-Islami,121461,Md. Tajuddin Khan,123271,1810
+Meherpur 2,74,181904,182294,184085,390,2181,3,3,Bangladesh Jamaat-e-Islami,94658,Md. Nazmul Huda,96306,1648
+Jhenaidah 1,81,229534,232324,232324,2790,2790,5,5,Bangladesh Nationalist Party - BNP,171756,Md. Asaduzzaman,173381,1625
+Jhenaidah 2,82,372996,378148,378148,5152,5152,6,6,Bangladesh Jamaat-e-Islami,192352,Ali Azam Md. Abu Bakar,195702,3350
+Jhenaidah 3,83,325916,329886,329886,3970,3970,4,4,Bangladesh Jamaat-e-Islami,173154,Md. Motiyar Rahman,175857,2703
+Jhenaidah 4,84,240816,244114,244150,3298,3334,6,6,Bangladesh Jamaat-e-Islami,104081,Md. Abu Talib,105999,1918
+Jashore 1,85,213480,215801,215801,2321,2321,4,4,Bangladesh Jamaat-e-Islami,117377,Muhammad Azizur Rahman.,119093,1716
+Jashore 2,86,329870,334891,334891,5021,5021,8,8,Bangladesh Jamaat-e-Islami,177472,Mohammad Mosleh Uddin Farid,180965,3493
+Jashore 3,87,403186,408053,408053,4867,4867,6,6,Bangladesh Nationalist Party - BNP,199647,Anindya Islam Amit,201339,1692
+Jashore 4,88,321960,325283,325283,3323,3323,8,8,Bangladesh Jamaat-e-Islami,174621,Md. Gholam Rashul,176912,2291
+Jashore 5,89,277937,281544,281544,3607,3607,6,6,Bangladesh Jamaat-e-Islami,130596,Gazi Enamul Haque,132876,2280
+Jashore 6,90,173231,175322,175322,2091,2091,5,5,Bangladesh Jamaat-e-Islami,91018,Md. Mokhtar Ali,92234,1216
+Bagerhat 1,95,242390,244871,244871,2481,2481,8,8,Bangladesh Jamaat-e-Islami,116180,Md. Mashirur Rahman Khan,117527,1347
+Bagerhat 2,96,235071,237396,237396,2325,2325,4,4,Bangladesh Jamaat-e-Islami,116370,Sheikh Manjurul Haque (Rahad),117709,1339
+Bagerhat 3,97,189451,190445,191830,994,2379,5,5,Bangladesh Nationalist Party - BNP,102193,Sheikh Faridul Islam,103711,1518
+Bagerhat 4,98,222047,224585,224585,2538,2538,6,6,Bangladesh Jamaat-e-Islami,114417,Md. Abdul Alim,116067,1650
+Khulna 1,99,204284,205795,205795,1511,1511,12,12,Bangladesh Nationalist Party - BNP,120092,Ameer Ejaz Khan,121352,1260
+Khulna 2,100,186430,189284,189284,2854,2854,3,3,Bangladesh Jamaat-e-Islami,92199,Sheikh Jahangir Hossain Helal,93789,1590
+Khulna 3,101,145134,147966,147966,2832,2832,10,10,Bangladesh Nationalist Party - BNP,73570,Rakibul Islam,74845,1275
+Khulna 4,102,243845,246896,246896,3051,3051,4,4,Bangladesh Nationalist Party - BNP,121623,Azizul Baree Helal,123162,1539
+Khulna 5,103,294931,298209,298209,3278,3278,4,4,Bangladesh Nationalist Party - BNP,147625,Mohammad Ali Asghar,148854,1229
+Khulna 6,104,279571,282672,282672,3101,3101,5,5,Bangladesh Jamaat-e-Islami,148956,Md. Abul Kalam Azad,150724,1768
+Satkhira 1,105,364910,369097,369097,4187,4187,5,5,Bangladesh Jamaat-e-Islami,190967,Md. Izzat Ullah,193772,2805
+Satkhira 2,106,385172,389823,389823,4651,4651,5,5,Bangladesh Jamaat-e-Islami,263503,Muhammad Abdul Khaliq,266959,3456
+Satkhira 3,107,346879,350233,350233,3354,3354,6,6,Bangladesh Jamaat-e-Islami,182165,Hafez Muhaj Rabiul Bashar,184233,2068
+Satkhira 4,108,196772,198383,198383,1611,1611,4,4,Bangladesh Jamaat-e-Islami,105805,G. M. Nazrul Islam,106913,1108
+Barguna 1,109,279289,283649,283649,4360,4360,4,4,Islamic Andolan Bangladesh,138510,Md. Ali Ullah,140291,1781
+Barguna 2,110,190896,194622,194622,3726,3726,9,9,Bangladesh Nationalist Party - BNP,89428,Md. Nurul Islam,90643,1215
+Bhola 1,115,205671,196496,208481,-9175,2810,8,8,Bangladesh Jatiya Party - BJP,104462,Andaleeve Rahman,105543,1081
+Bhola 2,116,212333,215422,215422,3089,3089,8,8,Bangladesh Nationalist Party - BNP,118131,Md. Hafiz Ibrahim,119085,954
+Bhola 3,117,210055,212153,212153,2098,2098,6,6,Bangladesh Nationalist Party - BNP,145127,"Hafiz Uddin Ahmed, Bir Bikram",145990,863
+Bhola 4,118,294100,296927,297427,2827,3327,7,7,Bangladesh Nationalist Party - BNP,188390,Mohammad Nurul Islam,189351,961
+Barishal 1,119,196851,199585,199585,2734,2734,5,5,Bangladesh Nationalist Party - BNP,99418,Zahir Uddin Swapon,100552,1134
+Barishal 2,120,222654,226273,226273,3619,3619,8,8,Bangladesh Nationalist Party - BNP,140085,Sardar Sarfuddin Ahmed,141622,1537
+Barishal 3,121,170347,173705,173705,3358,3358,6,6,Bangladesh Nationalist Party - BNP,79771,Zainul Abedin,80930,1159
+Barishal 4,122,237213,240506,240506,3293,3293,5,5,Bangladesh Nationalist Party - BNP,127192,Md. Rajib Ahsan,128322,1130
+Barishal 5,123,249815,254379,254379,4564,4564,6,6,Bangladesh Nationalist Party - BNP,133008,Md. Mojibur Rahman Sarwar,135146,2138
+Barishal 6,124,165162,168100,168100,2938,2938,6,6,Bangladesh Nationalist Party - BNP,81087,Abul Hossain Khan,82217,1130
+Jhalokathi 1,125,126722,129000,129000,2278,2278,10,10,Bangladesh Nationalist Party - BNP,61216,Rafiqul Islam Jamal,62010,794
+Jhalokathi 2,126,209049,212164,212164,3115,3115,8,8,Bangladesh Nationalist Party - BNP,112279,Israt Sultana Ilein Bhutto,113419,1140
+Pirojpur 1,127,236736,239764,239764,3028,3028,2,2,Bangladesh Jamaat-e-Islami,130624,Masud Sayeedi,132659,2035
+Pirojpur 2,128,227506,230238,230238,2732,2732,7,7,Bangladesh Nationalist Party - BNP,104413,Ahmad Sohail Manzoor,105185,772
+Pirojpur 3,129,134683,136987,136987,2304,2304,6,6,Bangladesh Nationalist Party - BNP,63138,Md. Ruhul Amin Dulal,63791,653
+Jamalpur 1,138,274580,271476,271476,-3104,-3104,5,5,Bangladesh Nationalist Party - BNP,172568,M. Rashiduzzaman Millat,173656,1088
+Jamalpur 2,139,158900,160181,160181,1281,1281,4,4,Bangladesh Nationalist Party - BNP,95378,"A. , E. , Sultan Mahmud Babu",95860,482
+Jamalpur 3,140,312893,316146,316146,3253,3253,9,9,Bangladesh Nationalist Party - BNP,206214,Md. Mostafizur Rahman Babul,207412,1198
+Jamalpur 4,141,194048,195731,195731,1683,1683,6,6,Bangladesh Nationalist Party - BNP,146546,Md. Faridul Kabir Talukder,147406,860
+Jamalpur 5,142,320407,322457,322457,2050,2050,10,8,Bangladesh Nationalist Party - BNP,198292,Shah Md. Waresh Ali Mamun,199344,1052
+Sherpur 1,143,266869,269980,269980,3111,3111,6,6,Bangladesh Jamaat-e-Islami,125941,Md. Rashedul Islam Rashed,127811,1870
+Sherpur 2,144,229774,232722,232722,2948,2948,4,4,Bangladesh Nationalist Party - BNP,117441,Mohammad Fahim Chowdhury,118472,1031
+Netrakona 1,157,251496,253829,253929,2333,2433,6,6,Bangladesh Nationalist Party - BNP,156924,Barrister Kaiser Kamal,158434,1510
+Netrakona 2,158,257275,260851,276071,3576,18796,5,6,Bangladesh Nationalist Party - BNP,169140,Md. Anwarul Haque,171399,2259
+Netrakona 3,159,229723,232678,232678,2955,2955,6,6,Bangladesh Nationalist Party - BNP,117318,Rafiqul Islam Hilali,118469,1151
+Netrakona 4,160,204095,205730,206307,1635,2212,5,5,Bangladesh Nationalist Party - BNP,159167,Md. Lutfuzzaman Babar,160801,1634
+Netrakona 5,161,163233,169930,169930,6697,6697,3,3,Bangladesh Jamaat-e-Islami,81252,Machum Mustafa,82177,925
+Kishoreganj 1,162,262385,265551,265551,3166,3166,8,8,Bangladesh Nationalist Party - BNP,122945,Md. Mazharul Islam,124035,1090
+Kishoreganj 2,163,268412,272616,272616,4204,4204,7,8,Bangladesh Nationalist Party - BNP,142616,Advocate Md. Jalal Uddin,143669,1053
+Kishoreganj 3,164,226659,228764,228764,2105,2105,7,7,Bangladesh Nationalist Party - BNP,111638,Dr. Muhammad Osman Farooq,112466,828
+Kishoreganj 4,165,198151,197695,199878,-456,1727,8,8,Bangladesh Nationalist Party - BNP,131851,Md. Fazlur Rahman,132553,702
+Kishoreganj 5,166,204948,206782,206782,1834,1834,8,8,Independent,79210,Sheikh Mujibur Rahman Iqbal,79604,394
+Kishoreganj 6,167,235414,237990,237990,2576,2576,9,9,Bangladesh Nationalist Party - BNP,185795,Md. Shariful Alam,187159,1364
+Manikganj 1,168,295005,298463,298463,3458,3458,7,7,Bangladesh Nationalist Party - BNP,136836,S. A. Jinnah Kabir,137773,937
+Manikganj 2,169,265248,268235,268235,2987,2987,4,4,Bangladesh Nationalist Party - BNP,174631,Moinul Islam Khan,175776,1145
+Manikganj 3,170,263154,266032,266032,2878,2878,9,9,Bangladesh Nationalist Party - BNP,166174,Afroza Khanam,167345,1171
+Dhaka 1,174,294287,299523,299523,5236,5236,6,6,Bangladesh Nationalist Party - BNP,172402,Khondaker Abu Ashfaque,173781,1379
+Dhaka 2,175,247976,250198,250198,2222,2222,3,3,Bangladesh Nationalist Party - BNP,163020,Md. Amanullah Aman,163793,773
+Dhaka 3,176,189636,191109,191118,1473,1482,10,10,Bangladesh Nationalist Party - BNP,98785,Goyasawar Chandra Roy,99163,378
+Dhaka 4,177,159538,162069,162069,2531,2531,8,8,Bangladesh Jamaat-e-Islami,75683,Sayed Joynul Abedin,77367,1684
+Dhaka 5,178,198351,201370,201370,3019,3019,11,11,Bangladesh Jamaat-e-Islami,94668,Mohammed Kamal Hossain,96641,1973
+Dhaka 6,179,135389,137179,137179,1790,1790,7,7,Bangladesh Nationalist Party - BNP,78142,Ishraque Hossain,78850,708
+Dhaka 7,180,224226,226175,226175,1949,1949,11,11,Bangladesh Nationalist Party - BNP,104091,Hamidur Rahman,104666,575
+Dhaka 8,181,111975,117667,117667,5692,5692,11,11,Bangladesh Nationalist Party - BNP,56552,Mirza Abbas Uddin Ahmed,59366,2814
+Dhaka 9,182,214245,217688,217688,3443,3443,12,12,Bangladesh Nationalist Party - BNP,110111,Habibur Rashid,111212,1101
+Dhaka 10,183,161920,157572,157572,-4348,-4348,10,11,Bangladesh Nationalist Party - BNP,79051,Sheikh Rabiul Alam,80436,1385
+Dhaka 11,184,190053,192853,192853,2800,2800,10,10,National Citizens Party - NCP,92038,Md. Nahid Islam,93872,1834
+Dhaka 12,185,119805,84736,122268,-35069,2463,15,15,Bangladesh Jamaat-e-Islami,52127,Md. Saiful Alam,53773,1646
+Dhaka 13,186,174504,178267,178267,3763,3763,9,9,Bangladesh Nationalist Party - BNP,86804,Bobby Hajjaj,88387,1583
+Dhaka 14,187,203584,206956,206956,3372,3372,12,12,Bangladesh Jamaat-e-Islami,98912,Mir Ahmad Bin Quasem,101113,2201
+Dhaka 15,188,147593,152484,152484,4891,4891,8,8,Bangladesh Jamaat-e-Islami,82364,Md. Shafiqur Rahman,85131,2767
+Dhaka 16,189,178063,180799,180799,2736,2736,11,11,Bangladesh Jamaat-e-Islami,87027,Md. Abdul Baten,88828,1801
+Dhaka 17,190,142007,145677,145677,3670,3670,12,12,Bangladesh Nationalist Party - BNP,71443,Tarique Rahman,72699,1256
+Dhaka 18,191,265383,269989,269989,4606,4606,10,10,Bangladesh Nationalist Party - BNP,143037,S. M. Jahangir Hossain,144715,1678
+Dhaka 19,192,331585,314259,314259,-17326,-17326,8,8,Bangladesh Nationalist Party - BNP,191327,Dewan Mohammad Salauddin,190976,-351
+Dhaka 20,193,229606,233380,233380,3774,3774,6,6,Bangladesh Nationalist Party - BNP,160428,Md. Tamiz Uddin,162504,2076
+Gazipur 1,194,371557,374494,374494,2937,2937,8,8,Bangladesh Nationalist Party - BNP,207622,Md. Mojibur Rahman,208688,1066
+Gazipur 2,195,348174,350983,350983,2809,2809,12,12,Bangladesh Nationalist Party - BNP,187558,M. Manjurul Karim Roni,188606,1048
+Gazipur 3,196,293168,295692,295692,2524,2524,7,7,Bangladesh Nationalist Party - BNP,161258,S. M. Rafiqul Islam,162343,1085
+Gazipur 4,197,195949,199554,199554,3605,3605,8,8,Bangladesh Jamaat-e-Islami,99271,Salah Uddin,101779,2508
+Gazipur 5,198,223111,225552,225552,2441,2441,7,7,Bangladesh Nationalist Party - BNP,133063,A. K. M. Fazlul Haque Milon,133869,806
+Narsingdi 1,199,270494,270720,273139,226,2645,8,8,Bangladesh Nationalist Party - BNP,160676,Khairul Kabir Khokon,161405,729
+Narsingdi 2,200,168968,170427,170427,1459,1459,6,6,Bangladesh Nationalist Party - BNP,92352,Dr. Abdul Moin Khan,92739,387
+Narsingdi 3,201,165303,167817,167817,2514,2514,8,8,Bangladesh Nationalist Party - BNP,81415,Manzoor Elahi,82061,646
+Narsingdi 4,202,250062,254035,254035,3973,3973,9,9,Bangladesh Nationalist Party - BNP,161912,Sardar Md. Sakhawat Hossain,163392,1480
+Narsingdi 5,203,243450,247335,247335,3885,3885,10,10,Bangladesh Nationalist Party - BNP,136602,Md. Ashraf Uddin,137690,1088
+Faridpur 1,211,315975,318898,319625,2923,3650,8,9,Bangladesh Jamaat-e-Islami,152610,Md. Ilias Mollah,154772,2162
+Faridpur 2,212,212735,214299,214299,1564,1564,6,6,Bangladesh Nationalist Party - BNP,120909,Shama Obayed Islam,121694,785
+Faridpur 3,213,276702,279153,279153,2451,2451,6,6,Bangladesh Nationalist Party - BNP,147846,Nayab Yusuf Ahmed,148545,699
+Faridpur 4,214,271353,274992,274996,3639,3643,8,8,Bangladesh Nationalist Party - BNP,126532,Md. Shahidul Islam,127443,911
+Gopalganj 1,215,189577,224434,224434,34857,34857,9,9,Bangladesh Nationalist Party - BNP,68867,Md. Selimuzzaman Mollya,69462,595
+Gopalganj 2,216,146438,147991,147991,1553,1553,13,13,Bangladesh Nationalist Party - BNP,39617,K. M. Babar,40048,431
+Gopalganj 3,217,130906,132465,132465,1559,1559,8,8,Bangladesh Nationalist Party - BNP,60166,S. M. Zilany,60991,825
+Madaripur 3,220,192836,196762,196762,3926,3926,5,5,Bangladesh Nationalist Party - BNP,95174,Anishur Rahman,96188,1014
+Sunamganj 1,224,253366,255924,255924,2558,2558,3,3,Bangladesh Nationalist Party - BNP,160515,Kamruzzaman Kamrul,161774,1259
+Sunamganj 2,225,162929,163974,163974,1045,1045,3,3,Bangladesh Nationalist Party - BNP,99132,Md. Nashir Chowdhury,99522,390
+Sunamganj 3,226,158389,159951,159951,1562,1562,7,7,Bangladesh Nationalist Party - BNP,96666,Mohammad Kaishar Ahmed,97313,647
+Sunamganj 4,227,201528,203858,203858,2330,2330,5,5,Bangladesh Nationalist Party - BNP,97404,Nurul Islam,98092,688
+Sunamganj 5,228,254643,258271,258271,3628,3628,5,5,Bangladesh Nationalist Party - BNP,150810,Kalim Uddin Ahmed,151915,1105
+Sylhet 1,229,310328,312393,314620,2065,4292,8,8,Bangladesh Nationalist Party - BNP,174517,Khandaker Abdul Muktadir,176936,2419
+Sylhet 2,230,157568,156591,156591,-977,-977,5,5,Bangladesh Nationalist Party - BNP,116697,Deleted by Tahsina Rushdie,117956,1259
+Sylhet 3,231,196259,267483,268678,71224,72419,6,6,Bangladesh Nationalist Party - BNP,114255,Mohammad Abdul Malik,115450,1195
+Sylhet 4,232,260479,258237,258247,-2242,-2232,5,5,Bangladesh Nationalist Party - BNP,185703,Ariful Haque Chowdhury,186846,1143
+Sylhet 5,233,201933,149129,149129,-52804,-52804,4,4,Khelafat Majlis,76221,Mohammad Abul Hasan,79355,3134
+Sylhet 6,234,232519,211486,211486,-21033,-21033,5,5,Bangladesh Nationalist Party - BNP,108612,Emran Ahmad Chowdhury,109917,1305
+Moulvibazar 1,235,185256,181295,181295,-3961,-3961,6,6,Bangladesh Nationalist Party - BNP,97534,Nasir Uddin Ahmed,98282,748
+Moulvibazar 2,236,161450,141839,141839,-19611,-19611,8,8,Bangladesh Nationalist Party - BNP,67721,Md. Shawkatul Islam,88381,20660
+Moulvibazar 3,237,236699,234393,235754,-2306,-945,4,4,Bangladesh Nationalist Party - BNP,155342,Nasser Rahman,156757,1415
+Moulvibazar 4,238,258872,252329,255063,-6543,-3809,6,6,Bangladesh Nationalist Party - BNP,169608,Md. Mujibur Rahman Chowdhury,170877,1269
+Habiganj 1,239,206663,208684,208684,2021,2021,5,5,Bangladesh Nationalist Party - BNP,111073,Reza Kibria,111999,926
+Habiganj 2,240,194023,195577,195577,1554,1554,5,5,Bangladesh Nationalist Party - BNP,125971,Abu Mansoor Sakhawat Hasan,126583,612
+Habiganj 3,241,206953,208883,208883,1930,1930,6,6,Bangladesh Nationalist Party - BNP,141521,Alhaj Md. G. K. Gouch,142348,827
+Habiganj 4,242,299070,301965,301965,2895,2895,9,9,Bangladesh Nationalist Party - BNP,186678,S. M. Faisal,188072,1394
+Cumilla 1,249,239274,244890,244890,5616,5616,9,9,Bangladesh Nationalist Party - BNP,140305,Dr. Khandaker Mosharraf Hossain,141440,1135
+Cumilla 2,250,196576,201414,201414,4838,4838,6,6,Bangladesh Nationalist Party - BNP,76268,Md. Selim Bhuiyan,77037,769
+Cumilla 3,251,267807,274507,274507,6700,6700,9,9,Bangladesh Nationalist Party - BNP,157800,Qazi Shah Mofazzal Hossain (Kaikobad),159291,1491
+Cumilla 4,252,213015,219375,219375,6360,6360,5,5,National Citizens Party - NCP,160527,Md. Abul Hasnat,166583,6056
+Cumilla 5,253,255743,264184,264224,8441,8481,10,10,Bangladesh Nationalist Party - BNP,132538,Md. Jashim Uddin,134485,1947
+Cumilla 6,254,323747,330017,331614,6270,7867,9,9,Bangladesh Nationalist Party - BNP,199541,Md. Monirul Haque Chowdhury,201706,2165
+Cumilla 7,255,177680,181056,181056,3376,3376,5,5,Independent,90819,Atiqul Alam,91690,871
+Cumilla 8,256,215463,221093,221096,5630,5633,8,8,Bangladesh Nationalist Party - BNP,167431,Zakaria Taher,169178,1747
+Cumilla 9,257,294916,302665,302665,7749,7749,8,8,Bangladesh Nationalist Party - BNP,168108,Md. Abul Kalam,170008,1900
+Cumilla 10,258,287110,296747,296747,9637,9637,7,7,Bangladesh Nationalist Party - BNP,161847,Md. Mobasher Alam Bhuiyan,163667,1820
+Cumilla 11,259,213894,213894,213894,0,0,7,7,Bangladesh Jamaat-e-Islami,133308,Syed Abdullah Mohammed Taher,133308,0
+Chandpur 1,260,203526,208969,208969,5443,5443,6,6,Bangladesh Nationalist Party - BNP,131329,A. N. M. Ehsanul Hoque Milon,133032,1703
+Chandpur 2,261,239857,244864,244864,5007,5007,8,8,Bangladesh Nationalist Party - BNP,170583,Md. Jalal Uddin,172506,1923
+Chandpur 3,262,277710,283839,283839,6129,6129,7,7,Bangladesh Nationalist Party - BNP,163610,Sheikh Farid Ahmed,165404,1794
+Chandpur 4,263,210033,216493,216493,6460,6460,8,8,Independent,73599,Md. Abdul Hannan,74175,576
+Chandpur 5,264,275763,282963,282963,7200,7200,7,7,Bangladesh Nationalist Party - BNP,182588,Md. Mominul Haque,185404,2816
+Feni 1,265,204633,212495,212495,7862,7862,7,7,Bangladesh Nationalist Party - BNP,117231,Munshi Rafiqul Alam,119904,2673
+Feni 2,266,213536,215422,217033,1886,3497,11,11,Bangladesh Nationalist Party - BNP,128206,Zainal Abedin,131210,3004
+Feni 3,267,264747,275622,276022,10875,11275,8,8,Bangladesh Nationalist Party - BNP,154229,Mr. Abdul Awal Mintu,157825,3596
+Cox's Bazar 1,294,349540,356275,356275,6735,6735,3,3,Bangladesh Nationalist Party - BNP,219758,Salahuddin Ahmed,222019,2261
+Cox's Bazar 2,295,224170,227185,227185,3015,3015,5,5,Bangladesh Nationalist Party - BNP,124660,Alamgir Muhammad Mahfuz Ullah Farid,125543,883
+Cox's Bazar 3,296,343486,350988,350988,7502,7502,6,6,Bangladesh Nationalist Party - BNP,180507,Lutfur Rahman,182096,1589
+Cox's Bazar 4,297,247782,250332,250332,2550,2550,4,4,Bangladesh Nationalist Party - BNP,123021,Shahjahan Chowdhury,123582,561
+Rangamati 1,299,260598,263647,263647,3049,3049,7,7,Bangladesh Nationalist Party - BNP,199855,Deepen Dewan,201544,1689
