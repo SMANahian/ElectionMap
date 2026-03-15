@@ -10,6 +10,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-minimap@3.6.1/dist/Control.MiniMap.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet-minimap@3.6.1/dist/Control.MiniMap.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -255,6 +258,43 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
 .div-row{cursor:pointer;border-radius:6px;padding:4px 6px;margin:4px -6px;transition:all var(--transition-fast)}
 .div-row:hover{background:var(--accent-soft)}
 .div-row.active-div{background:var(--accent-soft);border:1px solid rgba(124,108,255,.2)}
+
+/* Neighbors */
+.neighbors-section{margin-top:14px;border-top:1px solid var(--border);padding-top:12px}
+.neighbors-title{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--text-tertiary);margin-bottom:10px;font-weight:700}
+.neighbor-row{display:flex;align-items:center;gap:8px;padding:6px 8px;margin:3px -8px;border-radius:6px;cursor:pointer;transition:all var(--transition-fast)}
+.neighbor-row:hover{background:var(--accent-soft)}
+.neighbor-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.neighbor-info{flex:1;min-width:0}
+.neighbor-name{font-size:11px;font-weight:600;color:var(--text-primary);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.neighbor-detail{font-size:9px;color:var(--text-tertiary);display:flex;gap:8px;margin-top:1px}
+.neighbor-winner{font-size:9px;font-weight:700;flex-shrink:0}
+
+/* District toggle */
+.view-toggle{display:flex;gap:4px;margin-bottom:16px;background:var(--card-bg);border-radius:var(--radius-sm);padding:3px;border:1px solid var(--border)}
+.view-toggle-btn{flex:1;padding:6px 0;font-size:10px;font-weight:700;text-align:center;border:none;border-radius:7px;cursor:pointer;background:transparent;color:var(--text-tertiary);font-family:inherit;transition:all var(--transition-fast);letter-spacing:.3px}
+.view-toggle-btn.active{background:var(--accent);color:#fff;box-shadow:0 2px 8px rgba(124,108,255,.3)}
+.view-toggle-btn:hover:not(.active){color:var(--text-secondary);background:var(--card-bg-hover)}
+
+/* Screenshot button */
+.screenshot-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;font-size:10px;font-weight:600;border:1px solid var(--border);border-radius:var(--radius-sm);cursor:pointer;background:var(--card-bg);color:var(--text-secondary);font-family:inherit;transition:all var(--transition-fast);letter-spacing:.3px}
+.screenshot-btn:hover{background:var(--card-bg-hover);color:var(--text-primary);border-color:var(--border-light)}
+.screenshot-btn svg{width:14px;height:14px}
+.toolbar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+
+/* Mini map override */
+.leaflet-control-minimap{border:2px solid var(--border)!important;border-radius:var(--radius-sm)!important;box-shadow:var(--shadow-lg)!important}
+.leaflet-control-minimap .leaflet-container{background:#1a1a2e!important}
+
+/* Comparison mode */
+#compare-container{display:none;flex:1;height:100vh}
+#compare-container.active{display:flex}
+#compare-container.active~#map{display:none}
+.compare-pane{flex:1;height:100%;position:relative}
+.compare-pane:first-child{border-right:2px solid var(--accent)}
+.compare-label{position:absolute;top:10px;left:50%;transform:translateX(-50%);z-index:1000;background:var(--sidebar-bg);color:var(--text-primary);padding:5px 14px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:.5px;border:1px solid var(--border);box-shadow:var(--shadow-md);text-transform:uppercase;pointer-events:none}
+.compare-select{position:absolute;top:10px;right:10px;z-index:1000;background:var(--sidebar-bg);color:var(--text-primary);padding:6px 10px;border-radius:var(--radius-xs);font-size:11px;font-weight:600;border:1px solid var(--border);font-family:inherit;cursor:pointer}
+.compare-select option{background:var(--sidebar-bg);color:var(--text-primary)}
 </style>
 </head>
 <body>
@@ -294,6 +334,16 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
     <div id="selected-seat" role="region" aria-label="Selected constituency">
       <button class="close-btn" aria-label="Close">&times;</button>
       <div id="selected-seat-content"></div>
+    </div>
+
+    <div class="view-toggle" id="view-toggle">
+      <button class="view-toggle-btn active" data-view="constituency">Constituency</button>
+      <button class="view-toggle-btn" data-view="district">District</button>
+    </div>
+
+    <div class="toolbar">
+      <button class="screenshot-btn" id="screenshot-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M3 9h2m14 0h2M9 3v2m0 14v2m6-18v2m0 14v2M3 15h2m14 0h2"/></svg>Screenshot</button>
+      <button class="screenshot-btn" id="compare-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="18" rx="1"/><rect x="14" y="3" width="7" height="18" rx="1"/></svg>Compare</button>
     </div>
 
     <div class="section">
@@ -354,6 +404,18 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
   </div>
 </div>
 <div id="map"></div>
+<div id="compare-container">
+  <div class="compare-pane" id="compare-left">
+    <div class="compare-label" id="compare-label-left"></div>
+    <select class="compare-select" id="compare-select-left"></select>
+    <div id="compare-map-left" style="width:100%;height:100%"></div>
+  </div>
+  <div class="compare-pane" id="compare-right">
+    <div class="compare-label" id="compare-label-right"></div>
+    <select class="compare-select" id="compare-select-right"></select>
+    <div id="compare-map-right" style="width:100%;height:100%"></div>
+  </div>
+</div>
 </div>
 
 <button id="sidebar-toggle">Show Results</button>
@@ -443,7 +505,9 @@ function getColor(v){if(v==null||isNaN(v))return"#222";var m=STAT_META[currentSt
 function getActiveRamp(){return STAT_META[currentStat].ramp}
 
 var currentStat="bnp_vs_eleven_party_alliance";
-var seatData={};var geojsonLayer=null;var legendControl=null;var selectedSeatKey=null;var seatLayers={};
+var seatData={};var neighborData={};var districtGeo=null;var districtData={};
+var geojsonLayer=null;var districtLayer=null;var legendControl=null;var selectedSeatKey=null;var seatLayers={};
+var currentView="constituency";var compareMode=false;
 
 // Dark basemap
 var map=L.map("map",{zoomSnap:0.25,zoomControl:false,attributionControl:true}).setView([23.5,90.3],7.5);
@@ -462,12 +526,17 @@ L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.p
 
 Promise.all([
   fetch("data/constituencies.geojson").then(function(r){return r.json()}),
-  fetch("data/seat_data.json").then(function(r){return r.json()})
+  fetch("data/seat_data.json").then(function(r){return r.json()}),
+  fetch("data/neighbors.json").then(function(r){return r.json()}).catch(function(){return{}}),
+  fetch("data/districts.geojson").then(function(r){return r.json()}).catch(function(){return null}),
+  fetch("data/district_data.json").then(function(r){return r.json()}).catch(function(){return{}})
 ]).then(function(res){
-  seatData=res[1];
+  seatData=res[1];neighborData=res[2];districtGeo=res[3];districtData=res[4];
   initGeoJSON(res[0]);
   addDivisionBorders(res[0]);
+  if(districtGeo)initDistrictLayer(districtGeo);
   if(geojsonLayer)map.fitBounds(geojsonLayer.getBounds().pad(0.02));
+  initMiniMap();
   updateAll();
   document.getElementById("loader").classList.add("hidden");
   setTimeout(function(){document.getElementById("loader").style.display="none"},700);
@@ -572,7 +641,38 @@ function selectSeat(key){
     });
     h+='</div>';
   }
+  // Neighboring seats
+  var nbrs=neighborData[key]||[];
+  if(nbrs.length){
+    h+='<div class="neighbors-section"><div class="neighbors-title">Neighboring Constituencies</div>';
+    nbrs.sort(function(a,b){
+      var sa=seatData[a],sb=seatData[b];
+      if(!sa)return 1;if(!sb)return -1;
+      return(sb.stats.victory_margin||0)-(sa.stats.victory_margin||0);
+    });
+    nbrs.forEach(function(nk){
+      var ns=seatData[nk];if(!ns)return;
+      var nws=PARTY_SHORT[ns.winner]||ns.winner||"?";
+      var nwc=PARTY_COLORS[ns.winner]||{fg:"#9090a0"};
+      h+='<div class="neighbor-row" data-seat="'+nk+'">';
+      h+='<div class="neighbor-dot" style="background:'+nwc.fg+'"></div>';
+      h+='<div class="neighbor-info"><div class="neighbor-name">'+ns.name+'</div>';
+      h+='<div class="neighbor-detail"><span>Turnout '+(ns.turnout*100).toFixed(1)+'%</span><span>Margin '+(ns.stats.victory_margin*100).toFixed(1)+'%</span></div></div>';
+      h+='<span class="neighbor-winner" style="color:'+nwc.fg+'">'+nws+'</span>';
+      h+='</div>';
+    });
+    h+='</div>';
+  }
   document.getElementById("selected-seat-content").innerHTML=h;
+  // Click handlers for neighbor rows
+  el.querySelectorAll(".neighbor-row").forEach(function(row){
+    row.addEventListener("click",function(){
+      var sk=row.getAttribute("data-seat");
+      selectSeat(sk);
+      var layer=seatLayers[sk];
+      if(layer)map.fitBounds(layer.getBounds().pad(0.5));
+    });
+  });
   el.classList.add("show");
 }
 
@@ -836,6 +936,239 @@ document.getElementById("division-breakdown").addEventListener("click",function(
     if(bounds.isValid())map.fitBounds(bounds.pad(0.1));
   }
 });
+
+// District layer
+function initDistrictLayer(geo){
+  districtLayer=L.geoJSON(geo,{
+    style:function(){return{weight:1.5,color:"#444",fillOpacity:0.88,fillColor:"#222"}},
+    onEachFeature:function(f,layer){
+      var key=f.properties.district;
+      layer._districtKey=key;
+      layer.on({
+        mouseover:function(e){e.target.setStyle({weight:2.5,color:"#666"});e.target.bringToFront()},
+        mouseout:function(e){e.target.setStyle({weight:1.5,color:"#444"})},
+        click:function(){
+          var dd=districtData[key];if(!dd)return;
+          // Show district info in selected seat panel
+          selectedSeatKey=null;
+          var el=document.getElementById("selected-seat");
+          var tw=dd.top_winner;var ws=PARTY_SHORT[tw]||tw||"?";
+          var wc=PARTY_COLORS[tw]||{bg:"rgba(144,144,160,.25)",fg:"#9090a0"};
+          var h='<div class="selected-seat-name">'+key+' District</div>';
+          h+='<div class="selected-seat-loc">'+dd.division+' Division &middot; '+dd.seat_count+' seats</div>';
+          h+='<div class="selected-seat-pills">';
+          h+='<span class="seat-pill seat-pill-winner" style="background:'+wc.bg+';color:'+wc.fg+'">'+ws+' leads</span>';
+          if(dd.stats.turnout!=null)h+='<span class="seat-pill seat-pill-stat">Turnout '+(dd.stats.turnout*100).toFixed(1)+'%</span>';
+          h+='</div>';
+          // Winner breakdown
+          if(dd.winner_counts){
+            var sorted=Object.entries(dd.winner_counts).sort(function(a,b){return b[1]-a[1]});
+            h+='<div class="candidate-list"><div class="candidate-list-title">Seats Won</div>';
+            sorted.forEach(function(e,i){
+              var pc=PARTY_COLORS[e[0]]||{fg:"#9090a0"};
+              var bw=(e[1]/dd.seat_count*100);
+              h+='<div class="cand-row"><div class="cand-info"><span class="cand-name">'+(PARTY_SHORT[e[0]]||e[0])+'</span><span class="cand-votes">'+e[1]+'</span></div>';
+              h+='<div class="cand-bar-bg"><div class="cand-bar" style="width:'+bw.toFixed(0)+'%;background:'+pc.fg+'"></div></div></div>';
+            });
+            h+='</div>';
+          }
+          document.getElementById("selected-seat-content").innerHTML=h;
+          el.classList.add("show");
+        }
+      });
+      layer.bindTooltip(function(){
+        var dd=districtData[key];if(!dd)return key;
+        var meta=STAT_META[currentStat];
+        var tw=PARTY_SHORT[dd.top_winner]||dd.top_winner||"";
+        var wc=PARTY_COLORS[dd.top_winner]||{fg:"#9090a0"};
+        var h='<div class="tt"><div class="tt-header"><div><div class="tt-name">'+key+'</div><div class="tt-district">'+dd.division+' &middot; '+dd.seat_count+' seats</div></div>';
+        h+='<div class="tt-winner-badge" style="background:rgba(144,144,160,.25);color:'+wc.fg+'">'+tw+'</div></div>';
+        if(!meta.categorical){
+          var val=dd.stats[currentStat];
+          var pctStr=val!=null?(val*100).toFixed(1)+'%':'N/A';
+          var col=val!=null?getColor(val):'#222';
+          h+='<div class="tt-stat-row"><span class="tt-stat-label">Avg '+meta.label+'</span><span class="tt-stat-value" style="color:'+col+'">'+pctStr+'</span></div>';
+        }
+        h+='</div>';return h;
+      },{sticky:true,className:"seat-tooltip",direction:"top",offset:[0,-12]});
+    }
+  });
+  // Start hidden
+  // Don't add to map yet
+}
+
+function updateDistrictMap(){
+  if(!districtLayer)return;
+  var meta=STAT_META[currentStat];
+  districtLayer.eachLayer(function(l){
+    var dd=districtData[l._districtKey];
+    var fill;
+    if(meta.categorical){fill=dd?getWinnerColor(dd.top_winner):"#222"}
+    else{var val=dd?dd.stats[currentStat]:null;fill=(val!=null&&!isNaN(val))?getColor(val):"#222"}
+    l.setStyle({fillColor:fill,fillOpacity:0.88});
+  });
+}
+
+// View toggle
+document.getElementById("view-toggle").addEventListener("click",function(e){
+  var btn=e.target.closest(".view-toggle-btn");if(!btn)return;
+  var view=btn.getAttribute("data-view");if(view===currentView)return;
+  currentView=view;
+  document.querySelectorAll(".view-toggle-btn").forEach(function(b){b.classList.remove("active")});
+  btn.classList.add("active");
+  if(view==="district"){
+    if(geojsonLayer)map.removeLayer(geojsonLayer);
+    if(districtLayer)districtLayer.addTo(map);
+    updateDistrictMap();
+  } else {
+    if(districtLayer)map.removeLayer(districtLayer);
+    if(geojsonLayer)geojsonLayer.addTo(map);
+    updateMap();
+  }
+  updateLegend();
+});
+
+// Mini map
+function initMiniMap(){
+  var miniTiles=L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png",{maxZoom:18});
+  new L.Control.MiniMap(miniTiles,{
+    toggleDisplay:true,
+    minimized:false,
+    position:"bottomright",
+    width:120,
+    height:100,
+    zoomLevelOffset:-5,
+    mapOptions:{zoomControl:false,attributionControl:false}
+  }).addTo(map);
+}
+
+// Screenshot
+document.getElementById("screenshot-btn").addEventListener("click",function(){
+  var btn=this;btn.textContent="Capturing...";btn.disabled=true;
+  var mapEl=compareMode?document.getElementById("compare-container"):document.getElementById("map");
+  html2canvas(mapEl,{
+    useCORS:true,
+    allowTaint:true,
+    backgroundColor:"#0a0a10",
+    scale:2
+  }).then(function(canvas){
+    var link=document.createElement("a");
+    link.download="election-map-"+currentStat+".png";
+    link.href=canvas.toDataURL("image/png");
+    link.click();
+    btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M3 9h2m14 0h2M9 3v2m0 14v2m6-18v2m0 14v2M3 15h2m14 0h2"/></svg>Screenshot';
+    btn.disabled=false;
+  }).catch(function(){
+    btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M3 9h2m14 0h2M9 3v2m0 14v2m6-18v2m0 14v2M3 15h2m14 0h2"/></svg>Screenshot';
+    btn.disabled=false;
+  });
+});
+
+// Comparison mode
+var compareMapLeft=null,compareMapRight=null,compareLayerLeft=null,compareLayerRight=null;
+var compareStatLeft="bnp",compareStatRight="jamaat";
+
+function buildStatOptions(selected){
+  return Object.keys(STAT_META).map(function(k){
+    return'<option value="'+k+'"'+(k===selected?' selected':'')+'>'+STAT_META[k].label+'</option>';
+  }).join("");
+}
+
+function colorCompareLayer(layer,statKey){
+  if(!layer)return;
+  var meta=STAT_META[statKey];
+  layer.eachLayer(function(l){
+    var seat=seatData[l._seatKey];
+    var fill;
+    if(meta.categorical){fill=seat?getWinnerColor(seat.winner):"#222"}
+    else{
+      var val=seat?seat.stats[statKey]:null;
+      if(val==null||isNaN(val)){fill="#222"}
+      else{
+        var lo=meta.range[0],hi=meta.range[1];
+        var t=(hi>lo)?(val-lo)/(hi-lo):0.5;
+        t=Math.max(0,Math.min(1,t));
+        if(meta.diverging){t=sigmoid(t,8)}else{t=Math.pow(t,0.85)}
+        fill=sampleRamp(meta.ramp,t);
+      }
+    }
+    l.setStyle({fillColor:fill,fillOpacity:0.88,weight:0.5,color:"#000"});
+  });
+}
+
+function initCompareMap(containerId,geoData){
+  var m=L.map(containerId,{zoomSnap:0.25,zoomControl:false,attributionControl:false}).setView([23.5,90.3],7.5);
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png",{maxZoom:18}).addTo(m);
+  var layer=L.geoJSON(geoData,{
+    style:function(){return{weight:0.5,color:"#000",fillOpacity:0.88,fillColor:"#222"}},
+    onEachFeature:function(f,l){l._seatKey=normalizeSeatName(f.properties.cst_n||"")}
+  }).addTo(m);
+  m.fitBounds(layer.getBounds().pad(0.02));
+  return{map:m,layer:layer};
+}
+
+var compareGeoCache=null;
+document.getElementById("compare-btn").addEventListener("click",function(){
+  compareMode=!compareMode;
+  var container=document.getElementById("compare-container");
+  var mainMap=document.getElementById("map");
+  if(compareMode){
+    this.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>Single View';
+    container.classList.add("active");
+    mainMap.style.display="none";
+    // Build select options
+    document.getElementById("compare-select-left").innerHTML=buildStatOptions(compareStatLeft);
+    document.getElementById("compare-select-right").innerHTML=buildStatOptions(compareStatRight);
+    document.getElementById("compare-label-left").textContent=STAT_META[compareStatLeft].label;
+    document.getElementById("compare-label-right").textContent=STAT_META[compareStatRight].label;
+    // Init maps if needed (need geo data)
+    if(!compareGeoCache){
+      fetch("data/constituencies.geojson").then(function(r){return r.json()}).then(function(geo){
+        compareGeoCache=geo;
+        var left=initCompareMap("compare-map-left",geo);
+        compareMapLeft=left.map;compareLayerLeft=left.layer;
+        var right=initCompareMap("compare-map-right",geo);
+        compareMapRight=right.map;compareLayerRight=right.layer;
+        colorCompareLayer(compareLayerLeft,compareStatLeft);
+        colorCompareLayer(compareLayerRight,compareStatRight);
+        // Sync views (with guard to prevent infinite loop)
+        var syncing=false;
+        compareMapLeft.on("move",function(){if(syncing)return;syncing=true;compareMapRight.setView(compareMapLeft.getCenter(),compareMapLeft.getZoom(),{animate:false});syncing=false});
+        compareMapRight.on("move",function(){if(syncing)return;syncing=true;compareMapLeft.setView(compareMapRight.getCenter(),compareMapRight.getZoom(),{animate:false});syncing=false});
+      });
+    } else {
+      setTimeout(function(){
+        if(compareMapLeft)compareMapLeft.invalidateSize();
+        if(compareMapRight)compareMapRight.invalidateSize();
+        colorCompareLayer(compareLayerLeft,compareStatLeft);
+        colorCompareLayer(compareLayerRight,compareStatRight);
+      },100);
+    }
+  } else {
+    this.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><rect x="3" y="3" width="7" height="18" rx="1"/><rect x="14" y="3" width="7" height="18" rx="1"/></svg>Compare';
+    container.classList.remove("active");
+    mainMap.style.display="";
+    map.invalidateSize();
+  }
+});
+
+document.getElementById("compare-select-left").addEventListener("change",function(){
+  compareStatLeft=this.value;
+  document.getElementById("compare-label-left").textContent=STAT_META[compareStatLeft].label;
+  colorCompareLayer(compareLayerLeft,compareStatLeft);
+});
+document.getElementById("compare-select-right").addEventListener("change",function(){
+  compareStatRight=this.value;
+  document.getElementById("compare-label-right").textContent=STAT_META[compareStatRight].label;
+  colorCompareLayer(compareLayerRight,compareStatRight);
+});
+
+// Update district view on stat change
+var origUpdateAll=updateAll;
+updateAll=function(){
+  origUpdateAll();
+  if(currentView==="district")updateDistrictMap();
+};
 </script>
 </body>
 </html>
