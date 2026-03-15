@@ -231,6 +231,30 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
 
 /* Keyboard focus styles */
 .stat-btn:focus-visible,#search:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* Full candidate results in selected seat */
+.candidate-list{margin-top:14px;border-top:1px solid var(--border);padding-top:12px}
+.candidate-list-title{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--text-tertiary);margin-bottom:10px;font-weight:700}
+.cand-row{margin-bottom:10px}
+.cand-info{display:flex;justify-content:space-between;align-items:center;margin-bottom:3px}
+.cand-name{font-size:11px;font-weight:600;color:var(--text-primary);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:60%}
+.cand-party{font-size:9px;color:var(--text-tertiary);font-weight:500}
+.cand-votes{font-size:11px;font-weight:800;color:var(--text-primary);font-variant-numeric:tabular-nums}
+.cand-bar-bg{height:5px;background:var(--bg);border-radius:3px;overflow:hidden}
+.cand-bar{height:100%;border-radius:3px}
+
+/* Histogram */
+.histogram-wrap{margin-top:16px}
+.histogram-title{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--text-tertiary);margin-bottom:8px;font-weight:700}
+.histogram{display:flex;align-items:flex-end;gap:1px;height:48px}
+.hist-bar{flex:1;background:var(--accent-dim);border-radius:2px 2px 0 0;min-width:2px;transition:height var(--transition-slow),background var(--transition-fast);cursor:pointer;position:relative}
+.hist-bar:hover{background:var(--accent)}
+.histogram-labels{display:flex;justify-content:space-between;font-size:9px;color:var(--text-tertiary);margin-top:4px;font-weight:600;font-variant-numeric:tabular-nums}
+
+/* Division clickable */
+.div-row{cursor:pointer;border-radius:6px;padding:4px 6px;margin:4px -6px;transition:all var(--transition-fast)}
+.div-row:hover{background:var(--accent-soft)}
+.div-row.active-div{background:var(--accent-soft);border:1px solid rgba(124,108,255,.2)}
 </style>
 </head>
 <body>
@@ -290,6 +314,12 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
         </div>
       </div>
       <div class="stat-group">
+        <div class="stat-group-label">Seats</div>
+        <div class="stat-grid">
+          <button class="stat-btn" data-stat="winner" role="radio" aria-checked="false"><span class="indicator" style="background:linear-gradient(90deg,#6baed6,#74c476,#9090a0)"></span>Winner Map</button>
+        </div>
+      </div>
+      <div class="stat-group">
         <div class="stat-group-label">Election Quality</div>
         <div class="stat-grid">
           <button class="stat-btn" data-stat="turnout" role="radio" aria-checked="false"><span class="indicator" style="background:#31a354"></span>Turnout</button>
@@ -301,6 +331,14 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
     <div class="section">
       <div class="section-label">National Summary</div>
       <div id="summary" class="summary-card"></div>
+    </div>
+
+    <div class="section" id="histogram-section" style="display:none">
+      <div class="section-label">Distribution</div>
+      <div class="histogram-wrap">
+        <div class="histogram" id="histogram"></div>
+        <div class="histogram-labels" id="histogram-labels"></div>
+      </div>
     </div>
 
     <div class="section">
@@ -365,15 +403,24 @@ var STAT_META = {
     range:[0.0, 0.50],
     // ColorBrewer YlOrRd 5
     ramp:["#ffffb2","#fecc5c","#fd8d3c","#f03b20","#bd0026"]
+  },
+  winner: {
+    label:"Winner", party:null,
+    categorical:true
   }
 };
 
-var PARTY_SHORT={"Bangladesh Nationalist Party (BNP)":"BNP","Bangladesh Jamaat-e-Islami (Jamaat)":"Jamaat","Independent":"Indep.","National Citizens Party (NCP)":"NCP"};
+var PARTY_SHORT={"Bangladesh Nationalist Party (BNP)":"BNP","Bangladesh Jamaat-e-Islami (Jamaat)":"Jamaat","Independent Candidate (Independent)":"Indep.","National Citizen Party (NCP)":"NCP","Khelafat Majlis":"KM","Islami Andolan Bangladesh (IAB)":"IAB","Ganosanhati Andolan (GSA)":"GSA","Bangladesh Jatiya Party (BJP)":"BJP","Gono Odhikar Parishad (GOP)":"GOP"};
 var PARTY_COLORS={
   "Bangladesh Nationalist Party (BNP)":{bg:"rgba(49,130,189,.3)",fg:"#6baed6"},
   "Bangladesh Jamaat-e-Islami (Jamaat)":{bg:"rgba(49,163,84,.3)",fg:"#74c476"},
-  "Independent":{bg:"rgba(144,144,160,.25)",fg:"#9090a0"},
-  "National Citizens Party (NCP)":{bg:"rgba(230,85,13,.25)",fg:"#fd8d3c"}
+  "Independent Candidate (Independent)":{bg:"rgba(144,144,160,.25)",fg:"#9090a0"},
+  "National Citizen Party (NCP)":{bg:"rgba(230,85,13,.3)",fg:"#fd8d3c"},
+  "Khelafat Majlis":{bg:"rgba(117,107,177,.3)",fg:"#9e9ac8"},
+  "Islami Andolan Bangladesh (IAB)":{bg:"rgba(227,74,51,.3)",fg:"#e34a33"},
+  "Ganosanhati Andolan (GSA)":{bg:"rgba(253,174,97,.3)",fg:"#fdae61"},
+  "Bangladesh Jatiya Party (BJP)":{bg:"rgba(166,189,219,.3)",fg:"#a6bddb"},
+  "Gono Odhikar Parishad (GOP)":{bg:"rgba(240,59,32,.3)",fg:"#f03b20"}
 };
 
 var LOCATION_ALIASES={"bogra":"Bogura","comilla":"Cumilla","jessore":"Jashore","jhalakathi":"Jhalokathi","jhalokati":"Jhalokathi","netrokona":"Netrakona","chapai nawabganj":"Chapainawabganj","chapai nababganj":"Chapainawabganj","chapainawabganj":"Chapainawabganj","nawabganj":"Chapainawabganj","coxs bazar":"Cox's Bazar","cox's bazar":"Cox's Bazar","cox?s bazar":"Cox's Bazar","barisal":"Barishal","chittagong":"Chattogram","brahmanbaria":"Brahmanbaria","habiganj":"Habiganj","habjganj":"Habiganj","maulvibazar":"Moulvibazar","moulvibazar":"Moulvibazar","sunamganj":"Sunamganj","sylhet":"Sylhet","bandarban":"Bandarban","parbatya bandarban":"Bandarban","khagrachhari":"Khagrachhari","khagrachari":"Khagrachhari","parbatya khagrachari":"Khagrachhari","parbatya khagrachhari":"Khagrachhari","rangamati":"Rangamati","parbatya rangamati":"Rangamati","patuakhali":"Patuakhali","bhola":"Bhola","pirojpur":"Pirojpur","barguna":"Barguna","chuadanga":"Chuadanga","kushtia":"Kushtia","meherpur":"Meherpur","khulna":"Khulna","bagerhal":"Bagerhat","bagerhat":"Bagerhat","satkhira":"Satkhira","jhenaidah":"Jhenaidah","magura":"Magura","narail":"Narail","faridpur":"Faridpur","rajbari":"Rajbari","gopalganj":"Gopalganj","madaripur":"Madaripur","shariatpur":"Shariatpur","dhaka":"Dhaka","gazipur":"Gazipur","narsingdi":"Narsingdi","narayanganj":"Narayanganj","munshiganj":"Munshiganj","manikganj":"Manikganj","tangail":"Tangail","kishoreganj":"Kishoreganj","mymensingh":"Mymensingh","netrakona":"Netrakona","sherpur":"Sherpur","jamalpur":"Jamalpur","rajshahi":"Rajshahi","natore":"Natore","naogaon":"Naogaon","pabna":"Pabna","sirajganj":"Sirajganj","rangpur":"Rangpur","dinajpur":"Dinajpur","kurigram":"Kurigram","gaibandha":"Gaibandha","lalmonirhat":"Lalmonirhat","nilphamari":"Nilphamari","nilphamhari":"Nilphamari","panchagarh":"Panchagarh","thakurgaon":"Thakurgaon"};
@@ -387,14 +434,19 @@ function rgbToHex(a){return"#"+a.map(function(x){return Math.max(0,Math.min(255,
 function lerpRgb(c1,c2,t){return c1.map(function(v,i){return v+(c2[i]-v)*t})}
 function sampleRamp(r,t){t=Math.max(0,Math.min(1,t));var n=r.length-1;var i=t*n;var lo=Math.floor(i);var hi=Math.min(lo+1,n);return rgbToHex(lerpRgb(hexToRgb(r[lo]),hexToRgb(r[hi]),i-lo))}
 function sigmoid(t,k){return 1/(1+Math.exp(-k*(t-0.5)))}
-function getColor(v){if(v==null||isNaN(v))return"#222";var m=STAT_META[currentStat];var lo=m.range[0],hi=m.range[1];var t=(hi>lo)?(v-lo)/(hi-lo):0.5;t=Math.max(0,Math.min(1,t));if(m.diverging){t=sigmoid(t,8)}else{t=Math.pow(t,0.85)}return sampleRamp(m.ramp,t)}
+function getWinnerColor(winner){
+  var pc=PARTY_COLORS[winner];
+  if(pc)return pc.fg;
+  return"#9090a0";
+}
+function getColor(v){if(v==null||isNaN(v))return"#222";var m=STAT_META[currentStat];if(m.categorical)return"#222";var lo=m.range[0],hi=m.range[1];var t=(hi>lo)?(v-lo)/(hi-lo):0.5;t=Math.max(0,Math.min(1,t));if(m.diverging){t=sigmoid(t,8)}else{t=Math.pow(t,0.85)}return sampleRamp(m.ramp,t)}
 function getActiveRamp(){return STAT_META[currentStat].ramp}
 
 var currentStat="bnp_vs_eleven_party_alliance";
 var seatData={};var geojsonLayer=null;var legendControl=null;var selectedSeatKey=null;var seatLayers={};
 
 // Dark basemap
-var map=L.map("map",{zoomSnap:0.25,zoomControl:false,attributionControl:true}).setView([23.7,90.3],7);
+var map=L.map("map",{zoomSnap:0.25,zoomControl:false,attributionControl:true}).setView([23.5,90.3],7.5);
 L.control.zoom({position:"topright"}).addTo(map);
 
 // Dark CARTO basemap
@@ -415,6 +467,7 @@ Promise.all([
   seatData=res[1];
   initGeoJSON(res[0]);
   addDivisionBorders(res[0]);
+  if(geojsonLayer)map.fitBounds(geojsonLayer.getBounds().pad(0.02));
   updateAll();
   document.getElementById("loader").classList.add("hidden");
   setTimeout(function(){document.getElementById("loader").style.display="none"},700);
@@ -452,14 +505,20 @@ function addDivisionBorders(geo){}
 
 function buildTooltip(key,seat){
   if(!seat)return'<div class="tt"><div class="tt-name">'+key+'</div><div class="tt-district" style="color:var(--text-tertiary)">No data available</div></div>';
-  var val=seat.stats[currentStat];var meta=STAT_META[currentStat];
-  var pctStr=val!=null?(val*100).toFixed(1)+"%":"N/A";
-  var col=val!=null?getColor(val):"#222";
+  var meta=STAT_META[currentStat];
   var ws=PARTY_SHORT[seat.winner]||seat.winner||"";
   var wc=PARTY_COLORS[seat.winner]||{bg:"rgba(144,144,160,.25)",fg:"#9090a0"};
   var h='<div class="tt"><div class="tt-header"><div><div class="tt-name">'+seat.name+'</div><div class="tt-district">'+seat.district+', '+seat.division+'</div></div>';
   if(ws)h+='<div class="tt-winner-badge" style="background:'+wc.bg+';color:'+wc.fg+'">'+ws+'</div>';
-  h+='</div><div class="tt-stat-row"><span class="tt-stat-label">'+meta.label+'</span><span class="tt-stat-value" style="color:'+col+'">'+pctStr+'</span></div>';
+  h+='</div>';
+  if(meta.categorical){
+    h+='<div class="tt-stat-row"><span class="tt-stat-label">Winner</span><span class="tt-stat-value" style="color:'+wc.fg+'">'+ws+'</span></div>';
+  } else {
+    var val=seat.stats[currentStat];
+    var pctStr=val!=null?(val*100).toFixed(1)+"%":"N/A";
+    var col=val!=null?getColor(val):"#222";
+    h+='<div class="tt-stat-row"><span class="tt-stat-label">'+meta.label+'</span><span class="tt-stat-value" style="color:'+col+'">'+pctStr+'</span></div>';
+  }
   if(seat.top3&&seat.top3.length){
     h+='<div style="padding-top:8px">';
     var mx=Math.max.apply(null,seat.top3.map(function(t){return t.pct}));
@@ -490,6 +549,29 @@ function selectSeat(key){
   h+='<span class="seat-pill seat-pill-stat">Turnout '+(seat.turnout*100).toFixed(1)+'%</span>';
   h+='<span class="seat-pill seat-pill-stat">Margin '+(seat.stats.victory_margin*100).toFixed(1)+'%</span>';
   h+='</div>';
+  // Full candidate results
+  if(seat.candidates&&seat.candidates.length){
+    var maxV=Math.max.apply(null,seat.candidates.map(function(c){return c.votes}));
+    h+='<div class="candidate-list"><div class="candidate-list-title">All Candidates</div>';
+    seat.candidates.forEach(function(c,i){
+      var bw=maxV>0?(c.votes/maxV*100):0;
+      var barCol=i===0?"var(--accent)":i===1?"#6b6b80":"#3a3a4a";
+      h+='<div class="cand-row"><div class="cand-info"><span class="cand-name">'+c.name+'</span><span class="cand-votes">'+c.votes.toLocaleString()+'</span></div>';
+      h+='<div style="display:flex;align-items:center;gap:6px"><span class="cand-party">'+c.party+'</span></div>';
+      h+='<div class="cand-bar-bg"><div class="cand-bar" style="width:'+bw.toFixed(0)+'%;background:'+barCol+'"></div></div></div>';
+    });
+    h+='</div>';
+  } else if(seat.top3&&seat.top3.length){
+    var maxP=Math.max.apply(null,seat.top3.map(function(t){return t.pct}));
+    h+='<div class="candidate-list"><div class="candidate-list-title">Top Candidates</div>';
+    seat.top3.forEach(function(t,i){
+      var bw=maxP>0?(t.pct/maxP*100):0;
+      var barCol=i===0?"var(--accent)":i===1?"#6b6b80":"#3a3a4a";
+      h+='<div class="cand-row"><div class="cand-info"><span class="cand-name">'+t.party+'</span><span class="cand-votes">'+t.pct+'%</span></div>';
+      h+='<div class="cand-bar-bg"><div class="cand-bar" style="width:'+bw.toFixed(0)+'%;background:'+barCol+'"></div></div></div>';
+    });
+    h+='</div>';
+  }
   document.getElementById("selected-seat-content").innerHTML=h;
   el.classList.add("show");
 }
@@ -546,13 +628,16 @@ searchInput.addEventListener("keydown",function(e){
   }
 });
 
-function updateAll(){updateMap();updateSummary();updateDivisions();updateLegend()}
+function updateAll(){updateMap();updateSummary();updateDivisions();updateLegend();updateHistogram()}
 
 function updateMap(){
   if(!geojsonLayer)return;
+  var isCat=STAT_META[currentStat].categorical;
   geojsonLayer.eachLayer(function(l){
-    var seat=seatData[l._seatKey];var val=seat?seat.stats[currentStat]:null;
-    var fill=(val!=null&&!isNaN(val))?getColor(val):"#222";
+    var seat=seatData[l._seatKey];
+    var fill;
+    if(isCat){fill=seat?getWinnerColor(seat.winner):"#222"}
+    else{var val=seat?seat.stats[currentStat]:null;fill=(val!=null&&!isNaN(val))?getColor(val):"#222"}
     var isSel=selectedSeatKey===l._seatKey;
     l.setStyle({fillColor:fill,fillOpacity:0.88,weight:isSel?3:0.5,color:isSel?"#7c6cff":"#000"});
   });
@@ -561,7 +646,7 @@ function updateMap(){
 function updateSummary(){
   var el=document.getElementById("summary");var meta=STAT_META[currentStat];
   var seats=Object.values(seatData);
-  var valid=seats.filter(function(s){var v=s.stats[currentStat];return v!=null&&!isNaN(v)});
+  var valid=STAT_META[currentStat].categorical?seats.filter(function(s){return s.winner}):seats.filter(function(s){var v=s.stats[currentStat];return v!=null&&!isNaN(v)});
 
   if(currentStat==="turnout"){
     var avg=valid.reduce(function(a,s){return a+s.stats.turnout},0)/valid.length;
@@ -576,6 +661,10 @@ function updateSummary(){
     var sf=valid.reduce(function(a,s){return s.stats.victory_margin>a.stats.victory_margin?s:a});
     var comp=valid.filter(function(s){return s.stats.victory_margin<0.05}).length;
     el.innerHTML='<div class="summary-stat"><span class="value">'+(avg*100).toFixed(1)+'%</span><span class="label">avg margin</span></div><div class="summary-detail"><strong>'+comp+'</strong> seats decided by &lt;5%<br>Closest: <strong>'+cl.name+'</strong> ('+(cl.stats.victory_margin*100).toFixed(1)+'%)<br>Safest: <strong>'+sf.name+'</strong> ('+(sf.stats.victory_margin*100).toFixed(1)+'%)</div>';
+  } else if(currentStat==="winner"){
+    var wc={};valid.forEach(function(s){var w=PARTY_SHORT[s.winner]||s.winner||"Other";wc[w]=(wc[w]||0)+1});
+    var sorted=Object.entries(wc).sort(function(a,b){return b[1]-a[1]});
+    el.innerHTML='<div class="summary-stat"><span class="value">'+valid.length+'</span><span class="label">seats</span></div><div class="winner-grid">'+sorted.map(function(e){var pc=PARTY_COLORS[Object.keys(PARTY_SHORT).find(function(k){return PARTY_SHORT[k]===e[0]})]||{fg:"#9090a0"};return'<div class="winner-item"><div class="count" style="color:'+pc.fg+'">'+e[1]+'</div><div class="party-name">'+e[0]+'</div></div>'}).join("")+'</div>';
   } else if(currentStat==="bnp_vs_eleven_party_alliance"){
     var bm=valid.filter(function(s){return s.stats.bnp_vs_eleven_party_alliance>0.5}).length;
     var em=valid.length-bm;
@@ -600,6 +689,18 @@ function updateDivisions(){
   var el=document.getElementById("division-breakdown");var byDiv={};
   Object.values(seatData).forEach(function(s){var d=s.division||"Unknown";if(!byDiv[d])byDiv[d]=[];byDiv[d].push(s)});
   var meta=STAT_META[currentStat];
+  if(meta.categorical){
+    var entries=Object.keys(byDiv).sort().map(function(d){
+      var wc={};byDiv[d].forEach(function(s){var w=PARTY_SHORT[s.winner]||s.winner||"Other";wc[w]=(wc[w]||0)+1});
+      var top=Object.entries(wc).sort(function(a,b){return b[1]-a[1]})[0];
+      return{name:d,topParty:top?top[0]:"",topCount:top?top[1]:0,total:byDiv[d].length};
+    });
+    el.innerHTML=entries.map(function(de){
+      var pc=PARTY_COLORS[Object.keys(PARTY_SHORT).find(function(k){return PARTY_SHORT[k]===de.topParty})]||{fg:"#9090a0"};
+      return'<div class="div-row'+(activeDivision===de.name?' active-div':'')+'" data-division="'+de.name+'"><span class="div-label">'+de.name+'</span><div class="div-bar-bg"><div class="div-bar" style="width:'+(de.topCount/de.total*100).toFixed(1)+'%;background:'+pc.fg+'"></div></div><span class="div-val" style="color:'+pc.fg+'">'+de.topParty+' '+de.topCount+'</span></div>';
+    }).join("");
+    return;
+  }
   var entries=Object.keys(byDiv).map(function(d){
     var vals=byDiv[d].map(function(s){return s.stats[currentStat]}).filter(function(v){return v!=null&&!isNaN(v)});
     return{name:d,avg:vals.length?vals.reduce(function(a,b){return a+b},0)/vals.length:0,count:byDiv[d].length}
@@ -608,21 +709,28 @@ function updateDivisions(){
     var col=getColor(de.avg);var pct=(de.avg*100).toFixed(1);
     var barT=(meta.range[1]>meta.range[0])?(de.avg-meta.range[0])/(meta.range[1]-meta.range[0]):0.5;
     barT=Math.max(0,Math.min(1,barT));
-    return'<div class="div-row"><span class="div-label">'+de.name+'</span><div class="div-bar-bg"><div class="div-bar" style="width:'+(barT*100).toFixed(1)+'%;background:'+col+'"></div></div><span class="div-val">'+pct+'%</span></div>';
+    return'<div class="div-row'+(activeDivision===de.name?' active-div':'')+'" data-division="'+de.name+'"><span class="div-label">'+de.name+'</span><div class="div-bar-bg"><div class="div-bar" style="width:'+(barT*100).toFixed(1)+'%;background:'+col+'"></div></div><span class="div-val">'+pct+'%</span></div>';
   }).join("");
 }
 
 function updateLegend(){
   if(legendControl)map.removeControl(legendControl);
   legendControl=L.control({position:"bottomleft"});
-  var meta=STAT_META[currentStat];var ramp=getActiveRamp();
+  var meta=STAT_META[currentStat];
   legendControl.onAdd=function(){
     var div=L.DomUtil.create("div","legend");
-    var stops=ramp.map(function(c,i){return c+" "+(i/(ramp.length-1)*100).toFixed(0)+"%"}).join(", ");
-    var lo,hi,mid;
-    if(meta.diverging){lo="11-Party";hi="BNP";mid='<span>Even</span>'}
-    else{lo=(meta.range[0]*100).toFixed(0)+"%";hi=(meta.range[1]*100).toFixed(0)+"%";mid='<span>'+((meta.range[0]+meta.range[1])/2*100).toFixed(0)+'%</span>'}
-    div.innerHTML='<div class="legend-title">'+meta.label+'</div><div class="legend-gradient" style="background:linear-gradient(to right,'+stops+')"></div><div class="legend-labels"><span>'+lo+'</span>'+mid+'<span>'+hi+'</span></div><div class="legend-nodata"><span class="legend-nodata-swatch"></span> No data</div>';
+    if(meta.categorical){
+      var items=Object.keys(PARTY_COLORS).map(function(k){var s=PARTY_SHORT[k]||k;return'<div style="display:flex;align-items:center;gap:7px;margin:5px 0"><span style="width:14px;height:10px;background:'+PARTY_COLORS[k].fg+';border-radius:3px;display:inline-block"></span><span style="font-size:10px;color:var(--text-secondary)">'+s+'</span></div>'}).join("");
+      items+='<div style="display:flex;align-items:center;gap:7px;margin:5px 0"><span style="width:14px;height:10px;background:#9090a0;border-radius:3px;display:inline-block"></span><span style="font-size:10px;color:var(--text-secondary)">Other</span></div>';
+      div.innerHTML='<div class="legend-title">'+meta.label+'</div>'+items+'<div class="legend-nodata"><span class="legend-nodata-swatch"></span> No data</div>';
+    } else {
+      var ramp=getActiveRamp();
+      var stops=ramp.map(function(c,i){return c+" "+(i/(ramp.length-1)*100).toFixed(0)+"%"}).join(", ");
+      var lo,hi,mid;
+      if(meta.diverging){lo="11-Party";hi="BNP";mid='<span>Even</span>'}
+      else{lo=(meta.range[0]*100).toFixed(0)+"%";hi=(meta.range[1]*100).toFixed(0)+"%";mid='<span>'+((meta.range[0]+meta.range[1])/2*100).toFixed(0)+'%</span>'}
+      div.innerHTML='<div class="legend-title">'+meta.label+'</div><div class="legend-gradient" style="background:linear-gradient(to right,'+stops+')"></div><div class="legend-labels"><span>'+lo+'</span>'+mid+'<span>'+hi+'</span></div><div class="legend-nodata"><span class="legend-nodata-swatch"></span> No data</div>';
+    }
     return div;
   };
   legendControl.addTo(map);
@@ -636,6 +744,8 @@ pills.forEach(function(p){
     p.classList.add("active");
     p.setAttribute("aria-checked","true");
     currentStat=p.getAttribute("data-stat");
+    activeDivision=null;
+    if(geojsonLayer)geojsonLayer.eachLayer(function(l){l.setStyle({fillOpacity:0.88})});
     updateAll();
   });
 });
@@ -667,6 +777,64 @@ sidebarToggle.addEventListener("click",function(){
 mobileHandle.addEventListener("click",function(){
   sidebar.classList.toggle("mobile-open");
   sidebarToggle.textContent=sidebar.classList.contains("mobile-open")?"Show Map":"Show Results";
+});
+
+// Histogram
+function updateHistogram(){
+  var sec=document.getElementById("histogram-section");
+  var meta=STAT_META[currentStat];
+  if(meta.categorical){sec.style.display="none";return}
+  sec.style.display="";
+  var vals=Object.values(seatData).map(function(s){return s.stats[currentStat]}).filter(function(v){return v!=null&&!isNaN(v)});
+  if(!vals.length){sec.style.display="none";return}
+  var lo=meta.range[0],hi=meta.range[1];
+  var nBins=20;var bins=new Array(nBins).fill(0);
+  vals.forEach(function(v){
+    var t=(v-lo)/(hi-lo);
+    var b=Math.min(nBins-1,Math.max(0,Math.floor(t*nBins)));
+    bins[b]++;
+  });
+  var maxB=Math.max.apply(null,bins);
+  var el=document.getElementById("histogram");
+  el.innerHTML=bins.map(function(c,i){
+    var h=maxB>0?(c/maxB*100):0;
+    var midT=(i+0.5)/nBins;
+    var col=meta.diverging?sampleRamp(meta.ramp,sigmoid(midT,8)):sampleRamp(meta.ramp,Math.pow(midT,0.85));
+    return'<div class="hist-bar" style="height:'+h+'%;background:'+col+'" title="'+c+' seats"></div>';
+  }).join("");
+  var labels=document.getElementById("histogram-labels");
+  if(meta.diverging){labels.innerHTML='<span>11-Party</span><span>Even</span><span>BNP</span>'}
+  else{labels.innerHTML='<span>'+(lo*100).toFixed(0)+'%</span><span>'+((lo+hi)/2*100).toFixed(0)+'%</span><span>'+(hi*100).toFixed(0)+'%</span>'}
+}
+
+// Division filter
+var activeDivision=null;
+document.getElementById("division-breakdown").addEventListener("click",function(e){
+  var row=e.target.closest(".div-row");
+  if(!row)return;
+  var divName=row.getAttribute("data-division");
+  if(activeDivision===divName){
+    activeDivision=null;
+    row.classList.remove("active-div");
+    if(geojsonLayer)map.fitBounds(geojsonLayer.getBounds().pad(0.02));
+    geojsonLayer.eachLayer(function(l){l.setStyle({fillOpacity:0.88})});
+  } else {
+    activeDivision=divName;
+    document.querySelectorAll(".div-row.active-div").forEach(function(r){r.classList.remove("active-div")});
+    row.classList.add("active-div");
+    // Fit bounds to division and dim others
+    var bounds=L.latLngBounds([]);
+    geojsonLayer.eachLayer(function(l){
+      var seat=seatData[l._seatKey];
+      if(seat&&seat.division===divName){
+        l.setStyle({fillOpacity:0.88});
+        bounds.extend(l.getBounds());
+      } else {
+        l.setStyle({fillOpacity:0.15});
+      }
+    });
+    if(bounds.isValid())map.fitBounds(bounds.pad(0.1));
+  }
 });
 </script>
 </body>
