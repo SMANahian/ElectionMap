@@ -12,7 +12,7 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet-minimap@3.6.1/dist/Control.MiniMap.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet-minimap@3.6.1/dist/Control.MiniMap.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.js"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -79,9 +79,9 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
 
 /* Sidebar content */
-#sidebar-inner{padding:20px 22px;flex:1}
-.section{margin-bottom:28px}
-.section-label{font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-tertiary);margin-bottom:12px;font-weight:700;display:flex;align-items:center;gap:8px}
+#sidebar-inner{padding:16px 18px;flex:1}
+.section{margin-bottom:18px}
+.section-label{font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-tertiary);margin-bottom:8px;font-weight:700;display:flex;align-items:center;gap:8px}
 .section-label::after{content:'';flex:1;height:1px;background:var(--border)}
 
 /* Search */
@@ -101,7 +101,7 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
 .search-item .seat-district{color:var(--text-tertiary);font-size:10px;margin-top:2px}
 
 /* Stat buttons */
-.stat-group{margin-bottom:14px}
+.stat-group{margin-bottom:10px}
 .stat-group-label{font-size:9px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;font-weight:700;padding-left:2px}
 .stat-grid{display:flex;flex-wrap:wrap;gap:6px}
 .stat-btn{
@@ -123,8 +123,8 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
 
 
 /* Selected seat */
-#selected-seat{display:none;background:linear-gradient(135deg,var(--accent-soft),rgba(124,108,255,.03));border:1px solid rgba(124,108,255,.15);border-radius:var(--radius-md);padding:16px 18px;margin-bottom:20px;position:relative;animation:fadeIn .2s ease-out}
-#selected-seat.show{display:block}
+#selected-seat,#selected-seat-compare{display:none;background:linear-gradient(135deg,var(--accent-soft),rgba(124,108,255,.03));border:1px solid rgba(124,108,255,.15);border-radius:var(--radius-md);padding:16px 18px;margin-bottom:20px;position:relative;animation:fadeIn .2s ease-out}
+#selected-seat.show,#selected-seat-compare.show{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
 #selected-seat .close-btn{position:absolute;top:10px;right:10px;width:24px;height:24px;border:none;background:rgba(255,255,255,.05);cursor:pointer;color:var(--text-tertiary);font-size:16px;display:flex;align-items:center;justify-content:center;border-radius:8px;transition:all var(--transition-fast)}
 #selected-seat .close-btn:hover{background:rgba(255,255,255,.1);color:var(--text-primary);transform:scale(1.1)}
@@ -137,31 +137,31 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
 .seat-pill-stat{background:var(--card-bg);color:var(--text-secondary);border:1px solid var(--border)}
 
 /* Summary card */
-.summary-card{background:var(--card-bg);border-radius:var(--radius-md);padding:20px;border:1px solid var(--border);position:relative;overflow:hidden}
+.summary-card{background:var(--card-bg);border-radius:var(--radius-sm);padding:12px 14px;border:1px solid var(--border);position:relative;overflow:hidden}
 .summary-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent-glow),transparent)}
-.summary-stat{display:flex;align-items:baseline;gap:10px;margin-bottom:8px}
-.summary-stat .label{font-size:10px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:.8px;font-weight:700}
-.summary-stat .value{font-size:32px;font-weight:900;color:var(--text-primary);letter-spacing:-1px;line-height:1;font-variant-numeric:tabular-nums}
-.summary-detail{font-size:12px;color:var(--text-secondary);line-height:1.9;margin-top:12px}
+.summary-stat{display:flex;align-items:baseline;gap:8px;margin-bottom:4px}
+.summary-stat .label{font-size:9px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:.8px;font-weight:700}
+.summary-stat .value{font-size:22px;font-weight:900;color:var(--text-primary);letter-spacing:-.5px;line-height:1;font-variant-numeric:tabular-nums}
+.summary-detail{font-size:11px;color:var(--text-secondary);line-height:1.7;margin-top:6px}
 .summary-detail strong{color:var(--text-primary);font-weight:700}
 
 /* Winner grid */
-.winner-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
-.winner-item{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px 12px;text-align:center;transition:all var(--transition-normal);position:relative;overflow:hidden}
+.winner-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:8px}
+.winner-item{background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:8px 8px;text-align:center;transition:all var(--transition-normal);position:relative;overflow:hidden}
 .winner-item::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(124,108,255,.03),transparent);opacity:0;transition:opacity var(--transition-fast)}
-.winner-item:hover{border-color:var(--border-light);transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.winner-item:hover{border-color:var(--border-light);transform:translateY(-1px);box-shadow:var(--shadow-sm)}
 .winner-item:hover::before{opacity:1}
-.winner-item .count{font-size:26px;font-weight:900;color:var(--text-primary);font-variant-numeric:tabular-nums;letter-spacing:-.5px}
-.winner-item .party-name{font-size:9px;color:var(--text-tertiary);margin-top:4px;text-transform:uppercase;letter-spacing:.6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:600}
+.winner-item .count{font-size:18px;font-weight:900;color:var(--text-primary);font-variant-numeric:tabular-nums;letter-spacing:-.3px}
+.winner-item .party-name{font-size:8px;color:var(--text-tertiary);margin-top:2px;text-transform:uppercase;letter-spacing:.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:600}
 
 /* Division bars */
-.div-row{display:flex;align-items:center;margin:7px 0;gap:10px;transition:opacity var(--transition-fast)}
+.div-row{display:flex;align-items:center;margin:4px 0;gap:8px;transition:opacity var(--transition-fast)}
 .div-row:hover{opacity:1!important}
-.div-label{width:78px;text-align:right;font-size:11px;color:var(--text-secondary);flex-shrink:0;font-weight:600}
-.div-bar-bg{flex:1;height:22px;background:var(--bg);border-radius:6px;overflow:hidden;position:relative;border:1px solid var(--border)}
-.div-bar{height:100%;border-radius:5px;transition:width var(--transition-slow);position:relative}
-.div-bar::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.08),transparent);border-radius:5px}
-.div-val{width:48px;font-size:11px;color:var(--text-primary);text-align:right;flex-shrink:0;font-weight:800;font-variant-numeric:tabular-nums}
+.div-label{width:70px;text-align:right;font-size:10px;color:var(--text-secondary);flex-shrink:0;font-weight:600}
+.div-bar-bg{flex:1;height:16px;background:var(--bg);border-radius:4px;overflow:hidden;position:relative;border:1px solid var(--border)}
+.div-bar{height:100%;border-radius:3px;transition:width var(--transition-slow);position:relative}
+.div-bar::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.08),transparent);border-radius:3px}
+.div-val{width:44px;font-size:10px;color:var(--text-primary);text-align:right;flex-shrink:0;font-weight:800;font-variant-numeric:tabular-nums}
 
 /* Footer */
 #footer{padding:18px 22px;border-top:1px solid var(--border);font-size:10px;color:var(--text-tertiary);line-height:2;margin-top:auto;letter-spacing:.2px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.2))}
@@ -171,10 +171,10 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
 /* Map */
 #map{flex:1;height:100vh;position:relative}
 .leaflet-container{background:#2d2d2d}
-.leaflet-control-zoom{border:none!important;box-shadow:var(--shadow-md)!important;border-radius:var(--radius-sm)!important;overflow:hidden}
-.leaflet-control-zoom a{background:var(--sidebar-bg)!important;color:var(--text-primary)!important;border:none!important;border-bottom:1px solid var(--border)!important;width:36px!important;height:36px!important;line-height:36px!important;font-size:16px!important;transition:all .15s!important;font-weight:700!important}
+.leaflet-control-zoom{border:none!important;box-shadow:0 4px 20px rgba(0,0,0,.6)!important;border-radius:var(--radius-sm)!important;overflow:hidden;border:1px solid var(--border-light)!important}
+.leaflet-control-zoom a{background:rgba(17,17,24,.95)!important;color:#fff!important;border:none!important;border-bottom:1px solid var(--border)!important;width:40px!important;height:40px!important;line-height:40px!important;font-size:18px!important;transition:all .15s!important;font-weight:700!important}
 .leaflet-control-zoom a:last-child{border-bottom:none!important}
-.leaflet-control-zoom a:hover{background:var(--card-bg-hover)!important;color:var(--accent)!important}
+.leaflet-control-zoom a:hover{background:var(--accent)!important;color:#fff!important}
 .leaflet-control-attribution{background:rgba(10,10,16,.9)!important;color:var(--text-tertiary)!important;font-size:9px!important;backdrop-filter:blur(8px)!important}
 .leaflet-control-attribution a{color:var(--text-secondary)!important}
 
@@ -249,13 +249,13 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
 /* Histogram */
 .histogram-wrap{margin-top:16px}
 .histogram-title{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--text-tertiary);margin-bottom:8px;font-weight:700}
-.histogram{display:flex;align-items:flex-end;gap:1px;height:48px}
+.histogram{display:flex;align-items:flex-end;gap:1px;height:36px}
 .hist-bar{flex:1;background:var(--accent-dim);border-radius:2px 2px 0 0;min-width:2px;transition:height var(--transition-slow),background var(--transition-fast);cursor:pointer;position:relative}
 .hist-bar:hover{background:var(--accent)}
 .histogram-labels{display:flex;justify-content:space-between;font-size:9px;color:var(--text-tertiary);margin-top:4px;font-weight:600;font-variant-numeric:tabular-nums}
 
 /* Division clickable */
-.div-row{cursor:pointer;border-radius:6px;padding:4px 6px;margin:4px -6px;transition:all var(--transition-fast)}
+.div-row{cursor:pointer;border-radius:4px;padding:3px 5px;margin:2px -5px;transition:all var(--transition-fast)}
 .div-row:hover{background:var(--accent-soft)}
 .div-row.active-div{background:var(--accent-soft);border:1px solid rgba(124,108,255,.2)}
 
@@ -280,11 +280,11 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
 .screenshot-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;font-size:10px;font-weight:600;border:1px solid var(--border);border-radius:var(--radius-sm);cursor:pointer;background:var(--card-bg);color:var(--text-secondary);font-family:inherit;transition:all var(--transition-fast);letter-spacing:.3px}
 .screenshot-btn:hover{background:var(--card-bg-hover);color:var(--text-primary);border-color:var(--border-light)}
 .screenshot-btn svg{width:14px;height:14px}
-.toolbar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.toolbar{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
 
 /* Reset zoom */
-.reset-zoom{position:absolute;top:80px;right:10px;z-index:1000;width:36px;height:36px;background:var(--sidebar-bg);border:none;border-radius:var(--radius-sm);cursor:pointer;color:var(--text-primary);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-md);transition:all var(--transition-fast)}
-.reset-zoom:hover{background:var(--card-bg-hover);color:var(--accent)}
+.reset-zoom{position:absolute;top:90px;right:10px;z-index:1000;width:40px;height:40px;background:rgba(17,17,24,.95);border:1px solid var(--border-light);border-radius:var(--radius-sm);cursor:pointer;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.6);transition:all var(--transition-fast)}
+.reset-zoom:hover{background:var(--accent);color:#fff}
 
 /* Mini map override */
 .leaflet-control-minimap{border:2px solid var(--border)!important;border-radius:var(--radius-sm)!important;box-shadow:var(--shadow-lg)!important}
@@ -312,6 +312,13 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
 .scatter-info strong{color:var(--text-secondary)}
 
 /* Threshold highlighter */
+/* Share URL */
+.share-url-wrap{display:flex;gap:4px;margin-bottom:14px;animation:fadeIn .2s ease-out}
+.share-url-input{flex:1;padding:7px 10px;font-size:10px;font-family:inherit;background:var(--card-bg);color:var(--text-primary);border:1px solid var(--border);border-radius:var(--radius-xs);outline:none;min-width:0}
+.share-url-input:focus{border-color:var(--accent-dim);box-shadow:0 0 0 3px var(--accent-soft)}
+.share-copy-btn{padding:7px 12px;font-size:10px;font-weight:700;background:var(--accent);color:#fff;border:none;border-radius:var(--radius-xs);cursor:pointer;font-family:inherit;white-space:nowrap;transition:all var(--transition-fast)}
+.share-copy-btn:hover{background:var(--accent-dim)}
+
 .threshold-section{margin-bottom:28px}
 .threshold-controls{display:flex;align-items:center;gap:10px;margin-bottom:8px}
 .threshold-slider{flex:1;-webkit-appearance:none;appearance:none;height:4px;background:var(--border);border-radius:2px;outline:none;cursor:pointer}
@@ -345,108 +352,127 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
       </div>
       <span class="header-year">2026</span>
     </div>
-    <div class="header-badges">
-      <div class="header-badge"><span class="dot"></span> 297 Seats</div>
-      <div class="header-badge">Official EC Data</div>
-    </div>
   </div>
   <div id="sidebar-inner">
 
-    <div id="search-wrap">
-      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-      <input type="text" id="search" placeholder="Search constituency or district..." autocomplete="off" aria-label="Search constituencies">
-      <div id="search-results" role="listbox"></div>
+    <!-- Top mode toggle -->
+    <div class="view-toggle" id="mode-toggle" style="margin-bottom:14px">
+      <button class="view-toggle-btn active" data-mode="single">Single View</button>
+      <button class="view-toggle-btn" data-mode="compare">Compare View</button>
     </div>
 
-    <div id="selected-seat" role="region" aria-label="Selected constituency">
-      <button class="close-btn" aria-label="Close">&times;</button>
-      <div id="selected-seat-content"></div>
-    </div>
-
-    <div class="view-toggle" id="view-toggle">
-      <button class="view-toggle-btn active" data-view="constituency">Constituency</button>
-      <button class="view-toggle-btn" data-view="district">District</button>
-    </div>
-
-    <div class="toolbar">
-      <button class="screenshot-btn" id="screenshot-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M3 9h2m14 0h2M9 3v2m0 14v2m6-18v2m0 14v2M3 15h2m14 0h2"/></svg>Screenshot</button>
-      <button class="screenshot-btn" id="compare-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="18" rx="1"/><rect x="14" y="3" width="7" height="18" rx="1"/></svg>Compare</button>
-    </div>
-
-    <div class="section">
-      <div class="section-label">Statistic</div>
-      <div class="stat-group">
-        <div class="stat-group-label">Party Vote Share</div>
-        <div class="stat-grid" role="radiogroup" aria-label="Party vote share statistics">
-          <button class="stat-btn" data-stat="bnp" role="radio" aria-checked="false"><span class="indicator" style="background:#3182bd"></span>BNP</button>
-          <button class="stat-btn" data-stat="jamaat" role="radio" aria-checked="false"><span class="indicator" style="background:#31a354"></span>Jamaat</button>
-          <button class="stat-btn" data-stat="bnp_alliance" role="radio" aria-checked="false"><span class="indicator" style="background:#e6550d"></span>BNP Alliance</button>
-          <button class="stat-btn" data-stat="eleven_party_alliance" role="radio" aria-checked="false"><span class="indicator" style="background:#756bb1"></span>11-Party</button>
+    <!-- SINGLE VIEW CONTENT -->
+    <div id="single-content">
+      <div class="section">
+        <div class="section-label">Statistic</div>
+        <div class="stat-group">
+          <div class="stat-group-label">Party Vote Share</div>
+          <div class="stat-grid" role="radiogroup" aria-label="Party vote share statistics">
+            <button class="stat-btn" data-stat="bnp" role="radio" aria-checked="false"><span class="indicator" style="background:#3182bd"></span>BNP</button>
+            <button class="stat-btn" data-stat="jamaat" role="radio" aria-checked="false"><span class="indicator" style="background:#31a354"></span>Jamaat</button>
+            <button class="stat-btn" data-stat="eleven_party_alliance" role="radio" aria-checked="false"><span class="indicator" style="background:#756bb1"></span>11-Party</button>
+          </div>
+        </div>
+        <div class="stat-group">
+          <div class="stat-group-label">Comparison & Seats</div>
+          <div class="stat-grid">
+            <button class="stat-btn active" data-stat="bnp_vs_eleven_party_alliance" role="radio" aria-checked="true"><span class="indicator" style="background:linear-gradient(90deg,#ca0020,#0571b0)"></span>BNP vs 11-Party</button>
+            <button class="stat-btn" data-stat="winner" role="radio" aria-checked="false"><span class="indicator" style="background:linear-gradient(90deg,#6baed6,#74c476,#9090a0)"></span>Winner Map</button>
+          </div>
+        </div>
+        <div class="stat-group">
+          <div class="stat-group-label">Election Quality</div>
+          <div class="stat-grid">
+            <button class="stat-btn" data-stat="turnout" role="radio" aria-checked="false"><span class="indicator" style="background:#31a354"></span>Turnout</button>
+            <button class="stat-btn" data-stat="victory_margin" role="radio" aria-checked="false"><span class="indicator" style="background:#f03b20"></span>Victory Margin</button>
+          </div>
         </div>
       </div>
-      <div class="stat-group">
-        <div class="stat-group-label">Head to Head</div>
-        <div class="stat-grid">
-          <button class="stat-btn active" data-stat="bnp_vs_eleven_party_alliance" role="radio" aria-checked="true"><span class="indicator" style="background:linear-gradient(90deg,#ca0020,#0571b0)"></span>BNP vs 11-Party</button>
+
+      <div style="display:flex;gap:6px;margin-bottom:14px">
+        <div class="view-toggle" id="view-toggle" style="flex:1;margin-bottom:0">
+          <button class="view-toggle-btn active" data-view="constituency">Constituency</button>
+          <button class="view-toggle-btn" data-view="district">District</button>
+        </div>
+        <button class="screenshot-btn sidebar-zoom-btn" id="sidebar-zoom-in" title="Zoom in" style="padding:6px 10px"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></button>
+        <button class="screenshot-btn sidebar-zoom-btn" id="sidebar-zoom-out" title="Zoom out" style="padding:6px 10px"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/></svg></button>
+        <button class="screenshot-btn sidebar-zoom-btn" id="sidebar-reset-zoom" title="Reset zoom" style="padding:6px 10px"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9"/><path d="M3 3v6h6"/></svg></button>
+      </div>
+
+      <div id="selected-seat" role="region" aria-label="Selected constituency">
+        <button class="close-btn" aria-label="Close">&times;</button>
+        <div id="selected-seat-content"></div>
+      </div>
+
+      <div class="toolbar">
+        <button class="screenshot-btn" id="screenshot-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M3 9h2m14 0h2M9 3v2m0 14v2m6-18v2m0 14v2M3 15h2m14 0h2"/></svg>Screenshot</button>
+        <button class="screenshot-btn" id="share-btn"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98"/></svg>Share View</button>
+      </div>
+      <div class="share-url-wrap" id="share-url-wrap" style="display:none">
+        <input type="text" class="share-url-input" id="share-url" readonly>
+        <button class="share-copy-btn" id="share-copy-btn">Copy</button>
+      </div>
+
+      <div class="section threshold-section" id="threshold-section">
+        <div class="section-label">Highlight Threshold</div>
+        <div class="threshold-mode" id="threshold-mode">
+          <button class="threshold-mode-btn active" data-mode="above">Above</button>
+          <button class="threshold-mode-btn" data-mode="below">Below</button>
+        </div>
+        <div class="threshold-controls">
+          <input type="range" class="threshold-slider" id="threshold-slider" min="0" max="100" value="100" step="1">
+          <span class="threshold-val" id="threshold-val">100%</span>
+        </div>
+        <div class="threshold-count" id="threshold-count"></div>
+      </div>
+
+      <div class="section" id="histogram-section" style="display:none">
+        <div class="section-label">Distribution</div>
+        <div class="histogram-wrap">
+          <div class="histogram" id="histogram"></div>
+          <div class="histogram-labels" id="histogram-labels"></div>
         </div>
       </div>
-      <div class="stat-group">
-        <div class="stat-group-label">Seats</div>
-        <div class="stat-grid">
-          <button class="stat-btn" data-stat="winner" role="radio" aria-checked="false"><span class="indicator" style="background:linear-gradient(90deg,#6baed6,#74c476,#9090a0)"></span>Winner Map</button>
+
+      <div class="section">
+        <div class="section-label">By Division</div>
+        <div id="division-breakdown"></div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">National Summary</div>
+        <div id="summary" class="summary-card"></div>
+      </div>
+    </div>
+
+    <!-- COMPARE VIEW CONTENT -->
+    <div id="compare-content" style="display:none">
+      <div class="section scatter-section">
+        <div class="section-label">Compare Statistics</div>
+        <div class="scatter-controls">
+          <select class="scatter-select" id="scatter-x"></select>
+          <span class="scatter-vs">vs</span>
+          <select class="scatter-select" id="scatter-y"></select>
         </div>
-      </div>
-      <div class="stat-group">
-        <div class="stat-group-label">Election Quality</div>
-        <div class="stat-grid">
-          <button class="stat-btn" data-stat="turnout" role="radio" aria-checked="false"><span class="indicator" style="background:#31a354"></span>Turnout</button>
-          <button class="stat-btn" data-stat="victory_margin" role="radio" aria-checked="false"><span class="indicator" style="background:#f03b20"></span>Victory Margin</button>
+        <div class="scatter-wrap">
+          <canvas id="scatter-canvas" width="356" height="280"></canvas>
         </div>
+        <div class="scatter-info" id="scatter-info"></div>
       </div>
-    </div>
 
-    <div class="section">
-      <div class="section-label">National Summary</div>
-      <div id="summary" class="summary-card"></div>
-    </div>
+      <div id="selected-seat-compare" role="region" aria-label="Selected constituency">
+        <button class="close-btn" aria-label="Close">&times;</button>
+        <div id="selected-seat-compare-content"></div>
+      </div>
 
-    <div class="section" id="histogram-section" style="display:none">
-      <div class="section-label">Distribution</div>
-      <div class="histogram-wrap">
-        <div class="histogram" id="histogram"></div>
-        <div class="histogram-labels" id="histogram-labels"></div>
+      <div class="toolbar">
+        <button class="screenshot-btn" id="screenshot-btn-compare"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M3 9h2m14 0h2M9 3v2m0 14v2m6-18v2m0 14v2M3 15h2m14 0h2"/></svg>Screenshot</button>
+        <button class="screenshot-btn" id="share-btn-compare"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98"/></svg>Share View</button>
       </div>
-    </div>
-
-    <div class="section threshold-section" id="threshold-section">
-      <div class="section-label">Highlight Threshold</div>
-      <div class="threshold-mode" id="threshold-mode">
-        <button class="threshold-mode-btn active" data-mode="above">Above</button>
-        <button class="threshold-mode-btn" data-mode="below">Below</button>
+      <div class="share-url-wrap" id="share-url-wrap-compare" style="display:none">
+        <input type="text" class="share-url-input" id="share-url-compare" readonly>
+        <button class="share-copy-btn" id="share-copy-btn-compare">Copy</button>
       </div>
-      <div class="threshold-controls">
-        <input type="range" class="threshold-slider" id="threshold-slider" min="0" max="100" value="100" step="1">
-        <span class="threshold-val" id="threshold-val">100%</span>
-      </div>
-      <div class="threshold-count" id="threshold-count"></div>
-    </div>
-
-    <div class="section scatter-section">
-      <div class="section-label">Scatter Plot</div>
-      <div class="scatter-controls">
-        <select class="scatter-select" id="scatter-x"></select>
-        <span class="scatter-vs">vs</span>
-        <select class="scatter-select" id="scatter-y"></select>
-      </div>
-      <div class="scatter-wrap">
-        <canvas id="scatter-canvas" width="356" height="280"></canvas>
-      </div>
-      <div class="scatter-info" id="scatter-info"></div>
-    </div>
-
-    <div class="section">
-      <div class="section-label">By Division</div>
-      <div id="division-breakdown"></div>
     </div>
 
   </div>
@@ -473,7 +499,7 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
 </div>
 </div>
 
-<button id="sidebar-toggle">Show Results</button>
+<button id="sidebar-toggle">Show Settings</button>
 
 <script>
 // ColorBrewer palettes
@@ -570,11 +596,7 @@ L.control.zoom({position:"topright"}).addTo(map);
 
 // Click map background to deselect
 map.on("click",function(e){
-  if(selectedSeatKey){
-    document.getElementById("selected-seat").classList.remove("show");
-    selectedSeatKey=null;
-    updateMap();
-  }
+  if(selectedSeatKey){deselectSeat()}
 });
 
 // Dark CARTO basemap
@@ -602,6 +624,7 @@ Promise.all([
   if(geojsonLayer)map.fitBounds(geojsonLayer.getBounds().pad(0.02));
   initMiniMap();
   updateAll();
+  if(window._applyPendingState)window._applyPendingState();
   document.getElementById("loader").classList.add("hidden");
   setTimeout(function(){document.getElementById("loader").style.display="none"},700);
 }).catch(function(err){
@@ -738,59 +761,28 @@ function selectSeat(key){
     });
   });
   el.classList.add("show");
+  // Also update compare view's selected seat
+  var elC=document.getElementById("selected-seat-compare");
+  document.getElementById("selected-seat-compare-content").innerHTML=document.getElementById("selected-seat-content").innerHTML;
+  elC.classList.add("show");
+  elC.querySelectorAll(".neighbor-row").forEach(function(row){
+    row.addEventListener("click",function(){
+      var sk=row.getAttribute("data-seat");
+      selectSeat(sk);
+      var layer=seatLayers[sk];
+      if(layer)map.fitBounds(layer.getBounds().pad(0.5));
+    });
+  });
 }
 
-document.querySelector("#selected-seat .close-btn").addEventListener("click",function(){
-  document.getElementById("selected-seat").classList.remove("show");selectedSeatKey=null;updateMap();
-});
+function deselectSeat(){
+  document.getElementById("selected-seat").classList.remove("show");
+  document.getElementById("selected-seat-compare").classList.remove("show");
+  selectedSeatKey=null;updateMap();
+}
 
-// Search
-var searchInput=document.getElementById("search");
-var searchResults=document.getElementById("search-results");
-searchInput.addEventListener("input",function(){
-  var q=this.value.trim().toLowerCase();
-  if(q.length<2){searchResults.classList.remove("show");return}
-  var matches=[];var keys=Object.keys(seatData);
-  for(var i=0;i<keys.length&&matches.length<8;i++){
-    var s=seatData[keys[i]];
-    if(s.name.toLowerCase().indexOf(q)>=0||s.district.toLowerCase().indexOf(q)>=0)matches.push(s);
-  }
-  if(!matches.length){searchResults.classList.remove("show");return}
-  searchResults.innerHTML=matches.map(function(s){
-    return'<div class="search-item" data-key="'+s.name+'" role="option"><div class="seat-name">'+s.name+'</div><div class="seat-district">'+s.district+', '+s.division+'</div></div>';
-  }).join("");
-  searchResults.classList.add("show");
-});
-searchResults.addEventListener("click",function(e){
-  var item=e.target.closest(".search-item");if(!item)return;
-  var key=item.getAttribute("data-key");
-  searchResults.classList.remove("show");searchInput.value="";
-  selectSeat(key);
-  var layer=seatLayers[key];
-  if(layer)map.fitBounds(layer.getBounds().pad(0.5));
-});
-document.addEventListener("click",function(e){if(!e.target.closest("#search-wrap"))searchResults.classList.remove("show")});
+document.querySelector("#selected-seat .close-btn").addEventListener("click",deselectSeat);
 
-// Keyboard navigation for search
-searchInput.addEventListener("keydown",function(e){
-  if(e.key==="ArrowDown"||e.key==="ArrowUp"){
-    e.preventDefault();
-    var items=searchResults.querySelectorAll(".search-item");
-    if(!items.length)return;
-    var current=searchResults.querySelector(".search-item:hover,.search-item.focused");
-    var idx=Array.prototype.indexOf.call(items,current);
-    items.forEach(function(i){i.classList.remove("focused");i.style.background=""});
-    if(e.key==="ArrowDown")idx=Math.min(idx+1,items.length-1);
-    else idx=Math.max(idx-1,0);
-    items[idx].classList.add("focused");
-    items[idx].style.background="var(--accent-soft)";
-    items[idx].scrollIntoView({block:"nearest"});
-  }
-  if(e.key==="Enter"){
-    var focused=searchResults.querySelector(".search-item.focused");
-    if(focused)focused.click();
-  }
-});
 
 function updateAll(){updateMap();updateSummary();updateDivisions();updateLegend();updateHistogram()}
 
@@ -916,17 +908,7 @@ pills.forEach(function(p){
 
 // Keyboard shortcuts
 document.addEventListener("keydown",function(e){
-  if(e.key==="Escape"){
-    document.getElementById("selected-seat").classList.remove("show");
-    selectedSeatKey=null;
-    searchResults.classList.remove("show");
-    searchInput.value="";
-    updateMap();
-  }
-  // / to focus search
-  if(e.key==="/"&&document.activeElement!==searchInput){
-    e.preventDefault();searchInput.focus();
-  }
+  if(e.key==="Escape"){deselectSeat()}
 });
 
 
@@ -936,11 +918,11 @@ var sidebar=document.getElementById("sidebar");
 var mobileHandle=document.getElementById("mobile-handle");
 sidebarToggle.addEventListener("click",function(){
   sidebar.classList.toggle("mobile-open");
-  sidebarToggle.textContent=sidebar.classList.contains("mobile-open")?"Show Map":"Show Results";
+  sidebarToggle.textContent=sidebar.classList.contains("mobile-open")?"Show Map":"Show Settings";
 });
 mobileHandle.addEventListener("click",function(){
   sidebar.classList.toggle("mobile-open");
-  sidebarToggle.textContent=sidebar.classList.contains("mobile-open")?"Show Map":"Show Results";
+  sidebarToggle.textContent=sidebar.classList.contains("mobile-open")?"Show Map":"Show Settings";
 });
 
 // Histogram
@@ -1106,31 +1088,43 @@ function initMiniMap(){
   }).addTo(map);
 }
 
-// Screenshot
+// Screenshot - uses html-to-image which handles Leaflet CSS transforms correctly
+var screenshotSvg='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M3 9h2m14 0h2M9 3v2m0 14v2m6-18v2m0 14v2M3 15h2m14 0h2"/></svg>';
+function takeScreenshot(btn,filename){
+  btn.textContent="Capturing...";btn.disabled=true;
+  setTimeout(function(){
+    var mapTarget=compareMode?document.getElementById("compare-container"):document.getElementById("map");
+    var opts={
+      pixelRatio:2,
+      backgroundColor:"#0a0a10",
+      cacheBust:true,
+      filter:function(node){
+        // Skip minimap to avoid clutter, keep everything else
+        if(node.classList&&node.classList.contains("leaflet-control-minimap"))return false;
+        return true;
+      }
+    };
+    htmlToImage.toPng(mapTarget,opts).then(function(dataUrl){
+      var link=document.createElement("a");
+      link.download=filename;
+      link.href=dataUrl;
+      link.click();
+      btn.innerHTML=screenshotSvg+'Screenshot';
+      btn.disabled=false;
+    }).catch(function(err){
+      console.error("Screenshot failed:",err);
+      btn.innerHTML=screenshotSvg+'Screenshot';
+      btn.disabled=false;
+    });
+  },500);
+}
 document.getElementById("screenshot-btn").addEventListener("click",function(){
-  var btn=this;btn.textContent="Capturing...";btn.disabled=true;
-  var mapEl=compareMode?document.getElementById("compare-container"):document.getElementById("map");
-  html2canvas(mapEl,{
-    useCORS:true,
-    allowTaint:true,
-    backgroundColor:"#0a0a10",
-    scale:2
-  }).then(function(canvas){
-    var link=document.createElement("a");
-    link.download="election-map-"+currentStat+".png";
-    link.href=canvas.toDataURL("image/png");
-    link.click();
-    btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M3 9h2m14 0h2M9 3v2m0 14v2m6-18v2m0 14v2M3 15h2m14 0h2"/></svg>Screenshot';
-    btn.disabled=false;
-  }).catch(function(){
-    btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M3 9h2m14 0h2M9 3v2m0 14v2m6-18v2m0 14v2M3 15h2m14 0h2"/></svg>Screenshot';
-    btn.disabled=false;
-  });
+  takeScreenshot(this,"election-map-"+currentStat+".png");
 });
 
 // Comparison mode
 var compareMapLeft=null,compareMapRight=null,compareLayerLeft=null,compareLayerRight=null;
-var compareStatLeft="bnp",compareStatRight="jamaat";
+var compareStatLeft="turnout",compareStatRight="eleven_party_alliance";
 
 function buildStatOptions(selected){
   return Object.keys(STAT_META).map(function(k){
@@ -1160,45 +1154,85 @@ function colorCompareLayer(layer,statKey){
   });
 }
 
-function initCompareMap(containerId,geoData){
+// Compare layer lookup for cross-highlight
+var compareLayerLookupLeft={},compareLayerLookupRight={};
+var compareHoveredKey=null;
+
+function highlightCompareConstituency(key){
+  if(compareHoveredKey===key)return;
+  // Unhighlight previous
+  if(compareHoveredKey){
+    var pl=compareLayerLookupLeft[compareHoveredKey];
+    var pr=compareLayerLookupRight[compareHoveredKey];
+    if(pl)pl.setStyle({weight:0.5,color:"#000"});
+    if(pr)pr.setStyle({weight:0.5,color:"#000"});
+  }
+  compareHoveredKey=key;
+  if(key){
+    var hl=compareLayerLookupLeft[key];
+    var hr=compareLayerLookupRight[key];
+    if(hl){hl.setStyle({weight:3,color:"#7c6cff"});hl.bringToFront()}
+    if(hr){hr.setStyle({weight:3,color:"#7c6cff"});hr.bringToFront()}
+  }
+}
+
+function initCompareMap(containerId,geoData,lookupObj){
   var m=L.map(containerId,{zoomSnap:0.25,zoomControl:false,attributionControl:false}).setView([23.5,90.3],7.5);
   L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png",{maxZoom:18}).addTo(m);
   var layer=L.geoJSON(geoData,{
     style:function(){return{weight:0.5,color:"#000",fillOpacity:0.88,fillColor:"#222"}},
-    onEachFeature:function(f,l){l._seatKey=normalizeSeatName(f.properties.cst_n||"")}
+    onEachFeature:function(f,l){
+      l._seatKey=normalizeSeatName(f.properties.cst_n||"");
+      lookupObj[l._seatKey]=l;
+      l.on("mouseover",function(){highlightCompareConstituency(l._seatKey)});
+      l.on("mouseout",function(){highlightCompareConstituency(null)});
+      l.on("click",function(){selectSeat(l._seatKey);updateScatter()});
+    }
   }).addTo(m);
   m.fitBounds(layer.getBounds().pad(0.02));
   return{map:m,layer:layer};
 }
 
 var compareGeoCache=null;
-document.getElementById("compare-btn").addEventListener("click",function(){
-  compareMode=!compareMode;
+
+// Mode toggle: Single View vs Compare View
+function activateMode(mode){
+  compareMode=(mode==="compare");
   var container=document.getElementById("compare-container");
   var mainMap=document.getElementById("map");
+  var singleContent=document.getElementById("single-content");
+  var compareContent=document.getElementById("compare-content");
+  document.querySelectorAll("#mode-toggle .view-toggle-btn").forEach(function(b){
+    b.classList.toggle("active",b.getAttribute("data-mode")===mode);
+  });
   if(compareMode){
-    this.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>Single View';
+    singleContent.style.display="none";
+    compareContent.style.display="";
     container.classList.add("active");
     mainMap.style.display="none";
-    // Build select options
+    // Build compare select options
     document.getElementById("compare-select-left").innerHTML=buildStatOptions(compareStatLeft);
     document.getElementById("compare-select-right").innerHTML=buildStatOptions(compareStatRight);
     document.getElementById("compare-label-left").textContent=STAT_META[compareStatLeft].label;
     document.getElementById("compare-label-right").textContent=STAT_META[compareStatRight].label;
-    // Init maps if needed (need geo data)
+    // Sync scatter selects to compare stats
+    document.getElementById("scatter-x").value=compareStatLeft;
+    document.getElementById("scatter-y").value=compareStatRight;
+    scatterXStat=compareStatLeft;scatterYStat=compareStatRight;
     if(!compareGeoCache){
       fetch("data/constituencies.geojson").then(function(r){return r.json()}).then(function(geo){
         compareGeoCache=geo;
-        var left=initCompareMap("compare-map-left",geo);
+        compareLayerLookupLeft={};compareLayerLookupRight={};
+        var left=initCompareMap("compare-map-left",geo,compareLayerLookupLeft);
         compareMapLeft=left.map;compareLayerLeft=left.layer;
-        var right=initCompareMap("compare-map-right",geo);
+        var right=initCompareMap("compare-map-right",geo,compareLayerLookupRight);
         compareMapRight=right.map;compareLayerRight=right.layer;
         colorCompareLayer(compareLayerLeft,compareStatLeft);
         colorCompareLayer(compareLayerRight,compareStatRight);
-        // Sync views (with guard to prevent infinite loop)
         var syncing=false;
         compareMapLeft.on("move",function(){if(syncing)return;syncing=true;compareMapRight.setView(compareMapLeft.getCenter(),compareMapLeft.getZoom(),{animate:false});syncing=false});
         compareMapRight.on("move",function(){if(syncing)return;syncing=true;compareMapLeft.setView(compareMapRight.getCenter(),compareMapRight.getZoom(),{animate:false});syncing=false});
+        setTimeout(function(){updateScatter()},50);
       });
     } else {
       setTimeout(function(){
@@ -1206,25 +1240,41 @@ document.getElementById("compare-btn").addEventListener("click",function(){
         if(compareMapRight)compareMapRight.invalidateSize();
         colorCompareLayer(compareLayerLeft,compareStatLeft);
         colorCompareLayer(compareLayerRight,compareStatRight);
+        updateScatter();
       },100);
     }
   } else {
-    this.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><rect x="3" y="3" width="7" height="18" rx="1"/><rect x="14" y="3" width="7" height="18" rx="1"/></svg>Compare';
+    singleContent.style.display="";
+    compareContent.style.display="none";
     container.classList.remove("active");
     mainMap.style.display="";
     map.invalidateSize();
   }
+}
+
+document.getElementById("mode-toggle").addEventListener("click",function(e){
+  var btn=e.target.closest(".view-toggle-btn");if(!btn)return;
+  activateMode(btn.getAttribute("data-mode"));
 });
 
+// Compare map selects sync with scatter
 document.getElementById("compare-select-left").addEventListener("change",function(){
   compareStatLeft=this.value;
   document.getElementById("compare-label-left").textContent=STAT_META[compareStatLeft].label;
   colorCompareLayer(compareLayerLeft,compareStatLeft);
+  // Sync scatter X
+  scatterXStat=compareStatLeft;
+  document.getElementById("scatter-x").value=compareStatLeft;
+  updateScatter();
 });
 document.getElementById("compare-select-right").addEventListener("change",function(){
   compareStatRight=this.value;
   document.getElementById("compare-label-right").textContent=STAT_META[compareStatRight].label;
   colorCompareLayer(compareLayerRight,compareStatRight);
+  // Sync scatter Y
+  scatterYStat=compareStatRight;
+  document.getElementById("scatter-y").value=compareStatRight;
+  updateScatter();
 });
 
 // Update district view on stat change
@@ -1237,7 +1287,7 @@ updateAll=function(){
 };
 
 // ========== SCATTER PLOT ==========
-var scatterXStat="turnout",scatterYStat="victory_margin";
+var scatterXStat="turnout",scatterYStat="eleven_party_alliance";
 var scatterCanvas=document.getElementById("scatter-canvas");
 var scatterCtx=scatterCanvas.getContext("2d");
 var scatterPoints=[];// cached for click detection
@@ -1252,8 +1302,24 @@ function initScatterSelects(){
 }
 initScatterSelects();
 
-document.getElementById("scatter-x").addEventListener("change",function(){scatterXStat=this.value;updateScatter()});
-document.getElementById("scatter-y").addEventListener("change",function(){scatterYStat=this.value;updateScatter()});
+document.getElementById("scatter-x").addEventListener("change",function(){
+  scatterXStat=this.value;
+  // Sync compare map left
+  compareStatLeft=scatterXStat;
+  document.getElementById("compare-select-left").value=compareStatLeft;
+  document.getElementById("compare-label-left").textContent=STAT_META[compareStatLeft].label;
+  colorCompareLayer(compareLayerLeft,compareStatLeft);
+  updateScatter();
+});
+document.getElementById("scatter-y").addEventListener("change",function(){
+  scatterYStat=this.value;
+  // Sync compare map right
+  compareStatRight=scatterYStat;
+  document.getElementById("compare-select-right").value=compareStatRight;
+  document.getElementById("compare-label-right").textContent=STAT_META[compareStatRight].label;
+  colorCompareLayer(compareLayerRight,compareStatRight);
+  updateScatter();
+});
 
 function updateScatter(){
   var c=scatterCanvas;
@@ -1398,33 +1464,34 @@ document.getElementById("threshold-mode").addEventListener("click",function(e){
 thresholdSlider.addEventListener("input",function(){
   var meta=STAT_META[currentStat];if(!meta||meta.categorical)return;
   var pct=parseInt(this.value);
-  thresholdVal=meta.range[0]+(meta.range[1]-meta.range[0])*(pct/100);
-  thresholdValEl.textContent=(thresholdVal*100).toFixed(0)+"%";
+  thresholdVal=pct/100;
+  thresholdValEl.textContent=pct+"%";
   updateThreshold();
 });
 
 function updateThreshold(){
   updateThresholdVisibility();
   var meta=STAT_META[currentStat];if(!meta||meta.categorical)return;
-  // Update slider label
   var pct=parseInt(thresholdSlider.value);
-  thresholdVal=meta.range[0]+(meta.range[1]-meta.range[0])*(pct/100);
-  thresholdValEl.textContent=(thresholdVal*100).toFixed(0)+"%";
+  thresholdVal=pct/100;
+  thresholdValEl.textContent=pct+"%";
 
   var count=0,total=0;
+  var allMatch=(pct>=100&&thresholdMode==="above")||(pct<=0&&thresholdMode==="below");
+  var noneMatch=(pct>=100&&thresholdMode==="below")||(pct<=0&&thresholdMode==="above");
   if(currentView==="constituency"&&geojsonLayer){
     geojsonLayer.eachLayer(function(l){
       var seat=seatData[l._seatKey];if(!seat)return;
       var val=seat.stats[currentStat];if(val==null||isNaN(val))return;
       total++;
       var match=(thresholdMode==="above")?val>=thresholdVal:val<=thresholdVal;
-      if(match){
-        count++;
-        l.setStyle({weight:2.5,color:"#ffe066"});
-        l.bringToFront();
+      if(match)count++;
+      var isSel=selectedSeatKey===l._seatKey;
+      // At extremes, show everything normally
+      if(allMatch||noneMatch){
+        l.setStyle({fillOpacity:0.88,weight:isSel?3:0.5,color:isSel?"#7c6cff":"#000"});
       } else {
-        var isSel=selectedSeatKey===l._seatKey;
-        l.setStyle({weight:isSel?3:0.5,color:isSel?"#7c6cff":"#000"});
+        l.setStyle({fillOpacity:match?0.88:0.12,weight:isSel?3:0.5,color:isSel?"#7c6cff":"#000"});
       }
     });
   } else if(currentView==="district"&&districtLayer){
@@ -1433,12 +1500,11 @@ function updateThreshold(){
       var val=dd.stats[currentStat];if(val==null||isNaN(val))return;
       total++;
       var match=(thresholdMode==="above")?val>=thresholdVal:val<=thresholdVal;
-      if(match){
-        count++;
-        l.setStyle({weight:3,color:"#ffe066"});
-        l.bringToFront();
+      if(match)count++;
+      if(allMatch||noneMatch){
+        l.setStyle({fillOpacity:0.88,weight:1.5,color:"#444"});
       } else {
-        l.setStyle({weight:1.5,color:"#444"});
+        l.setStyle({fillOpacity:match?0.88:0.12,weight:1.5,color:"#444"});
       }
     });
   }
@@ -1446,7 +1512,7 @@ function updateThreshold(){
 }
 
 // Reset zoom
-document.getElementById("reset-zoom").addEventListener("click",function(){
+function resetZoom(){
   activeDivision=null;
   document.querySelectorAll(".div-row.active-div").forEach(function(r){r.classList.remove("active-div")});
   var layer=currentView==="district"?districtLayer:geojsonLayer;
@@ -1454,7 +1520,181 @@ document.getElementById("reset-zoom").addEventListener("click",function(){
     map.fitBounds(layer.getBounds().pad(0.02));
     layer.eachLayer(function(l){l.setStyle({fillOpacity:0.88})});
   }
+}
+document.getElementById("reset-zoom").addEventListener("click",resetZoom);
+document.getElementById("sidebar-reset-zoom").addEventListener("click",resetZoom);
+document.getElementById("sidebar-zoom-in").addEventListener("click",function(){map.zoomIn()});
+document.getElementById("sidebar-zoom-out").addEventListener("click",function(){map.zoomOut()});
+
+// Compare view: selected seat close button
+document.querySelector("#selected-seat-compare .close-btn").addEventListener("click",function(){
+  deselectSeat();
 });
+
+// Compare view: screenshot button
+document.getElementById("screenshot-btn-compare").addEventListener("click",function(){
+  takeScreenshot(this,"election-compare-"+compareStatLeft+"-vs-"+compareStatRight+".png");
+});
+
+// ========== SHAREABLE URL STATE ==========
+function encodeState(){
+  var p={};
+  p.stat=currentStat;
+  p.view=currentView;
+  if(compareMode){p.mode="compare";p.cx=compareStatLeft;p.cy=compareStatRight}
+  if(selectedSeatKey)p.seat=selectedSeatKey;
+  if(activeDivision)p.div=activeDivision;
+  var c=map.getCenter();var z=map.getZoom();
+  p.lat=c.lat.toFixed(4);p.lng=c.lng.toFixed(4);p.z=z.toFixed(2);
+  var base=window.location.origin+window.location.pathname;
+  return base+"#"+Object.keys(p).map(function(k){return k+"="+encodeURIComponent(p[k])}).join("&");
+}
+
+function decodeHash(){
+  var h=window.location.hash.slice(1);if(!h)return null;
+  var p={};
+  h.split("&").forEach(function(pair){
+    var kv=pair.split("=");
+    if(kv.length===2)p[kv[0]]=decodeURIComponent(kv[1]);
+  });
+  return p;
+}
+
+function applyUrlState(){
+  var p=decodeHash();if(!p)return;
+  if(p.stat&&STAT_META[p.stat]){
+    currentStat=p.stat;
+    document.querySelectorAll(".stat-btn").forEach(function(b){
+      b.classList.toggle("active",b.getAttribute("data-stat")===currentStat);
+      b.setAttribute("aria-checked",b.getAttribute("data-stat")===currentStat?"true":"false");
+    });
+  }
+  if(p.view==="district"||p.view==="constituency"){
+    currentView=p.view;
+    document.querySelectorAll("#view-toggle .view-toggle-btn").forEach(function(b){
+      b.classList.toggle("active",b.getAttribute("data-view")===currentView);
+    });
+  }
+  if(p.lat&&p.lng&&p.z){
+    map.setView([parseFloat(p.lat),parseFloat(p.lng)],parseFloat(p.z));
+  }
+  if(p.mode==="compare"){
+    if(p.cx&&STAT_META[p.cx])compareStatLeft=p.cx;
+    if(p.cy&&STAT_META[p.cy])compareStatRight=p.cy;
+    scatterXStat=compareStatLeft;scatterYStat=compareStatRight;
+    activateMode("compare");
+  }
+  if(p.seat)window._pendingSeat=p.seat;
+  if(p.div)window._pendingDiv=p.div;
+}
+
+window._applyPendingState=function(){
+  if(window._pendingSeat){selectSeat(window._pendingSeat);window._pendingSeat=null}
+  if(window._pendingDiv){
+    activeDivision=window._pendingDiv;
+    updateDivisions();
+    if(geojsonLayer){
+      var bounds=L.latLngBounds();
+      geojsonLayer.eachLayer(function(l){
+        var s=seatData[l._seatKey];
+        if(s&&s.division===activeDivision)bounds.extend(l.getBounds());
+      });
+      if(bounds.isValid())map.fitBounds(bounds.pad(0.05));
+    }
+    window._pendingDiv=null;
+  }
+};
+
+// Share button: generate link and show in copiable field
+document.getElementById("share-btn").addEventListener("click",function(){
+  var url=encodeState();
+  var wrap=document.getElementById("share-url-wrap");
+  var inp=document.getElementById("share-url");
+  inp.value=url;
+  wrap.style.display="flex";
+  inp.select();
+});
+document.getElementById("share-copy-btn").addEventListener("click",function(){
+  var inp=document.getElementById("share-url");
+  inp.select();
+  navigator.clipboard.writeText(inp.value).then(function(){
+    var btn=document.getElementById("share-copy-btn");
+    btn.textContent="Copied!";
+    setTimeout(function(){btn.textContent="Copy"},1500);
+  });
+});
+
+// Compare view share button
+document.getElementById("share-btn-compare").addEventListener("click",function(){
+  var url=encodeState();
+  var wrap=document.getElementById("share-url-wrap-compare");
+  var inp=document.getElementById("share-url-compare");
+  inp.value=url;
+  wrap.style.display="flex";
+  inp.select();
+});
+document.getElementById("share-copy-btn-compare").addEventListener("click",function(){
+  var inp=document.getElementById("share-url-compare");
+  inp.select();
+  navigator.clipboard.writeText(inp.value).then(function(){
+    var btn=document.getElementById("share-copy-btn-compare");
+    btn.textContent="Copied!";
+    setTimeout(function(){btn.textContent="Copy"},1500);
+  });
+});
+
+// ========== REGRESSION LINE OVERLAY ON COMPARE MAPS ==========
+var regressionLineLeft=null,regressionLineRight=null;
+
+function updateRegressionOverlay(){
+  // Remove old lines
+  if(regressionLineLeft&&compareMapLeft){compareMapLeft.removeLayer(regressionLineLeft);regressionLineLeft=null}
+  if(regressionLineRight&&compareMapRight){compareMapRight.removeLayer(regressionLineRight);regressionLineRight=null}
+  if(!compareMode||!compareLayerLeft||!compareLayerRight)return;
+
+  // Compute regression: for each constituency, get its centroid + x/y values
+  var pts=[];
+  compareLayerLeft.eachLayer(function(l){
+    var seat=seatData[l._seatKey];if(!seat)return;
+    var vx=seat.stats[compareStatLeft],vy=seat.stats[compareStatRight];
+    if(vx!=null&&!isNaN(vx)&&vx!==0&&vy!=null&&!isNaN(vy)&&vy!==0){
+      var c=l.getBounds().getCenter();
+      pts.push({lat:c.lat,lng:c.lng,x:vx,y:vy,key:l._seatKey});
+    }
+  });
+  if(pts.length<2)return;
+
+  // Linear regression
+  var n=pts.length,sumX=0,sumY=0,sumXY=0,sumXX=0;
+  pts.forEach(function(p){sumX+=p.x;sumY+=p.y;sumXY+=p.x*p.y;sumXX+=p.x*p.x});
+  var denom=n*sumXX-sumX*sumX;
+  var slope=denom!==0?(n*sumXY-sumX*sumY)/denom:0;
+  var intercept=(sumY-slope*sumX)/n;
+
+  // Color constituencies by residual on both maps: blue=above line, red=below
+  // Left map: size dots by X value; Right map: color by residual
+  pts.forEach(function(p){
+    var predicted=slope*p.x+intercept;
+    var residual=p.y-predicted;
+    var rl=compareLayerLookupLeft[p.key];
+    var rr=compareLayerLookupRight[p.key];
+    // On both maps, add a subtle border color showing residual direction
+    var resColor=residual>0?"rgba(52,211,153,0.6)":"rgba(248,113,113,0.6)";
+    var absRes=Math.min(Math.abs(residual)*10,3);// scale to border width
+    if(rl)rl._residualWeight=0.5+absRes;
+    if(rr)rr._residualWeight=0.5+absRes;
+  });
+}
+
+// Call after compare colors are updated
+var origColorCompareLayer=colorCompareLayer;
+colorCompareLayer=function(layer,statKey){
+  origColorCompareLayer(layer,statKey);
+  // Re-apply after both layers colored
+  setTimeout(updateRegressionOverlay,10);
+};
+
+applyUrlState();
 </script>
 </body>
 </html>

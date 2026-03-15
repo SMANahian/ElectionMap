@@ -9,6 +9,8 @@ Built with Leaflet.js on a dark CARTO basemap with ColorBrewer palettes.
 
 Built by S M A Nahian (<https://smanahian.com>).
 
+## Features
+
 ### Map layers
 
 | Layer | Description |
@@ -16,10 +18,26 @@ Built by S M A Nahian (<https://smanahian.com>).
 | **BNP Vote Share** | Bangladesh Nationalist Party (Blues) |
 | **Jamaat Vote Share** | Bangladesh Jamaat-e-Islami (Greens) |
 | **11-Party Alliance** | Eleven-party Islamist coalition led by Jamaat (Purples) |
-| **BNP Alliance** | BNP-led broader alliance (Oranges) |
 | **BNP vs 11-Party** | Diverging red-yellow-blue map with sigmoid scaling |
+| **Winner Map** | Color each seat by winning party |
 | **Turnout** | Voter turnout percentage (Yellow-Green) |
 | **Victory Margin** | Winner's margin of victory (Yellow-Red) |
+
+### Interactive tools
+
+- **Single View / Compare View** — top-level toggle between single-stat exploration and side-by-side comparison mode
+- **Constituency / District toggle** — switch between individual seat view and aggregated district-level view with dissolved boundaries
+- **Scatter plot** (Compare View) — plot any stat vs any stat with linear regression best-fit line, Pearson r and r² values. Click dots to select seats. Dynamic axis ranges. Axes sync with compare maps.
+- **Side-by-side synced maps** (Compare View) — two maps driven by scatter plot X/Y axes, with synchronized pan/zoom and cross-highlight on hover
+- **Threshold highlighter** — slider (0–100%) to highlight seats above or below a threshold by dimming non-matching areas
+- **Division filter** — click a division in the breakdown to zoom and isolate it
+- **Neighboring seats** — select a constituency to see how adjacent seats voted, with click-to-navigate
+- **Distribution histogram** — shows how seats are distributed across the current stat's range
+- **Share View** — generate a shareable URL that encodes the current stat, view, zoom, selected seat, and compare state. Copiable link field with one-click copy.
+- **Screenshot** — export current map view or compare view as high-res PNG
+- **Mini map** — inset overview map showing current viewport position
+- **Reset zoom** — button to return to full country view
+- **Keyboard shortcuts** — `Escape` to deselect, click map background to deselect
 
 ## Repository structure
 
