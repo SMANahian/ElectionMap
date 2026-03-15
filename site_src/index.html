@@ -282,6 +282,10 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
 .screenshot-btn svg{width:14px;height:14px}
 .toolbar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
 
+/* Reset zoom */
+.reset-zoom{position:absolute;top:80px;right:10px;z-index:1000;width:36px;height:36px;background:var(--sidebar-bg);border:none;border-radius:var(--radius-sm);cursor:pointer;color:var(--text-primary);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-md);transition:all var(--transition-fast)}
+.reset-zoom:hover{background:var(--card-bg-hover);color:var(--accent)}
+
 /* Mini map override */
 .leaflet-control-minimap{border:2px solid var(--border)!important;border-radius:var(--radius-sm)!important;box-shadow:var(--shadow-lg)!important}
 .leaflet-control-minimap .leaflet-container{background:#1a1a2e!important}
@@ -295,6 +299,29 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
 .compare-label{position:absolute;top:10px;left:50%;transform:translateX(-50%);z-index:1000;background:var(--sidebar-bg);color:var(--text-primary);padding:5px 14px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:.5px;border:1px solid var(--border);box-shadow:var(--shadow-md);text-transform:uppercase;pointer-events:none}
 .compare-select{position:absolute;top:10px;right:10px;z-index:1000;background:var(--sidebar-bg);color:var(--text-primary);padding:6px 10px;border-radius:var(--radius-xs);font-size:11px;font-weight:600;border:1px solid var(--border);font-family:inherit;cursor:pointer}
 .compare-select option{background:var(--sidebar-bg);color:var(--text-primary)}
+
+/* Scatter plot */
+.scatter-section{margin-bottom:28px}
+.scatter-controls{display:flex;gap:6px;margin-bottom:10px;align-items:center}
+.scatter-select{flex:1;padding:6px 8px;font-size:10px;font-weight:600;background:var(--card-bg);color:var(--text-primary);border:1px solid var(--border);border-radius:var(--radius-xs);font-family:inherit;cursor:pointer}
+.scatter-select option{background:var(--sidebar-bg);color:var(--text-primary)}
+.scatter-vs{font-size:9px;color:var(--text-tertiary);font-weight:700}
+.scatter-wrap{position:relative;background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden}
+.scatter-wrap canvas{display:block;width:100%;cursor:crosshair}
+.scatter-info{font-size:9px;color:var(--text-tertiary);margin-top:6px;display:flex;justify-content:space-between;font-weight:500}
+.scatter-info strong{color:var(--text-secondary)}
+
+/* Threshold highlighter */
+.threshold-section{margin-bottom:28px}
+.threshold-controls{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.threshold-slider{flex:1;-webkit-appearance:none;appearance:none;height:4px;background:var(--border);border-radius:2px;outline:none;cursor:pointer}
+.threshold-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:14px;height:14px;border-radius:50%;background:var(--accent);cursor:pointer;box-shadow:0 0 6px rgba(124,108,255,.4)}
+.threshold-slider::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:var(--accent);cursor:pointer;border:none}
+.threshold-val{font-size:11px;font-weight:800;color:var(--text-primary);min-width:38px;text-align:right;font-variant-numeric:tabular-nums}
+.threshold-mode{display:flex;gap:4px;margin-bottom:8px}
+.threshold-mode-btn{padding:4px 10px;font-size:9px;font-weight:700;border:1px solid var(--border);border-radius:14px;background:transparent;color:var(--text-tertiary);cursor:pointer;font-family:inherit;transition:all var(--transition-fast)}
+.threshold-mode-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.threshold-count{font-size:10px;color:var(--text-secondary);font-weight:500}
 </style>
 </head>
 <body>
@@ -391,6 +418,32 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
       </div>
     </div>
 
+    <div class="section threshold-section" id="threshold-section">
+      <div class="section-label">Highlight Threshold</div>
+      <div class="threshold-mode" id="threshold-mode">
+        <button class="threshold-mode-btn active" data-mode="above">Above</button>
+        <button class="threshold-mode-btn" data-mode="below">Below</button>
+      </div>
+      <div class="threshold-controls">
+        <input type="range" class="threshold-slider" id="threshold-slider" min="0" max="100" value="100" step="1">
+        <span class="threshold-val" id="threshold-val">100%</span>
+      </div>
+      <div class="threshold-count" id="threshold-count"></div>
+    </div>
+
+    <div class="section scatter-section">
+      <div class="section-label">Scatter Plot</div>
+      <div class="scatter-controls">
+        <select class="scatter-select" id="scatter-x"></select>
+        <span class="scatter-vs">vs</span>
+        <select class="scatter-select" id="scatter-y"></select>
+      </div>
+      <div class="scatter-wrap">
+        <canvas id="scatter-canvas" width="356" height="280"></canvas>
+      </div>
+      <div class="scatter-info" id="scatter-info"></div>
+    </div>
+
     <div class="section">
       <div class="section-label">By Division</div>
       <div id="division-breakdown"></div>
@@ -403,7 +456,9 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
     Built by <a href="https://smanahian.com" target="_blank" rel="noopener">S M A Nahian</a> &middot; <a href="https://github.com/smanahian/ElectionMap" target="_blank" rel="noopener">GitHub</a>
   </div>
 </div>
-<div id="map"></div>
+<div id="map" style="position:relative">
+  <button class="reset-zoom" id="reset-zoom" title="Reset zoom"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9"/><path d="M3 3v6h6"/></svg></button>
+</div>
 <div id="compare-container">
   <div class="compare-pane" id="compare-left">
     <div class="compare-label" id="compare-label-left"></div>
@@ -513,6 +568,15 @@ var currentView="constituency";var compareMode=false;
 var map=L.map("map",{zoomSnap:0.25,zoomControl:false,attributionControl:true}).setView([23.5,90.3],7.5);
 L.control.zoom({position:"topright"}).addTo(map);
 
+// Click map background to deselect
+map.on("click",function(e){
+  if(selectedSeatKey){
+    document.getElementById("selected-seat").classList.remove("show");
+    selectedSeatKey=null;
+    updateMap();
+  }
+});
+
 // Dark CARTO basemap
 // Dark basemap with rivers and geographic features
 L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png",{
@@ -563,7 +627,7 @@ function initGeoJSON(geo){
             e.target.setStyle({weight:0.5,color:"#000"});
           }
         },
-        click:function(){selectSeat(key)}
+        click:function(e){L.DomEvent.stopPropagation(e);selectSeat(key)}
       });
       layer.bindTooltip(function(){return buildTooltip(key,seatData[key])},{sticky:true,className:"seat-tooltip",direction:"top",offset:[0,-12]});
     }
@@ -1168,7 +1232,229 @@ var origUpdateAll=updateAll;
 updateAll=function(){
   origUpdateAll();
   if(currentView==="district")updateDistrictMap();
+  updateThreshold();
+  updateScatter();
 };
+
+// ========== SCATTER PLOT ==========
+var scatterXStat="turnout",scatterYStat="victory_margin";
+var scatterCanvas=document.getElementById("scatter-canvas");
+var scatterCtx=scatterCanvas.getContext("2d");
+var scatterPoints=[];// cached for click detection
+
+function initScatterSelects(){
+  var numStats=Object.keys(STAT_META).filter(function(k){return !STAT_META[k].categorical});
+  var optHtml=numStats.map(function(k){return'<option value="'+k+'">'+STAT_META[k].label+'</option>'}).join("");
+  var selX=document.getElementById("scatter-x");
+  var selY=document.getElementById("scatter-y");
+  selX.innerHTML=optHtml;selY.innerHTML=optHtml;
+  selX.value=scatterXStat;selY.value=scatterYStat;
+}
+initScatterSelects();
+
+document.getElementById("scatter-x").addEventListener("change",function(){scatterXStat=this.value;updateScatter()});
+document.getElementById("scatter-y").addEventListener("change",function(){scatterYStat=this.value;updateScatter()});
+
+function updateScatter(){
+  var c=scatterCanvas;
+  var dpr=window.devicePixelRatio||1;
+  var w=c.parentElement.clientWidth||356;
+  var h=280;
+  c.width=w*dpr;c.height=h*dpr;
+  c.style.width=w+"px";c.style.height=h+"px";
+  var ctx=scatterCtx;
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+  ctx.clearRect(0,0,w,h);
+
+  var pad={top:20,right:20,bottom:30,left:40};
+  var pw=w-pad.left-pad.right,ph=h-pad.top-pad.bottom;
+
+  // Collect data
+  var seats=Object.keys(seatData);
+  var pts=[];
+  var mx=STAT_META[scatterXStat],my=STAT_META[scatterYStat];
+  seats.forEach(function(k){
+    var s=seatData[k];
+    var vx=s.stats[scatterXStat],vy=s.stats[scatterYStat];
+    if(vx!=null&&!isNaN(vx)&&vx!==0&&vy!=null&&!isNaN(vy)&&vy!==0){
+      pts.push({key:k,x:vx,y:vy});
+    }
+  });
+  scatterPoints=pts;
+  if(pts.length<2){
+    document.getElementById("scatter-info").innerHTML="Not enough data";
+    return;
+  }
+
+  // Dynamic range from actual data with 5% padding
+  var xVals=pts.map(function(p){return p.x}),yVals=pts.map(function(p){return p.y});
+  var xMin=Math.min.apply(null,xVals),xMax=Math.max.apply(null,xVals);
+  var yMin=Math.min.apply(null,yVals),yMax=Math.max.apply(null,yVals);
+  var xPad=(xMax-xMin)*0.05||0.01,yPad=(yMax-yMin)*0.05||0.01;
+  var xlo=xMin-xPad,xhi=xMax+xPad,ylo=yMin-yPad,yhi=yMax+yPad;
+
+  function sx(v){return pad.left+((v-xlo)/(xhi-xlo))*pw}
+  function sy(v){return pad.top+ph-((v-ylo)/(yhi-ylo))*ph}
+
+  // Grid lines
+  ctx.strokeStyle="rgba(255,255,255,.06)";ctx.lineWidth=1;
+  for(var i=0;i<=4;i++){
+    var gx=pad.left+(pw*i/4);
+    var gy=pad.top+(ph*i/4);
+    ctx.beginPath();ctx.moveTo(gx,pad.top);ctx.lineTo(gx,pad.top+ph);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(pad.left,gy);ctx.lineTo(pad.left+pw,gy);ctx.stroke();
+  }
+
+  // Axis labels
+  ctx.fillStyle="rgba(255,255,255,.3)";ctx.font="600 9px Inter,sans-serif";
+  ctx.textAlign="center";
+  ctx.fillText((xlo*100).toFixed(0)+"%",pad.left,h-4);
+  ctx.fillText((xhi*100).toFixed(0)+"%",w-pad.right,h-4);
+  ctx.fillText(((xlo+xhi)/2*100).toFixed(0)+"%",pad.left+pw/2,h-4);
+  ctx.textAlign="right";
+  ctx.fillText((ylo*100).toFixed(0)+"%",pad.left-4,pad.top+ph);
+  ctx.fillText((yhi*100).toFixed(0)+"%",pad.left-4,pad.top+8);
+
+  // Best fit line (linear regression)
+  var n=pts.length;
+  var sumX=0,sumY=0,sumXY=0,sumXX=0;
+  pts.forEach(function(p){sumX+=p.x;sumY+=p.y;sumXY+=p.x*p.y;sumXX+=p.x*p.x});
+  var denom=n*sumXX-sumX*sumX;
+  var slope=denom!==0?(n*sumXY-sumX*sumY)/denom:0;
+  var intercept=(sumY-slope*sumX)/n;
+  var r_num=n*sumXY-sumX*sumY;
+  var r_den=Math.sqrt((n*sumXX-sumX*sumX)*(n*pts.reduce(function(a,p){return a+p.y*p.y},0)-sumY*sumY));
+  var r=r_den!==0?r_num/r_den:0;
+
+  // Draw best fit line
+  ctx.strokeStyle="rgba(124,108,255,.5)";ctx.lineWidth=2;ctx.setLineDash([6,4]);
+  var lx0=xlo,ly0=slope*xlo+intercept,lx1=xhi,ly1=slope*xhi+intercept;
+  ly0=Math.max(ylo,Math.min(yhi,ly0));ly1=Math.max(ylo,Math.min(yhi,ly1));
+  ctx.beginPath();ctx.moveTo(sx(lx0),sy(ly0));ctx.lineTo(sx(lx1),sy(ly1));ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Draw points
+  pts.forEach(function(p){
+    var px=sx(p.x),py=sy(p.y);
+    // Store pixel coords for click
+    p.px=px;p.py=py;
+    var isSel=p.key===selectedSeatKey;
+    ctx.beginPath();ctx.arc(px,py,isSel?5:2.5,0,Math.PI*2);
+    if(isSel){
+      ctx.fillStyle="rgba(124,108,255,.9)";
+      ctx.strokeStyle="#fff";ctx.lineWidth=1.5;
+      ctx.fill();ctx.stroke();
+    } else {
+      var wc=PARTY_COLORS[seatData[p.key].winner];
+      ctx.fillStyle=wc?wc.fg+"aa":"rgba(144,144,160,.5)";
+      ctx.fill();
+    }
+  });
+
+  // Info
+  document.getElementById("scatter-info").innerHTML='<span>n='+n+'</span><strong>r='+r.toFixed(3)+'</strong><span>r²='+(r*r).toFixed(3)+'</span>';
+}
+
+// Click on scatter to select seat
+scatterCanvas.addEventListener("click",function(e){
+  var rect=scatterCanvas.getBoundingClientRect();
+  var dpr=window.devicePixelRatio||1;
+  var mx=e.clientX-rect.left,my=e.clientY-rect.top;
+  var best=null,bestD=Infinity;
+  scatterPoints.forEach(function(p){
+    var dx=p.px-mx,dy=p.py-my;
+    var d=dx*dx+dy*dy;
+    if(d<bestD){bestD=d;best=p}
+  });
+  if(best&&bestD<400){// ~20px radius
+    selectSeat(best.key);
+    var layer=seatLayers[best.key];
+    if(layer)map.fitBounds(layer.getBounds().pad(0.5));
+    updateScatter();
+  }
+});
+
+// ========== THRESHOLD HIGHLIGHTER ==========
+var thresholdVal=0.5,thresholdMode="above";
+var thresholdSlider=document.getElementById("threshold-slider");
+var thresholdValEl=document.getElementById("threshold-val");
+var thresholdCountEl=document.getElementById("threshold-count");
+
+// Hide threshold for categorical stats
+function updateThresholdVisibility(){
+  var sec=document.getElementById("threshold-section");
+  sec.style.display=STAT_META[currentStat].categorical?"none":"";
+}
+updateThresholdVisibility();
+
+document.getElementById("threshold-mode").addEventListener("click",function(e){
+  var btn=e.target.closest(".threshold-mode-btn");if(!btn)return;
+  thresholdMode=btn.getAttribute("data-mode");
+  document.querySelectorAll(".threshold-mode-btn").forEach(function(b){b.classList.remove("active")});
+  btn.classList.add("active");
+  updateThreshold();
+});
+
+thresholdSlider.addEventListener("input",function(){
+  var meta=STAT_META[currentStat];if(!meta||meta.categorical)return;
+  var pct=parseInt(this.value);
+  thresholdVal=meta.range[0]+(meta.range[1]-meta.range[0])*(pct/100);
+  thresholdValEl.textContent=(thresholdVal*100).toFixed(0)+"%";
+  updateThreshold();
+});
+
+function updateThreshold(){
+  updateThresholdVisibility();
+  var meta=STAT_META[currentStat];if(!meta||meta.categorical)return;
+  // Update slider label
+  var pct=parseInt(thresholdSlider.value);
+  thresholdVal=meta.range[0]+(meta.range[1]-meta.range[0])*(pct/100);
+  thresholdValEl.textContent=(thresholdVal*100).toFixed(0)+"%";
+
+  var count=0,total=0;
+  if(currentView==="constituency"&&geojsonLayer){
+    geojsonLayer.eachLayer(function(l){
+      var seat=seatData[l._seatKey];if(!seat)return;
+      var val=seat.stats[currentStat];if(val==null||isNaN(val))return;
+      total++;
+      var match=(thresholdMode==="above")?val>=thresholdVal:val<=thresholdVal;
+      if(match){
+        count++;
+        l.setStyle({weight:2.5,color:"#ffe066"});
+        l.bringToFront();
+      } else {
+        var isSel=selectedSeatKey===l._seatKey;
+        l.setStyle({weight:isSel?3:0.5,color:isSel?"#7c6cff":"#000"});
+      }
+    });
+  } else if(currentView==="district"&&districtLayer){
+    districtLayer.eachLayer(function(l){
+      var dd=districtData[l._districtKey];if(!dd)return;
+      var val=dd.stats[currentStat];if(val==null||isNaN(val))return;
+      total++;
+      var match=(thresholdMode==="above")?val>=thresholdVal:val<=thresholdVal;
+      if(match){
+        count++;
+        l.setStyle({weight:3,color:"#ffe066"});
+        l.bringToFront();
+      } else {
+        l.setStyle({weight:1.5,color:"#444"});
+      }
+    });
+  }
+  thresholdCountEl.textContent=count+" of "+total+" "+(currentView==="district"?"districts":"seats")+" "+(thresholdMode==="above"?"≥":"≤")+" "+(thresholdVal*100).toFixed(0)+"%";
+}
+
+// Reset zoom
+document.getElementById("reset-zoom").addEventListener("click",function(){
+  activeDivision=null;
+  document.querySelectorAll(".div-row.active-div").forEach(function(r){r.classList.remove("active-div")});
+  var layer=currentView==="district"?districtLayer:geojsonLayer;
+  if(layer){
+    map.fitBounds(layer.getBounds().pad(0.02));
+    layer.eachLayer(function(l){l.setStyle({fillOpacity:0.88})});
+  }
+});
 </script>
 </body>
 </html>
