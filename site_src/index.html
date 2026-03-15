@@ -1,67 +1,673 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bangladesh Election 2026 – Interactive Maps</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header { background-color: #003366; color: white; padding: 1em; }
-    header h1 { margin: 0; font-size: 1.6em; }
-    header p { margin: 0.5em 0 0 0; font-size: 0.9em; }
-    main { padding: 1em; }
-    #mapFrame { border: none; width: 100%; height: 650px; }
-    footer { background-color: #f0f0f0; padding: 1em; font-size: 0.8em; color: #333; }
-    select { padding: 0.5em; font-size: 1em; margin-top: 0.5em; }
-    .credits { margin-top: 1em; }
-    .credits a { color: #003366; text-decoration: none; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bangladesh Election 2026 — Interactive Map</title>
+<meta name="description" content="Explore Bangladesh's 2026 national election results across all 297 constituencies with interactive maps, party breakdowns, and detailed statistics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0a10;
+  --sidebar-bg:#111118;
+  --card-bg:#18181f;
+  --card-bg-hover:#1e1e28;
+  --card-bg-active:#252530;
+  --text-primary:#eaeaf0;
+  --text-secondary:#8e8ea0;
+  --text-tertiary:#55556a;
+  --border:#1e1e2a;
+  --border-light:#2a2a3a;
+  --accent:#7c6cff;
+  --accent-dim:#5a4ccc;
+  --accent-glow:rgba(124,108,255,.15);
+  --accent-soft:rgba(124,108,255,.08);
+  --green:#34d399;
+  --red:#f87171;
+  --orange:#fb923c;
+  --shadow-sm:0 2px 8px rgba(0,0,0,.4);
+  --shadow-md:0 4px 24px rgba(0,0,0,.5);
+  --shadow-lg:0 12px 48px rgba(0,0,0,.7);
+  --radius-xs:6px;
+  --radius-sm:10px;
+  --radius-md:14px;
+  --radius-lg:20px;
+  --transition-fast:.15s cubic-bezier(.4,0,.2,1);
+  --transition-normal:.25s cubic-bezier(.4,0,.2,1);
+  --transition-slow:.4s cubic-bezier(.4,0,.2,1);
+}
+html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text-primary);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+#app{display:flex;height:100vh;width:100vw;overflow:hidden}
+
+/* Loader */
+#loader{position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px;transition:opacity .6s ease-out}
+#loader.hidden{opacity:0;pointer-events:none}
+.loader-content{display:flex;flex-direction:column;align-items:center;gap:16px}
+.loader-map-icon{width:48px;height:48px;color:var(--accent);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.5;transform:scale(.95)}50%{opacity:1;transform:scale(1)}}
+.loader-bar{width:200px;height:3px;background:var(--border);border-radius:2px;overflow:hidden}
+.loader-bar-fill{width:60%;height:100%;background:linear-gradient(90deg,var(--accent),#a78bfa);border-radius:2px;animation:load 1.5s ease-in-out infinite}
+@keyframes load{0%{transform:translateX(-100%)}100%{transform:translateX(220%)}}
+#loader p{font-size:12px;color:var(--text-tertiary);font-weight:500;letter-spacing:.5px;text-transform:uppercase}
+
+/* Sidebar */
+#sidebar{width:400px;min-width:400px;height:100vh;overflow-y:auto;background:var(--sidebar-bg);border-right:1px solid var(--border);z-index:1000;display:flex;flex-direction:column;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+#sidebar::-webkit-scrollbar{width:5px}
+#sidebar::-webkit-scrollbar-track{background:transparent}
+#sidebar::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+#sidebar::-webkit-scrollbar-thumb:hover{background:var(--text-tertiary)}
+
+/* Header */
+#header{padding:28px 24px 24px;background:linear-gradient(180deg,rgba(124,108,255,.04) 0%,transparent 100%);border-bottom:1px solid var(--border);position:relative}
+#header::after{content:'';position:absolute;bottom:-1px;left:24px;right:24px;height:1px;background:linear-gradient(90deg,transparent,var(--accent-glow),transparent)}
+.header-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+#header h1{font-size:22px;font-weight:900;letter-spacing:-.4px;line-height:1.15;color:var(--text-primary);background:linear-gradient(135deg,#fff 0%,#c4c0ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.header-year{display:inline-flex;padding:4px 10px;background:var(--accent);color:#fff;font-size:10px;font-weight:800;border-radius:6px;letter-spacing:.5px;flex-shrink:0;margin-top:2px}
+#header .subtitle{font-size:12px;color:var(--text-tertiary);margin-top:6px;font-weight:400;letter-spacing:.3px}
+.header-badges{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+.header-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;background:var(--card-bg);border:1px solid var(--border);border-radius:20px;font-size:10px;color:var(--text-secondary);font-weight:600;letter-spacing:.3px;transition:all var(--transition-fast)}
+.header-badge:hover{border-color:var(--border-light);background:var(--card-bg-hover)}
+.header-badge .dot{width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:0 0 8px rgba(52,211,153,.5);animation:blink 3s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
+
+/* Sidebar content */
+#sidebar-inner{padding:20px 22px;flex:1}
+.section{margin-bottom:28px}
+.section-label{font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-tertiary);margin-bottom:12px;font-weight:700;display:flex;align-items:center;gap:8px}
+.section-label::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* Search */
+#search-wrap{position:relative;margin-bottom:20px}
+#search{width:100%;padding:11px 14px 11px 40px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:13px;font-family:inherit;outline:none;background:var(--card-bg);color:var(--text-primary);transition:all var(--transition-normal)}
+#search:focus{border-color:var(--accent-dim);box-shadow:0 0 0 4px var(--accent-soft),0 0 20px rgba(124,108,255,.08);background:var(--card-bg-hover)}
+#search::placeholder{color:var(--text-tertiary)}
+.search-icon{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--text-tertiary);transition:color var(--transition-fast)}
+#search:focus ~ .search-icon-ref{color:var(--accent)}
+#search-results{position:absolute;top:calc(100% + 6px);left:0;right:0;background:var(--card-bg);border:1px solid var(--border-light);border-radius:var(--radius-sm);max-height:260px;overflow-y:auto;z-index:10;box-shadow:var(--shadow-lg);display:none;backdrop-filter:blur(12px)}
+#search-results.show{display:block;animation:slideDown .2s ease-out}
+@keyframes slideDown{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.search-item{padding:10px 16px;font-size:12px;cursor:pointer;border-bottom:1px solid var(--border);transition:all var(--transition-fast)}
+.search-item:last-child{border-bottom:none}
+.search-item:hover{background:var(--accent-soft);padding-left:20px}
+.search-item .seat-name{font-weight:600;color:var(--text-primary)}
+.search-item .seat-district{color:var(--text-tertiary);font-size:10px;margin-top:2px}
+
+/* Stat buttons */
+.stat-group{margin-bottom:14px}
+.stat-group-label{font-size:9px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;font-weight:700;padding-left:2px}
+.stat-grid{display:flex;flex-wrap:wrap;gap:6px}
+.stat-btn{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:8px 14px;font-size:11px;font-weight:500;
+  border-radius:var(--radius-sm);border:1px solid var(--border);
+  cursor:pointer;transition:all var(--transition-normal);
+  background:var(--card-bg);color:var(--text-secondary);
+  user-select:none;white-space:nowrap;position:relative;overflow:hidden;
+}
+.stat-btn::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(124,108,255,.06),transparent);opacity:0;transition:opacity var(--transition-fast)}
+.stat-btn:hover{border-color:var(--border-light);color:var(--text-primary);background:var(--card-bg-hover);transform:translateY(-1px);box-shadow:var(--shadow-sm)}
+.stat-btn:hover::before{opacity:1}
+.stat-btn:active{transform:translateY(0)}
+.stat-btn.active{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:700;box-shadow:0 4px 20px rgba(124,108,255,.35),inset 0 1px 0 rgba(255,255,255,.15);transform:translateY(-1px)}
+.stat-btn.active::before{display:none}
+.stat-btn .indicator{width:8px;height:8px;border-radius:50%;flex-shrink:0;border:1.5px solid rgba(255,255,255,.15)}
+.stat-btn.active .indicator{border-color:rgba(255,255,255,.3);box-shadow:0 0 6px rgba(255,255,255,.2)}
+
+
+/* Selected seat */
+#selected-seat{display:none;background:linear-gradient(135deg,var(--accent-soft),rgba(124,108,255,.03));border:1px solid rgba(124,108,255,.15);border-radius:var(--radius-md);padding:16px 18px;margin-bottom:20px;position:relative;animation:fadeIn .2s ease-out}
+#selected-seat.show{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+#selected-seat .close-btn{position:absolute;top:10px;right:10px;width:24px;height:24px;border:none;background:rgba(255,255,255,.05);cursor:pointer;color:var(--text-tertiary);font-size:16px;display:flex;align-items:center;justify-content:center;border-radius:8px;transition:all var(--transition-fast)}
+#selected-seat .close-btn:hover{background:rgba(255,255,255,.1);color:var(--text-primary);transform:scale(1.1)}
+.selected-seat-name{font-size:15px;font-weight:800;color:var(--text-primary);letter-spacing:-.2px}
+.selected-seat-loc{font-size:10px;color:var(--text-tertiary);margin-top:3px;margin-bottom:12px;letter-spacing:.3px}
+.selected-seat-pills{display:flex;gap:6px;flex-wrap:wrap}
+.seat-pill{padding:5px 11px;border-radius:20px;font-size:10px;font-weight:600;letter-spacing:.2px;transition:transform var(--transition-fast)}
+.seat-pill:hover{transform:scale(1.03)}
+.seat-pill-winner{color:#fff}
+.seat-pill-stat{background:var(--card-bg);color:var(--text-secondary);border:1px solid var(--border)}
+
+/* Summary card */
+.summary-card{background:var(--card-bg);border-radius:var(--radius-md);padding:20px;border:1px solid var(--border);position:relative;overflow:hidden}
+.summary-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent-glow),transparent)}
+.summary-stat{display:flex;align-items:baseline;gap:10px;margin-bottom:8px}
+.summary-stat .label{font-size:10px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:.8px;font-weight:700}
+.summary-stat .value{font-size:32px;font-weight:900;color:var(--text-primary);letter-spacing:-1px;line-height:1;font-variant-numeric:tabular-nums}
+.summary-detail{font-size:12px;color:var(--text-secondary);line-height:1.9;margin-top:12px}
+.summary-detail strong{color:var(--text-primary);font-weight:700}
+
+/* Winner grid */
+.winner-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.winner-item{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px 12px;text-align:center;transition:all var(--transition-normal);position:relative;overflow:hidden}
+.winner-item::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(124,108,255,.03),transparent);opacity:0;transition:opacity var(--transition-fast)}
+.winner-item:hover{border-color:var(--border-light);transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.winner-item:hover::before{opacity:1}
+.winner-item .count{font-size:26px;font-weight:900;color:var(--text-primary);font-variant-numeric:tabular-nums;letter-spacing:-.5px}
+.winner-item .party-name{font-size:9px;color:var(--text-tertiary);margin-top:4px;text-transform:uppercase;letter-spacing:.6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:600}
+
+/* Division bars */
+.div-row{display:flex;align-items:center;margin:7px 0;gap:10px;transition:opacity var(--transition-fast)}
+.div-row:hover{opacity:1!important}
+.div-label{width:78px;text-align:right;font-size:11px;color:var(--text-secondary);flex-shrink:0;font-weight:600}
+.div-bar-bg{flex:1;height:22px;background:var(--bg);border-radius:6px;overflow:hidden;position:relative;border:1px solid var(--border)}
+.div-bar{height:100%;border-radius:5px;transition:width var(--transition-slow);position:relative}
+.div-bar::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.08),transparent);border-radius:5px}
+.div-val{width:48px;font-size:11px;color:var(--text-primary);text-align:right;flex-shrink:0;font-weight:800;font-variant-numeric:tabular-nums}
+
+/* Footer */
+#footer{padding:18px 22px;border-top:1px solid var(--border);font-size:10px;color:var(--text-tertiary);line-height:2;margin-top:auto;letter-spacing:.2px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.2))}
+#footer a{color:var(--text-secondary);text-decoration:none;font-weight:600;transition:color var(--transition-fast);border-bottom:1px solid transparent}
+#footer a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+
+/* Map */
+#map{flex:1;height:100vh;position:relative}
+.leaflet-container{background:#2d2d2d}
+.leaflet-control-zoom{border:none!important;box-shadow:var(--shadow-md)!important;border-radius:var(--radius-sm)!important;overflow:hidden}
+.leaflet-control-zoom a{background:var(--sidebar-bg)!important;color:var(--text-primary)!important;border:none!important;border-bottom:1px solid var(--border)!important;width:36px!important;height:36px!important;line-height:36px!important;font-size:16px!important;transition:all .15s!important;font-weight:700!important}
+.leaflet-control-zoom a:last-child{border-bottom:none!important}
+.leaflet-control-zoom a:hover{background:var(--card-bg-hover)!important;color:var(--accent)!important}
+.leaflet-control-attribution{background:rgba(10,10,16,.9)!important;color:var(--text-tertiary)!important;font-size:9px!important;backdrop-filter:blur(8px)!important}
+.leaflet-control-attribution a{color:var(--text-secondary)!important}
+
+/* Legend */
+.legend{background:var(--sidebar-bg);padding:16px 18px;border-radius:var(--radius-md);box-shadow:var(--shadow-lg);font-size:12px;min-width:200px;border:1px solid var(--border);backdrop-filter:blur(12px)}
+.legend-title{font-weight:800;margin-bottom:10px;font-size:11px;color:var(--text-primary);letter-spacing:.4px;text-transform:uppercase}
+.legend-gradient{width:100%;height:16px;border-radius:5px;margin:8px 0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.legend-labels{display:flex;justify-content:space-between;font-size:9px;color:var(--text-tertiary);font-weight:700;letter-spacing:.4px;text-transform:uppercase}
+.legend-nodata{display:flex;align-items:center;gap:7px;margin-top:10px;font-size:10px;color:var(--text-tertiary);font-weight:500}
+.legend-nodata-swatch{width:14px;height:10px;background:#222;border-radius:3px;border:1px solid #444}
+
+/* Tooltips */
+.seat-tooltip{padding:0!important;border:none!important;border-radius:var(--radius-lg)!important;box-shadow:var(--shadow-lg)!important;font-family:inherit!important}
+.seat-tooltip .leaflet-tooltip-content-wrapper,.seat-tooltip::before{display:none}
+.tt{background:var(--sidebar-bg);border:1px solid var(--border-light);border-radius:var(--radius-lg);padding:18px 20px;min-width:270px;font-size:12px;line-height:1.5;color:var(--text-primary);backdrop-filter:blur(16px)}
+.tt-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:12px;gap:12px}
+.tt-name{font-size:15px;font-weight:800;color:#fff;letter-spacing:-.2px}
+.tt-district{font-size:10px;color:var(--text-tertiary);margin-top:4px;letter-spacing:.3px;font-weight:500}
+.tt-winner-badge{display:inline-flex;padding:4px 10px;border-radius:14px;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;flex-shrink:0}
+.tt-stat-row{display:flex;align-items:center;gap:10px;padding:12px 0;border-top:1px solid var(--border)}
+.tt-stat-label{font-size:9px;color:var(--text-tertiary);flex:1;text-transform:uppercase;letter-spacing:.5px;font-weight:700}
+.tt-stat-value{font-size:22px;font-weight:900;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
+.tt-party-row{display:flex;justify-content:space-between;align-items:center;padding:4px 0}
+.tt-party-row .party{color:var(--text-secondary);font-size:11px;font-weight:500}
+.tt-party-row .pct{font-weight:800;color:var(--text-primary);font-size:11px;font-variant-numeric:tabular-nums}
+.tt-party-bar-bg{height:4px;background:var(--bg);border-radius:3px;margin-top:2px;margin-bottom:7px;overflow:hidden}
+.tt-party-bar{height:100%;border-radius:3px;transition:width .3s ease}
+.tt-meta{margin-top:12px;padding-top:12px;border-top:1px solid var(--border);font-size:10px;color:var(--text-tertiary);display:flex;gap:16px;font-variant-numeric:tabular-nums;font-weight:500}
+
+/* Mobile toggle */
+#sidebar-toggle{display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:2000;padding:10px 24px;background:var(--accent);color:#fff;border:none;border-radius:30px;font-size:12px;font-weight:700;font-family:inherit;cursor:pointer;box-shadow:0 4px 24px rgba(124,108,255,.4);letter-spacing:.3px;transition:all var(--transition-fast)}
+#sidebar-toggle:active{transform:translateX(-50%) scale(.96)}
+
+/* Responsive */
+@media(max-width:900px){
+  #sidebar{width:360px;min-width:360px}
+}
+@media(max-width:767px){
+  #app{flex-direction:column}
+  #sidebar{width:100%;min-width:unset;height:100vh;max-height:100vh;border-right:none;position:fixed;bottom:0;left:0;right:0;z-index:2000;transform:translateY(calc(100% - 56px));transition:transform var(--transition-slow)}
+  #sidebar.mobile-open{transform:translateY(0)}
+  #map{height:100vh}
+  #header{padding:14px 18px 12px}
+  #header h1{font-size:16px}
+  .header-top{align-items:center}
+  #sidebar-inner{padding:14px 16px}
+  .stat-btn{padding:6px 10px;font-size:10px}
+  #sidebar-toggle{display:block}
+  .mobile-handle{display:block;width:36px;height:4px;background:var(--border-light);border-radius:2px;margin:0 auto 12px;cursor:pointer}
+}
+@media(min-width:768px){
+  .mobile-handle{display:none}
+}
+
+/* Smooth transitions on stat change */
+.summary-card,.div-row{transition:opacity .15s ease}
+
+/* Keyboard focus styles */
+.stat-btn:focus-visible,#search:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
 </head>
 <body>
-  <header>
-    <h1>Bangladesh Election 2026 – Interactive Maps</h1>
-    <p>Select a statistic and color spectrum to visualise on the map:</p>
-    <select id="mapSelect">
-      <option value="bnp">BNP vote share</option>
-      <option value="jamaat">Jamaat vote share</option>
-      <option value="democracy_platform">Democracy Platform vote share</option>
-      <option value="eleven_party_alliance">Eleven-Party Alliance vote share</option>
-      <option value="bnp_alliance">BNP Alliance vote share</option>
-      <option value="bnp_vs_eleven_party_alliance" selected>Eleven-Party Alliance vs BNP: Who dominated? (ratio)</option>
-    </select>
-    <select id="paletteSelect">
-      <option value="yellow_blue">Yellow to Blue</option>
-      <option value="blue_yellow" selected>Blue to Yellow</option>
-      <option value="green_red">Green to Red</option>
-      <option value="red_green">Red to Green</option>
-      <option value="orange_purple">Orange to Purple</option>
-      <option value="purple_orange">Purple to Orange</option>
-      <option value="gray_red">Gray to Red</option>
-      <option value="red_gray">Red to Gray</option>
-      <option value="red_blue">Red to Blue</option>
-      <option value="blue_red">Blue to Red</option>
-    </select>
-  </header>
-  <main>
-    <iframe id="mapFrame" src="maps/bnp_vs_eleven_party_alliance.html?palette=blue_yellow" allow="fullscreen"></iframe>
-    <div class="credits">
-      <p><strong>Contribute:</strong> If you have better vote data, submit a pull request to the <a href="https://github.com/SMANahian/ElectionMap" target="_blank">GitHub repository</a>—improvements are welcome!</p>
-      <p>Vote data: <a href="https://www.tbsnews.net/election-2026" target="_blank">The Business Standard</a> (view source) and Bangladesh Election Commission.</p>
-      <p>Boundary data: <a href="https://www.bbc.com/bengali/resources/idt-12e6dcd9-2189-4c28-aafb-b106e6d01189" target="_blank">BBC Bangla election map</a> (based on <a href="https://electiondataarchive.org/data-and-documentation/georeferenced-electoral-districts-datasets/" target="_blank">GeoReferenced Electoral Districts (GRED)</a>).</p>
-      <p>Built by S M A Nahian (<a href="https://smanahian.com" target="_blank">smanahian.com</a>) with a custom Python pipeline. Tooling support: ChatGPT agent and GitHub Copilot.</p>
+
+<div id="loader">
+  <div class="loader-content">
+    <svg class="loader-map-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    <p>Loading election data</p>
+  </div>
+</div>
+
+<div id="app">
+<div id="sidebar">
+  <div class="mobile-handle" id="mobile-handle"></div>
+  <div id="header">
+    <div class="header-top">
+      <div>
+        <h1>Bangladesh Election</h1>
+        <div class="subtitle">Interactive Constituency Results Map</div>
+      </div>
+      <span class="header-year">2026</span>
     </div>
-  </main>
-  <footer>
-    &copy; 2026 <a href="https://smanahian.com" target="_blank" style="color: inherit; text-decoration: none;">S M A Nahian</a>. All rights reserved.
-  </footer>
-  <script>
-    function updateMapFrame() {
-      var slug = document.getElementById('mapSelect').value;
-      var palette = document.getElementById('paletteSelect').value;
-      document.getElementById('mapFrame').src = 'maps/' + slug + '.html?palette=' + palette;
+    <div class="header-badges">
+      <div class="header-badge"><span class="dot"></span> 297 Seats</div>
+      <div class="header-badge">Official EC Data</div>
+    </div>
+  </div>
+  <div id="sidebar-inner">
+
+    <div id="search-wrap">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="text" id="search" placeholder="Search constituency or district..." autocomplete="off" aria-label="Search constituencies">
+      <div id="search-results" role="listbox"></div>
+    </div>
+
+    <div id="selected-seat" role="region" aria-label="Selected constituency">
+      <button class="close-btn" aria-label="Close">&times;</button>
+      <div id="selected-seat-content"></div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Statistic</div>
+      <div class="stat-group">
+        <div class="stat-group-label">Party Vote Share</div>
+        <div class="stat-grid" role="radiogroup" aria-label="Party vote share statistics">
+          <button class="stat-btn" data-stat="bnp" role="radio" aria-checked="false"><span class="indicator" style="background:#3182bd"></span>BNP</button>
+          <button class="stat-btn" data-stat="jamaat" role="radio" aria-checked="false"><span class="indicator" style="background:#31a354"></span>Jamaat</button>
+          <button class="stat-btn" data-stat="bnp_alliance" role="radio" aria-checked="false"><span class="indicator" style="background:#e6550d"></span>BNP Alliance</button>
+          <button class="stat-btn" data-stat="eleven_party_alliance" role="radio" aria-checked="false"><span class="indicator" style="background:#756bb1"></span>11-Party</button>
+        </div>
+      </div>
+      <div class="stat-group">
+        <div class="stat-group-label">Head to Head</div>
+        <div class="stat-grid">
+          <button class="stat-btn active" data-stat="bnp_vs_eleven_party_alliance" role="radio" aria-checked="true"><span class="indicator" style="background:linear-gradient(90deg,#ca0020,#0571b0)"></span>BNP vs 11-Party</button>
+        </div>
+      </div>
+      <div class="stat-group">
+        <div class="stat-group-label">Election Quality</div>
+        <div class="stat-grid">
+          <button class="stat-btn" data-stat="turnout" role="radio" aria-checked="false"><span class="indicator" style="background:#31a354"></span>Turnout</button>
+          <button class="stat-btn" data-stat="victory_margin" role="radio" aria-checked="false"><span class="indicator" style="background:#f03b20"></span>Victory Margin</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">National Summary</div>
+      <div id="summary" class="summary-card"></div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">By Division</div>
+      <div id="division-breakdown"></div>
+    </div>
+
+  </div>
+  <div id="footer">
+    Data: <a href="https://www.ecs.gov.bd" target="_blank" rel="noopener">Bangladesh Election Commission</a><br>
+    Boundaries: IFES / ElectionGuide<br>
+    Built by <a href="https://smanahian.com" target="_blank" rel="noopener">S M A Nahian</a> &middot; <a href="https://github.com/smanahian/ElectionMap" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div>
+<div id="map"></div>
+</div>
+
+<button id="sidebar-toggle">Show Results</button>
+
+<script>
+// ColorBrewer palettes
+var STAT_META = {
+  bnp: {
+    label:"BNP Vote Share", party:"Bangladesh Nationalist Party (BNP)",
+    range:[0.20, 0.80],
+    // ColorBrewer Blues 5
+    ramp:["#eff3ff","#bdd7e7","#6baed6","#3182bd","#08519c"]
+  },
+  jamaat: {
+    label:"Jamaat Vote Share", party:"Bangladesh Jamaat-e-Islami (Jamaat)",
+    range:[0.20, 0.80],
+    // ColorBrewer Greens 5
+    ramp:["#edf8e9","#bae4b3","#74c476","#31a354","#006d2c"]
+  },
+  eleven_party_alliance: {
+    label:"11-Party Alliance", party:null,
+    range:[0.20, 0.80],
+    // ColorBrewer Purples 5
+    ramp:["#f2f0f7","#cbc9e2","#9e9ac8","#756bb1","#54278f"]
+  },
+  bnp_alliance: {
+    label:"BNP Alliance", party:null,
+    range:[0.20, 0.80],
+    // ColorBrewer Oranges 5
+    ramp:["#feedde","#fdbe85","#fd8d3c","#e6550d","#a63603"]
+  },
+  bnp_vs_eleven_party_alliance: {
+    label:"BNP vs 11-Party", party:null,
+    range:[0.0, 1.0],
+    // ColorBrewer RdBu 5 (THE classic diverging)
+    ramp:["#0571b0","#92c5de","#ffffbf","#f4a582","#ca0020"],
+    diverging: true
+  },
+  turnout: {
+    label:"Voter Turnout", party:null,
+    range:[0.35, 0.80],
+    // ColorBrewer YlGn 5
+    ramp:["#ffffcc","#c2e699","#78c679","#31a354","#006837"]
+  },
+  victory_margin: {
+    label:"Victory Margin", party:null,
+    range:[0.0, 0.50],
+    // ColorBrewer YlOrRd 5
+    ramp:["#ffffb2","#fecc5c","#fd8d3c","#f03b20","#bd0026"]
+  }
+};
+
+var PARTY_SHORT={"Bangladesh Nationalist Party (BNP)":"BNP","Bangladesh Jamaat-e-Islami (Jamaat)":"Jamaat","Independent":"Indep.","National Citizens Party (NCP)":"NCP"};
+var PARTY_COLORS={
+  "Bangladesh Nationalist Party (BNP)":{bg:"rgba(49,130,189,.3)",fg:"#6baed6"},
+  "Bangladesh Jamaat-e-Islami (Jamaat)":{bg:"rgba(49,163,84,.3)",fg:"#74c476"},
+  "Independent":{bg:"rgba(144,144,160,.25)",fg:"#9090a0"},
+  "National Citizens Party (NCP)":{bg:"rgba(230,85,13,.25)",fg:"#fd8d3c"}
+};
+
+var LOCATION_ALIASES={"bogra":"Bogura","comilla":"Cumilla","jessore":"Jashore","jhalakathi":"Jhalokathi","jhalokati":"Jhalokathi","netrokona":"Netrakona","chapai nawabganj":"Chapainawabganj","chapai nababganj":"Chapainawabganj","chapainawabganj":"Chapainawabganj","nawabganj":"Chapainawabganj","coxs bazar":"Cox's Bazar","cox's bazar":"Cox's Bazar","cox?s bazar":"Cox's Bazar","barisal":"Barishal","chittagong":"Chattogram","brahmanbaria":"Brahmanbaria","habiganj":"Habiganj","habjganj":"Habiganj","maulvibazar":"Moulvibazar","moulvibazar":"Moulvibazar","sunamganj":"Sunamganj","sylhet":"Sylhet","bandarban":"Bandarban","parbatya bandarban":"Bandarban","khagrachhari":"Khagrachhari","khagrachari":"Khagrachhari","parbatya khagrachari":"Khagrachhari","parbatya khagrachhari":"Khagrachhari","rangamati":"Rangamati","parbatya rangamati":"Rangamati","patuakhali":"Patuakhali","bhola":"Bhola","pirojpur":"Pirojpur","barguna":"Barguna","chuadanga":"Chuadanga","kushtia":"Kushtia","meherpur":"Meherpur","khulna":"Khulna","bagerhal":"Bagerhat","bagerhat":"Bagerhat","satkhira":"Satkhira","jhenaidah":"Jhenaidah","magura":"Magura","narail":"Narail","faridpur":"Faridpur","rajbari":"Rajbari","gopalganj":"Gopalganj","madaripur":"Madaripur","shariatpur":"Shariatpur","dhaka":"Dhaka","gazipur":"Gazipur","narsingdi":"Narsingdi","narayanganj":"Narayanganj","munshiganj":"Munshiganj","manikganj":"Manikganj","tangail":"Tangail","kishoreganj":"Kishoreganj","mymensingh":"Mymensingh","netrakona":"Netrakona","sherpur":"Sherpur","jamalpur":"Jamalpur","rajshahi":"Rajshahi","natore":"Natore","naogaon":"Naogaon","pabna":"Pabna","sirajganj":"Sirajganj","rangpur":"Rangpur","dinajpur":"Dinajpur","kurigram":"Kurigram","gaibandha":"Gaibandha","lalmonirhat":"Lalmonirhat","nilphamari":"Nilphamari","nilphamhari":"Nilphamari","panchagarh":"Panchagarh","thakurgaon":"Thakurgaon"};
+var SINGLE_SEATS=new Set(["Bandarban","Rangamati","Khagrachhari"]);
+function titleCase(s){return s.replace(/\w\S*/g,function(w){return w[0].toUpperCase()+w.slice(1).toLowerCase()})}
+function normalizeLocation(n){if(!n)return"";var k=n.trim().toLowerCase();return LOCATION_ALIASES[k]||titleCase(n.trim())}
+function normalizeSeatName(n){if(!n)return"";n=n.trim().replace(/[-\u2013\u2014]/g," ").replace(/[?\u2018\u2019']/g,"'").replace(/\s+/g," ");if(n.toLowerCase().startsWith("parbatya ")&&!/\d+$/.test(n)){n=n.slice(9).trim()+" 1"}var p=n.split(" ");var l=p[p.length-1];if(/^\d+$/.test(l)&&p.length>=2){return normalizeLocation(p.slice(0,-1).join(" "))+" "+l}var nl=normalizeLocation(n);if(SINGLE_SEATS.has(nl))return nl+" 1";return nl}
+
+function hexToRgb(h){return[parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)]}
+function rgbToHex(a){return"#"+a.map(function(x){return Math.max(0,Math.min(255,Math.round(x))).toString(16).padStart(2,"0")}).join("")}
+function lerpRgb(c1,c2,t){return c1.map(function(v,i){return v+(c2[i]-v)*t})}
+function sampleRamp(r,t){t=Math.max(0,Math.min(1,t));var n=r.length-1;var i=t*n;var lo=Math.floor(i);var hi=Math.min(lo+1,n);return rgbToHex(lerpRgb(hexToRgb(r[lo]),hexToRgb(r[hi]),i-lo))}
+function sigmoid(t,k){return 1/(1+Math.exp(-k*(t-0.5)))}
+function getColor(v){if(v==null||isNaN(v))return"#222";var m=STAT_META[currentStat];var lo=m.range[0],hi=m.range[1];var t=(hi>lo)?(v-lo)/(hi-lo):0.5;t=Math.max(0,Math.min(1,t));if(m.diverging){t=sigmoid(t,8)}else{t=Math.pow(t,0.85)}return sampleRamp(m.ramp,t)}
+function getActiveRamp(){return STAT_META[currentStat].ramp}
+
+var currentStat="bnp_vs_eleven_party_alliance";
+var seatData={};var geojsonLayer=null;var legendControl=null;var selectedSeatKey=null;var seatLayers={};
+
+// Dark basemap
+var map=L.map("map",{zoomSnap:0.25,zoomControl:false,attributionControl:true}).setView([23.7,90.3],7);
+L.control.zoom({position:"topright"}).addTo(map);
+
+// Dark CARTO basemap
+// Dark basemap with rivers and geographic features
+L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png",{
+  maxZoom:18,
+  attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>'
+}).addTo(map);
+// Labels layer on top (shows city names, rivers, etc.)
+L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png",{
+  maxZoom:18,pane:"overlayPane"
+}).addTo(map);
+
+Promise.all([
+  fetch("data/constituencies.geojson").then(function(r){return r.json()}),
+  fetch("data/seat_data.json").then(function(r){return r.json()})
+]).then(function(res){
+  seatData=res[1];
+  initGeoJSON(res[0]);
+  addDivisionBorders(res[0]);
+  updateAll();
+  document.getElementById("loader").classList.add("hidden");
+  setTimeout(function(){document.getElementById("loader").style.display="none"},700);
+}).catch(function(err){
+  document.querySelector("#loader p").textContent="Failed to load data. Please refresh.";
+  console.error("Data load error:",err);
+});
+
+function initGeoJSON(geo){
+  geojsonLayer=L.geoJSON(geo,{
+    style:function(){return{weight:0.5,color:"#000",fillOpacity:0.88,fillColor:"#222"}},
+    onEachFeature:function(f,layer){
+      var key=normalizeSeatName(f.properties.cst_n||"");
+      layer._seatKey=key;seatLayers[key]=layer;
+      layer.on({
+        mouseover:function(e){
+          if(selectedSeatKey!==key){
+            e.target.setStyle({weight:2,color:"#444"});
+            e.target.bringToFront();
+          }
+        },
+        mouseout:function(e){
+          if(selectedSeatKey!==key){
+            e.target.setStyle({weight:0.5,color:"#000"});
+          }
+        },
+        click:function(){selectSeat(key)}
+      });
+      layer.bindTooltip(function(){return buildTooltip(key,seatData[key])},{sticky:true,className:"seat-tooltip",direction:"top",offset:[0,-12]});
     }
-    document.getElementById('mapSelect').addEventListener('change', updateMapFrame);
-    document.getElementById('paletteSelect').addEventListener('change', updateMapFrame);
-  </script>
+  }).addTo(map);
+}
+
+function addDivisionBorders(geo){}
+
+function buildTooltip(key,seat){
+  if(!seat)return'<div class="tt"><div class="tt-name">'+key+'</div><div class="tt-district" style="color:var(--text-tertiary)">No data available</div></div>';
+  var val=seat.stats[currentStat];var meta=STAT_META[currentStat];
+  var pctStr=val!=null?(val*100).toFixed(1)+"%":"N/A";
+  var col=val!=null?getColor(val):"#222";
+  var ws=PARTY_SHORT[seat.winner]||seat.winner||"";
+  var wc=PARTY_COLORS[seat.winner]||{bg:"rgba(144,144,160,.25)",fg:"#9090a0"};
+  var h='<div class="tt"><div class="tt-header"><div><div class="tt-name">'+seat.name+'</div><div class="tt-district">'+seat.district+', '+seat.division+'</div></div>';
+  if(ws)h+='<div class="tt-winner-badge" style="background:'+wc.bg+';color:'+wc.fg+'">'+ws+'</div>';
+  h+='</div><div class="tt-stat-row"><span class="tt-stat-label">'+meta.label+'</span><span class="tt-stat-value" style="color:'+col+'">'+pctStr+'</span></div>';
+  if(seat.top3&&seat.top3.length){
+    h+='<div style="padding-top:8px">';
+    var mx=Math.max.apply(null,seat.top3.map(function(t){return t.pct}));
+    for(var i=0;i<seat.top3.length;i++){var t=seat.top3[i];var bw=mx>0?(t.pct/mx*100):0;
+      var barCol=i===0?"var(--accent)":i===1?"#6b6b80":"#3a3a4a";
+      h+='<div class="tt-party-row"><span class="party">'+t.party+'</span><span class="pct">'+t.pct+'%</span></div>';
+      h+='<div class="tt-party-bar-bg"><div class="tt-party-bar" style="width:'+bw.toFixed(0)+'%;background:'+barCol+'"></div></div>';
+    }h+='</div>';
+  }
+  h+='<div class="tt-meta"><span>Votes: '+seat.total_votes.toLocaleString()+'</span><span>Turnout: '+(seat.turnout*100).toFixed(1)+'%</span>';
+  if(seat.stats.victory_margin!=null)h+='<span>Margin: '+(seat.stats.victory_margin*100).toFixed(1)+'%</span>';
+  h+='</div></div>';return h;
+}
+
+function selectSeat(key){
+  var seat=seatData[key];if(!seat)return;selectedSeatKey=key;
+  geojsonLayer.eachLayer(function(l){
+    if(l._seatKey===key){l.setStyle({weight:3,color:"#7c6cff"});l.bringToFront()}
+    else{l.setStyle({weight:0.5,color:"#000"})}
+  });
+  var el=document.getElementById("selected-seat");
+  var ws=PARTY_SHORT[seat.winner]||seat.winner||"Unknown";
+  var wc=PARTY_COLORS[seat.winner]||{bg:"rgba(144,144,160,.25)",fg:"#9090a0"};
+  var h='<div class="selected-seat-name">'+seat.name+'</div>';
+  h+='<div class="selected-seat-loc">'+seat.district+', '+seat.division+'</div>';
+  h+='<div class="selected-seat-pills">';
+  h+='<span class="seat-pill seat-pill-winner" style="background:'+wc.bg+';color:'+wc.fg+'">'+ws+'</span>';
+  h+='<span class="seat-pill seat-pill-stat">Turnout '+(seat.turnout*100).toFixed(1)+'%</span>';
+  h+='<span class="seat-pill seat-pill-stat">Margin '+(seat.stats.victory_margin*100).toFixed(1)+'%</span>';
+  h+='</div>';
+  document.getElementById("selected-seat-content").innerHTML=h;
+  el.classList.add("show");
+}
+
+document.querySelector("#selected-seat .close-btn").addEventListener("click",function(){
+  document.getElementById("selected-seat").classList.remove("show");selectedSeatKey=null;updateMap();
+});
+
+// Search
+var searchInput=document.getElementById("search");
+var searchResults=document.getElementById("search-results");
+searchInput.addEventListener("input",function(){
+  var q=this.value.trim().toLowerCase();
+  if(q.length<2){searchResults.classList.remove("show");return}
+  var matches=[];var keys=Object.keys(seatData);
+  for(var i=0;i<keys.length&&matches.length<8;i++){
+    var s=seatData[keys[i]];
+    if(s.name.toLowerCase().indexOf(q)>=0||s.district.toLowerCase().indexOf(q)>=0)matches.push(s);
+  }
+  if(!matches.length){searchResults.classList.remove("show");return}
+  searchResults.innerHTML=matches.map(function(s){
+    return'<div class="search-item" data-key="'+s.name+'" role="option"><div class="seat-name">'+s.name+'</div><div class="seat-district">'+s.district+', '+s.division+'</div></div>';
+  }).join("");
+  searchResults.classList.add("show");
+});
+searchResults.addEventListener("click",function(e){
+  var item=e.target.closest(".search-item");if(!item)return;
+  var key=item.getAttribute("data-key");
+  searchResults.classList.remove("show");searchInput.value="";
+  selectSeat(key);
+  var layer=seatLayers[key];
+  if(layer)map.fitBounds(layer.getBounds().pad(0.5));
+});
+document.addEventListener("click",function(e){if(!e.target.closest("#search-wrap"))searchResults.classList.remove("show")});
+
+// Keyboard navigation for search
+searchInput.addEventListener("keydown",function(e){
+  if(e.key==="ArrowDown"||e.key==="ArrowUp"){
+    e.preventDefault();
+    var items=searchResults.querySelectorAll(".search-item");
+    if(!items.length)return;
+    var current=searchResults.querySelector(".search-item:hover,.search-item.focused");
+    var idx=Array.prototype.indexOf.call(items,current);
+    items.forEach(function(i){i.classList.remove("focused");i.style.background=""});
+    if(e.key==="ArrowDown")idx=Math.min(idx+1,items.length-1);
+    else idx=Math.max(idx-1,0);
+    items[idx].classList.add("focused");
+    items[idx].style.background="var(--accent-soft)";
+    items[idx].scrollIntoView({block:"nearest"});
+  }
+  if(e.key==="Enter"){
+    var focused=searchResults.querySelector(".search-item.focused");
+    if(focused)focused.click();
+  }
+});
+
+function updateAll(){updateMap();updateSummary();updateDivisions();updateLegend()}
+
+function updateMap(){
+  if(!geojsonLayer)return;
+  geojsonLayer.eachLayer(function(l){
+    var seat=seatData[l._seatKey];var val=seat?seat.stats[currentStat]:null;
+    var fill=(val!=null&&!isNaN(val))?getColor(val):"#222";
+    var isSel=selectedSeatKey===l._seatKey;
+    l.setStyle({fillColor:fill,fillOpacity:0.88,weight:isSel?3:0.5,color:isSel?"#7c6cff":"#000"});
+  });
+}
+
+function updateSummary(){
+  var el=document.getElementById("summary");var meta=STAT_META[currentStat];
+  var seats=Object.values(seatData);
+  var valid=seats.filter(function(s){var v=s.stats[currentStat];return v!=null&&!isNaN(v)});
+
+  if(currentStat==="turnout"){
+    var avg=valid.reduce(function(a,s){return a+s.stats.turnout},0)/valid.length;
+    var tv=valid.reduce(function(a,s){return a+s.total_voters},0);
+    var tc=valid.reduce(function(a,s){return a+s.total_votes},0);
+    var best=valid.reduce(function(a,s){return s.stats.turnout>a.stats.turnout?s:a});
+    var worst=valid.reduce(function(a,s){return s.stats.turnout<a.stats.turnout?s:a});
+    el.innerHTML='<div class="summary-stat"><span class="value">'+(avg*100).toFixed(1)+'%</span><span class="label">avg turnout</span></div><div class="summary-detail"><strong>'+tc.toLocaleString()+'</strong> votes cast of <strong>'+tv.toLocaleString()+'</strong> registered<br>Highest: <strong>'+best.name+'</strong> ('+(best.stats.turnout*100).toFixed(1)+'%)<br>Lowest: <strong>'+worst.name+'</strong> ('+(worst.stats.turnout*100).toFixed(1)+'%)</div>';
+  } else if(currentStat==="victory_margin"){
+    var avg=valid.reduce(function(a,s){return a+s.stats.victory_margin},0)/valid.length;
+    var cl=valid.reduce(function(a,s){return s.stats.victory_margin<a.stats.victory_margin?s:a});
+    var sf=valid.reduce(function(a,s){return s.stats.victory_margin>a.stats.victory_margin?s:a});
+    var comp=valid.filter(function(s){return s.stats.victory_margin<0.05}).length;
+    el.innerHTML='<div class="summary-stat"><span class="value">'+(avg*100).toFixed(1)+'%</span><span class="label">avg margin</span></div><div class="summary-detail"><strong>'+comp+'</strong> seats decided by &lt;5%<br>Closest: <strong>'+cl.name+'</strong> ('+(cl.stats.victory_margin*100).toFixed(1)+'%)<br>Safest: <strong>'+sf.name+'</strong> ('+(sf.stats.victory_margin*100).toFixed(1)+'%)</div>';
+  } else if(currentStat==="bnp_vs_eleven_party_alliance"){
+    var bm=valid.filter(function(s){return s.stats.bnp_vs_eleven_party_alliance>0.5}).length;
+    var em=valid.length-bm;
+    var wc={};valid.forEach(function(s){var w=PARTY_SHORT[s.winner]||s.winner||"Other";wc[w]=(wc[w]||0)+1});
+    var sorted=Object.entries(wc).sort(function(a,b){return b[1]-a[1]});
+    el.innerHTML='<div class="summary-stat"><span class="value">'+bm+' \u2013 '+em+'</span><span class="label">BNP vs 11-Party</span></div><div class="summary-detail">BNP led in <strong>'+bm+'</strong> constituencies<br>11-Party Alliance led in <strong>'+em+'</strong></div><div class="winner-grid">'+sorted.slice(0,4).map(function(e){return'<div class="winner-item"><div class="count">'+e[1]+'</div><div class="party-name">'+e[0]+'</div></div>'}).join("")+'</div>';
+  } else {
+    var sk=currentStat;
+    var tv=valid.reduce(function(a,s){return a+(s.stats[sk]*s.total_votes)},0);
+    var ta=valid.reduce(function(a,s){return a+s.total_votes},0);
+    var sh=ta>0?tv/ta:0;
+    var sw=meta.party?valid.filter(function(s){return s.winner===meta.party}).length:null;
+    var best=valid.reduce(function(a,s){return s.stats[sk]>a.stats[sk]?s:a});
+    var h='<div class="summary-stat"><span class="value">'+Math.round(tv).toLocaleString()+'</span><span class="label">total votes</span></div><div class="summary-detail">National share: <strong>'+(sh*100).toFixed(1)+'%</strong><br>';
+    if(sw!==null)h+='Seats won: <strong>'+sw+' / '+valid.length+'</strong><br>';
+    h+='Strongest: <strong>'+best.name+'</strong> ('+(best.stats[sk]*100).toFixed(1)+'%)</div>';
+    el.innerHTML=h;
+  }
+}
+
+function updateDivisions(){
+  var el=document.getElementById("division-breakdown");var byDiv={};
+  Object.values(seatData).forEach(function(s){var d=s.division||"Unknown";if(!byDiv[d])byDiv[d]=[];byDiv[d].push(s)});
+  var meta=STAT_META[currentStat];
+  var entries=Object.keys(byDiv).map(function(d){
+    var vals=byDiv[d].map(function(s){return s.stats[currentStat]}).filter(function(v){return v!=null&&!isNaN(v)});
+    return{name:d,avg:vals.length?vals.reduce(function(a,b){return a+b},0)/vals.length:0,count:byDiv[d].length}
+  }).sort(function(a,b){return b.avg-a.avg});
+  el.innerHTML=entries.map(function(de){
+    var col=getColor(de.avg);var pct=(de.avg*100).toFixed(1);
+    var barT=(meta.range[1]>meta.range[0])?(de.avg-meta.range[0])/(meta.range[1]-meta.range[0]):0.5;
+    barT=Math.max(0,Math.min(1,barT));
+    return'<div class="div-row"><span class="div-label">'+de.name+'</span><div class="div-bar-bg"><div class="div-bar" style="width:'+(barT*100).toFixed(1)+'%;background:'+col+'"></div></div><span class="div-val">'+pct+'%</span></div>';
+  }).join("");
+}
+
+function updateLegend(){
+  if(legendControl)map.removeControl(legendControl);
+  legendControl=L.control({position:"bottomleft"});
+  var meta=STAT_META[currentStat];var ramp=getActiveRamp();
+  legendControl.onAdd=function(){
+    var div=L.DomUtil.create("div","legend");
+    var stops=ramp.map(function(c,i){return c+" "+(i/(ramp.length-1)*100).toFixed(0)+"%"}).join(", ");
+    var lo,hi,mid;
+    if(meta.diverging){lo="11-Party";hi="BNP";mid='<span>Even</span>'}
+    else{lo=(meta.range[0]*100).toFixed(0)+"%";hi=(meta.range[1]*100).toFixed(0)+"%";mid='<span>'+((meta.range[0]+meta.range[1])/2*100).toFixed(0)+'%</span>'}
+    div.innerHTML='<div class="legend-title">'+meta.label+'</div><div class="legend-gradient" style="background:linear-gradient(to right,'+stops+')"></div><div class="legend-labels"><span>'+lo+'</span>'+mid+'<span>'+hi+'</span></div><div class="legend-nodata"><span class="legend-nodata-swatch"></span> No data</div>';
+    return div;
+  };
+  legendControl.addTo(map);
+}
+
+// Stat button clicks
+var pills=document.querySelectorAll(".stat-btn[data-stat]");
+pills.forEach(function(p){
+  p.addEventListener("click",function(){
+    pills.forEach(function(b){b.classList.remove("active");b.setAttribute("aria-checked","false")});
+    p.classList.add("active");
+    p.setAttribute("aria-checked","true");
+    currentStat=p.getAttribute("data-stat");
+    updateAll();
+  });
+});
+
+// Keyboard shortcuts
+document.addEventListener("keydown",function(e){
+  if(e.key==="Escape"){
+    document.getElementById("selected-seat").classList.remove("show");
+    selectedSeatKey=null;
+    searchResults.classList.remove("show");
+    searchInput.value="";
+    updateMap();
+  }
+  // / to focus search
+  if(e.key==="/"&&document.activeElement!==searchInput){
+    e.preventDefault();searchInput.focus();
+  }
+});
+
+
+// Mobile sidebar toggle
+var sidebarToggle=document.getElementById("sidebar-toggle");
+var sidebar=document.getElementById("sidebar");
+var mobileHandle=document.getElementById("mobile-handle");
+sidebarToggle.addEventListener("click",function(){
+  sidebar.classList.toggle("mobile-open");
+  sidebarToggle.textContent=sidebar.classList.contains("mobile-open")?"Show Map":"Show Results";
+});
+mobileHandle.addEventListener("click",function(){
+  sidebar.classList.toggle("mobile-open");
+  sidebarToggle.textContent=sidebar.classList.contains("mobile-open")?"Show Map":"Show Results";
+});
+</script>
 </body>
 </html>

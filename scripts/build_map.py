@@ -247,6 +247,10 @@ def build_map(geojson: Dict[str, Any], results_df: pd.DataFrame, coalition_code:
         <div style="font-weight: 600; line-height: 1.25; margin-bottom: 2px;">{{ title }}</div>
         {% if coalition_code == 'bnp_vs_eleven_party_alliance' %}
         <div style="font-size: 11px; color: #666; margin-bottom: 6px;">BNP's share of (BNP + Eleven-Party Alliance) votes</div>
+        {% elif coalition_code == 'turnout' %}
+        <div style="font-size: 11px; color: #666; margin-bottom: 6px;">Percentage of registered voters who cast a ballot</div>
+        {% elif coalition_code == 'victory_margin' %}
+        <div style="font-size: 11px; color: #666; margin-bottom: 6px;">Gap between 1st and 2nd place as share of total votes</div>
         {% else %}
         <div style="font-size: 11px; color: #666; margin-bottom: 6px;">Percentage of total votes cast in each constituency</div>
         {% endif %}
@@ -254,6 +258,10 @@ def build_map(geojson: Dict[str, Any], results_df: pd.DataFrame, coalition_code:
             <span style="display: inline-block; width: 12px; height: 12px; background: #000000; border: 1px solid #222;"></span>
             {% if coalition_code == 'bnp_vs_eleven_party_alliance' %}
             <span>At least one group missing data</span>
+            {% elif coalition_code == 'turnout' %}
+            <span>No voter data</span>
+            {% elif coalition_code == 'victory_margin' %}
+            <span>No result data</span>
             {% else %}
             <span>No candidates nominated</span>
             {% endif %}
@@ -270,6 +278,14 @@ def build_map(geojson: Dict[str, Any], results_df: pd.DataFrame, coalition_code:
         {% if coalition_code == 'bnp_vs_eleven_party_alliance' %}
         <div style="display: flex; justify-content: space-between; width: 200px; margin-top: 2px; font-size: 11px;">
             <span style="text-align: left;">Eleven-Party<br/>Alliance dominated</span><span style="text-align: right;">BNP<br/>dominated</span>
+        </div>
+        {% elif coalition_code == 'turnout' %}
+        <div style="display: flex; justify-content: space-between; width: 200px; margin-top: 2px; font-size: 11px;">
+            <span style="text-align: left;">Lower<br/>turnout (0%)</span><span style="text-align: right;">Higher<br/>turnout (100%)</span>
+        </div>
+        {% elif coalition_code == 'victory_margin' %}
+        <div style="display: flex; justify-content: space-between; width: 200px; margin-top: 2px; font-size: 11px;">
+            <span style="text-align: left;">Very close<br/>race (0%)</span><span style="text-align: right;">Landslide<br/>victory (100%)</span>
         </div>
         {% else %}
         <div style="display: flex; justify-content: space-between; width: 200px; margin-top: 2px; font-size: 11px;">
@@ -412,7 +428,7 @@ def main() -> None:
     if not os.path.exists(args.output_dir):
         os.makedirs(args.output_dir, exist_ok=True)
     # Build maps
-    derived_codes = {'bnp_vs_eleven_party_alliance'}
+    derived_codes = {'bnp_vs_eleven_party_alliance', 'turnout', 'victory_margin'}
     for code, meta in coalitions.items():
         if f'{code}_ratio' not in results_df.columns and code not in derived_codes:
             # Skip coalitions that are not present

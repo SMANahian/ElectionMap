@@ -114,6 +114,18 @@ def main():
         html = download()
         results = parse(html)
 
+    # Deduplicate exact duplicates (same seat + candidate + party + votes)
+    seen = set()
+    deduped = []
+    for r in results:
+        key = (r["seat_name"], r["candidate"], r["party"], r["votes"])
+        if key not in seen:
+            seen.add(key)
+            deduped.append(r)
+    if len(deduped) < len(results):
+        print(f"Removed {len(results) - len(deduped)} exact duplicates")
+    results = deduped
+
     print(f"Parsed {len(results)} candidate entries")
 
     with open(OUTPUT, "w", newline="", encoding="utf-8") as f:

@@ -357,10 +357,94 @@ def rule3_fix_japa(seat, clusters, merge_log):
 
 # ── Vote resolution ──────────────────────────────────────────────────────────
 
-def resolve_votes(votes_by_source):
-    """Pick the max vote count across all sources."""
-    vals = [v for v in votes_by_source.values() if v > 0]
-    return max(vals) if vals else 0
+def load_total_votes_cast():
+    """Load total_votes_cast per seat from DS, DT, TBS wide CSVs."""
+    from collections import defaultdict
+    base = os.path.dirname(PIPE)
+    sources = {
+        "ds": os.path.join(base, "result_from_source", "result_from_dailystar.csv"),
+        "dt": os.path.join(base, "result_from_source", "result_from_dhakatribune.csv"),
+        "tbs": os.path.join(base, "result_from_source", "tbsnews_party_by_seat.csv"),
+    }
+    from normalize import normalize_seat_name
+    by_seat = defaultdict(dict)
+    for label, path in sources.items():
+        if not os.path.exists(path):
+            continue
+        with open(path, encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                seat = normalize_seat_name(row.get("seat_name", ""))
+                tv = row.get("total_votes", "")
+                if seat and tv and tv != "-":
+                    try:
+                        by_seat[seat][label] = int(float(tv))
+                    except (ValueError, TypeError):
+                        pass
+
+    result = {}
+    for seat, vals in by_seat.items():
+        pos = {s: v for s, v in vals.items() if v > 0}
+        if not pos:
+            continue
+        if len(pos) == 1:
+            result[seat] = next(iter(pos.values()))
+            continue
+        # Cluster within 5%, pick largest group's max
+        clusters = []
+        for s, v in sorted(pos.items(), key=lambda x: x[1]):
+            placed = False
+            for cl in clusters:
+                if cl[0][1] > 0 and abs(v - cl[0][1]) / cl[0][1] <= 0.05:
+                    cl.append((s, v))
+                    placed = True
+                    break
+            if not placed:
+                clusters.append([(s, v)])
+        best = max(clusters, key=lambda cl: (len(cl), max(v for _, v in cl)))
+        result[seat] = max(v for _, v in best)
+    return result
+
+
+def resolve_votes(votes_by_source, ceiling=None):
+    """Pick the best vote: group within 5%, prefer cluster under ceiling if available."""
+    vals = {s: v for s, v in votes_by_source.items() if v > 0}
+    if not vals:
+        return 0
+    if len(vals) == 1:
+        _, v = next(iter(vals.items()))
+        # If only 1 source has votes and 2+ *detailed* sources report 0,
+        # treat as suspect inflation. BSS only reports winner+runner-up so
+        # its 0 doesn't count as counter-evidence.
+        detailed_zeros = [s for s, val in votes_by_source.items()
+                          if val == 0 and s != "bss"]
+        if len(detailed_zeros) >= 2:
+            return 0
+        return v
+
+    # Cluster values within 5% tolerance
+    clusters = []
+    for s, v in sorted(vals.items(), key=lambda x: x[1]):
+        placed = False
+        for cl in clusters:
+            ref = cl[0][1]
+            if ref > 0 and abs(v - ref) / ref <= 0.05:
+                cl.append((s, v))
+                placed = True
+                break
+        if not placed:
+            clusters.append([(s, v)])
+
+    # If we have a ceiling (total_votes_cast), prefer clusters that fit under it
+    if ceiling and len(clusters) > 1:
+        under = [cl for cl in clusters if max(v for _, v in cl) <= ceiling]
+        if under:
+            # Among valid clusters, pick most-agreed, then largest value
+            best = max(under, key=lambda cl: (len(cl), max(v for _, v in cl)))
+            return max(v for _, v in best)
+
+    # Fallback: pick the cluster with most sources
+    best = max(clusters, key=lambda cl: (len(cl), max(v for _, v in cl)))
+    return max(v for _, v in best)
 
 
 # ── Suspicious: unmerged pairs that look like they might be the same ────────
@@ -479,6 +563,7 @@ def main():
     entries_by_seat = load_entries_by_seat()
     print(f"\nTotal seats: {len(entries_by_seat)}")
 
+    total_votes_cast = load_total_votes_cast()
     merge_log = []
     results = []
     suspicious = []
@@ -515,16 +600,58 @@ def main():
         # Find suspicious unmerged pairs
         suspicious.extend(find_suspicious(seat, clusters))
 
-        # Build result rows
+        # Build result rows — resolve votes with ceiling, then fix sum overflows
+        ceiling = total_votes_cast.get(seat)
+        seat_results = []
         for cl in clusters:
-            votes = resolve_votes(cl["votes"])
+            votes = resolve_votes(cl["votes"], ceiling=ceiling)
             nonzero = [v for v in cl["votes"].values() if v > 0]
             comment = ""
             if len(nonzero) >= 2:
                 spread = (max(nonzero) - min(nonzero)) / max(nonzero)
                 if spread > 0.20:
                     comment = f"vote-mismatch: spread={spread:.0%}"
+            seat_results.append((cl, votes, comment))
 
+        # If sum of resolved votes exceeds total_votes_cast, re-resolve
+        # candidates with vote mismatches: pick the value closest to but not
+        # exceeding ceiling, or use median of values under ceiling
+        if ceiling:
+            total_resolved = sum(v for _, v, _ in seat_results)
+            if total_resolved > ceiling:
+                new_results = []
+                for cl, votes, comment in seat_results:
+                    nonzero = sorted([v for v in cl["votes"].values() if v > 0])
+                    if len(nonzero) >= 2:
+                        spread = (nonzero[-1] - nonzero[0]) / nonzero[-1]
+                        if spread > 0.10:
+                            # Sum overflows — use most-agreed value, or minimum
+                            # if no agreement (conservative: avoids inflated outliers)
+                            under = [v for v in nonzero if v <= ceiling]
+                            vals_to_pick = under if under else nonzero
+                            # Cluster within 5%, pick largest group
+                            pick_clusters = []
+                            for v in sorted(vals_to_pick):
+                                placed = False
+                                for pc in pick_clusters:
+                                    if pc[0] > 0 and abs(v - pc[0]) / pc[0] <= 0.05:
+                                        pc.append(v)
+                                        placed = True
+                                        break
+                                if not placed:
+                                    pick_clusters.append([v])
+                            best_cl = max(pick_clusters, key=len)
+                            if len(best_cl) >= 2:
+                                votes = best_cl[len(best_cl) // 2]
+                            else:
+                                # No agreement — take minimum (conservative)
+                                votes = min(vals_to_pick)
+                            if not comment:
+                                comment = f"vote-mismatch: spread={spread:.0%}"
+                    new_results.append((cl, votes, comment))
+                seat_results = new_results
+
+        for cl, votes, comment in seat_results:
             results.append({
                 "seat_name": seat,
                 "candidate": cl["name"],

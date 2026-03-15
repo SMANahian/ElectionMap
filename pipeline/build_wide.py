@@ -79,26 +79,92 @@ def load_metadata():
                     if field not in meta[seat] and row.get(field):
                         meta[seat][field] = normalize_location_name(row[field])
 
-    # DS wide — total votes cast
-    if os.path.exists(DS_WIDE):
-        with open(DS_WIDE, encoding="utf-8") as f:
+    # Total votes cast — collect from all sources, pick best agreement
+    votes_cast_sources = defaultdict(dict)  # seat → {source_name: value}
+
+    # DT wide CSV
+    DT_WIDE = os.path.join(BASE, "result_from_source", "result_from_dhakatribune.csv")
+    for label, path in [("ds", DS_WIDE), ("dt", DT_WIDE)]:
+        if not os.path.exists(path):
+            continue
+        with open(path, encoding="utf-8") as f:
             for row in csv.DictReader(f):
                 seat = normalize_seat_name(row.get("seat_name", ""))
                 tv = row.get("total_votes", "")
                 if seat and tv and tv != "-":
                     try:
-                        meta[seat]["total_votes_cast"] = int(float(tv))
+                        votes_cast_sources[seat][label] = int(float(tv))
                     except (ValueError, TypeError):
                         pass
 
+    # TBS wide CSV
+    TBS_WIDE = os.path.join(BASE, "result_from_source", "tbsnews_party_by_seat.csv")
+    if os.path.exists(TBS_WIDE):
+        with open(TBS_WIDE, encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                seat = normalize_seat_name(row.get("seat_name", ""))
+                tv = row.get("total_votes", "")
+                if seat and tv and tv != "-":
+                    try:
+                        votes_cast_sources[seat]["tbs"] = int(float(tv))
+                    except (ValueError, TypeError):
+                        pass
+
+    # Note: Netra News data (netra_total_votes.csv) has union-level valid_votes
+    # but 518/5034 unions span multiple constituencies, inflating per-seat totals.
+    # Not used for total_votes_cast resolution.
+
+    # Store raw sources; resolve later when we know total_known_votes
+    meta["_votes_cast_sources"] = votes_cast_sources
+
     return meta
+
+
+def resolve_total_votes_cast(meta, seat, total_known):
+    """Resolve total_votes_cast using source clustering + total_known_votes as reference."""
+    votes_cast_sources = meta.get("_votes_cast_sources", {})
+    src_vals = votes_cast_sources.get(seat, {})
+    vals = {s: v for s, v in src_vals.items() if v > 0}
+    if not vals:
+        return 0
+    if len(vals) == 1:
+        return next(iter(vals.values()))
+
+    # Cluster within 5%
+    clusters = []
+    for s, v in sorted(vals.items(), key=lambda x: x[1]):
+        placed = False
+        for cl in clusters:
+            ref = cl[0][1]
+            if ref > 0 and abs(v - ref) / ref <= 0.05:
+                cl.append((s, v))
+                placed = True
+                break
+        if not placed:
+            clusters.append([(s, v)])
+
+    if len(clusters) == 1:
+        return max(v for _, v in clusters[0])
+
+    # Multiple disagreeing clusters: prefer the one closest to total_known_votes
+    if total_known > 0:
+        def cluster_score(cl):
+            best_v = max(v for _, v in cl)
+            # Simply pick the value closest to total_known_votes
+            return (-abs(best_v - total_known), len(cl))
+        best = max(clusters, key=cluster_score)
+    else:
+        best = max(clusters, key=lambda cl: (len(cl), max(v for _, v in cl)))
+
+    return max(v for _, v in best)
 
 
 META_FIELDS = [
     "seat_name", "division", "district", "area",
     "total_voters", "male_voters", "female_voters",
     "total_centers", "total_candidates",
-    "total_votes_cast", "referendum_yes", "referendum_no",
+    "total_votes_cast", "total_known_votes", "vote_diff",
+    "referendum_yes", "referendum_no",
     "winner", "winner_party", "winner_votes",
     "runner_up", "runner_up_party", "runner_up_votes",
     "independent_total",
@@ -167,6 +233,15 @@ def main():
         row["independent_total"] = independent_total or ""
         for p in sorted_parties:
             row[p] = party_votes[p] or ""
+
+        # Total known votes = sum of all candidate votes in this seat
+        total_known = independent_total + sum(party_votes.values())
+        row["total_known_votes"] = total_known or ""
+        # Resolve total_votes_cast using total_known as reference
+        tvc = resolve_total_votes_cast(meta, seat, total_known)
+        if tvc:
+            row["total_votes_cast"] = tvc
+        row["vote_diff"] = (tvc - total_known) if tvc and total_known else ""
 
         rows.append(row)
 

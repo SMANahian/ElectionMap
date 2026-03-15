@@ -34,31 +34,22 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Scrape vote data
+      - name: Build seat results from official EC data
         run: |
           mkdir -p results
-          python scripts/scrape_votes.py \
+          python scripts/build_ec_seat_results.py \
             --config config/coalitions.json \
-            --url https://www.tbsnews.net/election-2026 \
-            --local_html data/tbs_election_2026.html \
-            --output_seat_results results/seat_results.csv \
-            --output_party_votes results/party_totals.csv \
-            --output_party_by_seat results/party_by_seat.csv \
-            --save_html
+            --output results/seat_results.csv
 
-      - name: Generate maps
+      - name: Build site data JSON
         run: |
-          mkdir -p site/maps
-          python scripts/build_map.py \
-            --config config/coalitions.json \
-            --results_csv results/seat_results.csv \
-            --geojson data/constituencies.geojson \
-            --output_dir site/maps
+          mkdir -p site/data
+          python scripts/build_site_data.py
 
       - name: Copy website files
         run: |
-          # Copy static HTML pages (index and parameterised pages)
           cp -r site_src/* site/
+          cp data/constituencies.geojson site/data/constituencies.geojson
 
       - name: Upload artifact for Pages
         uses: actions/upload-pages-artifact@v3

@@ -40,3 +40,8 @@ ignore/
 census_verification/
 census/
 humdata_dhs/
+*/analysis/
+/analysis/
+
+ElectionAnalysis/*
+*netra*

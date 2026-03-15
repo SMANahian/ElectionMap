@@ -80,5 +80,17 @@
     "display_name": "Eleven-Party Alliance vs BNP (BNP share)",
     "keywords": [],
     "color_scale": ["#FDE0DD", "#C51B8A"]
+  },
+  "turnout": {
+    "display_name": "Voter Turnout",
+    "keywords": [],
+    "color_scale": ["#F7FCF5", "#00441B"],
+    "skip_coalition": true
+  },
+  "victory_margin": {
+    "display_name": "Victory Margin",
+    "keywords": [],
+    "color_scale": ["#FFF5F0", "#A50F15"],
+    "skip_coalition": true
   }
 }

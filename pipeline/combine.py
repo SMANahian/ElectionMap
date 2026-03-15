@@ -143,9 +143,11 @@ def resolve_votes(votes_dict):
     Pick the best vote count from multiple sources.
 
     Strategy:
-      1. Group values within 2% tolerance into clusters.
-      2. If a cluster has 2+ sources agreeing, use its median.
-      3. Otherwise fall back to priority order: dt > tbs > ds > bss.
+      1. If majority of sources (2+) report 0 and only 1 has a large value,
+         treat as suspect — use 0 (likely source inflation).
+      2. Group non-zero values within 2% tolerance into clusters.
+      3. If a cluster has 2+ sources agreeing, use its max.
+      4. Otherwise fall back to priority order: dt > tbs > ds > bss.
     """
     vals = [(src, v) for src, v in votes_dict.items() if v > 0]
     if not vals:

@@ -45,7 +45,7 @@ Barishal 1,Abdus Sobhan,Independent Candidate (Independent),44188,3,"ds,dt,tbs",
 Barishal 1,Md. Russell Sardar,Islami Andolan Bangladesh (IAB),6846,3,"ds,dt,tbs",ds=0; dt=6846; tbs=6846,
 Barishal 1,Sher-e-Niabath Sekendar Ali,Jatiya Party (Manju) (JP–Manju),1736,3,"ds,dt,tbs",ds=0; dt=1736; tbs=1736,
 Barishal 2,Sardar Sarfuddin Ahmed,Bangladesh Nationalist Party (BNP),141622,4,"bss,ds,dt,tbs",bss=141622; ds=141622; dt=141622; tbs=141622,
-Barishal 2,Abdul Mannan,Bangladesh Jamaat-e-Islami (Jamaat),78082,4,"bss,ds,dt,tbs",bss=74082; ds=74082; dt=74082; tbs=78082,
+Barishal 2,Abdul Mannan,Bangladesh Jamaat-e-Islami (Jamaat),74082,4,"bss,ds,dt,tbs",bss=74082; ds=74082; dt=74082; tbs=78082,
 Barishal 2,Mohammad Nesar Uddin,Islami Andolan Bangladesh (IAB),6021,3,"ds,dt,tbs",ds=0; dt=6021; tbs=6021,
 Barishal 2,A. Haque,Jatiya Party (Manju) (JP–Manju),2329,3,"ds,dt,tbs",ds=0; dt=2329; tbs=2329,
 Barishal 2,M. A. Jalil,Jatiya Party (JaPa),1199,3,"ds,dt,tbs",ds=0; dt=1199; tbs=1199,
@@ -76,7 +76,7 @@ Barishal 6,Md. Kamrul Islam Khan,Independent Candidate (Independent),366,3,"ds,d
 Barishal 6,Abdul Quddus,Bangladesh Muslim League (BML),244,3,"ds,dt,tbs",ds=0; dt=244; tbs=244,
 Barishal 6,Md. Salahuddin Mia,Gono Odhikar Parishad (GOP),139,3,"ds,dt,tbs",ds=0; dt=139; tbs=139,
 Bhola 1,Andaleeve Rahman,Bangladesh Jatiya Party (BJP),105543,4,"bss,ds,dt,tbs",bss=105543; ds=105543; dt=105543; tbs=105543,
-Bhola 1,Md. Nazrul Islam,Bangladesh Jamaat-e-Islami (Jamaat),75337,4,"bss,ds,dt,tbs",bss=75337; ds=75337; dt=63352; tbs=75337,
+Bhola 1,Md. Nazrul Islam,Bangladesh Jamaat-e-Islami (Jamaat),75337,4,"bss,ds,dt,tbs",bss=75337; ds=75337; dt=63352; tbs=75337,vote-mismatch: spread=16%
 Bhola 1,Md. Obaidur Rahman,Islami Andolan Bangladesh (IAB),25245,3,"ds,dt,tbs",ds=0; dt=25245; tbs=25245,
 Bhola 1,Md. Ainur Rahman (Jewel) Mia,Gono Odhikar Parishad (GOP),1103,3,"ds,dt,tbs",ds=0; dt=1103; tbs=1103,
 Bhola 1,Md. Akbar Hossain,Jatiya Party (JaPa),599,3,"ds,dt,tbs",ds=0; dt=599; tbs=599,
@@ -140,7 +140,7 @@ Bogura 7,Md. Shafiqul Islam,Islami Andolan Bangladesh (IAB),2061,3,"ds,dt,tbs",d
 Bogura 7,Md. Ansar Ali,Bangladesh Muslim League (BML),536,3,"ds,dt,tbs",ds=0; dt=536; tbs=536,
 Brahmanbaria 1,M. A. Hannan,Bangladesh Nationalist Party (BNP),68092,4,"bss,ds,dt,tbs",bss=68092; ds=68092; dt=68092; tbs=68092,
 Brahmanbaria 1,A. K. M. Kamruzzaman,Independent Candidate (Independent),35220,3,"ds,dt,tbs",ds=35220; dt=35220; tbs=35220,
-Brahmanbaria 1,A. K. M. Aminul Islam,Bangladesh Jamaat-e-Islami (Jamaat),35220,4,"bss,ds,dt,tbs",bss=35220; ds=24430; dt=24430; tbs=24430,vote-mismatch: spread=31%
+Brahmanbaria 1,A. K. M. Aminul Islam,Bangladesh Jamaat-e-Islami (Jamaat),24430,4,"bss,ds,dt,tbs",bss=35220; ds=24430; dt=24430; tbs=24430,vote-mismatch: spread=31%
 Brahmanbaria 1,Iqbal Chowdhury,Independent Candidate (Independent),17666,3,"ds,dt,tbs",ds=17666; dt=17666; tbs=17666,
 Brahmanbaria 1,Hussain Ahmed,Islami Andolan Bangladesh (IAB),907,3,"ds,dt,tbs",ds=907; dt=907; tbs=907,
 Brahmanbaria 1,Md. Shah Alam,Jatiya Party (JaPa),265,3,"ds,dt,tbs",ds=265; dt=265; tbs=265,
@@ -152,9 +152,9 @@ Brahmanbaria 2,Ashraf Uddin,National Citizen Party (NCP),20401,3,"ds,dt,tbs",ds=
 Brahmanbaria 2,S. N. Tarun Dey,Independent Candidate (Independent),12560,3,"ds,dt,tbs",ds=0; dt=12560; tbs=12560,
 Brahmanbaria 2,Nesar Ahmed,Islami Andolan Bangladesh (IAB),3851,3,"ds,dt,tbs",ds=0; dt=3851; tbs=3851,
 Brahmanbaria 2,Md. Main Uddin,Insaniyat Biplob Bangladesh (IBB),1419,3,"ds,dt,tbs",ds=0; dt=1419; tbs=1419,
-Brahmanbaria 2,Taimur Reza Md. Shahjad,Jatiya Samajtantrik Dal (JSD),384,3,"ds,dt,tbs",ds=0; dt=0; tbs=384,
 Brahmanbaria 2,Adv. Md. Ziaul Haque Mridha,Jatiya Party (JaPa),199,3,"ds,dt,tbs",ds=0; dt=199; tbs=199,
 Brahmanbaria 2,Sharifa Akhter,Amjanatar Dol,181,3,"ds,dt,tbs",ds=0; dt=181; tbs=181,
+Brahmanbaria 2,Taimur Reza Md. Shahjad,Jatiya Samajtantrik Dal (JSD),0,3,"ds,dt,tbs",ds=0; dt=0; tbs=384,
 Brahmanbaria 3,Md. Khaled Hossain Mahbub,Bangladesh Nationalist Party (BNP),209636,4,"bss,ds,dt,tbs",bss=209636; ds=209636; dt=209636; tbs=209636,
 Brahmanbaria 3,Ataullah,National Citizen Party (NCP),62547,4,"bss,ds,dt,tbs",bss=62547; ds=62547; dt=62547; tbs=62547,
 Brahmanbaria 3,Niazul Karim,Islami Andolan Bangladesh (IAB),6321,3,"ds,dt,tbs",ds=0; dt=6321; tbs=6231,
@@ -390,9 +390,9 @@ Cumilla 1,Barua Monojit Dhimon,Jatiya Samajtantrik Dal (JSD),144,3,"ds,dt,tbs",d
 Cumilla 10,Md. Mobasher Alam Bhuiyan,Bangladesh Nationalist Party (BNP),163667,4,"bss,ds,dt,tbs",bss=163667; ds=163667; dt=163667; tbs=163667,
 Cumilla 10,মুহাম্মদ ইয়াছিন আরাফাত,Bangladesh Jamaat-e-Islami (Jamaat),123733,4,"bss,ds,dt,tbs",bss=123733; ds=123733; dt=123733; tbs=123733,
 Cumilla 10,Md. Shamsuddoha,Islami Andolan Bangladesh (IAB),7959,3,"ds,dt,tbs",ds=0; dt=7959; tbs=7959,
-Cumilla 10,Kazi Nur E Alam Siddiqui,Bangladesh Sangskritik Muktijote (BSM),422,3,"ds,dt,tbs",ds=0; dt=322; tbs=422,vote-mismatch: spread=24%
 Cumilla 10,Hasan Mahmud,Bangladesh Congress,400,3,"ds,dt,tbs",ds=0; dt=400; tbs=400,
 Cumilla 10,Md. Abdullah Al Noman,Amjanatar Dol,373,3,"ds,dt,tbs",ds=0; dt=373; tbs=373,
+Cumilla 10,Kazi Nur E Alam Siddiqui,Bangladesh Sangskritik Muktijote (BSM),322,3,"ds,dt,tbs",ds=0; dt=322; tbs=422,vote-mismatch: spread=24%
 Cumilla 10,Ramiz Bin Arif,Gono Odhikar Parishad (GOP),293,3,"ds,dt,tbs",ds=0; dt=293; tbs=293,
 Cumilla 11,Syed Abdullah Mohammed Taher,Bangladesh Jamaat-e-Islami (Jamaat),133308,4,"bss,ds,dt,tbs",bss=133308; ds=133308; dt=133308; tbs=133308,
 Cumilla 11,Md. Kamrul Huda,Bangladesh Nationalist Party (BNP),76638,4,"bss,ds,dt,tbs",bss=76638; ds=76638; dt=76638; tbs=76638,
@@ -423,9 +423,9 @@ Cumilla 4,Irfanul Haque Sarkar,Insaniyat Biplob Bangladesh (IBB),427,3,"ds,dt,tb
 Cumilla 4,Md. Mazibur Rahman Farazi,Khelafat Majlis,248,3,"ds,dt,tbs",ds=0; dt=248; tbs=248,
 Cumilla 5,Md. Jashim Uddin,Bangladesh Nationalist Party (BNP),134485,4,"bss,ds,dt,tbs",bss=134485; ds=134485; dt=134485; tbs=134485,
 Cumilla 5,Mobarak Hussain,Bangladesh Jamaat-e-Islami (Jamaat),124587,4,"bss,ds,dt,tbs",bss=124587; ds=124547; dt=124547; tbs=124547,
-Cumilla 5,Md. Emranul Haque,Jatiya Party (JaPa),124547,3,"ds,dt,tbs",ds=0; dt=705; tbs=124547,vote-mismatch: spread=99%
 Cumilla 5,Jobair Ahmed Bhuiyan,Amar Bangladesh Party (AB),2029,3,"ds,dt,tbs",ds=0; dt=2029; tbs=2029,
 Cumilla 5,Md. Rashedul Islam,Islami Andolan Bangladesh (IAB),1505,3,"ds,dt,tbs",ds=0; dt=1505; tbs=1505,
+Cumilla 5,Md. Emranul Haque,Jatiya Party (JaPa),705,3,"ds,dt,tbs",ds=0; dt=705; tbs=124547,vote-mismatch: spread=99%
 Cumilla 5,Abdullah Al Kafee,Communist Party of Bangladesh (CPB),342,3,"ds,dt,tbs",ds=0; dt=342; tbs=342,
 Cumilla 5,Tanzil Ahmed,Insaniyat Biplob Bangladesh (IBB),167,3,"ds,dt,tbs",ds=0; dt=167; tbs=167,
 Cumilla 5,Shirin Akhter,Jatiya Samajtantrik Dal (JSD),153,3,"ds,dt,tbs",ds=0; dt=153; tbs=153,
@@ -566,7 +566,7 @@ Dhaka 18,Mahmudur Rahman Manna,Nagorik Oikya (NO),350,3,"ds,dt,tbs",ds=0; dt=350
 Dhaka 18,Mrs. Sabina Javed,National People's Party (NPP),301,3,"ds,dt,tbs",ds=0; dt=301; tbs=301,
 Dhaka 18,Syed Harun Ur Rashid,Bangladesh Samajtantrik Dal (Basad),260,3,"ds,dt,tbs",ds=0; dt=260; tbs=260,
 Dhaka 19,Dewan Mohammad Salauddin,Bangladesh Nationalist Party (BNP),190976,4,"bss,ds,dt,tbs",bss=190976; ds=190976; dt=101956; tbs=190976,vote-mismatch: spread=47%
-Dhaka 19,Dilshana Parul,National Citizen Party (NCP),125283,4,"bss,ds,dt,tbs",bss=123283; ds=123283; dt=61269; tbs=125283,vote-mismatch: spread=51%
+Dhaka 19,Dilshana Parul,National Citizen Party (NCP),123283,4,"bss,ds,dt,tbs",bss=123283; ds=123283; dt=61269; tbs=125283,vote-mismatch: spread=51%
 Dhaka 19,Chowdhury Hasan Sarwardy,Bangladesh Liberal Democratic Party (LDP),0,2,"ds,dt",ds=0; dt=0,
 Dhaka 19,Md. Bahadur Islam,Jatiya Party (JaPa),0,2,"ds,dt",ds=0; dt=0,
 Dhaka 19,Md. Israfil Hossain Shavery,National People's Party (NPP),0,2,"ds,dt",ds=0; dt=0,
@@ -662,10 +662,10 @@ Dinajpur 2,Md. Sadik Riyaz,Bangladesh Nationalist Party (BNP),144317,4,"bss,ds,d
 Dinajpur 2,A. K. M. Afjalul Anam,Bangladesh Jamaat-e-Islami (Jamaat),104887,4,"bss,ds,dt,tbs",bss=101831; ds=101831; dt=104887; tbs=104887,
 Dinajpur 2,Md. Anm Bazlur Rashid,Independent Candidate (Independent),15618,3,"ds,dt,tbs",ds=0; dt=15618; tbs=15618,
 Dinajpur 2,Md. Zulfikar Hossain,Jatiya Party (JaPa),4647,3,"ds,dt,tbs",ds=0; dt=4647; tbs=4647,
-Dinajpur 2,Md. Mokarram Hossain,Bangladesh Muslim League (BML),4610,3,"ds,dt,tbs",ds=0; dt=461; tbs=4610,vote-mismatch: spread=90%
 Dinajpur 2,Anowar Chowdhury Jibon,Independent Candidate (Independent),3857,3,"ds,dt,tbs",ds=0; dt=3857; tbs=3857,
 Dinajpur 2,Muha Redwanul Karim Rabid,Islami Andolan Bangladesh (IAB),1067,3,"ds,dt,tbs",ds=0; dt=1067; tbs=1061,
 Dinajpur 2,Zobayer Sayeed,Khelafat Majlis,1046,3,"ds,dt,tbs",ds=0; dt=1046; tbs=1046,
+Dinajpur 2,Md. Mokarram Hossain,Bangladesh Muslim League (BML),461,3,"ds,dt,tbs",ds=0; dt=461; tbs=4610,vote-mismatch: spread=90%
 Dinajpur 3,Syed Jahangir Alam,Bangladesh Nationalist Party (BNP),140608,4,"bss,ds,dt,tbs",bss=139207; ds=139207; dt=140608; tbs=140608,
 Dinajpur 3,Md. Mainul Alam,Bangladesh Jamaat-e-Islami (Jamaat),136239,4,"bss,ds,dt,tbs",bss=134618; ds=134618; dt=136239; tbs=136239,
 Dinajpur 3,Ahmed Shafi Rubel,Jatiya Party (JaPa),3838,3,"ds,dt,tbs",ds=0; dt=3838; tbs=3838,
@@ -705,8 +705,8 @@ Faridpur 2,Shama Obayed Islam,Bangladesh Nationalist Party (BNP),121694,4,"bss,d
 Faridpur 2,Md. Akram Ali,Khelafat Majlis,89305,4,"bss,ds,dt,tbs",bss=89305; ds=89305; dt=89305; tbs=89305,
 Faridpur 2,Shah Md. Jamal Uddin,Islami Andolan Bangladesh (IAB),2368,3,"ds,dt,tbs",ds=0; dt=2368; tbs=2368,
 Faridpur 2,Farooq Fakir,Gono Odhikar Parishad (GOP),675,3,"ds,dt,tbs",ds=0; dt=675; tbs=675,
-Faridpur 2,Akramuzzaman,Insaniyat Biplob Bangladesh (IBB),617,3,"ds,dt,tbs",ds=0; dt=0; tbs=617,
 Faridpur 2,Md. Nazmul Hasan,Bangladesh Congress,257,3,"ds,dt,tbs",ds=0; dt=257; tbs=257,
+Faridpur 2,Akramuzzaman,Insaniyat Biplob Bangladesh (IBB),0,3,"ds,dt,tbs",ds=0; dt=0; tbs=617,
 Faridpur 3,Nayab Yusuf Ahmed,Bangladesh Nationalist Party (BNP),148545,4,"bss,ds,dt,tbs",bss=148545; ds=148545; dt=148545; tbs=148545,
 Faridpur 3,Md. Abdut Tawab,Bangladesh Jamaat-e-Islami (Jamaat),124115,4,"bss,ds,dt,tbs",bss=124115; ds=124115; dt=124115; tbs=124115,
 Faridpur 3,K. M. Sarowar,Islami Andolan Bangladesh (IAB),4022,3,"ds,dt,tbs",ds=0; dt=4022; tbs=4022,
@@ -730,7 +730,7 @@ Feni 1,Md. Firoz Uddin Chowdhury,Bangladesh Congress,215,3,"ds,dt,tbs",ds=215; d
 Feni 1,Mahbub Morshed Majumdar,Bangladesh Muslim League (BML),188,3,"ds,dt,tbs",ds=188; dt=188; tbs=188,
 Feni 2,Zainal Abedin,Bangladesh Nationalist Party (BNP),131210,4,"bss,ds,dt,tbs",bss=131210; ds=131210; dt=131210; tbs=131210,
 Feni 2,Mohammad Mojibur Rahman Bhuiyan,Amar Bangladesh Party (AB),80058,4,"bss,ds,dt,tbs",bss=80058; ds=80058; dt=78447; tbs=80058,
-Feni 2,Mohammad Ekramul Haque Bhuiyan,Islami Andolan Bangladesh (IAB),6849,3,"ds,dt,tbs",ds=0; dt=1927; tbs=6849,vote-mismatch: spread=72%
+Feni 2,Mohammad Ekramul Haque Bhuiyan,Islami Andolan Bangladesh (IAB),1927,3,"ds,dt,tbs",ds=0; dt=1927; tbs=6849,vote-mismatch: spread=72%
 Feni 2,Md. Harunur Rashid Bhuiyan,Khelafat Majlis,820,3,"ds,dt,tbs",ds=0; dt=820; tbs=820,
 Feni 2,Saiful Karim Majumdar,Amjanatar Dol,801,3,"ds,dt,tbs",ds=0; dt=801; tbs=801,
 Feni 2,Md. Ismail,Independent Candidate (Independent),703,1,dt,dt=703,
@@ -747,7 +747,7 @@ Feni 3,Abdul Malek,Bangladesh Samajtantrik Dal (Basad),731,3,"ds,dt,tbs",ds=0; d
 Feni 3,Md. Abu Nasir,Bangladesh Islami Front (BIF),531,3,"ds,dt,tbs",ds=0; dt=531; tbs=531,
 Feni 3,Md. Hasan Ahmad,Insaniyat Biplob Bangladesh (IBB),327,3,"ds,dt,tbs",ds=0; dt=327; tbs=327,
 Feni 3,Mohammad Khaleduzzaman Patwari,Bangladesh Khelafat Andolon (BKA),320,3,"ds,dt,tbs",ds=0; dt=320; tbs=320,
-Gaibandha 1,Md. Mazedur Rahman,Bangladesh Jamaat-e-Islami (Jamaat),140726,4,"bss,ds,dt,tbs",bss=140726; ds=140726; dt=114595; tbs=140726,
+Gaibandha 1,Md. Mazedur Rahman,Bangladesh Jamaat-e-Islami (Jamaat),140726,4,"bss,ds,dt,tbs",bss=140726; ds=140726; dt=114595; tbs=140726,vote-mismatch: spread=19%
 Gaibandha 1,Khandaker Ziaul Islam Mohammad Ali,Bangladesh Nationalist Party (BNP),37997,4,"bss,ds,dt,tbs",bss=37997; ds=37997; dt=28771; tbs=37997,vote-mismatch: spread=24%
 Gaibandha 1,Shameem Haider Patwary,Jatiya Party (JaPa),25523,2,"ds,dt",ds=0; dt=25523,
 Gaibandha 1,Md. Mostafa Mohsin,Independent Candidate (Independent),20495,2,"ds,dt",ds=0; dt=20495,
@@ -762,7 +762,7 @@ Gaibandha 2,Mohammad Abdul Majed,Islami Andolan Bangladesh (IAB),2351,2,"ds,dt",
 Gaibandha 2,Mihir Kumar Ghosh,Communist Party of Bangladesh (CPB),2318,2,"ds,dt",ds=0; dt=2318,
 Gaibandha 2,Ahsanul Habib Sayeed,Socialist Party of Bangladesh (Marxist) (SPB-M),620,2,"ds,dt",ds=0; dt=620,
 Gaibandha 2,Md. Shahedur Jahan,Janotar Dol,196,2,"ds,dt",ds=0; dt=196,
-Gaibandha 3,Abul Kauchar Mohammad Nazrul Islam,Bangladesh Jamaat-e-Islami (Jamaat),163457,4,"bss,ds,dt,tbs",bss=162457; ds=163457; dt=85816; tbs=162457,vote-mismatch: spread=47%
+Gaibandha 3,Abul Kauchar Mohammad Nazrul Islam,Bangladesh Jamaat-e-Islami (Jamaat),162457,4,"bss,ds,dt,tbs",bss=162457; ds=163457; dt=85816; tbs=162457,vote-mismatch: spread=47%
 Gaibandha 3,Professor Dr. Syed Mainul Hasan Sadiq,Bangladesh Nationalist Party (BNP),139864,4,"bss,ds,dt,tbs",bss=139864; ds=139864; dt=55500; tbs=139864,vote-mismatch: spread=60%
 Gaibandha 3,Md. A. T. M. Awlad Hossain,Islami Andolan Bangladesh (IAB),1246,2,"ds,dt",ds=0; dt=1246,
 Gaibandha 3,Md. Shoruj Mia,Gono Odhikar Parishad (GOP),995,2,"ds,dt",ds=0; dt=995,
@@ -778,8 +778,8 @@ Gaibandha 4,Kazi Md. Mashiur Rahman,Jatiya Party (JaPa),1174,2,"ds,dt",ds=0; dt=
 Gaibandha 4,Md. Abdur Rouf Akanda,Independent Candidate (Independent),777,2,"ds,dt",ds=0; dt=777,
 Gaibandha 4,Said Touhidul Islam Tuhin,Islami Andolan Bangladesh (IAB),710,2,"ds,dt",ds=0; dt=710,
 Gaibandha 4,Md. Atowarul Islam,Revolutionary Workers Party of Bangladesh (RWPB),98,2,"ds,dt",ds=0; dt=98,
-Gaibandha 5,Md. Abdul Wareth,Bangladesh Jamaat-e-Islami (Jamaat),99378,4,"bss,ds,dt,tbs",bss=89274; ds=89274; dt=99378; tbs=89274,
-Gaibandha 5,Md. Faruk Alam Sarkar,Bangladesh Nationalist Party (BNP),73483,4,"bss,ds,dt,tbs",bss=73483; ds=73483; dt=61525; tbs=73483,
+Gaibandha 5,Md. Abdul Wareth,Bangladesh Jamaat-e-Islami (Jamaat),89274,4,"bss,ds,dt,tbs",bss=89274; ds=89274; dt=99378; tbs=89274,vote-mismatch: spread=10%
+Gaibandha 5,Md. Faruk Alam Sarkar,Bangladesh Nationalist Party (BNP),73483,4,"bss,ds,dt,tbs",bss=73483; ds=73483; dt=61525; tbs=73483,vote-mismatch: spread=16%
 Gaibandha 5,Nahiduzzaman Nishad,Independent Candidate (Independent),33036,2,"ds,dt",ds=0; dt=33036,
 Gaibandha 5,A. H. M. Golam Shahid Ranjhu,Independent Candidate (Independent),8266,2,"ds,dt",ds=0; dt=8266,
 Gaibandha 5,Shameem Haider Patwary,Jatiya Party (JaPa),3102,2,"ds,dt",ds=0; dt=3102,
@@ -821,7 +821,7 @@ Gazipur 4,Enamul Kabir,Jatiya Party (JaPa),2147,3,"ds,dt,tbs",ds=0; dt=2147; tbs
 Gazipur 4,Md. Shafiullah,Independent Candidate (Independent),1521,3,"ds,dt,tbs",ds=0; dt=1521; tbs=1521,
 Gazipur 4,Manabendra Dev,Communist Party of Bangladesh (CPB),1091,3,"ds,dt,tbs",ds=0; dt=1091; tbs=1091,
 Gazipur 4,Md. Zakir Hossain,Amjanatar Dol,278,3,"ds,dt,tbs",ds=0; dt=278; tbs=278,
-Gazipur 4,Monir Hossain,National People's Party (NPP),135,3,"ds,dt,tbs",ds=0; dt=0; tbs=135,
+Gazipur 4,Monir Hossain,National People's Party (NPP),0,3,"ds,dt,tbs",ds=0; dt=0; tbs=135,
 Gazipur 5,A. K. M. Fazlul Haque Milon,Bangladesh Nationalist Party (BNP),133869,4,"bss,ds,dt,tbs",bss=133869; ds=133869; dt=133869; tbs=133869,
 Gazipur 5,Md. Khairul Hassan,Bangladesh Jamaat-e-Islami (Jamaat),78123,4,"bss,ds,dt,tbs",bss=78123; ds=78123; dt=78123; tbs=78123,
 Gazipur 5,Md. Azam Khan,Janotar Dol,6592,3,"ds,dt,tbs",ds=0; dt=6592; tbs=6592,
@@ -844,7 +844,7 @@ Gopalganj 2,Shuayeb Ibrahim,Khelafat Majlis,28604,3,"ds,dt,tbs",ds=0; dt=28604; 
 Gopalganj 2,Kamruzzaman Bhuiyan,Independent Candidate (Independent),27891,3,"ds,dt,tbs",ds=0; dt=27891; tbs=27891,
 Gopalganj 2,Utpal Biswas,Independent Candidate (Independent),8665,3,"ds,dt,tbs",ds=0; dt=8665; tbs=8665,
 Gopalganj 2,Taslim Shikder,Islami Andolan Bangladesh (IAB),2911,3,"ds,dt,tbs",ds=0; dt=2911; tbs=2911,
-Gopalganj 2,Md. Sirajul Islam Siraj,Independent Candidate (Independent),2819,3,"ds,dt,tbs",ds=0; dt=2189; tbs=2819,vote-mismatch: spread=22%
+Gopalganj 2,Md. Sirajul Islam Siraj,Independent Candidate (Independent),2189,3,"ds,dt,tbs",ds=0; dt=2189; tbs=2819,vote-mismatch: spread=22%
 Gopalganj 2,Shipon Bhuiyan,Independent Candidate (Independent),1931,3,"ds,dt,tbs",ds=0; dt=1931; tbs=1931,
 Gopalganj 2,Mahamud Hasan,Zaker Party (ZP),1371,3,"ds,dt,tbs",ds=0; dt=1371; tbs=1371,
 Gopalganj 2,Riyaz Sarwar Mollya,Jatiya Party (JaPa),419,2,"dt,tbs",dt=419; tbs=419,
@@ -988,7 +988,7 @@ Jhenaidah 3,Mawlana Sarwar Hossain,Islami Andolan Bangladesh (IAB),3820,3,"ds,dt
 Jhenaidah 3,Md. Suman Kabir,Gono Odhikar Parishad (GOP),388,3,"ds,dt,tbs",ds=0; dt=388; tbs=388,
 Jhenaidah 4,Md. Abu Talib,Bangladesh Jamaat-e-Islami (Jamaat),105999,4,"bss,ds,dt,tbs",bss=105999; ds=105999; dt=105999; tbs=105999,
 Jhenaidah 4,Md. Saiful Islam Feroze,Independent Candidate (Independent),77140,4,"bss,ds,dt,tbs",bss=77104; ds=77140; dt=77104; tbs=77104,
-Jhenaidah 4,Md. Rashed Khan,Bangladesh Nationalist Party (BNP),77104,3,"ds,dt,tbs",ds=0; dt=56224; tbs=77104,vote-mismatch: spread=27%
+Jhenaidah 4,Md. Rashed Khan,Bangladesh Nationalist Party (BNP),56224,3,"ds,dt,tbs",ds=0; dt=56224; tbs=77104,vote-mismatch: spread=27%
 Jhenaidah 4,Abdul Jalil,Islami Andolan Bangladesh (IAB),3907,3,"ds,dt,tbs",ds=0; dt=3907; tbs=3907,
 Jhenaidah 4,Emdadul Islam (Bacchu),Jatiya Party (JaPa),613,3,"ds,dt,tbs",ds=0; dt=613; tbs=613,
 Jhenaidah 4,Khaniya Khanam,Gono Forum (GF),267,3,"ds,dt,tbs",ds=0; dt=267; tbs=267,
@@ -1000,10 +1000,10 @@ Joypurhat 1,Md. Wazed Parvej,Bangladesh Samajtantrik Dal (Basad),578,3,"ds,dt,tb
 Joypurhat 2,Md. Abdul Bari,Bangladesh Nationalist Party (BNP),158065,4,"bss,ds,dt,tbs",bss=158065; ds=158065; dt=158065; tbs=158065,
 Joypurhat 2,S. M. Rashedul Alam,Bangladesh Jamaat-e-Islami (Jamaat),92517,4,"bss,ds,dt,tbs",bss=92517; ds=92517; dt=92517; tbs=92517,
 Joypurhat 2,S. A. Zahid,Amar Bangladesh Party (AB),1555,3,"ds,dt,tbs",ds=1555; dt=1555; tbs=1555,
-Khagrachhari 1,Samiran Dewan,Independent Candidate (Independent),447910,3,"ds,dt,tbs",ds=0; dt=47910; tbs=447910,vote-mismatch: spread=89%
 Khagrachhari 1,Abdul Wadud Bhuiyan,Bangladesh Nationalist Party (BNP),151040,4,"bss,ds,dt,tbs",bss=151040; ds=151040; dt=151040; tbs=151040,
 Khagrachhari 1,Dharma Jyoti Chakma,Independent Candidate (Independent),68315,4,"bss,ds,dt,tbs",bss=68315; ds=68315; dt=68315; tbs=68315,
 Khagrachhari 1,Md. Yeakub Ali,Bangladesh Jamaat-e-Islami (Jamaat),58545,3,"ds,dt,tbs",ds=0; dt=58545; tbs=58545,
+Khagrachhari 1,Samiran Dewan,Independent Candidate (Independent),47910,3,"ds,dt,tbs",ds=0; dt=47910; tbs=447910,vote-mismatch: spread=89%
 Khagrachhari 1,Md. Kawsar,Islami Andolan Bangladesh (IAB),3089,3,"ds,dt,tbs",ds=0; dt=3089; tbs=3089,
 Khagrachhari 1,Ushyapru Marma,Bangladesh Minority Janata Party (BMJP),1030,3,"ds,dt,tbs",ds=0; dt=1030; tbs=1030,
 Khagrachhari 1,Mithila Roaza,Jatiya Party (JaPa),1024,3,"ds,dt,tbs",ds=0; dt=1024; tbs=1024,
@@ -1016,12 +1016,12 @@ Khulna 1,Krishna Nandi,Bangladesh Jamaat-e-Islami (Jamaat),70346,4,"bss,ds,dt,tb
 Khulna 1,Md. Abu Sayeed,Islami Andolan Bangladesh (IAB),5619,3,"ds,dt,tbs",ds=0; dt=5619; tbs=5619,
 Khulna 1,Kishore Kumar Ray,Communist Party of Bangladesh (CPB),4742,3,"ds,dt,tbs",ds=0; dt=4742; tbs=4742,
 Khulna 1,Gobinda Halder,Independent Candidate (Independent),894,3,"ds,dt,tbs",ds=0; dt=894; tbs=894,
-Khulna 1,Sunil Shubho Roy,Bangladesh Islami Front (BIF),881,3,"ds,dt,tbs",ds=0; dt=169; tbs=881,vote-mismatch: spread=81%
 Khulna 1,Achintya Kumar Mondal,Independent Candidate (Independent),710,3,"ds,dt,tbs",ds=0; dt=710; tbs=710,
 Khulna 1,Md. Jahangir Hossain,Jatiya Party (JaPa),630,3,"ds,dt,tbs",ds=0; dt=630; tbs=630,
 Khulna 1,Prabir Gopal Roy,Bangladesh Minority Janata Party (BMJP),567,3,"ds,dt,tbs",ds=0; dt=567; tbs=567,
 Khulna 1,Prosenjit Dutta,Jatiya Samajtantrik Dal (JSD),513,3,"ds,dt,tbs",ds=0; dt=513; tbs=513,
 Khulna 1,Subrata Mondal,Bangladesh Somo Odhikar Party (BEP),169,3,"ds,dt,tbs",ds=0; dt=169; tbs=169,
+Khulna 1,Sunil Shubho Roy,Bangladesh Islami Front (BIF),169,3,"ds,dt,tbs",ds=0; dt=169; tbs=881,vote-mismatch: spread=81%
 Khulna 1,G. M. Rokonuzzaman,Gono Odhikar Parishad (GOP),84,3,"ds,dt,tbs",ds=0; dt=84; tbs=84,
 Khulna 2,Sheikh Jahangir Hossain Helal,Bangladesh Jamaat-e-Islami (Jamaat),93789,4,"bss,ds,dt,tbs",bss=93789; ds=93789; dt=93789; tbs=93789,
 Khulna 2,Nazrul Islam Manju,Bangladesh Nationalist Party (BNP),88197,4,"bss,ds,dt,tbs",bss=88197; ds=88197; dt=88197; tbs=88197,
@@ -1029,13 +1029,13 @@ Khulna 2,Amanullah,Islami Andolan Bangladesh (IAB),7298,3,"ds,dt,tbs",ds=0; dt=7
 Khulna 3,Rakibul Islam,Bangladesh Nationalist Party (BNP),74845,4,"bss,ds,dt,tbs",bss=74845; ds=74845; dt=74845; tbs=74845,
 Khulna 3,Mohammad Mahfuzur Rahman,Bangladesh Jamaat-e-Islami (Jamaat),66010,4,"bss,ds,dt,tbs",bss=66010; ds=66010; dt=66010; tbs=66010,
 Khulna 3,Md. A. A. Auwal,Islami Andolan Bangladesh (IAB),5705,3,"ds,dt,tbs",ds=0; dt=5705; tbs=5705,
-Khulna 3,Md. Abdullah Al Mamun,Jatiya Party (JaPa),1070,3,"ds,dt,tbs",ds=0; dt=0; tbs=1070,
 Khulna 3,S. M. Arifur Rahman (Mithu),Independent Candidate (Independent),838,3,"ds,dt,tbs",ds=0; dt=838; tbs=838,
 Khulna 3,Janardan Dutta,Bangladesh Samajtantrik Dal (Basad),246,3,"ds,dt,tbs",ds=0; dt=246; tbs=246,
 Khulna 3,Sheikh Arman Hossain,Nationalist Democratic Movement (NDM),141,3,"ds,dt,tbs",ds=0; dt=141; tbs=141,
 Khulna 3,Main Mohammad Mayaz,Independent Candidate (Independent),98,3,"ds,dt,tbs",ds=0; dt=98; tbs=98,
 Khulna 3,Md. Murad Khan Liton,Independent Candidate (Independent),83,3,"ds,dt,tbs",ds=0; dt=83; tbs=83,
-Khulna 3,Md. Abul Hasnat Siddiqui,Independent Candidate (Independent),68,3,"ds,dt,tbs",ds=0; dt=0; tbs=68,
+Khulna 3,Md. Abul Hasnat Siddiqui,Independent Candidate (Independent),0,3,"ds,dt,tbs",ds=0; dt=0; tbs=68,
+Khulna 3,Md. Abdullah Al Mamun,Jatiya Party (JaPa),0,3,"ds,dt,tbs",ds=0; dt=0; tbs=1070,
 Khulna 4,Azizul Baree Helal,Bangladesh Nationalist Party (BNP),123162,4,"bss,ds,dt,tbs",bss=123162; ds=123162; dt=123162; tbs=123162,
 Khulna 4,S. M. Sakhaowat Hossain,Khelafat Majlis,109530,4,"bss,ds,dt,tbs",bss=109530; ds=109530; dt=109530; tbs=109530,
 Khulna 4,Younus Ahammad Sheikh,Islami Andolan Bangladesh (IAB),13345,3,"ds,dt,tbs",ds=0; dt=13345; tbs=13345,
@@ -1120,7 +1120,7 @@ Kurigram 3,Sarkar Md. Nur-e-Ershad Siddiqui,Gono Odhikar Parishad (GOP),0,2,"ds,
 Kurigram 3,Md. Safiur Rahman,Jatiya Party (JaPa),0,1,dt,dt=0,
 Kurigram 4,Md. Mostafizur Rahman,Bangladesh Jamaat-e-Islami (Jamaat),108210,4,"bss,ds,dt,tbs",bss=108210; ds=108210; dt=78943; tbs=106347,vote-mismatch: spread=27%
 Kurigram 4,Md. Azizur Rahman,Bangladesh Nationalist Party (BNP),84423,4,"bss,ds,dt,tbs",bss=84423; ds=84423; dt=57947; tbs=83762,vote-mismatch: spread=31%
-Kurigram 4,Md. Hafizur Rahman,Islami Andolan Bangladesh (IAB),9449,3,"ds,dt,tbs",ds=0; dt=0; tbs=9449,
+Kurigram 4,Md. Hafizur Rahman,Islami Andolan Bangladesh (IAB),0,3,"ds,dt,tbs",ds=0; dt=0; tbs=9449,
 Kurigram 4,K. M. Fazlul Haque Mandul,Jatiya Party (JaPa),0,2,"ds,dt",ds=0; dt=0,
 Kurigram 4,Md. Rukunuzzaman,Independent Candidate (Independent),0,2,"ds,dt",ds=0; dt=0,
 Kurigram 4,Raju Ahmed,Socialist Party of Bangladesh (Marxist) (SPB-M),0,2,"ds,dt",ds=0; dt=0,
@@ -1167,7 +1167,7 @@ Lakshmipur 2,Mohammad Rezaul Karim,Nagorik Oikya (NO),253,3,"ds,dt,tbs",ds=0; dt
 Lakshmipur 3,Md. Shahid Uddin Chowdhury Annie,Bangladesh Nationalist Party (BNP),135612,4,"bss,ds,dt,tbs",bss=135612; ds=135612; dt=135612; tbs=135612,
 Lakshmipur 3,Md. Rezaul Karim,Bangladesh Jamaat-e-Islami (Jamaat),122802,4,"bss,ds,dt,tbs",bss=122802; ds=122802; dt=122802; tbs=122802,
 Lakshmipur 3,Md. Ibrahim,Islami Andolan Bangladesh (IAB),5051,3,"ds,dt,tbs",ds=0; dt=5051; tbs=5051,
-Lakshmipur 3,A. K. M. Mohi Uddin,Jatiya Party (JaPa),1339,3,"ds,dt,tbs",ds=0; dt=1139; tbs=1339,
+Lakshmipur 3,A. K. M. Mohi Uddin,Jatiya Party (JaPa),1139,3,"ds,dt,tbs",ds=0; dt=1139; tbs=1339,vote-mismatch: spread=15%
 Lakshmipur 3,Md. Shamsuddin,Bangladesh Liberal Democratic Party (LDP),488,3,"ds,dt,tbs",ds=0; dt=488; tbs=488,
 Lakshmipur 3,Salim Mahmud,National People's Party (NPP),289,3,"ds,dt,tbs",ds=0; dt=289; tbs=289,
 Lakshmipur 4,A. B. M. Ashraf Uddin (Nizan),Bangladesh Nationalist Party (BNP),115199,4,"bss,ds,dt,tbs",bss=115199; ds=115199; dt=115199; tbs=115199,
@@ -1215,10 +1215,10 @@ Madaripur 2,Md. Jahandar Ali Mia,Bangladesh Nationalist Party (BNP),61744,4,"bss
 Madaripur 2,Milton Baidya,Independent Candidate (Independent),46476,4,"bss,ds,dt,tbs",bss=46476; ds=46476; dt=46476; tbs=46476,
 Madaripur 2,Abdus Sobahan,Khelafat Majlis,36169,3,"ds,dt,tbs",ds=0; dt=36169; tbs=36169,
 Madaripur 2,Ali Ahmed Chowdhury,Islami Andolan Bangladesh (IAB),16865,3,"ds,dt,tbs",ds=0; dt=16865; tbs=16865,
-Madaripur 2,Md. Kamrul Islam Saeed,Independent Candidate (Independent),14519,3,"ds,dt,tbs",ds=0; dt=14519; tbs=2779,vote-mismatch: spread=81%
 Madaripur 2,Muha Kamrul Islam Sayed,Independent Candidate (Independent),14519,2,"ds,tbs",ds=0; tbs=14519,
 Madaripur 2,Shahidul Islam Khan,Independent Candidate (Independent),6043,3,"ds,dt,tbs",ds=0; dt=6043; tbs=6043,
 Madaripur 2,Md. Reyazul Islam,Independent Candidate (Independent),2799,1,dt,dt=2799,
+Madaripur 2,Md. Kamrul Islam Saeed,Independent Candidate (Independent),2779,3,"ds,dt,tbs",ds=0; dt=14519; tbs=2779,vote-mismatch: spread=81%
 Madaripur 2,Md. Mohidul Islam,Jatiya Party (JaPa),646,3,"ds,dt,tbs",ds=0; dt=646; tbs=646,
 Madaripur 2,Subal Chandra Majumder,Bangladesh Kallyan Party (BKP),301,3,"ds,dt,tbs",ds=0; dt=301; tbs=301,
 Madaripur 2,Mohammad Didar Hossain,Socialist Party of Bangladesh (Marxist) (SPB-M),128,3,"ds,dt,tbs",ds=0; dt=128; tbs=128,
@@ -1306,8 +1306,8 @@ Munshiganj 3,Noor Hossain Noorani,Khelafat Majlis,54456,3,"ds,dt,tbs",ds=0; dt=5
 Munshiganj 3,Suman Dewan,Islami Andolan Bangladesh (IAB),6392,3,"ds,dt,tbs",ds=0; dt=6392; tbs=6392,
 Munshiganj 3,Md. Arifuzzaman (Didar),Jatiya Party (JaPa),804,3,"ds,dt,tbs",ds=0; dt=804; tbs=804,
 Munshiganj 3,Sheikh Md. Kamal Hossain,Communist Party of Bangladesh (CPB),304,3,"ds,dt,tbs",ds=0; dt=304; tbs=304,
-Munshiganj 3,Anis Mollah,Bangladesh Labour Party,294,3,"ds,dt,tbs",ds=0; dt=155; tbs=294,vote-mismatch: spread=47%
 Munshiganj 3,Sheikh Md. Shimul,Revolutionary Workers Party of Bangladesh (RWPB),174,3,"ds,dt,tbs",ds=0; dt=174; tbs=174,
+Munshiganj 3,Anis Mollah,Bangladesh Labour Party,155,3,"ds,dt,tbs",ds=0; dt=155; tbs=294,vote-mismatch: spread=47%
 Mymensingh 1,Mohammed Salman Omar,Independent Candidate (Independent),108265,4,"bss,ds,dt,tbs",bss=108265; ds=108265; dt=108265; tbs=108265,
 Mymensingh 1,Syed Imran Saleh,Bangladesh Nationalist Party (BNP),101926,4,"bss,ds,dt,tbs",bss=101926; ds=101926; dt=101926; tbs=101926,
 Mymensingh 1,Md. Tajul Islam,Khelafat Majlis,53222,3,"ds,dt,tbs",ds=0; dt=53222; tbs=53222,
@@ -1319,16 +1319,16 @@ Mymensingh 10,Mohammad Akhtaruzzaman,Bangladesh Nationalist Party (BNP),75585,4,
 Mymensingh 10,Abu Bakar Siddiqur Rahman,Independent Candidate (Independent),67013,4,"bss,ds,dt,tbs",bss=67013; ds=67013; dt=67013; tbs=67013,
 Mymensingh 10,Md. Ismail,Bangladesh Jamaat-e-Islami (Jamaat),66063,3,"ds,dt,tbs",ds=0; dt=66063; tbs=66063,
 Mymensingh 10,Md. Habibullah Belali,Islami Andolan Bangladesh (IAB),2504,3,"ds,dt,tbs",ds=0; dt=2504; tbs=2504,
-Mymensingh 10,Md. Al Amin (Sohan),Jatiya Party (JaPa),945,3,"ds,dt,tbs",ds=0; dt=369; tbs=945,vote-mismatch: spread=61%
 Mymensingh 10,Md. Matiur Rahman,Independent Candidate (Independent),386,2,"ds,dt",ds=0; dt=386,
+Mymensingh 10,Md. Al Amin (Sohan),Jatiya Party (JaPa),369,3,"ds,dt,tbs",ds=0; dt=369; tbs=945,vote-mismatch: spread=61%
 Mymensingh 10,"A. , K. , M. , Shamsul Alam",Ganosanhati Andolan (GSA),364,3,"ds,dt,tbs",ds=0; dt=364; tbs=364,
 Mymensingh 10,Syed Mahmud Morshed,Bangladesh Liberal Democratic Party (LDP),322,3,"ds,dt,tbs",ds=0; dt=322; tbs=322,
 Mymensingh 10,Md. Saifus Salehin,Communist Party of Bangladesh (CPB),299,3,"ds,dt,tbs",ds=0; dt=299; tbs=299,
 Mymensingh 11,Fakhr Uddin Ahmed,Bangladesh Nationalist Party (BNP),111230,4,"bss,ds,dt,tbs",bss=111230; ds=111230; dt=111230; tbs=111230,
 Mymensingh 11,Muhammad Morshed Alam,Independent Candidate (Independent),66016,4,"bss,ds,dt,tbs",bss=66016; ds=66016; dt=66016; tbs=66016,
 Mymensingh 11,Zahidul Islam,National Citizen Party (NCP),22195,3,"ds,dt,tbs",ds=0; dt=22195; tbs=22195,
-Mymensingh 11,Mohammad Anwarul Islam,Gono Odhikar Parishad (GOP),1855,3,"ds,dt,tbs",ds=0; dt=1855; tbs=391,vote-mismatch: spread=79%
-Mymensingh 11,Md. Mustafa Kamal,Islami Andolan Bangladesh (IAB),1855,3,"ds,dt,tbs",ds=0; dt=391; tbs=1855,vote-mismatch: spread=79%
+Mymensingh 11,Mohammad Anwarul Islam,Gono Odhikar Parishad (GOP),391,3,"ds,dt,tbs",ds=0; dt=1855; tbs=391,vote-mismatch: spread=79%
+Mymensingh 11,Md. Mustafa Kamal,Islami Andolan Bangladesh (IAB),391,3,"ds,dt,tbs",ds=0; dt=391; tbs=1855,vote-mismatch: spread=79%
 Mymensingh 2,Muhammadullah,Khelafat Majlis,146202,4,"bss,ds,dt,tbs",bss=146202; ds=146202; dt=146202; tbs=146202,
 Mymensingh 2,Motahar Hossain Talukder,Bangladesh Nationalist Party (BNP),118438,4,"bss,ds,dt,tbs",bss=118438; ds=118438; dt=118438; tbs=118438,
 Mymensingh 2,Shah Shahid Sarwar,Independent Candidate (Independent),48874,3,"ds,dt,tbs",ds=0; dt=48874; tbs=48874,
@@ -1337,8 +1337,8 @@ Mymensingh 2,Md. Julhas Uddin Sheikh,Bangladesh Supreme Party (BSP),1071,3,"ds,d
 Mymensingh 2,Md. Emdadul Haque Khan,Jatiya Party (JaPa),725,3,"ds,dt,tbs",ds=0; dt=725; tbs=725,
 Mymensingh 2,Mohammad Abu Bakar Siddique,Independent Candidate (Independent),494,3,"ds,dt,tbs",ds=0; dt=494; tbs=494,
 Mymensingh 2,Md. Abu Bakar Siddiq,Independent Candidate (Independent),494,1,tbs,tbs=494,
-Mymensingh 3,Ahmed Tayebur Rahman,Independent Candidate (Independent),85995,4,"bss,ds,dt,tbs",bss=65995; ds=65995; dt=85995; tbs=65995,vote-mismatch: spread=23%
 Mymensingh 3,M. Iqbal Hossain,Bangladesh Nationalist Party (BNP),75320,4,"bss,ds,dt,tbs",bss=75320; ds=75320; dt=75320; tbs=75320,
+Mymensingh 3,Ahmed Tayebur Rahman,Independent Candidate (Independent),65995,4,"bss,ds,dt,tbs",bss=65995; ds=65995; dt=85995; tbs=65995,vote-mismatch: spread=23%
 Mymensingh 3,Md. Abu Taher Khan,Bangladesh Nezame Islam Party (BNIP),25706,3,"ds,dt,tbs",ds=0; dt=25706; tbs=25706,
 Mymensingh 3,Md. Shariful Islam,Islami Andolan Bangladesh (IAB),2745,3,"ds,dt,tbs",ds=0; dt=2745; tbs=2745,
 Mymensingh 3,A. K. M. Ariful Hasan,Socialist Party of Bangladesh (Marxist) (SPB-M),354,3,"ds,dt,tbs",ds=0; dt=354; tbs=354,
@@ -1347,13 +1347,13 @@ Mymensingh 4,Mohammad Kamrul Ahsan,Bangladesh Jamaat-e-Islami (Jamaat),171880,4,
 Mymensingh 4,Md. Nasir Uddin,Islami Andolan Bangladesh (IAB),8701,3,"ds,dt,tbs",ds=0; dt=8701; tbs=8701,
 Mymensingh 4,Abu Md. Musa Sarkar,Jatiya Party (JaPa),3845,3,"ds,dt,tbs",ds=0; dt=3845; tbs=3845,
 Mymensingh 4,Emdadul Haque Millat,Communist Party of Bangladesh (CPB),1397,3,"ds,dt,tbs",ds=0; dt=1397; tbs=1397,
-Mymensingh 4,Shekhar Kumar Roy,Socialist Party of Bangladesh (Marxist) (SPB-M),1397,3,"ds,dt,tbs",ds=0; dt=740; tbs=1397,vote-mismatch: spread=47%
 Mymensingh 4,Md. Liaquat Ali,Bangladesh Supreme Party (BSP),892,3,"ds,dt,tbs",ds=0; dt=892; tbs=892,
+Mymensingh 4,Shekhar Kumar Roy,Socialist Party of Bangladesh (Marxist) (SPB-M),740,3,"ds,dt,tbs",ds=0; dt=740; tbs=1397,vote-mismatch: spread=47%
 Mymensingh 4,Mostafizur Rahman,Ganosanhati Andolan (GSA),456,2,"ds,dt",ds=0; dt=456,
 Mymensingh 4,Md. Hamidul Islam,National People's Party (NPP),373,2,"dt,tbs",dt=373; tbs=373,
-Mymensingh 5,Mohammad Zakir Hossain,Bangladesh Nationalist Party (BNP),128898,4,"bss,ds,dt,tbs",bss=128896; ds=128896; dt=7926; tbs=128898,vote-mismatch: spread=94%
+Mymensingh 5,Mohammad Zakir Hossain,Bangladesh Nationalist Party (BNP),128896,4,"bss,ds,dt,tbs",bss=128896; ds=128896; dt=7926; tbs=128898,vote-mismatch: spread=94%
 Mymensingh 5,Md. Matiur Rahman Akand,Bangladesh Jamaat-e-Islami (Jamaat),102228,4,"bss,ds,dt,tbs",bss=102228; ds=102226; dt=102228; tbs=102228,
-Mymensingh 5,Mohammad Sirajul Islam,Islami Andolan Bangladesh (IAB),6646,3,"ds,dt,tbs",ds=0; dt=3648; tbs=6646,vote-mismatch: spread=45%
+Mymensingh 5,Mohammad Sirajul Islam,Islami Andolan Bangladesh (IAB),3648,3,"ds,dt,tbs",ds=0; dt=3648; tbs=6646,vote-mismatch: spread=45%
 Mymensingh 5,Mohammad Nazrul Islam,Ganosanhati Andolan (GSA),815,2,"ds,dt",ds=0; dt=815,
 Mymensingh 5,Md. Rafiqul Islam,Amar Bangladesh Party (AB),348,3,"ds,dt,tbs",ds=0; dt=348; tbs=348,
 Mymensingh 6,Md. Kamrul Hasan,Bangladesh Jamaat-e-Islami (Jamaat),77325,4,"bss,ds,dt,tbs",bss=77325; ds=77325; dt=77325; tbs=77325,
@@ -1412,8 +1412,8 @@ Naogaon 6,Atikur Rahman Ratan Molla,Bangladesh Republican Party (BRP),555,3,"ds,
 Narail 1,Bishwas Jahangir Alam,Bangladesh Nationalist Party (BNP),99975,4,"bss,ds,dt,tbs",bss=99975; ds=99975; dt=99975; tbs=99975,
 Narail 1,Md. Obaidullah,Bangladesh Jamaat-e-Islami (Jamaat),75225,4,"bss,ds,dt,tbs",bss=75225; ds=75225; dt=75225; tbs=75225,
 Narail 1,Abdul Aziz,Islami Andolan Bangladesh (IAB),6352,3,"ds,dt,tbs",ds=0; dt=6352; tbs=6352,
-Narail 1,S. M. Sajjad Hossain,Independent Candidate (Independent),1113,3,"ds,dt,tbs",ds=0; dt=1113; tbs=898,
-Narail 1,S. M. Sazzad Hossain,Independent Candidate (Independent),1113,3,"ds,dt,tbs",ds=0; dt=898; tbs=1113,
+Narail 1,S. M. Sajjad Hossain,Independent Candidate (Independent),898,3,"ds,dt,tbs",ds=0; dt=1113; tbs=898,vote-mismatch: spread=19%
+Narail 1,S. M. Sazzad Hossain,Independent Candidate (Independent),898,3,"ds,dt,tbs",ds=0; dt=898; tbs=1113,vote-mismatch: spread=19%
 Narail 1,Sukesh Saha Ananda,Independent Candidate (Independent),864,3,"ds,dt,tbs",ds=0; dt=864; tbs=864,
 Narail 1,Md. Milton Molla,Jatiya Party (JaPa),461,3,"ds,dt,tbs",ds=0; dt=461; tbs=461,
 Narail 1,Md. Ujjal Molla,Independent Candidate (Independent),230,3,"ds,dt,tbs",ds=0; dt=230; tbs=230,
@@ -1445,17 +1445,17 @@ Narayanganj 3,Mohammad Gias Uddin,Independent Candidate (Independent),20379,3,"d
 Narayanganj 3,Golam Messiah,Islami Andolan Bangladesh (IAB),14223,3,"ds,dt,tbs",ds=0; dt=14223; tbs=14223,
 Narayanganj 3,Prof. Md. Rezaul Karim,Independent Candidate (Independent),4596,3,"ds,dt,tbs",ds=0; dt=4596; tbs=4596,
 Narayanganj 3,Md. Shahjahan,Khelafat Majlis,1193,3,"ds,dt,tbs",ds=0; dt=1193; tbs=1193,
-Narayanganj 3,Md. Atiqur Rahman Nannu Munshi,Bangladesh Khelafat Andolon (BKA),1193,3,"ds,dt,tbs",ds=0; dt=1193; tbs=769,vote-mismatch: spread=36%
-Narayanganj 3,Anjan Das,Ganosanhati Andolan (GSA),838,3,"ds,dt,tbs",ds=0; dt=638; tbs=838,vote-mismatch: spread=24%
+Narayanganj 3,Md. Atiqur Rahman Nannu Munshi,Bangladesh Khelafat Andolon (BKA),769,3,"ds,dt,tbs",ds=0; dt=1193; tbs=769,vote-mismatch: spread=36%
+Narayanganj 3,Anjan Das,Ganosanhati Andolan (GSA),638,3,"ds,dt,tbs",ds=0; dt=638; tbs=838,vote-mismatch: spread=24%
 Narayanganj 3,Md. Wahidur Rahman Milky,Gono Odhikar Parishad (GOP),314,3,"ds,dt,tbs",ds=0; dt=314; tbs=314,
 Narayanganj 3,Abdul Karim Munshi,Janotar Dol,285,3,"ds,dt,tbs",ds=0; dt=285; tbs=285,
 Narayanganj 3,Ariful Islam,Amar Bangladesh Party (AB),137,3,"ds,dt,tbs",ds=0; dt=137; tbs=137,
 Narayanganj 4,Abdullah Al Amin,National Citizen Party (NCP),106171,4,"bss,ds,dt,tbs",bss=106171; ds=106171; dt=106171; tbs=106171,
 Narayanganj 4,Monir Hossain,Jamiat Ulema-e-Islam Bangladesh (JUIB),80619,4,"bss,ds,dt,tbs",bss=80619; ds=80619; dt=80619; tbs=80619,
-Narayanganj 4,Md. Shah Alam,Independent Candidate (Independent),39589,3,"ds,dt,tbs",ds=0; dt=39589; tbs=31589,vote-mismatch: spread=20%
+Narayanganj 4,Md. Shah Alam,Independent Candidate (Independent),31589,3,"ds,dt,tbs",ds=0; dt=39589; tbs=31589,vote-mismatch: spread=20%
 Narayanganj 4,Md. Ismail Hossain Kausar,Islami Andolan Bangladesh (IAB),16746,3,"ds,dt,tbs",ds=0; dt=16746; tbs=16746,
 Narayanganj 4,Mohammad Ali,Bangladesh Republican Party (BRP),11328,3,"ds,dt,tbs",ds=0; dt=11328; tbs=11328,
-Narayanganj 4,Mohammad Gias Uddin,Independent Candidate (Independent),9779,3,"ds,dt,tbs",ds=0; dt=8771; tbs=9779,
+Narayanganj 4,Mohammad Gias Uddin,Independent Candidate (Independent),8771,3,"ds,dt,tbs",ds=0; dt=8771; tbs=9779,vote-mismatch: spread=10%
 Narayanganj 4,Md. Salahuddin Khoka,Jatiya Party (JaPa),817,3,"ds,dt,tbs",ds=0; dt=817; tbs=817,
 Narayanganj 4,Anwar Hossain,Khelafat Majlis,800,3,"ds,dt,tbs",ds=0; dt=800; tbs=800,
 Narayanganj 4,Md. Selim Ahmed,Bangladesh Supreme Party (BSP),643,3,"ds,dt,tbs",ds=0; dt=643; tbs=643,
@@ -1483,7 +1483,7 @@ Narsingdi 1,Hamidul Haque Parvez,Insaniyat Biplob Bangladesh (IBB),207,3,"ds,dt,
 Narsingdi 1,Shahiduzzaman Chowdhury,Gono Forum (GF),179,3,"ds,dt,tbs",ds=0; dt=179; tbs=179,
 Narsingdi 2,Dr. Abdul Moin Khan,Bangladesh Nationalist Party (BNP),92739,4,"bss,ds,dt,tbs",bss=92739; ds=92739; dt=92739; tbs=92739,
 Narsingdi 2,Md. Amjad Hossain,Bangladesh Jamaat-e-Islami (Jamaat),55920,4,"bss,ds,dt,tbs",bss=55920; ds=55920; dt=55920; tbs=55920,
-Narsingdi 2,Md. Golam Sarwar,National Citizen Party (NCP),53460,3,"ds,dt,tbs",ds=0; dt=19540; tbs=53460,vote-mismatch: spread=63%
+Narsingdi 2,Md. Golam Sarwar,National Citizen Party (NCP),19540,3,"ds,dt,tbs",ds=0; dt=19540; tbs=53460,vote-mismatch: spread=63%
 Narsingdi 2,A. N. M. Rafiqul Alam Saleem,Jatiya Party (JaPa),1285,3,"ds,dt,tbs",ds=0; dt=1285; tbs=1285,
 Narsingdi 2,Asif Iqbal,Bangladesh Islami Front (BIF),708,3,"ds,dt,tbs",ds=0; dt=708; tbs=708,
 Narsingdi 2,Mohammad Ibrahim,Insaniyat Biplob Bangladesh (IBB),235,3,"ds,dt,tbs",ds=0; dt=235; tbs=235,
@@ -1571,7 +1571,6 @@ Netrakona 5,Md. Nurul Islam,Islami Andolan Bangladesh (IAB),8341,3,"ds,dt,tbs",d
 Nilphamari 1,Md. Abdus Sattar,Bangladesh Jamaat-e-Islami (Jamaat),150824,4,"bss,ds,dt,tbs",bss=149224; ds=149224; dt=150824; tbs=150824,
 Nilphamari 1,Mawlana Md. Monzurul Islam,Jamiat Ulema-e-Islam Bangladesh (JUIB),119059,4,"bss,ds,dt,tbs",bss=118160; ds=118160; dt=119059; tbs=119059,
 Nilphamari 1,Md. Taslim Uddin,Jatiya Party (JaPa),12276,3,"ds,dt,tbs",ds=0; dt=12276; tbs=12276,
-Nilphamari 1,Md. Taslim Uddin,Jatiya Party (JaPa),12276,1,tbs,tbs=12276,
 Nilphamari 1,Md. Makhdum Azam Mashrafe,Jatiya Party (Manju) (JP–Manju),4501,3,"ds,dt,tbs",ds=0; dt=4501; tbs=4501,
 Nilphamari 1,Jebel Rahman Ghaani,Bangladesh National Awami Party–Bangladesh NAP (BNAP),4477,3,"ds,dt,tbs",ds=0; dt=4477; tbs=4477,
 Nilphamari 1,Md. Abdul Jalil,Islami Andolan Bangladesh (IAB),1871,3,"ds,dt,tbs",ds=0; dt=1871; tbs=1871,
@@ -1606,8 +1605,8 @@ Noakhali 1,Md. Mashirur Rahman,Insaniyat Biplob Bangladesh (IBB),188,3,"ds,dt,tb
 Noakhali 2,Zainul Abdin Farroque,Bangladesh Nationalist Party (BNP),83982,4,"bss,ds,dt,tbs",bss=83982; ds=83982; dt=83982; tbs=83982,
 Noakhali 2,Sultan Muhammad Zakaria Majumdar,National Citizen Party (NCP),67054,4,"bss,ds,dt,tbs",bss=67054; ds=67054; dt=67054; tbs=67054,
 Noakhali 2,Kazi Mohammad Mofizur Rahman,Independent Candidate (Independent),44712,3,"ds,dt,tbs",ds=0; dt=44712; tbs=44712,
-Noakhali 2,Khalilur Rahman,Islami Andolan Bangladesh (IAB),19289,3,"ds,dt,tbs",ds=0; dt=6217; tbs=19289,vote-mismatch: spread=68%
-Noakhali 2,Md. Shahadat Hossain,Jatiya Party (JaPa),1075,3,"ds,dt,tbs",ds=0; dt=557; tbs=1075,vote-mismatch: spread=48%
+Noakhali 2,Khalilur Rahman,Islami Andolan Bangladesh (IAB),6217,3,"ds,dt,tbs",ds=0; dt=6217; tbs=19289,vote-mismatch: spread=68%
+Noakhali 2,Md. Shahadat Hossain,Jatiya Party (JaPa),557,3,"ds,dt,tbs",ds=0; dt=557; tbs=1075,vote-mismatch: spread=48%
 Noakhali 3,Md. Barkat Ullah Bulu,Bangladesh Nationalist Party (BNP),141031,4,"bss,ds,dt,tbs",bss=141031; ds=141031; dt=141031; tbs=141031,
 Noakhali 3,Md. Borhan Uddin,Bangladesh Jamaat-e-Islami (Jamaat),123941,4,"bss,ds,dt,tbs",bss=123941; ds=123941; dt=123941; tbs=123941,
 Noakhali 3,Mohammad Nur Uddin,Islami Andolan Bangladesh (IAB),9861,3,"ds,dt,tbs",ds=0; dt=9861; tbs=9861,
@@ -1740,7 +1739,7 @@ Rajshahi 1,Md. Sharif Uddin,Bangladesh Nationalist Party (BNP),169902,4,"bss,ds,
 Rajshahi 1,Md. Abdur Rahman,Amar Bangladesh Party (AB),1100,3,"ds,dt,tbs",ds=0; dt=1100; tbs=1100,
 Rajshahi 1,Md. Al Saad,Independent Candidate (Independent),663,3,"ds,dt,tbs",ds=0; dt=663; tbs=663,
 Rajshahi 1,Mir Md. Shahjahan,Gono Odhikar Parishad (GOP),407,3,"ds,dt,tbs",ds=0; dt=407; tbs=407,
-Rajshahi 2,Md. Mizanur Rahman Minu,Bangladesh Nationalist Party (BNP),188546,4,"bss,ds,dt,tbs",bss=128546; ds=188546; dt=128546; tbs=128546,vote-mismatch: spread=32%
+Rajshahi 2,Md. Mizanur Rahman Minu,Bangladesh Nationalist Party (BNP),128546,4,"bss,ds,dt,tbs",bss=128546; ds=188546; dt=128546; tbs=128546,vote-mismatch: spread=32%
 Rajshahi 2,Mohammad Jahangir,Bangladesh Jamaat-e-Islami (Jamaat),100370,4,"bss,ds,dt,tbs",bss=100370; ds=100370; dt=100370; tbs=100370,
 Rajshahi 2,Saleh Ahmed,Independent Candidate (Independent),801,3,"ds,dt,tbs",ds=0; dt=801; tbs=801,
 Rajshahi 2,Md. Saeed Noman,Amar Bangladesh Party (AB),796,3,"ds,dt,tbs",ds=0; dt=786; tbs=796,
@@ -1780,13 +1779,13 @@ Rangpur 1,A. T. M. Golam Mostafa,Islami Andolan Bangladesh (IAB),0,2,"ds,dt",ds=
 Rangpur 1,Ahsanul Arefin,Socialist Party of Bangladesh (Marxist) (SPB-M),0,2,"ds,dt",ds=0; dt=0,
 Rangpur 1,Md. Anas,Bangladesh Islami Front (BIF),0,2,"ds,dt",ds=0; dt=0,
 Rangpur 1,Md. Monjum Ali,Jatiya Party (JaPa),0,2,"ds,dt",ds=0; dt=0,
-Rangpur 2,A. T. M. Azharul Islam,Bangladesh Jamaat-e-Islami (Jamaat),139680,4,"bss,ds,dt,tbs",bss=43076; ds=43076; dt=139680; tbs=89456,vote-mismatch: spread=69%
-Rangpur 2,Muhammad Ali Sarkar,Bangladesh Nationalist Party (BNP),79910,4,"bss,ds,dt,tbs",bss=22100; ds=22100; dt=79910; tbs=53626,vote-mismatch: spread=72%
+Rangpur 2,A. T. M. Azharul Islam,Bangladesh Jamaat-e-Islami (Jamaat),43076,4,"bss,ds,dt,tbs",bss=43076; ds=43076; dt=139680; tbs=89456,vote-mismatch: spread=69%
+Rangpur 2,Muhammad Ali Sarkar,Bangladesh Nationalist Party (BNP),22100,4,"bss,ds,dt,tbs",bss=22100; ds=22100; dt=79910; tbs=53626,vote-mismatch: spread=72%
 Rangpur 2,Anisul Islam Mondol,Jatiya Party (JaPa),19693,3,"ds,dt,tbs",ds=0; dt=17487; tbs=19693,
 Rangpur 2,Md. Ashraf Ali,Islami Andolan Bangladesh (IAB),0,2,"ds,dt",ds=0; dt=0,
 Rangpur 2,Md. Azizur Rahman,Jatiya Samajtantrik Dal (JSD),0,2,"ds,dt",ds=0; dt=0,
-Rangpur 3,Md. Mahbubur Rahman (Belal),Bangladesh Jamaat-e-Islami (Jamaat),175827,4,"bss,ds,dt,tbs",bss=175827; ds=175827; dt=157403; tbs=175827,
-Rangpur 3,Md. Shamsuzzaman Samu,Bangladesh Nationalist Party (BNP),84578,4,"bss,ds,dt,tbs",bss=84578; ds=84578; dt=74171; tbs=84578,
+Rangpur 3,Md. Mahbubur Rahman (Belal),Bangladesh Jamaat-e-Islami (Jamaat),175827,4,"bss,ds,dt,tbs",bss=175827; ds=175827; dt=157403; tbs=175827,vote-mismatch: spread=10%
+Rangpur 3,Md. Shamsuzzaman Samu,Bangladesh Nationalist Party (BNP),84578,4,"bss,ds,dt,tbs",bss=84578; ds=84578; dt=74171; tbs=84578,vote-mismatch: spread=12%
 Rangpur 3,Golam Mohammad Kader,Jatiya Party (JaPa),37933,2,"ds,dt",ds=0; dt=37933,
 Rangpur 3,Md. Abdul Quddus,Bangladesh Samajtantrik Dal (Basad),0,2,"ds,dt",ds=0; dt=0,
 Rangpur 3,Md. Amiruzzaman,Islami Andolan Bangladesh (IAB),0,2,"ds,dt",ds=0; dt=0,
@@ -1855,7 +1854,7 @@ Shariatpur 2,Parvez Musharraf,Janotar Dol,442,3,"ds,dt,tbs",ds=0; dt=442; tbs=44
 Shariatpur 2,Mahmudul Hasan,Bangladesh Khelafat Andolon (BKA),313,3,"ds,dt,tbs",ds=0; dt=313; tbs=313,
 Shariatpur 2,Akhtaruzzaman Samrat,Gono Odhikar Parishad (GOP),283,3,"ds,dt,tbs",ds=0; dt=283; tbs=283,
 Shariatpur 2,Md. Alamgir Hossain,Independent Candidate (Independent),246,3,"ds,dt,tbs",ds=0; dt=246; tbs=246,
-Shariatpur 2,Md. Nasir,Independent Candidate (Independent),206,3,"ds,dt,tbs",ds=0; dt=0; tbs=206,
+Shariatpur 2,Md. Nasir,Independent Candidate (Independent),0,3,"ds,dt,tbs",ds=0; dt=0; tbs=206,
 Shariatpur 3,Mia Nuruddin Ahmed Apu,Bangladesh Nationalist Party (BNP),107516,4,"bss,ds,dt,tbs",bss=107516; ds=107516; dt=75423; tbs=107516,vote-mismatch: spread=30%
 Shariatpur 3,Muhammad Azharul Islam,Bangladesh Jamaat-e-Islami (Jamaat),69684,4,"bss,ds,dt,tbs",bss=69684; ds=69684; dt=48213; tbs=69684,vote-mismatch: spread=31%
 Shariatpur 3,Hanif Mia,Islami Andolan Bangladesh (IAB),9814,3,"ds,dt,tbs",ds=0; dt=9814; tbs=9814,
@@ -1867,7 +1866,7 @@ Sherpur 1,Md. Mahmudul Haque Moni,Jatiya Party (JaPa),751,2,"ds,dt",ds=751; dt=7
 Sherpur 1,Md. Likhon Mia,National Citizen Party (NCP),456,2,"ds,dt",ds=456; dt=456,
 Sherpur 1,Md. Elias Uddin,Independent Candidate (Independent),205,2,"ds,dt",ds=205; dt=205,
 Sherpur 2,Mohammad Fahim Chowdhury,Bangladesh Nationalist Party (BNP),118472,4,"bss,ds,dt,tbs",bss=118472; ds=118472; dt=108335; tbs=118472,
-Sherpur 2,Md. Golam Kibria,Bangladesh Jamaat-e-Islami (Jamaat),118472,4,"bss,ds,dt,tbs",bss=108335; ds=108335; dt=118472; tbs=108335,
+Sherpur 2,Md. Golam Kibria,Bangladesh Jamaat-e-Islami (Jamaat),108335,4,"bss,ds,dt,tbs",bss=108335; ds=108335; dt=118472; tbs=108335,
 Sherpur 2,Md. Abdullah Al Kayes,Islami Andolan Bangladesh (IAB),4877,3,"ds,dt,tbs",ds=4877; dt=4877; tbs=4877,
 Sherpur 2,Md. Abdullah,Amar Bangladesh Party (AB),1038,2,"dt,tbs",dt=1038; tbs=1038,
 Sherpur 3,Abu Taleb Md. Saifuddin,Islami Andolan Bangladesh (IAB),0,2,"ds,dt",ds=0; dt=0,
@@ -1897,12 +1896,12 @@ Sirajganj 4,M. Akbar Ali,Bangladesh Nationalist Party (BNP),161278,4,"bss,ds,dt,
 Sirajganj 4,Abdur Rahman,Islami Andolan Bangladesh (IAB),2216,2,"ds,dt",ds=2216; dt=2216,
 Sirajganj 4,Md. Hilton Pramanik,Jatiya Party (JaPa),1213,2,"ds,dt",ds=1213; dt=1213,
 Sirajganj 4,Md. Abdul Hakim,Communist Party of Bangladesh (CPB),695,2,"ds,dt",ds=695; dt=695,
-Sirajganj 5,Md. Amirul Islam Khan,Bangladesh Nationalist Party (BNP),588084,4,"bss,ds,dt,tbs",bss=134197; ds=134989; dt=588084; tbs=134989,vote-mismatch: spread=77%
+Sirajganj 5,Md. Amirul Islam Khan,Bangladesh Nationalist Party (BNP),134989,4,"bss,ds,dt,tbs",bss=134197; ds=134989; dt=588084; tbs=134989,vote-mismatch: spread=77%
 Sirajganj 5,Md. Ali Alam,Bangladesh Jamaat-e-Islami (Jamaat),106805,4,"bss,ds,dt,tbs",bss=105188; ds=106805; dt=47876; tbs=106805,vote-mismatch: spread=55%
-Sirajganj 5,Nurun Nabi,Islami Andolan Bangladesh (IAB),5759,3,"ds,dt,tbs",ds=0; dt=0; tbs=5759,
-Sirajganj 5,Md. Akbar Hossain,Jatiya Party (JaPa),1224,3,"ds,dt,tbs",ds=0; dt=0; tbs=1224,
-Sirajganj 5,Md. Motiar Rahman,Communist Party of Bangladesh (CPB),328,3,"ds,dt,tbs",ds=0; dt=0; tbs=328,
-Sirajganj 5,Md. Yusuf Ali,Gono Odhikar Parishad (GOP),235,3,"ds,dt,tbs",ds=0; dt=0; tbs=235,
+Sirajganj 5,Md. Motiar Rahman,Communist Party of Bangladesh (CPB),0,3,"ds,dt,tbs",ds=0; dt=0; tbs=328,
+Sirajganj 5,Md. Akbar Hossain,Jatiya Party (JaPa),0,3,"ds,dt,tbs",ds=0; dt=0; tbs=1224,
+Sirajganj 5,Nurun Nabi,Islami Andolan Bangladesh (IAB),0,3,"ds,dt,tbs",ds=0; dt=0; tbs=5759,
+Sirajganj 5,Md. Yusuf Ali,Gono Odhikar Parishad (GOP),0,3,"ds,dt,tbs",ds=0; dt=0; tbs=235,
 Sirajganj 6,M. A. Muhit,Bangladesh Nationalist Party (BNP),171508,4,"bss,ds,dt,tbs",bss=171508; ds=171508; dt=171508; tbs=171508,
 Sirajganj 6,S. M. Saif Mostafiz,National Citizen Party (NCP),103884,4,"bss,ds,dt,tbs",bss=103884; ds=103884; dt=103884; tbs=103884,
 Sirajganj 6,Misbah Uddin,Islami Andolan Bangladesh (IAB),2280,2,"ds,dt",ds=0; dt=2280,
@@ -1938,12 +1937,12 @@ Sunamganj 5,Mohammad Abdul Qadir,Khelafat Majlis,2278,3,"ds,dt,tbs",ds=0; dt=227
 Sunamganj 5,Mohammad Jahangir Alam,Jatiya Party (JaPa),1524,3,"ds,dt,tbs",ds=0; dt=1524; tbs=1524,
 Sunamganj 5,Md. Azizul Haque,National People's Party (NPP),433,3,"ds,dt,tbs",ds=0; dt=433; tbs=433,
 Sylhet 1,Khandaker Abdul Muktadir,Bangladesh Nationalist Party (BNP),176936,4,"bss,ds,dt,tbs",bss=173932; ds=173932; dt=176936; tbs=176936,
-Sylhet 1,Mahmudul Hasan,Islami Andolan Bangladesh (IAB),134983,3,"ds,dt,tbs",ds=0; dt=134983; tbs=2701,vote-mismatch: spread=98%
 Sylhet 1,Maulana Habibur Rahman,Bangladesh Jamaat-e-Islami (Jamaat),134983,4,"bss,ds,dt,tbs",bss=134983; ds=134983; dt=474; tbs=134983,vote-mismatch: spread=100%
-Sylhet 1,Pranab Jyoti Pal,Bangladesh Samajtantrik Dal (Basad),1113,3,"ds,dt,tbs",ds=0; dt=0; tbs=1113,
-Sylhet 1,Mohammad Anwar Hossain,Communist Party of Bangladesh (CPB),908,3,"ds,dt,tbs",ds=0; dt=0; tbs=908,
-Sylhet 1,Sanjay Kanta Das,Socialist Party of Bangladesh (Marxist) (SPB-M),801,3,"ds,dt,tbs",ds=0; dt=0; tbs=801,
-Sylhet 1,Akmal Hossain,Gono Odhikar Parishad (GOP),314,3,"ds,dt,tbs",ds=0; dt=0; tbs=314,
+Sylhet 1,Mahmudul Hasan,Islami Andolan Bangladesh (IAB),2701,3,"ds,dt,tbs",ds=0; dt=134983; tbs=2701,vote-mismatch: spread=98%
+Sylhet 1,Sanjay Kanta Das,Socialist Party of Bangladesh (Marxist) (SPB-M),0,3,"ds,dt,tbs",ds=0; dt=0; tbs=801,
+Sylhet 1,Mohammad Anwar Hossain,Communist Party of Bangladesh (CPB),0,3,"ds,dt,tbs",ds=0; dt=0; tbs=908,
+Sylhet 1,Akmal Hossain,Gono Odhikar Parishad (GOP),0,3,"ds,dt,tbs",ds=0; dt=0; tbs=314,
+Sylhet 1,Pranab Jyoti Pal,Bangladesh Samajtantrik Dal (Basad),0,3,"ds,dt,tbs",ds=0; dt=0; tbs=1113,
 Sylhet 1,Md. Shamim Mia,Insaniyat Biplob Bangladesh (IBB),0,2,"ds,dt",ds=0; dt=0,
 Sylhet 2,Deleted by Tahsina Rushdie,Bangladesh Nationalist Party (BNP),117956,4,"bss,ds,dt,tbs",bss=117956; ds=117956; dt=116697; tbs=116697,
 Sylhet 2,Muhammad Muntashir Ali,Khelafat Majlis,38635,4,"bss,ds,dt,tbs",bss=38635; ds=38635; dt=37446; tbs=37446,
@@ -1963,7 +1962,7 @@ Sylhet 4,Maulana Said Ahmed,Islami Andolan Bangladesh (IAB),0,2,"ds,dt",ds=0; dt
 Sylhet 4,Mohammad Mujibur Rahman,Jatiya Party (JaPa),0,2,"ds,dt",ds=0; dt=0,
 Sylhet 5,Mohammad Abul Hasan,Khelafat Majlis,79355,4,"bss,ds,dt,tbs",bss=79355; ds=79355; dt=79355; tbs=79355,
 Sylhet 5,Ubaidullah Farooq,Jamiat Ulema-e-Islam Bangladesh (JUIB),69774,4,"bss,ds,dt,tbs",bss=69774; ds=69774; dt=69774; tbs=69774,
-Sylhet 5,Mamunur Rashid,Independent Candidate (Independent),54614,3,"ds,dt,tbs",ds=0; dt=0; tbs=54614,
+Sylhet 5,Mamunur Rashid,Independent Candidate (Independent),0,3,"ds,dt,tbs",ds=0; dt=0; tbs=54614,
 Sylhet 5,Md. Bilal Uddin,Bangladesh Muslim League (BML),0,2,"ds,dt",ds=0; dt=0,
 Sylhet 6,Emran Ahmad Chowdhury,Bangladesh Nationalist Party (BNP),109917,4,"bss,ds,dt,tbs",bss=109917; ds=109917; dt=108612; tbs=108612,
 Sylhet 6,Mohammad Salim Uddin,Bangladesh Jamaat-e-Islami (Jamaat),101569,4,"bss,ds,dt,tbs",bss=101569; ds=101569; dt=1343; tbs=97748,vote-mismatch: spread=99%
@@ -1981,9 +1980,9 @@ Tangail 2,Md. Humayun Kabir,Bangladesh Jamaat-e-Islami (Jamaat),60871,4,"bss,ds,
 Tangail 2,Md. Monowar Hossain Sagar,Islami Andolan Bangladesh (IAB),4777,3,"ds,dt,tbs",ds=0; dt=4777; tbs=4777,
 Tangail 2,Md. Humayun Kabir Talukder,Jatiya Party (JaPa),1854,3,"ds,dt,tbs",ds=0; dt=1854; tbs=1854,
 Tangail 3,Md. Lutfar Rahman Khan Azad,Independent Candidate (Independent),107901,4,"bss,ds,dt,tbs",bss=107901; ds=107901; dt=107901; tbs=107901,
-Tangail 3,Md. Rezaul Karim,Islami Andolan Bangladesh (IAB),107901,3,"ds,dt,tbs",ds=0; dt=4075; tbs=107901,vote-mismatch: spread=96%
 Tangail 3,S. M. Obaidul Haque,Bangladesh Nationalist Party (BNP),82769,4,"bss,ds,dt,tbs",bss=82769; ds=82769; dt=82769; tbs=82769,
 Tangail 3,Saifullah Haider,National Citizen Party (NCP),34588,3,"ds,dt,tbs",ds=0; dt=34588; tbs=34588,
+Tangail 3,Md. Rezaul Karim,Islami Andolan Bangladesh (IAB),4075,3,"ds,dt,tbs",ds=0; dt=4075; tbs=107901,vote-mismatch: spread=96%
 Tangail 3,Ainin Nahar,Independent Candidate (Independent),1087,3,"ds,dt,tbs",ds=0; dt=1087; tbs=1087,
 Tangail 4,Md. Lutfar Rahman,Bangladesh Nationalist Party (BNP),105342,4,"bss,ds,dt,tbs",bss=105342; ds=105342; dt=105342; tbs=105342,
 Tangail 4,Abdul Latif Siddiqui,Independent Candidate (Independent),62509,4,"bss,ds,dt,tbs",bss=62509; ds=62509; dt=62509; tbs=62509,
