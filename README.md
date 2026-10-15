@@ -3,7 +3,7 @@
 
 An interactive choropleth map showing constituency-level results from
 the 2026 Bangladesh general election across 300 parliamentary seats.
-Built with Leaflet.js on a dark CARTO basemap with ColorBrewer palettes.
+Built with Leaflet.js on Esri's Dark Gray Canvas basemap with ColorBrewer palettes.
 
 **Live site:** [smanahian.github.io/ElectionMap](https://smanahian.github.io/ElectionMap)
 

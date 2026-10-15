@@ -599,15 +599,15 @@ map.on("click",function(e){
   if(selectedSeatKey){deselectSeat()}
 });
 
-// Dark CARTO basemap
+// Dark basemap: Esri's Dark Gray Canvas (CARTO's tiles now need an API key)
 // Dark basemap with rivers and geographic features
-L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png",{
-  maxZoom:18,
-  attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>'
+L.tileLayer("https://services.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",{
+  maxZoom:18,maxNativeZoom:16,
+  attribution:'Tiles &copy; <a href="https://www.esri.com/">Esri</a>: Esri, HERE, Garmin, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, and the GIS user community'
 }).addTo(map);
 // Labels layer on top (shows city names, rivers, etc.)
-L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png",{
-  maxZoom:18,pane:"overlayPane"
+L.tileLayer("https://services.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}",{
+  maxZoom:18,maxNativeZoom:16,pane:"overlayPane"
 }).addTo(map);
 
 Promise.all([
@@ -1076,7 +1076,7 @@ document.getElementById("view-toggle").addEventListener("click",function(e){
 
 // Mini map
 function initMiniMap(){
-  var miniTiles=L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png",{maxZoom:18});
+  var miniTiles=L.tileLayer("https://services.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",{maxZoom:18,maxNativeZoom:16});
   new L.Control.MiniMap(miniTiles,{
     toggleDisplay:true,
     minimized:false,
@@ -1178,7 +1178,7 @@ function highlightCompareConstituency(key){
 
 function initCompareMap(containerId,geoData,lookupObj){
   var m=L.map(containerId,{zoomSnap:0.25,zoomControl:false,attributionControl:false}).setView([23.5,90.3],7.5);
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png",{maxZoom:18}).addTo(m);
+  L.tileLayer("https://services.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",{maxZoom:18,maxNativeZoom:16}).addTo(m);
   var layer=L.geoJSON(geoData,{
     style:function(){return{weight:0.5,color:"#000",fillOpacity:0.88,fillColor:"#222"}},
     onEachFeature:function(f,l){
