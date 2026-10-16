@@ -275,6 +275,8 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
 .view-toggle-btn{flex:1;padding:6px 0;font-size:10px;font-weight:700;text-align:center;border:none;border-radius:7px;cursor:pointer;background:transparent;color:var(--text-tertiary);font-family:inherit;transition:all var(--transition-fast);letter-spacing:.3px}
 .view-toggle-btn.active{background:var(--accent);color:#fff;box-shadow:0 2px 8px rgba(124,108,255,.3)}
 .view-toggle-btn:hover:not(.active){color:var(--text-secondary);background:var(--card-bg-hover)}
+.view-toggle-btn:disabled,.view-toggle-btn:disabled:hover{opacity:.35;cursor:not-allowed;background:transparent;color:var(--text-tertiary)}
+.view-toggle-btn.loading{cursor:progress;opacity:.6}
 
 /* Screenshot button */
 .screenshot-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;font-size:10px;font-weight:600;border:1px solid var(--border);border-radius:var(--radius-sm);cursor:pointer;background:var(--card-bg);color:var(--text-secondary);font-family:inherit;transition:all var(--transition-fast);letter-spacing:.3px}
@@ -586,7 +588,7 @@ function getColor(v){if(v==null||isNaN(v))return"#222";var m=STAT_META[currentSt
 function getActiveRamp(){return STAT_META[currentStat].ramp}
 
 var currentStat="bnp_vs_eleven_party_alliance";
-var seatData={};var neighborData={};var districtGeo=null;var districtData={};
+var seatData={};var neighborData={};var districtData={};
 var geojsonLayer=null;var districtLayer=null;var legendControl=null;var selectedSeatKey=null;var seatLayers={};
 var currentView="constituency";var compareMode=false;
 
@@ -613,14 +615,11 @@ L.tileLayer("https://services.arcgisonline.com/arcgis/rest/services/Canvas/World
 Promise.all([
   fetch("data/constituencies.geojson").then(function(r){return r.json()}),
   fetch("data/seat_data.json").then(function(r){return r.json()}),
-  fetch("data/neighbors.json").then(function(r){return r.json()}).catch(function(){return{}}),
-  fetch("data/districts.geojson").then(function(r){return r.json()}).catch(function(){return null}),
-  fetch("data/district_data.json").then(function(r){return r.json()}).catch(function(){return{}})
+  fetch("data/neighbors.json").then(function(r){return r.json()}).catch(function(){return{}})
 ]).then(function(res){
-  seatData=res[1];neighborData=res[2];districtGeo=res[3];districtData=res[4];
+  seatData=res[1];neighborData=res[2];
   initGeoJSON(res[0]);
   addDivisionBorders(res[0]);
-  if(districtGeo)initDistrictLayer(districtGeo);
   if(geojsonLayer)map.fitBounds(geojsonLayer.getBounds().pad(0.02));
   initMiniMap();
   updateAll();
@@ -1055,16 +1054,50 @@ function updateDistrictMap(){
   });
 }
 
+// District shapes are large, so fetch them the first time the view is opened
+var districtLoad=null;
+function loadDistrictData(){
+  if(districtLoad)return districtLoad;
+  var btn=document.querySelector('#view-toggle [data-view="district"]');
+  btn.classList.add("loading");btn.textContent="Loading…";btn.removeAttribute("title");
+  function getJSON(url){return fetch(url).then(function(r){
+    if(!r.ok){var e=new Error(url+" "+r.status);e.status=r.status;throw e}
+    return r.json();
+  })}
+  districtLoad=Promise.all([getJSON("data/districts.geojson"),getJSON("data/district_data.json")]).then(function(res){
+    districtData=res[1];
+    initDistrictLayer(res[0]);
+  }).catch(function(err){
+    console.warn("District view unavailable:",err);
+    // Missing files won't appear on a retry; a network error might clear up
+    districtLoad=null;
+    if(err.status===404){btn.disabled=true;btn.title="District data is unavailable"}
+    else btn.title="Couldn't load district data. Click to try again.";
+  }).then(function(){btn.classList.remove("loading");btn.textContent="District"});
+  return districtLoad;
+}
+
 // View toggle
-document.getElementById("view-toggle").addEventListener("click",function(e){
-  var btn=e.target.closest(".view-toggle-btn");if(!btn)return;
-  var view=btn.getAttribute("data-view");if(view===currentView)return;
+var requestedView="constituency";
+function setViewMode(view){
+  // Before the map data loads (e.g. keyboard use under the loading screen),
+  // remember the choice; _applyPendingState applies it after the load
+  if(!geojsonLayer){window._pendingView=view==="district"?view:null;return}
+  requestedView=view;
+  if(view==="district"&&!districtLayer){
+    // Switch once loaded, unless the user has picked another view meanwhile.
+    // If loading fails the constituency map stays rather than going blank.
+    loadDistrictData().then(function(){if(districtLayer&&requestedView==="district")setViewMode("district")});
+    return;
+  }
+  if(view===currentView)return;
   currentView=view;
-  document.querySelectorAll(".view-toggle-btn").forEach(function(b){b.classList.remove("active")});
-  btn.classList.add("active");
+  document.querySelectorAll("#view-toggle .view-toggle-btn").forEach(function(b){
+    b.classList.toggle("active",b.getAttribute("data-view")===view);
+  });
   if(view==="district"){
     if(geojsonLayer)map.removeLayer(geojsonLayer);
-    if(districtLayer)districtLayer.addTo(map);
+    districtLayer.addTo(map);
     updateDistrictMap();
   } else {
     if(districtLayer)map.removeLayer(districtLayer);
@@ -1072,6 +1105,11 @@ document.getElementById("view-toggle").addEventListener("click",function(e){
     updateMap();
   }
   updateLegend();
+  updateThreshold();
+}
+document.getElementById("view-toggle").addEventListener("click",function(e){
+  var btn=e.target.closest(".view-toggle-btn");if(!btn)return;
+  setViewMode(btn.getAttribute("data-view"));
 });
 
 // Mini map
@@ -1569,12 +1607,8 @@ function applyUrlState(){
       b.setAttribute("aria-checked",b.getAttribute("data-stat")===currentStat?"true":"false");
     });
   }
-  if(p.view==="district"||p.view==="constituency"){
-    currentView=p.view;
-    document.querySelectorAll("#view-toggle .view-toggle-btn").forEach(function(b){
-      b.classList.toggle("active",b.getAttribute("data-view")===currentView);
-    });
-  }
+  // Layers don't exist until the data loads, so switch views afterwards
+  if(p.view==="district")window._pendingView=p.view;
   if(p.lat&&p.lng&&p.z){
     map.setView([parseFloat(p.lat),parseFloat(p.lng)],parseFloat(p.z));
   }
@@ -1603,6 +1637,7 @@ window._applyPendingState=function(){
     }
     window._pendingDiv=null;
   }
+  if(window._pendingView){setViewMode(window._pendingView);window._pendingView=null}
 };
 
 // Share button: generate link and show in copiable field

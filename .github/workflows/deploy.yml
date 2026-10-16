@@ -46,6 +46,9 @@ jobs:
           mkdir -p site/data
           python scripts/build_site_data.py
 
+      - name: Build district and neighbor data
+        run: python scripts/build_district_site_data.py
+
       - name: Copy website files
         run: |
           cp -r site_src/* site/

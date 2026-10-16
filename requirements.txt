@@ -4,3 +4,4 @@ pandas
 folium
 jinja2
 aiohttp
+shapely>=2.0

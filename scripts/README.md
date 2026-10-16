@@ -56,6 +56,28 @@ Compares BNP Alliance and Eleven-Party Alliance vote totals between TBS and Dail
 ### `check_candidate_names.py`
 Uses fuzzy string matching and phonetic analysis to identify candidate name variations between sources. Separates spelling differences from genuinely different candidates.
 
+## Website Build
+
+These run in order in `.github/workflows/deploy.yml` on every push to `main`.
+
+### `build_ec_seat_results.py`
+Builds seat-level results from the official Election Commission data cached in `official_result/raw_data/`.
+
+**Output:** `results/seat_results.csv`
+
+### `build_site_data.py`
+Converts `results/seat_results.csv` into the JSON the website loads.
+
+**Output:** `site/data/seat_data.json`
+
+### `build_district_site_data.py`
+Builds the District view and neighbouring-seat data from `data/constituencies.geojson` and `site/data/seat_data.json` (requires `shapely`). District shapes merge each district's constituencies and close the hairline gaps between them; district stats are the mean of the district's seat values. Exits with an error if seat names or districts don't match between the two inputs.
+
+**Outputs** (to `site/data/`):
+- `neighbors.json` — seats bordering each seat
+- `districts.geojson` — one shape per district
+- `district_data.json` — per-district stats, seat winners and vote totals
+
 ## Map Generation
 
 ### `build_map.py`
