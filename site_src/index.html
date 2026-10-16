@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bangladesh Election 2026 — Interactive Map</title>
-<meta name="description" content="Explore Bangladesh's 2026 national election results across all 297 constituencies with interactive maps, party breakdowns, and detailed statistics.">
+<title>How Bangladesh voted: 2026 election results by constituency</title>
+<meta name="description" content="Constituency-level results of Bangladesh's 12 February 2026 parliamentary election, mapped from the Election Commission's polling-centre counts.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet-minimap@3.6.1/dist/Control.MiniMap.min.js"></script>
@@ -16,330 +16,256 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#0a0a10;
-  --sidebar-bg:#111118;
-  --card-bg:#18181f;
-  --card-bg-hover:#1e1e28;
-  --card-bg-active:#252530;
-  --text-primary:#eaeaf0;
-  --text-secondary:#8e8ea0;
-  --text-tertiary:#55556a;
-  --border:#1e1e2a;
-  --border-light:#2a2a3a;
-  --accent:#7c6cff;
-  --accent-dim:#5a4ccc;
-  --accent-glow:rgba(124,108,255,.15);
-  --accent-soft:rgba(124,108,255,.08);
-  --green:#34d399;
-  --red:#f87171;
-  --orange:#fb923c;
-  --shadow-sm:0 2px 8px rgba(0,0,0,.4);
-  --shadow-md:0 4px 24px rgba(0,0,0,.5);
-  --shadow-lg:0 12px 48px rgba(0,0,0,.7);
-  --radius-xs:6px;
-  --radius-sm:10px;
-  --radius-md:14px;
-  --radius-lg:20px;
-  --transition-fast:.15s cubic-bezier(.4,0,.2,1);
-  --transition-normal:.25s cubic-bezier(.4,0,.2,1);
-  --transition-slow:.4s cubic-bezier(.4,0,.2,1);
+  --paper:#141413;
+  --surface:#1a1a19;
+  --ink:#f0efec;
+  --ink-2:#c3c2b7;
+  --ink-3:#898781;
+  --on-ink:#141413;
+  --rule:#2c2c2a;
+  --rule-2:#3d3d3a;
+  --wash:#242423;
+  --no-data:#7b7a78;
+  --no-data-line:#cccac8;
+  --radius:4px;
+  --sans:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
 }
-html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text-primary);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+html,body{height:100%;font-family:var(--sans);font-size:14px;line-height:1.45;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
 #app{display:flex;height:100vh;width:100vw;overflow:hidden}
+button,select,input{font-family:inherit;color:inherit}
+a{color:inherit}
 
 /* Loader */
-#loader{position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px;transition:opacity .6s ease-out}
+#loader{position:fixed;inset:0;z-index:9999;background:var(--paper);display:flex;align-items:center;justify-content:center;transition:opacity .4s ease-out}
 #loader.hidden{opacity:0;pointer-events:none}
-.loader-content{display:flex;flex-direction:column;align-items:center;gap:16px}
-.loader-map-icon{width:48px;height:48px;color:var(--accent);animation:pulse 2s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:.5;transform:scale(.95)}50%{opacity:1;transform:scale(1)}}
-.loader-bar{width:200px;height:3px;background:var(--border);border-radius:2px;overflow:hidden}
-.loader-bar-fill{width:60%;height:100%;background:linear-gradient(90deg,var(--accent),#a78bfa);border-radius:2px;animation:load 1.5s ease-in-out infinite}
-@keyframes load{0%{transform:translateX(-100%)}100%{transform:translateX(220%)}}
-#loader p{font-size:12px;color:var(--text-tertiary);font-weight:500;letter-spacing:.5px;text-transform:uppercase}
+.loader-content{display:flex;flex-direction:column;align-items:center;gap:12px}
+.loader-bar{width:160px;height:2px;background:var(--rule);overflow:hidden}
+.loader-bar-fill{width:40%;height:100%;background:var(--ink);animation:load 1.4s ease-in-out infinite}
+@keyframes load{0%{transform:translateX(-100%)}100%{transform:translateX(250%)}}
+#loader p{font-size:13px;color:var(--ink-2)}
 
 /* Sidebar */
-#sidebar{width:400px;min-width:400px;height:100vh;overflow-y:auto;background:var(--sidebar-bg);border-right:1px solid var(--border);z-index:1000;display:flex;flex-direction:column;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
-#sidebar::-webkit-scrollbar{width:5px}
-#sidebar::-webkit-scrollbar-track{background:transparent}
-#sidebar::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
-#sidebar::-webkit-scrollbar-thumb:hover{background:var(--text-tertiary)}
+#sidebar{width:400px;min-width:400px;height:100vh;overflow-y:auto;background:var(--paper);border-right:1px solid var(--rule);z-index:1000;display:flex;flex-direction:column;scrollbar-width:thin;scrollbar-color:var(--rule-2) transparent}
 
 /* Header */
-#header{padding:28px 24px 24px;background:linear-gradient(180deg,rgba(124,108,255,.04) 0%,transparent 100%);border-bottom:1px solid var(--border);position:relative}
-#header::after{content:'';position:absolute;bottom:-1px;left:24px;right:24px;height:1px;background:linear-gradient(90deg,transparent,var(--accent-glow),transparent)}
-.header-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
-#header h1{font-size:22px;font-weight:900;letter-spacing:-.4px;line-height:1.15;color:var(--text-primary);background:linear-gradient(135deg,#fff 0%,#c4c0ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.header-year{display:inline-flex;padding:4px 10px;background:var(--accent);color:#fff;font-size:10px;font-weight:800;border-radius:6px;letter-spacing:.5px;flex-shrink:0;margin-top:2px}
-#header .subtitle{font-size:12px;color:var(--text-tertiary);margin-top:6px;font-weight:400;letter-spacing:.3px}
-.header-badges{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
-.header-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;background:var(--card-bg);border:1px solid var(--border);border-radius:20px;font-size:10px;color:var(--text-secondary);font-weight:600;letter-spacing:.3px;transition:all var(--transition-fast)}
-.header-badge:hover{border-color:var(--border-light);background:var(--card-bg-hover)}
-.header-badge .dot{width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:0 0 8px rgba(52,211,153,.5);animation:blink 3s ease-in-out infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
+#header{padding:24px 24px 18px;border-bottom:1px solid var(--rule)}
+.kicker{font-size:13px;font-weight:600;color:var(--ink-2)}
+#header h1{font-family:var(--serif);font-size:30px;font-weight:600;line-height:1.1;letter-spacing:-.01em;color:var(--ink);margin-top:6px}
+.dek{font-size:14px;color:var(--ink-2);margin-top:10px;line-height:1.5}
 
 /* Sidebar content */
-#sidebar-inner{padding:16px 18px;flex:1}
-.section{margin-bottom:18px}
-.section-label{font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-tertiary);margin-bottom:8px;font-weight:700;display:flex;align-items:center;gap:8px}
-.section-label::after{content:'';flex:1;height:1px;background:var(--border)}
+#sidebar-inner{padding:18px 24px 8px;flex:1}
+.section{margin-bottom:22px}
+.section-label{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:10px}
 
-/* Search */
-#search-wrap{position:relative;margin-bottom:20px}
-#search{width:100%;padding:11px 14px 11px 40px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:13px;font-family:inherit;outline:none;background:var(--card-bg);color:var(--text-primary);transition:all var(--transition-normal)}
-#search:focus{border-color:var(--accent-dim);box-shadow:0 0 0 4px var(--accent-soft),0 0 20px rgba(124,108,255,.08);background:var(--card-bg-hover)}
-#search::placeholder{color:var(--text-tertiary)}
-.search-icon{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--text-tertiary);transition:color var(--transition-fast)}
-#search:focus ~ .search-icon-ref{color:var(--accent)}
-#search-results{position:absolute;top:calc(100% + 6px);left:0;right:0;background:var(--card-bg);border:1px solid var(--border-light);border-radius:var(--radius-sm);max-height:260px;overflow-y:auto;z-index:10;box-shadow:var(--shadow-lg);display:none;backdrop-filter:blur(12px)}
-#search-results.show{display:block;animation:slideDown .2s ease-out}
-@keyframes slideDown{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
-.search-item{padding:10px 16px;font-size:12px;cursor:pointer;border-bottom:1px solid var(--border);transition:all var(--transition-fast)}
-.search-item:last-child{border-bottom:none}
-.search-item:hover{background:var(--accent-soft);padding-left:20px}
-.search-item .seat-name{font-weight:600;color:var(--text-primary)}
-.search-item .seat-district{color:var(--text-tertiary);font-size:10px;margin-top:2px}
-
-/* Stat buttons */
-.stat-group{margin-bottom:10px}
-.stat-group-label{font-size:9px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;font-weight:700;padding-left:2px}
+/* Measure buttons */
+.stat-group{margin-bottom:12px}
+.stat-group-label{font-size:12px;color:var(--ink-3);margin-bottom:6px}
 .stat-grid{display:flex;flex-wrap:wrap;gap:6px}
-.stat-btn{
-  display:inline-flex;align-items:center;gap:7px;
-  padding:8px 14px;font-size:11px;font-weight:500;
-  border-radius:var(--radius-sm);border:1px solid var(--border);
-  cursor:pointer;transition:all var(--transition-normal);
-  background:var(--card-bg);color:var(--text-secondary);
-  user-select:none;white-space:nowrap;position:relative;overflow:hidden;
-}
-.stat-btn::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(124,108,255,.06),transparent);opacity:0;transition:opacity var(--transition-fast)}
-.stat-btn:hover{border-color:var(--border-light);color:var(--text-primary);background:var(--card-bg-hover);transform:translateY(-1px);box-shadow:var(--shadow-sm)}
-.stat-btn:hover::before{opacity:1}
-.stat-btn:active{transform:translateY(0)}
-.stat-btn.active{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:700;box-shadow:0 4px 20px rgba(124,108,255,.35),inset 0 1px 0 rgba(255,255,255,.15);transform:translateY(-1px)}
-.stat-btn.active::before{display:none}
-.stat-btn .indicator{width:8px;height:8px;border-radius:50%;flex-shrink:0;border:1.5px solid rgba(255,255,255,.15)}
-.stat-btn.active .indicator{border-color:rgba(255,255,255,.3);box-shadow:0 0 6px rgba(255,255,255,.2)}
+.stat-btn{display:inline-flex;align-items:center;gap:7px;padding:6px 11px;font-size:13px;font-weight:500;border-radius:var(--radius);border:1px solid var(--rule-2);cursor:pointer;background:var(--surface);color:var(--ink-2);user-select:none;white-space:nowrap}
+.stat-btn:hover{border-color:var(--ink-3);color:var(--ink)}
+.stat-btn.active{background:var(--ink);border-color:var(--ink);color:var(--on-ink)}
+.stat-btn .indicator{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+.stat-btn.active .indicator{box-shadow:0 0 0 1px rgba(0,0,0,.35)}
 
+/* Segmented controls */
+.view-toggle{display:flex;margin-bottom:16px;border:1px solid var(--rule-2);border-radius:var(--radius);overflow:hidden;background:var(--surface)}
+.view-toggle-btn{flex:1;padding:6px 0;font-size:13px;font-weight:500;text-align:center;border:none;cursor:pointer;background:transparent;color:var(--ink-2)}
+.view-toggle-btn+.view-toggle-btn{border-left:1px solid var(--rule-2)}
+.view-toggle-btn.active{background:var(--ink);color:var(--on-ink)}
+.view-toggle-btn:hover:not(.active){background:var(--wash);color:var(--ink)}
+.view-toggle-btn:disabled,.view-toggle-btn:disabled:hover{opacity:.4;cursor:not-allowed;background:transparent;color:var(--ink-3)}
+.view-toggle-btn.loading{cursor:progress;color:var(--ink-3)}
 
-/* Selected seat */
-#selected-seat,#selected-seat-compare{display:none;background:linear-gradient(135deg,var(--accent-soft),rgba(124,108,255,.03));border:1px solid rgba(124,108,255,.15);border-radius:var(--radius-md);padding:16px 18px;margin-bottom:20px;position:relative;animation:fadeIn .2s ease-out}
+/* Plain buttons */
+.screenshot-btn{display:inline-flex;align-items:center;gap:6px;padding:6px 11px;font-size:13px;font-weight:500;border:1px solid var(--rule-2);border-radius:var(--radius);cursor:pointer;background:var(--surface);color:var(--ink-2)}
+.screenshot-btn:hover{border-color:var(--ink-3);color:var(--ink)}
+.screenshot-btn svg{width:14px;height:14px}
+.toolbar{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+
+/* Selected seat / district */
+#selected-seat,#selected-seat-compare{display:none;background:var(--surface);border:1px solid var(--rule);border-radius:var(--radius);padding:14px 16px;margin-bottom:20px;position:relative}
 #selected-seat.show,#selected-seat-compare.show{display:block}
-@keyframes fadeIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
-#selected-seat .close-btn{position:absolute;top:10px;right:10px;width:24px;height:24px;border:none;background:rgba(255,255,255,.05);cursor:pointer;color:var(--text-tertiary);font-size:16px;display:flex;align-items:center;justify-content:center;border-radius:8px;transition:all var(--transition-fast)}
-#selected-seat .close-btn:hover{background:rgba(255,255,255,.1);color:var(--text-primary);transform:scale(1.1)}
-.selected-seat-name{font-size:15px;font-weight:800;color:var(--text-primary);letter-spacing:-.2px}
-.selected-seat-loc{font-size:10px;color:var(--text-tertiary);margin-top:3px;margin-bottom:12px;letter-spacing:.3px}
-.selected-seat-pills{display:flex;gap:6px;flex-wrap:wrap}
-.seat-pill{padding:5px 11px;border-radius:20px;font-size:10px;font-weight:600;letter-spacing:.2px;transition:transform var(--transition-fast)}
-.seat-pill:hover{transform:scale(1.03)}
-.seat-pill-winner{color:#fff}
-.seat-pill-stat{background:var(--card-bg);color:var(--text-secondary);border:1px solid var(--border)}
+#selected-seat .close-btn,#selected-seat-compare .close-btn{position:absolute;top:8px;right:8px;width:28px;height:28px;border:none;background:transparent;cursor:pointer;color:var(--ink-3);font-size:20px;line-height:1;display:flex;align-items:center;justify-content:center;border-radius:var(--radius)}
+#selected-seat .close-btn:hover,#selected-seat-compare .close-btn:hover{background:var(--wash);color:var(--ink)}
+.selected-seat-name{font-size:18px;font-weight:700;color:var(--ink);padding-right:28px}
+.selected-seat-loc{font-size:13px;color:var(--ink-3);margin-top:1px;margin-bottom:10px}
+.selected-seat-pills{display:flex;gap:4px 16px;flex-wrap:wrap;font-size:13px;color:var(--ink-2)}
+.seat-pill{display:inline-flex;align-items:center;gap:6px}
+.seat-pill b{color:var(--ink);font-weight:600}
+.swatch{display:inline-block;width:10px;height:10px;border-radius:2px;flex-shrink:0}
 
-/* Summary card */
-.summary-card{background:var(--card-bg);border-radius:var(--radius-sm);padding:12px 14px;border:1px solid var(--border);position:relative;overflow:hidden}
-.summary-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent-glow),transparent)}
-.summary-stat{display:flex;align-items:baseline;gap:8px;margin-bottom:4px}
-.summary-stat .label{font-size:9px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:.8px;font-weight:700}
-.summary-stat .value{font-size:22px;font-weight:900;color:var(--text-primary);letter-spacing:-.5px;line-height:1;font-variant-numeric:tabular-nums}
-.summary-detail{font-size:11px;color:var(--text-secondary);line-height:1.7;margin-top:6px}
-.summary-detail strong{color:var(--text-primary);font-weight:700}
+/* Party / candidate rows */
+.candidate-list{margin-top:14px;border-top:1px solid var(--rule);padding-top:12px}
+.candidate-list-title{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:8px}
+.cand-row{margin-bottom:8px}
+.cand-info{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:3px}
+.cand-name{font-size:13px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cand-party{font-size:12px;color:var(--ink-3)}
+.cand-votes{font-size:13px;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums;flex-shrink:0}
+.cand-bar-bg{height:6px;background:var(--wash);border-radius:1px;overflow:hidden}
+.cand-bar{height:100%;border-radius:0 2px 2px 0}
 
-/* Winner grid */
-.winner-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:8px}
-.winner-item{background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:8px 8px;text-align:center;transition:all var(--transition-normal);position:relative;overflow:hidden}
-.winner-item::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(124,108,255,.03),transparent);opacity:0;transition:opacity var(--transition-fast)}
-.winner-item:hover{border-color:var(--border-light);transform:translateY(-1px);box-shadow:var(--shadow-sm)}
-.winner-item:hover::before{opacity:1}
-.winner-item .count{font-size:18px;font-weight:900;color:var(--text-primary);font-variant-numeric:tabular-nums;letter-spacing:-.3px}
-.winner-item .party-name{font-size:8px;color:var(--text-tertiary);margin-top:2px;text-transform:uppercase;letter-spacing:.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:600}
+/* Neighbours */
+.neighbors-section{margin-top:14px;border-top:1px solid var(--rule);padding-top:12px}
+.neighbors-title{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:6px}
+.neighbor-row{display:flex;align-items:center;gap:10px;padding:6px 8px;margin:0 -8px;border-radius:var(--radius);cursor:pointer}
+.neighbor-row:hover{background:var(--wash)}
+.neighbor-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+.neighbor-info{flex:1;min-width:0}
+.neighbor-name{font-size:13px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.neighbor-detail{font-size:12px;color:var(--ink-3);display:flex;gap:10px}
+.neighbor-winner{font-size:12px;color:var(--ink-2);flex-shrink:0}
+
+/* Nationwide summary */
+.summary-card{border-top:1px solid var(--rule);padding-top:10px}
+.summary-stat{display:flex;align-items:baseline;gap:8px;margin-bottom:2px}
+.summary-stat .value{font-size:26px;font-weight:700;color:var(--ink);line-height:1.1}
+.summary-stat .label{font-size:13px;color:var(--ink-2)}
+.summary-detail{font-size:13px;color:var(--ink-2);line-height:1.6;margin-top:4px}
+.summary-detail strong{color:var(--ink);font-weight:600}
+.seat-table{margin-top:10px;border-top:1px solid var(--rule)}
+.seat-row{display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--rule);font-size:13px}
+.seat-row .party{flex:1;color:var(--ink)}
+.seat-row .count{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+.seat-table-head{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-3);padding:6px 0 4px}
 
 /* Division bars */
-.div-row{display:flex;align-items:center;margin:4px 0;gap:8px;transition:opacity var(--transition-fast)}
-.div-row:hover{opacity:1!important}
-.div-label{width:70px;text-align:right;font-size:10px;color:var(--text-secondary);flex-shrink:0;font-weight:600}
-.div-bar-bg{flex:1;height:16px;background:var(--bg);border-radius:4px;overflow:hidden;position:relative;border:1px solid var(--border)}
-.div-bar{height:100%;border-radius:3px;transition:width var(--transition-slow);position:relative}
-.div-bar::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.08),transparent);border-radius:3px}
-.div-val{width:44px;font-size:10px;color:var(--text-primary);text-align:right;flex-shrink:0;font-weight:800;font-variant-numeric:tabular-nums}
+.div-row{display:flex;align-items:center;gap:10px;padding:3px 6px;margin:1px -6px;border-radius:var(--radius);cursor:pointer}
+.div-row:hover{background:var(--wash)}
+.div-row.active-div{background:var(--wash);box-shadow:inset 2px 0 0 var(--ink)}
+.div-label{width:84px;font-size:13px;color:var(--ink-2);flex-shrink:0}
+.div-bar-bg{flex:1;height:8px;background:var(--wash);border-radius:1px;overflow:hidden}
+.div-bar{height:100%;border-radius:0 2px 2px 0}
+.div-val{min-width:52px;font-size:13px;font-weight:600;color:var(--ink);text-align:right;flex-shrink:0;font-variant-numeric:tabular-nums}
+
+/* Histogram */
+.histogram-wrap{margin-top:4px}
+.histogram{display:flex;align-items:flex-end;gap:1px;height:40px;border-bottom:1px solid var(--rule-2)}
+.hist-bar{flex:1;min-width:2px;border-radius:1px 1px 0 0}
+.histogram-labels{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-3);margin-top:4px;font-variant-numeric:tabular-nums}
+
+/* Threshold */
+.threshold-section{margin-bottom:22px}
+.threshold-mode{display:inline-flex;border:1px solid var(--rule-2);border-radius:var(--radius);overflow:hidden;margin-bottom:10px;background:var(--surface)}
+.threshold-mode-btn{padding:4px 10px;font-size:12px;font-weight:500;border:none;background:transparent;color:var(--ink-2);cursor:pointer}
+.threshold-mode-btn+.threshold-mode-btn{border-left:1px solid var(--rule-2)}
+.threshold-mode-btn.active{background:var(--ink);color:var(--on-ink)}
+.threshold-controls{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.threshold-slider{flex:1;-webkit-appearance:none;appearance:none;height:2px;background:var(--rule-2);outline:none;cursor:pointer}
+.threshold-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:14px;height:14px;border-radius:50%;background:var(--ink);cursor:pointer;border:2px solid var(--paper)}
+.threshold-slider::-moz-range-thumb{width:12px;height:12px;border-radius:50%;background:var(--ink);cursor:pointer;border:2px solid var(--paper)}
+.threshold-val{font-size:13px;font-weight:600;color:var(--ink);min-width:40px;text-align:right;font-variant-numeric:tabular-nums}
+.threshold-count{font-size:12px;color:var(--ink-3)}
+
+/* Share link */
+.share-url-wrap{display:flex;gap:6px;margin-bottom:14px}
+.share-url-input{flex:1;padding:6px 8px;font-size:12px;background:var(--surface);color:var(--ink);border:1px solid var(--rule-2);border-radius:var(--radius);outline:none;min-width:0}
+.share-url-input:focus{border-color:var(--ink)}
+.share-copy-btn{padding:6px 12px;font-size:13px;font-weight:600;background:var(--ink);color:var(--on-ink);border:none;border-radius:var(--radius);cursor:pointer;white-space:nowrap}
 
 /* Footer */
-#footer{padding:18px 22px;border-top:1px solid var(--border);font-size:10px;color:var(--text-tertiary);line-height:2;margin-top:auto;letter-spacing:.2px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.2))}
-#footer a{color:var(--text-secondary);text-decoration:none;font-weight:600;transition:color var(--transition-fast);border-bottom:1px solid transparent}
-#footer a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+#footer{padding:16px 24px 20px;border-top:1px solid var(--rule);font-size:12px;color:var(--ink-3);line-height:1.55;margin-top:auto}
+#footer p+p{margin-top:6px}
+#footer strong{color:var(--ink-2);font-weight:600}
+#footer a{color:var(--ink-2);text-decoration:underline;text-decoration-color:var(--rule-2);text-underline-offset:2px}
+#footer a:hover{color:var(--ink);text-decoration-color:var(--ink)}
 
 /* Map */
 #map{flex:1;height:100vh;position:relative}
-.leaflet-container{background:#2d2d2d}
-.leaflet-control-zoom{border:none!important;box-shadow:0 4px 20px rgba(0,0,0,.6)!important;border-radius:var(--radius-sm)!important;overflow:hidden;border:1px solid var(--border-light)!important}
-.leaflet-control-zoom a{background:rgba(17,17,24,.95)!important;color:#fff!important;border:none!important;border-bottom:1px solid var(--border)!important;width:40px!important;height:40px!important;line-height:40px!important;font-size:18px!important;transition:all .15s!important;font-weight:700!important}
+.leaflet-container{background:#2d2d2d;font-family:var(--sans)}
+.leaflet-control-zoom{border:1px solid var(--rule-2)!important;border-radius:var(--radius)!important;overflow:hidden;box-shadow:none!important}
+.leaflet-control-zoom a{background:var(--surface)!important;color:var(--ink)!important;border:none!important;border-bottom:1px solid var(--rule)!important;width:34px!important;height:34px!important;line-height:34px!important;font-size:18px!important;font-weight:400!important}
 .leaflet-control-zoom a:last-child{border-bottom:none!important}
-.leaflet-control-zoom a:hover{background:var(--accent)!important;color:#fff!important}
-.leaflet-control-attribution{background:rgba(10,10,16,.9)!important;color:var(--text-tertiary)!important;font-size:9px!important;backdrop-filter:blur(8px)!important}
-.leaflet-control-attribution a{color:var(--text-secondary)!important}
+.leaflet-control-zoom a:hover{background:var(--wash)!important}
+.leaflet-control-attribution{background:rgba(20,20,19,.85)!important;color:var(--ink-3)!important;font-size:11px!important}
+.leaflet-control-attribution a{color:var(--ink-2)!important}
+.reset-zoom{position:absolute;top:82px;right:10px;z-index:1000;width:36px;height:36px;background:var(--surface);border:1px solid var(--rule-2);border-radius:var(--radius);cursor:pointer;color:var(--ink);display:flex;align-items:center;justify-content:center}
+.reset-zoom:hover{background:var(--wash)}
+.leaflet-control-minimap{border:1px solid var(--rule-2)!important;border-radius:var(--radius)!important;box-shadow:none!important}
+.leaflet-control-minimap .leaflet-container{background:#2d2d2d!important}
 
 /* Legend */
-.legend{background:var(--sidebar-bg);padding:16px 18px;border-radius:var(--radius-md);box-shadow:var(--shadow-lg);font-size:12px;min-width:200px;border:1px solid var(--border);backdrop-filter:blur(12px)}
-.legend-title{font-weight:800;margin-bottom:10px;font-size:11px;color:var(--text-primary);letter-spacing:.4px;text-transform:uppercase}
-.legend-gradient{width:100%;height:16px;border-radius:5px;margin:8px 0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
-.legend-labels{display:flex;justify-content:space-between;font-size:9px;color:var(--text-tertiary);font-weight:700;letter-spacing:.4px;text-transform:uppercase}
-.legend-nodata{display:flex;align-items:center;gap:7px;margin-top:10px;font-size:10px;color:var(--text-tertiary);font-weight:500}
-.legend-nodata-swatch{width:14px;height:10px;background:#222;border-radius:3px;border:1px solid #444}
+.legend{background:var(--surface);padding:10px 12px;border:1px solid var(--rule);border-radius:var(--radius);font-size:12px;min-width:210px;color:var(--ink-2)}
+.legend-title{font-weight:700;margin-bottom:8px;font-size:13px;color:var(--ink)}
+.legend-gradient{width:100%;height:10px;border-radius:1px;margin:6px 0 4px}
+.legend-labels{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.legend-item{display:flex;align-items:center;gap:8px;margin:4px 0;font-size:12px;color:var(--ink-2)}
+.legend-nodata{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:12px;color:var(--ink-2)}
+.legend-nodata-swatch,.no-data-swatch{width:12px;height:12px;border-radius:1px;border:1px solid var(--no-data-line);background:repeating-linear-gradient(45deg,var(--no-data) 0 2.5px,var(--no-data-line) 2.5px 3.5px)}
 
 /* Tooltips */
-.seat-tooltip{padding:0!important;border:none!important;border-radius:var(--radius-lg)!important;box-shadow:var(--shadow-lg)!important;font-family:inherit!important}
+.seat-tooltip{padding:0!important;border:none!important;background:transparent!important;box-shadow:none!important;font-family:inherit!important}
 .seat-tooltip .leaflet-tooltip-content-wrapper,.seat-tooltip::before{display:none}
-.tt{background:var(--sidebar-bg);border:1px solid var(--border-light);border-radius:var(--radius-lg);padding:18px 20px;min-width:270px;font-size:12px;line-height:1.5;color:var(--text-primary);backdrop-filter:blur(16px)}
-.tt-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:12px;gap:12px}
-.tt-name{font-size:15px;font-weight:800;color:#fff;letter-spacing:-.2px}
-.tt-district{font-size:10px;color:var(--text-tertiary);margin-top:4px;letter-spacing:.3px;font-weight:500}
-.tt-winner-badge{display:inline-flex;padding:4px 10px;border-radius:14px;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;flex-shrink:0}
-.tt-stat-row{display:flex;align-items:center;gap:10px;padding:12px 0;border-top:1px solid var(--border)}
-.tt-stat-label{font-size:9px;color:var(--text-tertiary);flex:1;text-transform:uppercase;letter-spacing:.5px;font-weight:700}
-.tt-stat-value{font-size:22px;font-weight:900;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
-.tt-party-row{display:flex;justify-content:space-between;align-items:center;padding:4px 0}
-.tt-party-row .party{color:var(--text-secondary);font-size:11px;font-weight:500}
-.tt-party-row .pct{font-weight:800;color:var(--text-primary);font-size:11px;font-variant-numeric:tabular-nums}
-.tt-party-bar-bg{height:4px;background:var(--bg);border-radius:3px;margin-top:2px;margin-bottom:7px;overflow:hidden}
-.tt-party-bar{height:100%;border-radius:3px;transition:width .3s ease}
-.tt-meta{margin-top:12px;padding-top:12px;border-top:1px solid var(--border);font-size:10px;color:var(--text-tertiary);display:flex;gap:16px;font-variant-numeric:tabular-nums;font-weight:500}
+.tt{background:var(--surface);border:1px solid var(--rule-2);border-radius:var(--radius);padding:12px 14px;min-width:240px;max-width:300px;font-size:13px;line-height:1.4;color:var(--ink);box-shadow:0 4px 16px rgba(0,0,0,.5);white-space:normal}
+.tt-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px;gap:12px}
+.tt-name{font-size:15px;font-weight:700;color:var(--ink)}
+.tt-district{font-size:12px;color:var(--ink-3);margin-top:1px}
+.tt-winner-badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--ink-2);flex-shrink:0;white-space:nowrap}
+.tt-stat-row{display:flex;align-items:baseline;gap:10px;padding:8px 0;border-top:1px solid var(--rule)}
+.tt-stat-label{font-size:12px;color:var(--ink-2);flex:1}
+.tt-stat-value{display:inline-flex;align-items:center;gap:6px;font-size:20px;font-weight:700;color:var(--ink)}
+.tt-party-row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding-top:4px}
+.tt-party-row .party{color:var(--ink-2);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tt-party-row .pct{font-weight:600;color:var(--ink);font-size:12px;font-variant-numeric:tabular-nums}
+.tt-party-bar-bg{height:4px;background:var(--wash);margin-top:3px;margin-bottom:4px;overflow:hidden}
+.tt-party-bar{height:100%}
+.tt-meta{margin-top:8px;padding-top:8px;border-top:1px solid var(--rule);font-size:12px;color:var(--ink-3);display:flex;flex-wrap:wrap;gap:4px 12px;font-variant-numeric:tabular-nums}
 
-/* Mobile toggle */
-#sidebar-toggle{display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:2000;padding:10px 24px;background:var(--accent);color:#fff;border:none;border-radius:30px;font-size:12px;font-weight:700;font-family:inherit;cursor:pointer;box-shadow:0 4px 24px rgba(124,108,255,.4);letter-spacing:.3px;transition:all var(--transition-fast)}
-#sidebar-toggle:active{transform:translateX(-50%) scale(.96)}
+/* Compare view */
+#compare-container{display:none;flex:1;height:100vh}
+#compare-container.active{display:flex}
+#compare-container.active~#map{display:none}
+.compare-pane{flex:1;height:100%;position:relative}
+.compare-pane:first-child{border-right:1px solid var(--rule-2)}
+.compare-label{position:absolute;top:10px;left:10px;z-index:1000;background:var(--surface);color:var(--ink);padding:4px 10px;border-radius:var(--radius);font-size:13px;font-weight:600;border:1px solid var(--rule);pointer-events:none}
+.compare-select{position:absolute;top:10px;right:10px;z-index:1000;background:var(--surface);color:var(--ink);padding:5px 8px;border-radius:var(--radius);font-size:13px;border:1px solid var(--rule-2);cursor:pointer}
 
-/* Responsive */
+/* Scatter plot */
+.scatter-section{margin-bottom:24px}
+.scatter-controls{display:flex;gap:8px;margin-bottom:10px;align-items:center}
+.scatter-select{flex:1;min-width:0;padding:5px 6px;font-size:13px;background:var(--surface);color:var(--ink);border:1px solid var(--rule-2);border-radius:var(--radius);cursor:pointer}
+.scatter-vs{font-size:12px;color:var(--ink-3)}
+.scatter-wrap{position:relative;background:var(--surface);border:1px solid var(--rule);border-radius:var(--radius);overflow:hidden}
+.scatter-wrap canvas{display:block;width:100%;cursor:crosshair}
+.scatter-info{font-size:12px;color:var(--ink-3);margin-top:6px;display:flex;justify-content:space-between;font-variant-numeric:tabular-nums}
+.scatter-info strong{color:var(--ink-2);font-weight:600}
+
+/* Mobile */
+#sidebar-toggle{display:none;position:fixed;bottom:16px;left:50%;transform:translateX(-50%);z-index:2001;padding:9px 20px;background:var(--ink);color:var(--on-ink);border:none;border-radius:var(--radius);font-size:14px;font-weight:600;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.5)}
+.mobile-handle{display:none}
 @media(max-width:900px){
   #sidebar{width:360px;min-width:360px}
 }
 @media(max-width:767px){
   #app{flex-direction:column}
-  #sidebar{width:100%;min-width:unset;height:100vh;max-height:100vh;border-right:none;position:fixed;bottom:0;left:0;right:0;z-index:2000;transform:translateY(calc(100% - 56px));transition:transform var(--transition-slow)}
+  #sidebar{width:100%;min-width:unset;height:100vh;max-height:100vh;border-right:none;border-top:1px solid var(--rule-2);position:fixed;bottom:0;left:0;right:0;z-index:2000;transform:translateY(calc(100% - 64px));transition:transform .3s ease}
   #sidebar.mobile-open{transform:translateY(0)}
   #map{height:100vh}
-  #header{padding:14px 18px 12px}
-  #header h1{font-size:16px}
-  .header-top{align-items:center}
-  #sidebar-inner{padding:14px 16px}
-  .stat-btn{padding:6px 10px;font-size:10px}
-  #sidebar-toggle{display:block}
-  .mobile-handle{display:block;width:36px;height:4px;background:var(--border-light);border-radius:2px;margin:0 auto 12px;cursor:pointer}
+  #header{padding:8px 18px 14px}
+  #header h1{font-size:22px;margin-top:2px}
+  .kicker{display:none}
+  #sidebar-inner{padding:14px 18px}
+  #sidebar-toggle{display:block;left:auto;right:14px;bottom:12px;transform:none}
+  .mobile-handle{display:block;width:36px;height:4px;background:var(--rule-2);border-radius:2px;margin:8px auto 4px;cursor:pointer}
+  #header h1{padding-right:96px}
+  /* Keep the legend and attribution above the collapsed sheet */
+  #map .leaflet-bottom{bottom:64px}
+  .leaflet-control-minimap{display:none!important}
+  .leaflet-control-attribution{max-width:40vw}
 }
-@media(min-width:768px){
-  .mobile-handle{display:none}
-}
 
-/* Smooth transitions on stat change */
-.summary-card,.div-row{transition:opacity .15s ease}
-
-/* Keyboard focus styles */
-.stat-btn:focus-visible,#search:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-
-/* Full candidate results in selected seat */
-.candidate-list{margin-top:14px;border-top:1px solid var(--border);padding-top:12px}
-.candidate-list-title{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--text-tertiary);margin-bottom:10px;font-weight:700}
-.cand-row{margin-bottom:10px}
-.cand-info{display:flex;justify-content:space-between;align-items:center;margin-bottom:3px}
-.cand-name{font-size:11px;font-weight:600;color:var(--text-primary);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:60%}
-.cand-party{font-size:9px;color:var(--text-tertiary);font-weight:500}
-.cand-votes{font-size:11px;font-weight:800;color:var(--text-primary);font-variant-numeric:tabular-nums}
-.cand-bar-bg{height:5px;background:var(--bg);border-radius:3px;overflow:hidden}
-.cand-bar{height:100%;border-radius:3px}
-
-/* Histogram */
-.histogram-wrap{margin-top:16px}
-.histogram-title{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--text-tertiary);margin-bottom:8px;font-weight:700}
-.histogram{display:flex;align-items:flex-end;gap:1px;height:36px}
-.hist-bar{flex:1;background:var(--accent-dim);border-radius:2px 2px 0 0;min-width:2px;transition:height var(--transition-slow),background var(--transition-fast);cursor:pointer;position:relative}
-.hist-bar:hover{background:var(--accent)}
-.histogram-labels{display:flex;justify-content:space-between;font-size:9px;color:var(--text-tertiary);margin-top:4px;font-weight:600;font-variant-numeric:tabular-nums}
-
-/* Division clickable */
-.div-row{cursor:pointer;border-radius:4px;padding:3px 5px;margin:2px -5px;transition:all var(--transition-fast)}
-.div-row:hover{background:var(--accent-soft)}
-.div-row.active-div{background:var(--accent-soft);border:1px solid rgba(124,108,255,.2)}
-
-/* Neighbors */
-.neighbors-section{margin-top:14px;border-top:1px solid var(--border);padding-top:12px}
-.neighbors-title{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--text-tertiary);margin-bottom:10px;font-weight:700}
-.neighbor-row{display:flex;align-items:center;gap:8px;padding:6px 8px;margin:3px -8px;border-radius:6px;cursor:pointer;transition:all var(--transition-fast)}
-.neighbor-row:hover{background:var(--accent-soft)}
-.neighbor-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
-.neighbor-info{flex:1;min-width:0}
-.neighbor-name{font-size:11px;font-weight:600;color:var(--text-primary);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.neighbor-detail{font-size:9px;color:var(--text-tertiary);display:flex;gap:8px;margin-top:1px}
-.neighbor-winner{font-size:9px;font-weight:700;flex-shrink:0}
-
-/* District toggle */
-.view-toggle{display:flex;gap:4px;margin-bottom:16px;background:var(--card-bg);border-radius:var(--radius-sm);padding:3px;border:1px solid var(--border)}
-.view-toggle-btn{flex:1;padding:6px 0;font-size:10px;font-weight:700;text-align:center;border:none;border-radius:7px;cursor:pointer;background:transparent;color:var(--text-tertiary);font-family:inherit;transition:all var(--transition-fast);letter-spacing:.3px}
-.view-toggle-btn.active{background:var(--accent);color:#fff;box-shadow:0 2px 8px rgba(124,108,255,.3)}
-.view-toggle-btn:hover:not(.active){color:var(--text-secondary);background:var(--card-bg-hover)}
-.view-toggle-btn:disabled,.view-toggle-btn:disabled:hover{opacity:.35;cursor:not-allowed;background:transparent;color:var(--text-tertiary)}
-.view-toggle-btn.loading{cursor:progress;opacity:.6}
-
-/* Screenshot button */
-.screenshot-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;font-size:10px;font-weight:600;border:1px solid var(--border);border-radius:var(--radius-sm);cursor:pointer;background:var(--card-bg);color:var(--text-secondary);font-family:inherit;transition:all var(--transition-fast);letter-spacing:.3px}
-.screenshot-btn:hover{background:var(--card-bg-hover);color:var(--text-primary);border-color:var(--border-light)}
-.screenshot-btn svg{width:14px;height:14px}
-.toolbar{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
-
-/* Reset zoom */
-.reset-zoom{position:absolute;top:90px;right:10px;z-index:1000;width:40px;height:40px;background:rgba(17,17,24,.95);border:1px solid var(--border-light);border-radius:var(--radius-sm);cursor:pointer;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.6);transition:all var(--transition-fast)}
-.reset-zoom:hover{background:var(--accent);color:#fff}
-
-/* Mini map override */
-.leaflet-control-minimap{border:2px solid var(--border)!important;border-radius:var(--radius-sm)!important;box-shadow:var(--shadow-lg)!important}
-.leaflet-control-minimap .leaflet-container{background:#1a1a2e!important}
-
-/* Comparison mode */
-#compare-container{display:none;flex:1;height:100vh}
-#compare-container.active{display:flex}
-#compare-container.active~#map{display:none}
-.compare-pane{flex:1;height:100%;position:relative}
-.compare-pane:first-child{border-right:2px solid var(--accent)}
-.compare-label{position:absolute;top:10px;left:50%;transform:translateX(-50%);z-index:1000;background:var(--sidebar-bg);color:var(--text-primary);padding:5px 14px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:.5px;border:1px solid var(--border);box-shadow:var(--shadow-md);text-transform:uppercase;pointer-events:none}
-.compare-select{position:absolute;top:10px;right:10px;z-index:1000;background:var(--sidebar-bg);color:var(--text-primary);padding:6px 10px;border-radius:var(--radius-xs);font-size:11px;font-weight:600;border:1px solid var(--border);font-family:inherit;cursor:pointer}
-.compare-select option{background:var(--sidebar-bg);color:var(--text-primary)}
-
-/* Scatter plot */
-.scatter-section{margin-bottom:28px}
-.scatter-controls{display:flex;gap:6px;margin-bottom:10px;align-items:center}
-.scatter-select{flex:1;padding:6px 8px;font-size:10px;font-weight:600;background:var(--card-bg);color:var(--text-primary);border:1px solid var(--border);border-radius:var(--radius-xs);font-family:inherit;cursor:pointer}
-.scatter-select option{background:var(--sidebar-bg);color:var(--text-primary)}
-.scatter-vs{font-size:9px;color:var(--text-tertiary);font-weight:700}
-.scatter-wrap{position:relative;background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden}
-.scatter-wrap canvas{display:block;width:100%;cursor:crosshair}
-.scatter-info{font-size:9px;color:var(--text-tertiary);margin-top:6px;display:flex;justify-content:space-between;font-weight:500}
-.scatter-info strong{color:var(--text-secondary)}
-
-/* Threshold highlighter */
-/* Share URL */
-.share-url-wrap{display:flex;gap:4px;margin-bottom:14px;animation:fadeIn .2s ease-out}
-.share-url-input{flex:1;padding:7px 10px;font-size:10px;font-family:inherit;background:var(--card-bg);color:var(--text-primary);border:1px solid var(--border);border-radius:var(--radius-xs);outline:none;min-width:0}
-.share-url-input:focus{border-color:var(--accent-dim);box-shadow:0 0 0 3px var(--accent-soft)}
-.share-copy-btn{padding:7px 12px;font-size:10px;font-weight:700;background:var(--accent);color:#fff;border:none;border-radius:var(--radius-xs);cursor:pointer;font-family:inherit;white-space:nowrap;transition:all var(--transition-fast)}
-.share-copy-btn:hover{background:var(--accent-dim)}
-
-.threshold-section{margin-bottom:28px}
-.threshold-controls{display:flex;align-items:center;gap:10px;margin-bottom:8px}
-.threshold-slider{flex:1;-webkit-appearance:none;appearance:none;height:4px;background:var(--border);border-radius:2px;outline:none;cursor:pointer}
-.threshold-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:14px;height:14px;border-radius:50%;background:var(--accent);cursor:pointer;box-shadow:0 0 6px rgba(124,108,255,.4)}
-.threshold-slider::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:var(--accent);cursor:pointer;border:none}
-.threshold-val{font-size:11px;font-weight:800;color:var(--text-primary);min-width:38px;text-align:right;font-variant-numeric:tabular-nums}
-.threshold-mode{display:flex;gap:4px;margin-bottom:8px}
-.threshold-mode-btn{padding:4px 10px;font-size:9px;font-weight:700;border:1px solid var(--border);border-radius:14px;background:transparent;color:var(--text-tertiary);cursor:pointer;font-family:inherit;transition:all var(--transition-fast)}
-.threshold-mode-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
-.threshold-count{font-size:10px;color:var(--text-secondary);font-weight:500}
+/* Keyboard focus */
+button:focus-visible,select:focus-visible,input:focus-visible,.neighbor-row:focus-visible,.div-row:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 </style>
 </head>
 <body>
 
 <div id="loader">
   <div class="loader-content">
-    <svg class="loader-map-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+    <p>Loading results…</p>
     <div class="loader-bar"><div class="loader-bar-fill"></div></div>
-    <p>Loading election data</p>
   </div>
 </div>
 
@@ -347,46 +273,42 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
 <div id="sidebar">
   <div class="mobile-handle" id="mobile-handle"></div>
   <div id="header">
-    <div class="header-top">
-      <div>
-        <h1>Bangladesh Election</h1>
-        <div class="subtitle">Interactive Constituency Results Map</div>
-      </div>
-      <span class="header-year">2026</span>
-    </div>
+    <p class="kicker">Parliamentary election, 12 February 2026</p>
+    <h1>How Bangladesh voted</h1>
+    <p class="dek">Results for 297 of the 300 constituencies, from the Election Commission’s polling-centre counts. Choose a measure to map it, or click a seat for its full result.</p>
   </div>
   <div id="sidebar-inner">
 
     <!-- Top mode toggle -->
     <div class="view-toggle" id="mode-toggle" style="margin-bottom:14px">
-      <button class="view-toggle-btn active" data-mode="single">Single View</button>
-      <button class="view-toggle-btn" data-mode="compare">Compare View</button>
+      <button class="view-toggle-btn active" data-mode="single">One map</button>
+      <button class="view-toggle-btn" data-mode="compare">Compare two</button>
     </div>
 
     <!-- SINGLE VIEW CONTENT -->
     <div id="single-content">
       <div class="section">
-        <div class="section-label">Statistic</div>
+        <div class="section-label">What to map</div>
         <div class="stat-group">
-          <div class="stat-group-label">Party Vote Share</div>
-          <div class="stat-grid" role="radiogroup" aria-label="Party vote share statistics">
+          <div class="stat-group-label">Vote share</div>
+          <div class="stat-grid" role="radiogroup" aria-label="Vote share">
             <button class="stat-btn" data-stat="bnp" role="radio" aria-checked="false"><span class="indicator" style="background:#3182bd"></span>BNP</button>
             <button class="stat-btn" data-stat="jamaat" role="radio" aria-checked="false"><span class="indicator" style="background:#31a354"></span>Jamaat</button>
-            <button class="stat-btn" data-stat="eleven_party_alliance" role="radio" aria-checked="false"><span class="indicator" style="background:#756bb1"></span>11-Party</button>
+            <button class="stat-btn" data-stat="eleven_party_alliance" role="radio" aria-checked="false"><span class="indicator" style="background:#756bb1"></span>11-party alliance</button>
           </div>
         </div>
         <div class="stat-group">
-          <div class="stat-group-label">Comparison & Seats</div>
+          <div class="stat-group-label">Who won</div>
           <div class="stat-grid">
-            <button class="stat-btn active" data-stat="bnp_vs_eleven_party_alliance" role="radio" aria-checked="true"><span class="indicator" style="background:linear-gradient(90deg,#ca0020,#0571b0)"></span>BNP vs 11-Party</button>
-            <button class="stat-btn" data-stat="winner" role="radio" aria-checked="false"><span class="indicator" style="background:linear-gradient(90deg,#6baed6,#74c476,#9090a0)"></span>Winner Map</button>
+            <button class="stat-btn active" data-stat="bnp_vs_eleven_party_alliance" role="radio" aria-checked="true"><span class="indicator" style="background:linear-gradient(90deg,#0571b0 50%,#ca0020 50%)"></span>BNP vs 11-party alliance</button>
+            <button class="stat-btn" data-stat="winner" role="radio" aria-checked="false">Winning party</button>
           </div>
         </div>
         <div class="stat-group">
-          <div class="stat-group-label">Election Quality</div>
+          <div class="stat-group-label">Turnout and margin</div>
           <div class="stat-grid">
-            <button class="stat-btn" data-stat="turnout" role="radio" aria-checked="false"><span class="indicator" style="background:#31a354"></span>Turnout</button>
-            <button class="stat-btn" data-stat="victory_margin" role="radio" aria-checked="false"><span class="indicator" style="background:#f03b20"></span>Victory Margin</button>
+            <button class="stat-btn" data-stat="turnout" role="radio" aria-checked="false">Turnout</button>
+            <button class="stat-btn" data-stat="victory_margin" role="radio" aria-checked="false">Winning margin</button>
           </div>
         </div>
       </div>
@@ -407,8 +329,8 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
       </div>
 
       <div class="toolbar">
-        <button class="screenshot-btn" id="screenshot-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M3 9h2m14 0h2M9 3v2m0 14v2m6-18v2m0 14v2M3 15h2m14 0h2"/></svg>Screenshot</button>
-        <button class="screenshot-btn" id="share-btn"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98"/></svg>Share View</button>
+        <button class="screenshot-btn" id="screenshot-btn">Save image</button>
+        <button class="screenshot-btn" id="share-btn">Share this view</button>
       </div>
       <div class="share-url-wrap" id="share-url-wrap" style="display:none">
         <input type="text" class="share-url-input" id="share-url" readonly>
@@ -416,10 +338,10 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
       </div>
 
       <div class="section threshold-section" id="threshold-section">
-        <div class="section-label">Highlight Threshold</div>
+        <div class="section-label">Highlight seats</div>
         <div class="threshold-mode" id="threshold-mode">
-          <button class="threshold-mode-btn active" data-mode="above">Above</button>
-          <button class="threshold-mode-btn" data-mode="below">Below</button>
+          <button class="threshold-mode-btn active" data-mode="above">At or above</button>
+          <button class="threshold-mode-btn" data-mode="below">At or below</button>
         </div>
         <div class="threshold-controls">
           <input type="range" class="threshold-slider" id="threshold-slider" min="0" max="100" value="100" step="1">
@@ -429,7 +351,7 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
       </div>
 
       <div class="section" id="histogram-section" style="display:none">
-        <div class="section-label">Distribution</div>
+        <div class="section-label">How seats are spread</div>
         <div class="histogram-wrap">
           <div class="histogram" id="histogram"></div>
           <div class="histogram-labels" id="histogram-labels"></div>
@@ -437,12 +359,12 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
       </div>
 
       <div class="section">
-        <div class="section-label">By Division</div>
+        <div class="section-label">By division</div>
         <div id="division-breakdown"></div>
       </div>
 
       <div class="section">
-        <div class="section-label">National Summary</div>
+        <div class="section-label">Nationwide</div>
         <div id="summary" class="summary-card"></div>
       </div>
     </div>
@@ -450,7 +372,7 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
     <!-- COMPARE VIEW CONTENT -->
     <div id="compare-content" style="display:none">
       <div class="section scatter-section">
-        <div class="section-label">Compare Statistics</div>
+        <div class="section-label">Compare two measures</div>
         <div class="scatter-controls">
           <select class="scatter-select" id="scatter-x"></select>
           <span class="scatter-vs">vs</span>
@@ -468,8 +390,8 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
       </div>
 
       <div class="toolbar">
-        <button class="screenshot-btn" id="screenshot-btn-compare"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M3 9h2m14 0h2M9 3v2m0 14v2m6-18v2m0 14v2M3 15h2m14 0h2"/></svg>Screenshot</button>
-        <button class="screenshot-btn" id="share-btn-compare"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98"/></svg>Share View</button>
+        <button class="screenshot-btn" id="screenshot-btn-compare">Save image</button>
+        <button class="screenshot-btn" id="share-btn-compare">Share this view</button>
       </div>
       <div class="share-url-wrap" id="share-url-wrap-compare" style="display:none">
         <input type="text" class="share-url-input" id="share-url-compare" readonly>
@@ -479,9 +401,9 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
 
   </div>
   <div id="footer">
-    Data: <a href="https://www.ecs.gov.bd" target="_blank" rel="noopener">Bangladesh Election Commission</a><br>
-    Boundaries: IFES / ElectionGuide<br>
-    Built by <a href="https://smanahian.com" target="_blank" rel="noopener">S M A Nahian</a> &middot; <a href="https://github.com/smanahian/ElectionMap" target="_blank" rel="noopener">GitHub</a>
+    <p><strong>Source:</strong> <a href="https://www.ecs.gov.bd" target="_blank" rel="noopener">Bangladesh Election Commission</a>, polling-centre results retrieved in March 2026. These counts do not include postal ballots, and no results were available for Sherpur 3, Chattogram 2 or Chattogram 4.</p>
+    <p><strong>Boundaries:</strong> GRED, 2008 constituency map.</p>
+    <p>By <a href="https://smanahian.com" target="_blank" rel="noopener">S M A Nahian</a> · <a href="https://github.com/smanahian/ElectionMap" target="_blank" rel="noopener">Source code</a></p>
   </div>
 </div>
 <div id="map" style="position:relative">
@@ -501,61 +423,64 @@ html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;bac
 </div>
 </div>
 
-<button id="sidebar-toggle">Show Settings</button>
+<button id="sidebar-toggle">Options</button>
 
 <script>
+// Map outline colours; INK marks the hovered and selected shapes
+var INK="#f0efec",EDGE="#000",DISTRICT_EDGE="#444",NO_DATA="#7b7a78",OTHER_PARTY="#6b6b75";
+
 // ColorBrewer palettes
 var STAT_META = {
   bnp: {
-    label:"BNP Vote Share", party:"Bangladesh Nationalist Party (BNP)",
+    label:"BNP vote share", party:"Bangladesh Nationalist Party (BNP)", color:"#3182bd",
     range:[0.20, 0.80],
     // ColorBrewer Blues 5
     ramp:["#eff3ff","#bdd7e7","#6baed6","#3182bd","#08519c"]
   },
   jamaat: {
-    label:"Jamaat Vote Share", party:"Bangladesh Jamaat-e-Islami (Jamaat)",
+    label:"Jamaat vote share", party:"Bangladesh Jamaat-e-Islami (Jamaat)", color:"#31a354",
     range:[0.20, 0.80],
     // ColorBrewer Greens 5
     ramp:["#edf8e9","#bae4b3","#74c476","#31a354","#006d2c"]
   },
   eleven_party_alliance: {
-    label:"11-Party Alliance", party:null,
+    label:"11-party alliance vote share", party:null, color:"#756bb1",
     range:[0.20, 0.80],
     // ColorBrewer Purples 5
     ramp:["#f2f0f7","#cbc9e2","#9e9ac8","#756bb1","#54278f"]
   },
   bnp_alliance: {
-    label:"BNP Alliance", party:null,
+    label:"BNP alliance vote share", party:null, color:"#e6550d",
     range:[0.20, 0.80],
     // ColorBrewer Oranges 5
     ramp:["#feedde","#fdbe85","#fd8d3c","#e6550d","#a63603"]
   },
   bnp_vs_eleven_party_alliance: {
-    label:"BNP vs 11-Party", party:null,
+    label:"BNP vs 11-party alliance", party:null,
     range:[0.0, 1.0],
     // ColorBrewer RdBu 5 (THE classic diverging)
     ramp:["#0571b0","#92c5de","#ffffbf","#f4a582","#ca0020"],
     diverging: true
   },
   turnout: {
-    label:"Voter Turnout", party:null,
+    label:"Turnout", party:null, color:"#31a354",
     range:[0.35, 0.80],
     // ColorBrewer YlGn 5
     ramp:["#ffffcc","#c2e699","#78c679","#31a354","#006837"]
   },
   victory_margin: {
-    label:"Victory Margin", party:null,
+    label:"Winning margin", party:null, color:"#f03b20",
     range:[0.0, 0.50],
     // ColorBrewer YlOrRd 5
     ramp:["#ffffb2","#fecc5c","#fd8d3c","#f03b20","#bd0026"]
   },
   winner: {
-    label:"Winner", party:null,
+    label:"Winning party", party:null,
     categorical:true
   }
 };
 
-var PARTY_SHORT={"Bangladesh Nationalist Party (BNP)":"BNP","Bangladesh Jamaat-e-Islami (Jamaat)":"Jamaat","Independent Candidate (Independent)":"Indep.","National Citizen Party (NCP)":"NCP","Khelafat Majlis":"KM","Islami Andolan Bangladesh (IAB)":"IAB","Ganosanhati Andolan (GSA)":"GSA","Bangladesh Jatiya Party (BJP)":"BJP","Gono Odhikar Parishad (GOP)":"GOP"};
+var PARTY_SHORT={"Bangladesh Nationalist Party (BNP)":"BNP","Bangladesh Jamaat-e-Islami (Jamaat)":"Jamaat","Independent Candidate (Independent)":"Independent","National Citizen Party (NCP)":"NCP","Khelafat Majlis":"KM","Islami Andolan Bangladesh (IAB)":"IAB","Ganosanhati Andolan (GSA)":"GSA","Bangladesh Jatiya Party (BJP)":"BJP","Gono Odhikar Parishad (GOP)":"GOP"};
 var PARTY_COLORS={
   "Bangladesh Nationalist Party (BNP)":{bg:"rgba(49,130,189,.3)",fg:"#6baed6"},
   "Bangladesh Jamaat-e-Islami (Jamaat)":{bg:"rgba(49,163,84,.3)",fg:"#74c476"},
@@ -567,6 +492,30 @@ var PARTY_COLORS={
   "Bangladesh Jatiya Party (BJP)":{bg:"rgba(166,189,219,.3)",fg:"#a6bddb"},
   "Gono Odhikar Parishad (GOP)":{bg:"rgba(240,59,32,.3)",fg:"#f03b20"}
 };
+function partyColor(p){var c=PARTY_COLORS[p];return c?c.fg:OTHER_PARTY}
+function partyShort(p){return PARTY_SHORT[p]||p||""}
+function swatch(c){return'<span class="swatch" style="background:'+c+'"></span>'}
+
+// Seats without results get a hatch so they can't be read as a low value
+function noDataFill(m){
+  var svg=m&&m.getPanes().overlayPane.querySelector("svg");
+  if(!svg)return NO_DATA;
+  var id="no-result-"+L.stamp(m);
+  if(!document.getElementById(id)){
+    var ns="http://www.w3.org/2000/svg";
+    var defs=svg.querySelector("defs")||svg.insertBefore(document.createElementNS(ns,"defs"),svg.firstChild);
+    var p=document.createElementNS(ns,"pattern");
+    p.setAttribute("id",id);p.setAttribute("width","5");p.setAttribute("height","5");
+    p.setAttribute("patternUnits","userSpaceOnUse");p.setAttribute("patternTransform","rotate(45)");
+    [["5","#7b7a78"],["1.4","#cccac8"]].forEach(function(r){
+      var rect=document.createElementNS(ns,"rect");
+      rect.setAttribute("width",r[0]);rect.setAttribute("height","5");rect.setAttribute("fill",r[1]);
+      p.appendChild(rect);
+    });
+    defs.appendChild(p);
+  }
+  return"url(#"+id+")";
+}
 
 var LOCATION_ALIASES={"bogra":"Bogura","comilla":"Cumilla","jessore":"Jashore","jhalakathi":"Jhalokathi","jhalokati":"Jhalokathi","netrokona":"Netrakona","chapai nawabganj":"Chapainawabganj","chapai nababganj":"Chapainawabganj","chapainawabganj":"Chapainawabganj","nawabganj":"Chapainawabganj","coxs bazar":"Cox's Bazar","cox's bazar":"Cox's Bazar","cox?s bazar":"Cox's Bazar","barisal":"Barishal","chittagong":"Chattogram","brahmanbaria":"Brahmanbaria","habiganj":"Habiganj","habjganj":"Habiganj","maulvibazar":"Moulvibazar","moulvibazar":"Moulvibazar","sunamganj":"Sunamganj","sylhet":"Sylhet","bandarban":"Bandarban","parbatya bandarban":"Bandarban","khagrachhari":"Khagrachhari","khagrachari":"Khagrachhari","parbatya khagrachari":"Khagrachhari","parbatya khagrachhari":"Khagrachhari","rangamati":"Rangamati","parbatya rangamati":"Rangamati","patuakhali":"Patuakhali","bhola":"Bhola","pirojpur":"Pirojpur","barguna":"Barguna","chuadanga":"Chuadanga","kushtia":"Kushtia","meherpur":"Meherpur","khulna":"Khulna","bagerhal":"Bagerhat","bagerhat":"Bagerhat","satkhira":"Satkhira","jhenaidah":"Jhenaidah","magura":"Magura","narail":"Narail","faridpur":"Faridpur","rajbari":"Rajbari","gopalganj":"Gopalganj","madaripur":"Madaripur","shariatpur":"Shariatpur","dhaka":"Dhaka","gazipur":"Gazipur","narsingdi":"Narsingdi","narayanganj":"Narayanganj","munshiganj":"Munshiganj","manikganj":"Manikganj","tangail":"Tangail","kishoreganj":"Kishoreganj","mymensingh":"Mymensingh","netrakona":"Netrakona","sherpur":"Sherpur","jamalpur":"Jamalpur","rajshahi":"Rajshahi","natore":"Natore","naogaon":"Naogaon","pabna":"Pabna","sirajganj":"Sirajganj","rangpur":"Rangpur","dinajpur":"Dinajpur","kurigram":"Kurigram","gaibandha":"Gaibandha","lalmonirhat":"Lalmonirhat","nilphamari":"Nilphamari","nilphamhari":"Nilphamari","panchagarh":"Panchagarh","thakurgaon":"Thakurgaon"};
 var SINGLE_SEATS=new Set(["Bandarban","Rangamati","Khagrachhari"]);
@@ -579,12 +528,8 @@ function rgbToHex(a){return"#"+a.map(function(x){return Math.max(0,Math.min(255,
 function lerpRgb(c1,c2,t){return c1.map(function(v,i){return v+(c2[i]-v)*t})}
 function sampleRamp(r,t){t=Math.max(0,Math.min(1,t));var n=r.length-1;var i=t*n;var lo=Math.floor(i);var hi=Math.min(lo+1,n);return rgbToHex(lerpRgb(hexToRgb(r[lo]),hexToRgb(r[hi]),i-lo))}
 function sigmoid(t,k){return 1/(1+Math.exp(-k*(t-0.5)))}
-function getWinnerColor(winner){
-  var pc=PARTY_COLORS[winner];
-  if(pc)return pc.fg;
-  return"#9090a0";
-}
-function getColor(v){if(v==null||isNaN(v))return"#222";var m=STAT_META[currentStat];if(m.categorical)return"#222";var lo=m.range[0],hi=m.range[1];var t=(hi>lo)?(v-lo)/(hi-lo):0.5;t=Math.max(0,Math.min(1,t));if(m.diverging){t=sigmoid(t,8)}else{t=Math.pow(t,0.85)}return sampleRamp(m.ramp,t)}
+function getWinnerColor(winner){return partyColor(winner)}
+function getColor(v){if(v==null||isNaN(v))return NO_DATA;var m=STAT_META[currentStat];if(m.categorical)return NO_DATA;var lo=m.range[0],hi=m.range[1];var t=(hi>lo)?(v-lo)/(hi-lo):0.5;t=Math.max(0,Math.min(1,t));if(m.diverging){t=sigmoid(t,8)}else{t=Math.pow(t,0.85)}return sampleRamp(m.ramp,t)}
 function getActiveRamp(){return STAT_META[currentStat].ramp}
 
 var currentStat="bnp_vs_eleven_party_alliance";
@@ -601,8 +546,7 @@ map.on("click",function(e){
   if(selectedSeatKey){deselectSeat()}
 });
 
-// Dark basemap: Esri's Dark Gray Canvas (CARTO's tiles now need an API key)
-// Dark basemap with rivers and geographic features
+// Basemap: Esri's Dark Gray Canvas (CARTO's tiles now need an API key)
 L.tileLayer("https://services.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",{
   maxZoom:18,maxNativeZoom:16,
   attribution:'Tiles &copy; <a href="https://www.esri.com/">Esri</a>: Esri, HERE, Garmin, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, and the GIS user community'
@@ -633,20 +577,20 @@ Promise.all([
 
 function initGeoJSON(geo){
   geojsonLayer=L.geoJSON(geo,{
-    style:function(){return{weight:0.5,color:"#000",fillOpacity:0.88,fillColor:"#222"}},
+    style:function(){return{weight:0.5,color:EDGE,fillOpacity:0.88,fillColor:NO_DATA}},
     onEachFeature:function(f,layer){
       var key=normalizeSeatName(f.properties.cst_n||"");
       layer._seatKey=key;seatLayers[key]=layer;
       layer.on({
         mouseover:function(e){
           if(selectedSeatKey!==key){
-            e.target.setStyle({weight:2,color:"#444"});
+            e.target.setStyle({weight:1.5,color:INK});
             e.target.bringToFront();
           }
         },
         mouseout:function(e){
           if(selectedSeatKey!==key){
-            e.target.setStyle({weight:0.5,color:"#000"});
+            e.target.setStyle({weight:0.5,color:EDGE});
           }
         },
         click:function(e){L.DomEvent.stopPropagation(e);selectSeat(key)}
@@ -659,78 +603,68 @@ function initGeoJSON(geo){
 function addDivisionBorders(geo){}
 
 function buildTooltip(key,seat){
-  if(!seat)return'<div class="tt"><div class="tt-name">'+key+'</div><div class="tt-district" style="color:var(--text-tertiary)">No data available</div></div>';
+  if(!seat)return'<div class="tt"><div class="tt-name">'+key+'</div><div class="tt-district">No result available</div></div>';
   var meta=STAT_META[currentStat];
-  var ws=PARTY_SHORT[seat.winner]||seat.winner||"";
-  var wc=PARTY_COLORS[seat.winner]||{bg:"rgba(144,144,160,.25)",fg:"#9090a0"};
+  var ws=partyShort(seat.winner);
   var h='<div class="tt"><div class="tt-header"><div><div class="tt-name">'+seat.name+'</div><div class="tt-district">'+seat.district+', '+seat.division+'</div></div>';
-  if(ws)h+='<div class="tt-winner-badge" style="background:'+wc.bg+';color:'+wc.fg+'">'+ws+'</div>';
+  if(ws)h+='<div class="tt-winner-badge">'+swatch(partyColor(seat.winner))+ws+' won</div>';
   h+='</div>';
-  if(meta.categorical){
-    h+='<div class="tt-stat-row"><span class="tt-stat-label">Winner</span><span class="tt-stat-value" style="color:'+wc.fg+'">'+ws+'</span></div>';
-  } else {
+  if(!meta.categorical){
     var val=seat.stats[currentStat];
     var pctStr=val!=null?(val*100).toFixed(1)+"%":"N/A";
-    var col=val!=null?getColor(val):"#222";
-    h+='<div class="tt-stat-row"><span class="tt-stat-label">'+meta.label+'</span><span class="tt-stat-value" style="color:'+col+'">'+pctStr+'</span></div>';
+    h+='<div class="tt-stat-row"><span class="tt-stat-label">'+meta.label+'</span><span class="tt-stat-value">'+(val!=null?swatch(getColor(val)):'')+pctStr+'</span></div>';
   }
   if(seat.top3&&seat.top3.length){
-    h+='<div style="padding-top:8px">';
-    var mx=Math.max.apply(null,seat.top3.map(function(t){return t.pct}));
-    for(var i=0;i<seat.top3.length;i++){var t=seat.top3[i];var bw=mx>0?(t.pct/mx*100):0;
-      var barCol=i===0?"var(--accent)":i===1?"#6b6b80":"#3a3a4a";
+    h+='<div>';
+    seat.top3.forEach(function(t){
       h+='<div class="tt-party-row"><span class="party">'+t.party+'</span><span class="pct">'+t.pct+'%</span></div>';
-      h+='<div class="tt-party-bar-bg"><div class="tt-party-bar" style="width:'+bw.toFixed(0)+'%;background:'+barCol+'"></div></div>';
-    }h+='</div>';
+      h+='<div class="tt-party-bar-bg"><div class="tt-party-bar" style="width:'+Math.min(100,t.pct)+'%;background:'+partyColor(t.party)+'"></div></div>';
+    });
+    h+='</div>';
   }
-  h+='<div class="tt-meta"><span>Votes: '+seat.total_votes.toLocaleString()+'</span><span>Turnout: '+(seat.turnout*100).toFixed(1)+'%</span>';
-  if(seat.stats.victory_margin!=null)h+='<span>Margin: '+(seat.stats.victory_margin*100).toFixed(1)+'%</span>';
+  h+='<div class="tt-meta"><span>'+seat.total_votes.toLocaleString()+' votes</span><span>Turnout '+(seat.turnout*100).toFixed(1)+'%</span>';
+  if(seat.stats.victory_margin!=null)h+='<span>Margin '+(seat.stats.victory_margin*100).toFixed(1)+'%</span>';
   h+='</div></div>';return h;
 }
 
 function selectSeat(key){
   var seat=seatData[key];if(!seat)return;selectedSeatKey=key;
   geojsonLayer.eachLayer(function(l){
-    if(l._seatKey===key){l.setStyle({weight:3,color:"#7c6cff"});l.bringToFront()}
-    else{l.setStyle({weight:0.5,color:"#000"})}
+    if(l._seatKey===key){l.setStyle({weight:2.5,color:INK});l.bringToFront()}
+    else{l.setStyle({weight:0.5,color:EDGE})}
   });
   var el=document.getElementById("selected-seat");
-  var ws=PARTY_SHORT[seat.winner]||seat.winner||"Unknown";
-  var wc=PARTY_COLORS[seat.winner]||{bg:"rgba(144,144,160,.25)",fg:"#9090a0"};
+  var ws=partyShort(seat.winner)||"Unknown";
   var h='<div class="selected-seat-name">'+seat.name+'</div>';
   h+='<div class="selected-seat-loc">'+seat.district+', '+seat.division+'</div>';
   h+='<div class="selected-seat-pills">';
-  h+='<span class="seat-pill seat-pill-winner" style="background:'+wc.bg+';color:'+wc.fg+'">'+ws+'</span>';
-  h+='<span class="seat-pill seat-pill-stat">Turnout '+(seat.turnout*100).toFixed(1)+'%</span>';
-  h+='<span class="seat-pill seat-pill-stat">Margin '+(seat.stats.victory_margin*100).toFixed(1)+'%</span>';
+  h+='<span class="seat-pill">'+swatch(partyColor(seat.winner))+'Won by <b>'+ws+'</b></span>';
+  h+='<span class="seat-pill">Turnout <b>'+(seat.turnout*100).toFixed(1)+'%</b></span>';
+  h+='<span class="seat-pill">Margin <b>'+(seat.stats.victory_margin*100).toFixed(1)+'%</b></span>';
   h+='</div>';
   // Full candidate results
   if(seat.candidates&&seat.candidates.length){
     var maxV=Math.max.apply(null,seat.candidates.map(function(c){return c.votes}));
-    h+='<div class="candidate-list"><div class="candidate-list-title">All Candidates</div>';
-    seat.candidates.forEach(function(c,i){
+    h+='<div class="candidate-list"><div class="candidate-list-title">Candidates</div>';
+    seat.candidates.forEach(function(c){
       var bw=maxV>0?(c.votes/maxV*100):0;
-      var barCol=i===0?"var(--accent)":i===1?"#6b6b80":"#3a3a4a";
       h+='<div class="cand-row"><div class="cand-info"><span class="cand-name">'+c.name+'</span><span class="cand-votes">'+c.votes.toLocaleString()+'</span></div>';
-      h+='<div style="display:flex;align-items:center;gap:6px"><span class="cand-party">'+c.party+'</span></div>';
-      h+='<div class="cand-bar-bg"><div class="cand-bar" style="width:'+bw.toFixed(0)+'%;background:'+barCol+'"></div></div></div>';
+      h+='<div><span class="cand-party">'+c.party+'</span></div>';
+      h+='<div class="cand-bar-bg"><div class="cand-bar" style="width:'+bw.toFixed(0)+'%;background:'+partyColor(c.party)+'"></div></div></div>';
     });
     h+='</div>';
   } else if(seat.top3&&seat.top3.length){
-    var maxP=Math.max.apply(null,seat.top3.map(function(t){return t.pct}));
-    h+='<div class="candidate-list"><div class="candidate-list-title">Top Candidates</div>';
-    seat.top3.forEach(function(t,i){
-      var bw=maxP>0?(t.pct/maxP*100):0;
-      var barCol=i===0?"var(--accent)":i===1?"#6b6b80":"#3a3a4a";
+    h+='<div class="candidate-list"><div class="candidate-list-title">Vote share by party</div>';
+    seat.top3.forEach(function(t){
       h+='<div class="cand-row"><div class="cand-info"><span class="cand-name">'+t.party+'</span><span class="cand-votes">'+t.pct+'%</span></div>';
-      h+='<div class="cand-bar-bg"><div class="cand-bar" style="width:'+bw.toFixed(0)+'%;background:'+barCol+'"></div></div></div>';
+      h+='<div class="cand-bar-bg"><div class="cand-bar" style="width:'+Math.min(100,t.pct)+'%;background:'+partyColor(t.party)+'"></div></div></div>';
     });
     h+='</div>';
   }
   // Neighboring seats
   var nbrs=neighborData[key]||[];
   if(nbrs.length){
-    h+='<div class="neighbors-section"><div class="neighbors-title">Neighboring Constituencies</div>';
+    h+='<div class="neighbors-section"><div class="neighbors-title">Neighboring seats</div>';
     nbrs.sort(function(a,b){
       var sa=seatData[a],sb=seatData[b];
       if(!sa)return 1;if(!sb)return -1;
@@ -738,13 +672,12 @@ function selectSeat(key){
     });
     nbrs.forEach(function(nk){
       var ns=seatData[nk];if(!ns)return;
-      var nws=PARTY_SHORT[ns.winner]||ns.winner||"?";
-      var nwc=PARTY_COLORS[ns.winner]||{fg:"#9090a0"};
+      var nws=partyShort(ns.winner)||"?";
       h+='<div class="neighbor-row" data-seat="'+nk+'">';
-      h+='<div class="neighbor-dot" style="background:'+nwc.fg+'"></div>';
+      h+='<div class="neighbor-dot" style="background:'+partyColor(ns.winner)+'"></div>';
       h+='<div class="neighbor-info"><div class="neighbor-name">'+ns.name+'</div>';
       h+='<div class="neighbor-detail"><span>Turnout '+(ns.turnout*100).toFixed(1)+'%</span><span>Margin '+(ns.stats.victory_margin*100).toFixed(1)+'%</span></div></div>';
-      h+='<span class="neighbor-winner" style="color:'+nwc.fg+'">'+nws+'</span>';
+      h+='<span class="neighbor-winner">'+nws+'</span>';
       h+='</div>';
     });
     h+='</div>';
@@ -787,15 +720,29 @@ function updateAll(){updateMap();updateSummary();updateDivisions();updateLegend(
 
 function updateMap(){
   if(!geojsonLayer)return;
-  var isCat=STAT_META[currentStat].categorical;
+  var isCat=STAT_META[currentStat].categorical;var nd=noDataFill(map);
   geojsonLayer.eachLayer(function(l){
     var seat=seatData[l._seatKey];
     var fill;
-    if(isCat){fill=seat?getWinnerColor(seat.winner):"#222"}
-    else{var val=seat?seat.stats[currentStat]:null;fill=(val!=null&&!isNaN(val))?getColor(val):"#222"}
+    if(isCat){fill=seat?getWinnerColor(seat.winner):nd}
+    else{var val=seat?seat.stats[currentStat]:null;fill=(val!=null&&!isNaN(val))?getColor(val):nd}
     var isSel=selectedSeatKey===l._seatKey;
-    l.setStyle({fillColor:fill,fillOpacity:0.88,weight:isSel?3:0.5,color:isSel?"#7c6cff":"#000"});
+    l.setStyle({fillColor:fill,fillOpacity:0.88,weight:isSel?2.5:0.5,color:isSel?INK:EDGE});
   });
+}
+
+// Seats won by party, as a small table (the table view of the Winner map)
+function seatTable(seats,limit){
+  var wc={};seats.forEach(function(s){if(s.winner)wc[s.winner]=(wc[s.winner]||0)+1});
+  var rows=Object.entries(wc).sort(function(a,b){return b[1]-a[1]});
+  if(limit&&rows.length>limit){
+    var rest=rows.slice(limit-1).reduce(function(a,e){return a+e[1]},0);
+    rows=rows.slice(0,limit-1).concat([[null,rest]]);
+  }
+  return'<div class="seat-table"><div class="seat-table-head"><span>Party</span><span>Seats won</span></div>'+rows.map(function(e){
+    var name=e[0]===null?"Other parties":e[0]==="Independent Candidate (Independent)"?"Independents":e[0];
+    return'<div class="seat-row">'+swatch(e[0]===null?OTHER_PARTY:partyColor(e[0]))+'<span class="party">'+name+'</span><span class="count">'+e[1]+'</span></div>';
+  }).join("")+'</div>';
 }
 
 function updateSummary(){
@@ -809,23 +756,19 @@ function updateSummary(){
     var tc=valid.reduce(function(a,s){return a+s.total_votes},0);
     var best=valid.reduce(function(a,s){return s.stats.turnout>a.stats.turnout?s:a});
     var worst=valid.reduce(function(a,s){return s.stats.turnout<a.stats.turnout?s:a});
-    el.innerHTML='<div class="summary-stat"><span class="value">'+(avg*100).toFixed(1)+'%</span><span class="label">avg turnout</span></div><div class="summary-detail"><strong>'+tc.toLocaleString()+'</strong> votes cast of <strong>'+tv.toLocaleString()+'</strong> registered<br>Highest: <strong>'+best.name+'</strong> ('+(best.stats.turnout*100).toFixed(1)+'%)<br>Lowest: <strong>'+worst.name+'</strong> ('+(worst.stats.turnout*100).toFixed(1)+'%)</div>';
+    el.innerHTML='<div class="summary-stat"><span class="value">'+(avg*100).toFixed(1)+'%</span><span class="label">average turnout across seats</span></div><div class="summary-detail"><strong>'+tc.toLocaleString()+'</strong> votes cast of <strong>'+tv.toLocaleString()+'</strong> registered<br>Highest: <strong>'+best.name+'</strong> ('+(best.stats.turnout*100).toFixed(1)+'%)<br>Lowest: <strong>'+worst.name+'</strong> ('+(worst.stats.turnout*100).toFixed(1)+'%)</div>';
   } else if(currentStat==="victory_margin"){
     var avg=valid.reduce(function(a,s){return a+s.stats.victory_margin},0)/valid.length;
     var cl=valid.reduce(function(a,s){return s.stats.victory_margin<a.stats.victory_margin?s:a});
     var sf=valid.reduce(function(a,s){return s.stats.victory_margin>a.stats.victory_margin?s:a});
     var comp=valid.filter(function(s){return s.stats.victory_margin<0.05}).length;
-    el.innerHTML='<div class="summary-stat"><span class="value">'+(avg*100).toFixed(1)+'%</span><span class="label">avg margin</span></div><div class="summary-detail"><strong>'+comp+'</strong> seats decided by &lt;5%<br>Closest: <strong>'+cl.name+'</strong> ('+(cl.stats.victory_margin*100).toFixed(1)+'%)<br>Safest: <strong>'+sf.name+'</strong> ('+(sf.stats.victory_margin*100).toFixed(1)+'%)</div>';
+    el.innerHTML='<div class="summary-stat"><span class="value">'+(avg*100).toFixed(1)+'%</span><span class="label">average winning margin</span></div><div class="summary-detail"><strong>'+comp+'</strong> seats decided by less than 5 points<br>Closest: <strong>'+cl.name+'</strong> ('+(cl.stats.victory_margin*100).toFixed(1)+'%)<br>Widest: <strong>'+sf.name+'</strong> ('+(sf.stats.victory_margin*100).toFixed(1)+'%)</div>';
   } else if(currentStat==="winner"){
-    var wc={};valid.forEach(function(s){var w=PARTY_SHORT[s.winner]||s.winner||"Other";wc[w]=(wc[w]||0)+1});
-    var sorted=Object.entries(wc).sort(function(a,b){return b[1]-a[1]});
-    el.innerHTML='<div class="summary-stat"><span class="value">'+valid.length+'</span><span class="label">seats</span></div><div class="winner-grid">'+sorted.map(function(e){var pc=PARTY_COLORS[Object.keys(PARTY_SHORT).find(function(k){return PARTY_SHORT[k]===e[0]})]||{fg:"#9090a0"};return'<div class="winner-item"><div class="count" style="color:'+pc.fg+'">'+e[1]+'</div><div class="party-name">'+e[0]+'</div></div>'}).join("")+'</div>';
+    el.innerHTML='<div class="summary-stat"><span class="value">'+valid.length+'</span><span class="label">seats with results</span></div>'+seatTable(valid);
   } else if(currentStat==="bnp_vs_eleven_party_alliance"){
     var bm=valid.filter(function(s){return s.stats.bnp_vs_eleven_party_alliance>0.5}).length;
     var em=valid.length-bm;
-    var wc={};valid.forEach(function(s){var w=PARTY_SHORT[s.winner]||s.winner||"Other";wc[w]=(wc[w]||0)+1});
-    var sorted=Object.entries(wc).sort(function(a,b){return b[1]-a[1]});
-    el.innerHTML='<div class="summary-stat"><span class="value">'+bm+' \u2013 '+em+'</span><span class="label">BNP vs 11-Party</span></div><div class="summary-detail">BNP led in <strong>'+bm+'</strong> constituencies<br>11-Party Alliance led in <strong>'+em+'</strong></div><div class="winner-grid">'+sorted.slice(0,4).map(function(e){return'<div class="winner-item"><div class="count">'+e[1]+'</div><div class="party-name">'+e[0]+'</div></div>'}).join("")+'</div>';
+    el.innerHTML='<div class="summary-detail">BNP finished ahead of the 11-party alliance in <strong>'+bm+'</strong> seats and behind it in <strong>'+em+'</strong>.</div>'+seatTable(valid,5);
   } else {
     var sk=currentStat;
     var tv=valid.reduce(function(a,s){return a+(s.stats[sk]*s.total_votes)},0);
@@ -833,9 +776,9 @@ function updateSummary(){
     var sh=ta>0?tv/ta:0;
     var sw=meta.party?valid.filter(function(s){return s.winner===meta.party}).length:null;
     var best=valid.reduce(function(a,s){return s.stats[sk]>a.stats[sk]?s:a});
-    var h='<div class="summary-stat"><span class="value">'+Math.round(tv).toLocaleString()+'</span><span class="label">total votes</span></div><div class="summary-detail">National share: <strong>'+(sh*100).toFixed(1)+'%</strong><br>';
-    if(sw!==null)h+='Seats won: <strong>'+sw+' / '+valid.length+'</strong><br>';
-    h+='Strongest: <strong>'+best.name+'</strong> ('+(best.stats[sk]*100).toFixed(1)+'%)</div>';
+    var h='<div class="summary-stat"><span class="value">'+(sh*100).toFixed(1)+'%</span><span class="label">of votes nationwide</span></div><div class="summary-detail"><strong>'+Math.round(tv).toLocaleString()+'</strong> votes<br>';
+    if(sw!==null)h+='Seats won: <strong>'+sw+'</strong> of '+valid.length+'<br>';
+    h+='Strongest seat: <strong>'+best.name+'</strong> ('+(best.stats[sk]*100).toFixed(1)+'%)</div>';
     el.innerHTML=h;
   }
 }
@@ -846,13 +789,12 @@ function updateDivisions(){
   var meta=STAT_META[currentStat];
   if(meta.categorical){
     var entries=Object.keys(byDiv).sort().map(function(d){
-      var wc={};byDiv[d].forEach(function(s){var w=PARTY_SHORT[s.winner]||s.winner||"Other";wc[w]=(wc[w]||0)+1});
+      var wc={};byDiv[d].forEach(function(s){if(s.winner)wc[s.winner]=(wc[s.winner]||0)+1});
       var top=Object.entries(wc).sort(function(a,b){return b[1]-a[1]})[0];
       return{name:d,topParty:top?top[0]:"",topCount:top?top[1]:0,total:byDiv[d].length};
     });
     el.innerHTML=entries.map(function(de){
-      var pc=PARTY_COLORS[Object.keys(PARTY_SHORT).find(function(k){return PARTY_SHORT[k]===de.topParty})]||{fg:"#9090a0"};
-      return'<div class="div-row'+(activeDivision===de.name?' active-div':'')+'" data-division="'+de.name+'"><span class="div-label">'+de.name+'</span><div class="div-bar-bg"><div class="div-bar" style="width:'+(de.topCount/de.total*100).toFixed(1)+'%;background:'+pc.fg+'"></div></div><span class="div-val" style="color:'+pc.fg+'">'+de.topParty+' '+de.topCount+'</span></div>';
+      return'<div class="div-row'+(activeDivision===de.name?' active-div':'')+'" data-division="'+de.name+'"><span class="div-label">'+de.name+'</span><div class="div-bar-bg"><div class="div-bar" style="width:'+(de.topCount/de.total*100).toFixed(1)+'%;background:'+partyColor(de.topParty)+'"></div></div><span class="div-val">'+partyShort(de.topParty)+' '+de.topCount+'</span></div>';
     }).join("");
     return;
   }
@@ -861,10 +803,9 @@ function updateDivisions(){
     return{name:d,avg:vals.length?vals.reduce(function(a,b){return a+b},0)/vals.length:0,count:byDiv[d].length}
   }).sort(function(a,b){return b.avg-a.avg});
   el.innerHTML=entries.map(function(de){
-    var col=getColor(de.avg);var pct=(de.avg*100).toFixed(1);
-    var barT=(meta.range[1]>meta.range[0])?(de.avg-meta.range[0])/(meta.range[1]-meta.range[0]):0.5;
-    barT=Math.max(0,Math.min(1,barT));
-    return'<div class="div-row'+(activeDivision===de.name?' active-div':'')+'" data-division="'+de.name+'"><span class="div-label">'+de.name+'</span><div class="div-bar-bg"><div class="div-bar" style="width:'+(barT*100).toFixed(1)+'%;background:'+col+'"></div></div><span class="div-val">'+pct+'%</span></div>';
+    // One colour per measure; for the head-to-head, the side that is ahead
+    var col=meta.diverging?(de.avg>=0.5?"#ca0020":"#0571b0"):(meta.color||OTHER_PARTY);
+    return'<div class="div-row'+(activeDivision===de.name?' active-div':'')+'" data-division="'+de.name+'"><span class="div-label">'+de.name+'</span><div class="div-bar-bg"><div class="div-bar" style="width:'+Math.max(0,Math.min(100,de.avg*100)).toFixed(1)+'%;background:'+col+'"></div></div><span class="div-val">'+(de.avg*100).toFixed(1)+'%</span></div>';
   }).join("");
 }
 
@@ -874,17 +815,19 @@ function updateLegend(){
   var meta=STAT_META[currentStat];
   legendControl.onAdd=function(){
     var div=L.DomUtil.create("div","legend");
+    var noData='<div class="legend-nodata"><span class="legend-nodata-swatch"></span>No result</div>';
     if(meta.categorical){
-      var items=Object.keys(PARTY_COLORS).map(function(k){var s=PARTY_SHORT[k]||k;return'<div style="display:flex;align-items:center;gap:7px;margin:5px 0"><span style="width:14px;height:10px;background:'+PARTY_COLORS[k].fg+';border-radius:3px;display:inline-block"></span><span style="font-size:10px;color:var(--text-secondary)">'+s+'</span></div>'}).join("");
-      items+='<div style="display:flex;align-items:center;gap:7px;margin:5px 0"><span style="width:14px;height:10px;background:#9090a0;border-radius:3px;display:inline-block"></span><span style="font-size:10px;color:var(--text-secondary)">Other</span></div>';
-      div.innerHTML='<div class="legend-title">'+meta.label+'</div>'+items+'<div class="legend-nodata"><span class="legend-nodata-swatch"></span> No data</div>';
+      var items=Object.keys(PARTY_COLORS).map(function(k){return'<div class="legend-item">'+swatch(PARTY_COLORS[k].fg)+(k==="Independent Candidate (Independent)"?"Independents":partyShort(k))+'</div>'}).join("");
+      // Only list "Other parties" when some winner has no colour of its own
+      if(Object.values(seatData).some(function(s){return s.winner&&!PARTY_COLORS[s.winner]}))items+='<div class="legend-item">'+swatch(OTHER_PARTY)+'Other parties</div>';
+      div.innerHTML='<div class="legend-title">'+meta.label+'</div>'+items+noData;
     } else {
       var ramp=getActiveRamp();
       var stops=ramp.map(function(c,i){return c+" "+(i/(ramp.length-1)*100).toFixed(0)+"%"}).join(", ");
       var lo,hi,mid;
-      if(meta.diverging){lo="11-Party";hi="BNP";mid='<span>Even</span>'}
-      else{lo=(meta.range[0]*100).toFixed(0)+"%";hi=(meta.range[1]*100).toFixed(0)+"%";mid='<span>'+((meta.range[0]+meta.range[1])/2*100).toFixed(0)+'%</span>'}
-      div.innerHTML='<div class="legend-title">'+meta.label+'</div><div class="legend-gradient" style="background:linear-gradient(to right,'+stops+')"></div><div class="legend-labels"><span>'+lo+'</span>'+mid+'<span>'+hi+'</span></div><div class="legend-nodata"><span class="legend-nodata-swatch"></span> No data</div>';
+      if(meta.diverging){lo="11-party ahead";hi="BNP ahead";mid='<span>Even</span>'}
+      else{lo="≤"+(meta.range[0]*100).toFixed(0)+"%";hi="≥"+(meta.range[1]*100).toFixed(0)+"%";mid='<span>'+((meta.range[0]+meta.range[1])/2*100).toFixed(0)+'%</span>'}
+      div.innerHTML='<div class="legend-title">'+meta.label+'</div><div class="legend-gradient" style="background:linear-gradient(to right,'+stops+')"></div><div class="legend-labels"><span>'+lo+'</span>'+mid+'<span>'+hi+'</span></div>'+noData;
     }
     return div;
   };
@@ -917,11 +860,11 @@ var sidebar=document.getElementById("sidebar");
 var mobileHandle=document.getElementById("mobile-handle");
 sidebarToggle.addEventListener("click",function(){
   sidebar.classList.toggle("mobile-open");
-  sidebarToggle.textContent=sidebar.classList.contains("mobile-open")?"Show Map":"Show Settings";
+  sidebarToggle.textContent=sidebar.classList.contains("mobile-open")?"Map":"Options";
 });
 mobileHandle.addEventListener("click",function(){
   sidebar.classList.toggle("mobile-open");
-  sidebarToggle.textContent=sidebar.classList.contains("mobile-open")?"Show Map":"Show Settings";
+  sidebarToggle.textContent=sidebar.classList.contains("mobile-open")?"Map":"Options";
 });
 
 // Histogram
@@ -948,7 +891,7 @@ function updateHistogram(){
     return'<div class="hist-bar" style="height:'+h+'%;background:'+col+'" title="'+c+' seats"></div>';
   }).join("");
   var labels=document.getElementById("histogram-labels");
-  if(meta.diverging){labels.innerHTML='<span>11-Party</span><span>Even</span><span>BNP</span>'}
+  if(meta.diverging){labels.innerHTML='<span>11-party ahead</span><span>Even</span><span>BNP ahead</span>'}
   else{labels.innerHTML='<span>'+(lo*100).toFixed(0)+'%</span><span>'+((lo+hi)/2*100).toFixed(0)+'%</span><span>'+(hi*100).toFixed(0)+'%</span>'}
 }
 
@@ -985,35 +928,33 @@ document.getElementById("division-breakdown").addEventListener("click",function(
 // District layer
 function initDistrictLayer(geo){
   districtLayer=L.geoJSON(geo,{
-    style:function(){return{weight:1.5,color:"#444",fillOpacity:0.88,fillColor:"#222"}},
+    style:function(){return{weight:1.5,color:DISTRICT_EDGE,fillOpacity:0.88,fillColor:NO_DATA}},
     onEachFeature:function(f,layer){
       var key=f.properties.district;
       layer._districtKey=key;
       layer.on({
-        mouseover:function(e){e.target.setStyle({weight:2.5,color:"#666"});e.target.bringToFront()},
-        mouseout:function(e){e.target.setStyle({weight:1.5,color:"#444"})},
+        mouseover:function(e){e.target.setStyle({weight:2,color:INK});e.target.bringToFront()},
+        mouseout:function(e){e.target.setStyle({weight:1.5,color:DISTRICT_EDGE})},
         click:function(){
           var dd=districtData[key];if(!dd)return;
           // Show district info in selected seat panel
           selectedSeatKey=null;
           var el=document.getElementById("selected-seat");
-          var tw=dd.top_winner;var ws=PARTY_SHORT[tw]||tw||"?";
-          var wc=PARTY_COLORS[tw]||{bg:"rgba(144,144,160,.25)",fg:"#9090a0"};
+          var tw=dd.top_winner;var ws=partyShort(tw)||"?";
           var h='<div class="selected-seat-name">'+key+' District</div>';
-          h+='<div class="selected-seat-loc">'+dd.division+' Division &middot; '+dd.seat_count+' seats</div>';
+          h+='<div class="selected-seat-loc">'+dd.division+' Division · '+dd.seat_count+' seats with results</div>';
           h+='<div class="selected-seat-pills">';
-          h+='<span class="seat-pill seat-pill-winner" style="background:'+wc.bg+';color:'+wc.fg+'">'+ws+' leads</span>';
-          if(dd.stats.turnout!=null)h+='<span class="seat-pill seat-pill-stat">Turnout '+(dd.stats.turnout*100).toFixed(1)+'%</span>';
+          h+='<span class="seat-pill">'+swatch(partyColor(tw))+'Most seats: <b>'+ws+'</b></span>';
+          if(dd.stats.turnout!=null)h+='<span class="seat-pill">Turnout <b>'+(dd.stats.turnout*100).toFixed(1)+'%</b></span>';
           h+='</div>';
           // Winner breakdown
           if(dd.winner_counts){
             var sorted=Object.entries(dd.winner_counts).sort(function(a,b){return b[1]-a[1]});
-            h+='<div class="candidate-list"><div class="candidate-list-title">Seats Won</div>';
-            sorted.forEach(function(e,i){
-              var pc=PARTY_COLORS[e[0]]||{fg:"#9090a0"};
+            h+='<div class="candidate-list"><div class="candidate-list-title">Seats won</div>';
+            sorted.forEach(function(e){
               var bw=(e[1]/dd.seat_count*100);
-              h+='<div class="cand-row"><div class="cand-info"><span class="cand-name">'+(PARTY_SHORT[e[0]]||e[0])+'</span><span class="cand-votes">'+e[1]+'</span></div>';
-              h+='<div class="cand-bar-bg"><div class="cand-bar" style="width:'+bw.toFixed(0)+'%;background:'+pc.fg+'"></div></div></div>';
+              h+='<div class="cand-row"><div class="cand-info"><span class="cand-name">'+partyShort(e[0])+'</span><span class="cand-votes">'+e[1]+'</span></div>';
+              h+='<div class="cand-bar-bg"><div class="cand-bar" style="width:'+bw.toFixed(0)+'%;background:'+partyColor(e[0])+'"></div></div></div>';
             });
             h+='</div>';
           }
@@ -1024,15 +965,14 @@ function initDistrictLayer(geo){
       layer.bindTooltip(function(){
         var dd=districtData[key];if(!dd)return key;
         var meta=STAT_META[currentStat];
-        var tw=PARTY_SHORT[dd.top_winner]||dd.top_winner||"";
-        var wc=PARTY_COLORS[dd.top_winner]||{fg:"#9090a0"};
-        var h='<div class="tt"><div class="tt-header"><div><div class="tt-name">'+key+'</div><div class="tt-district">'+dd.division+' &middot; '+dd.seat_count+' seats</div></div>';
-        h+='<div class="tt-winner-badge" style="background:rgba(144,144,160,.25);color:'+wc.fg+'">'+tw+'</div></div>';
+        var tw=partyShort(dd.top_winner);
+        var h='<div class="tt"><div class="tt-header"><div><div class="tt-name">'+key+'</div><div class="tt-district">'+dd.division+' · '+dd.seat_count+' seats with results</div></div>';
+        if(tw)h+='<div class="tt-winner-badge">'+swatch(partyColor(dd.top_winner))+tw+' most seats</div>';
+        h+='</div>';
         if(!meta.categorical){
           var val=dd.stats[currentStat];
           var pctStr=val!=null?(val*100).toFixed(1)+'%':'N/A';
-          var col=val!=null?getColor(val):'#222';
-          h+='<div class="tt-stat-row"><span class="tt-stat-label">Avg '+meta.label+'</span><span class="tt-stat-value" style="color:'+col+'">'+pctStr+'</span></div>';
+          h+='<div class="tt-stat-row"><span class="tt-stat-label">'+meta.label+', average of seats</span><span class="tt-stat-value">'+(val!=null?swatch(getColor(val)):'')+pctStr+'</span></div>';
         }
         h+='</div>';return h;
       },{sticky:true,className:"seat-tooltip",direction:"top",offset:[0,-12]});
@@ -1044,12 +984,12 @@ function initDistrictLayer(geo){
 
 function updateDistrictMap(){
   if(!districtLayer)return;
-  var meta=STAT_META[currentStat];
+  var meta=STAT_META[currentStat];var nd=noDataFill(map);
   districtLayer.eachLayer(function(l){
     var dd=districtData[l._districtKey];
     var fill;
-    if(meta.categorical){fill=dd?getWinnerColor(dd.top_winner):"#222"}
-    else{var val=dd?dd.stats[currentStat]:null;fill=(val!=null&&!isNaN(val))?getColor(val):"#222"}
+    if(meta.categorical){fill=dd?getWinnerColor(dd.top_winner):nd}
+    else{var val=dd?dd.stats[currentStat]:null;fill=(val!=null&&!isNaN(val))?getColor(val):nd}
     l.setStyle({fillColor:fill,fillOpacity:0.88});
   });
 }
@@ -1122,19 +1062,20 @@ function initMiniMap(){
     width:120,
     height:100,
     zoomLevelOffset:-5,
+    aimingRectOptions:{color:INK,weight:1,fillOpacity:0.06,interactive:false},
+    shadowRectOptions:{color:INK,weight:1,opacity:0,fillOpacity:0,interactive:false},
     mapOptions:{zoomControl:false,attributionControl:false}
   }).addTo(map);
 }
 
 // Screenshot - uses html-to-image which handles Leaflet CSS transforms correctly
-var screenshotSvg='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M3 9h2m14 0h2M9 3v2m0 14v2m6-18v2m0 14v2M3 15h2m14 0h2"/></svg>';
 function takeScreenshot(btn,filename){
-  btn.textContent="Capturing...";btn.disabled=true;
+  btn.textContent="Saving…";btn.disabled=true;
   setTimeout(function(){
     var mapTarget=compareMode?document.getElementById("compare-container"):document.getElementById("map");
     var opts={
       pixelRatio:2,
-      backgroundColor:"#0a0a10",
+      backgroundColor:"#141413",
       cacheBust:true,
       filter:function(node){
         // Skip minimap to avoid clutter, keep everything else
@@ -1147,11 +1088,11 @@ function takeScreenshot(btn,filename){
       link.download=filename;
       link.href=dataUrl;
       link.click();
-      btn.innerHTML=screenshotSvg+'Screenshot';
+      btn.textContent="Save image";
       btn.disabled=false;
     }).catch(function(err){
       console.error("Screenshot failed:",err);
-      btn.innerHTML=screenshotSvg+'Screenshot';
+      btn.textContent="Save image";
       btn.disabled=false;
     });
   },500);
@@ -1176,10 +1117,11 @@ function colorCompareLayer(layer,statKey){
   layer.eachLayer(function(l){
     var seat=seatData[l._seatKey];
     var fill;
-    if(meta.categorical){fill=seat?getWinnerColor(seat.winner):"#222"}
+    var nd=noDataFill(layer._map);
+    if(meta.categorical){fill=seat?getWinnerColor(seat.winner):nd}
     else{
       var val=seat?seat.stats[statKey]:null;
-      if(val==null||isNaN(val)){fill="#222"}
+      if(val==null||isNaN(val)){fill=nd}
       else{
         var lo=meta.range[0],hi=meta.range[1];
         var t=(hi>lo)?(val-lo)/(hi-lo):0.5;
@@ -1188,7 +1130,7 @@ function colorCompareLayer(layer,statKey){
         fill=sampleRamp(meta.ramp,t);
       }
     }
-    l.setStyle({fillColor:fill,fillOpacity:0.88,weight:0.5,color:"#000"});
+    l.setStyle({fillColor:fill,fillOpacity:0.88,weight:0.5,color:EDGE});
   });
 }
 
@@ -1202,15 +1144,15 @@ function highlightCompareConstituency(key){
   if(compareHoveredKey){
     var pl=compareLayerLookupLeft[compareHoveredKey];
     var pr=compareLayerLookupRight[compareHoveredKey];
-    if(pl)pl.setStyle({weight:0.5,color:"#000"});
-    if(pr)pr.setStyle({weight:0.5,color:"#000"});
+    if(pl)pl.setStyle({weight:0.5,color:EDGE});
+    if(pr)pr.setStyle({weight:0.5,color:EDGE});
   }
   compareHoveredKey=key;
   if(key){
     var hl=compareLayerLookupLeft[key];
     var hr=compareLayerLookupRight[key];
-    if(hl){hl.setStyle({weight:3,color:"#7c6cff"});hl.bringToFront()}
-    if(hr){hr.setStyle({weight:3,color:"#7c6cff"});hr.bringToFront()}
+    if(hl){hl.setStyle({weight:2.5,color:INK});hl.bringToFront()}
+    if(hr){hr.setStyle({weight:2.5,color:INK});hr.bringToFront()}
   }
 }
 
@@ -1218,7 +1160,7 @@ function initCompareMap(containerId,geoData,lookupObj){
   var m=L.map(containerId,{zoomSnap:0.25,zoomControl:false,attributionControl:false}).setView([23.5,90.3],7.5);
   L.tileLayer("https://services.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",{maxZoom:18,maxNativeZoom:16}).addTo(m);
   var layer=L.geoJSON(geoData,{
-    style:function(){return{weight:0.5,color:"#000",fillOpacity:0.88,fillColor:"#222"}},
+    style:function(){return{weight:0.5,color:EDGE,fillOpacity:0.88,fillColor:NO_DATA}},
     onEachFeature:function(f,l){
       l._seatKey=normalizeSeatName(f.properties.cst_n||"");
       lookupObj[l._seatKey]=l;
@@ -1401,7 +1343,7 @@ function updateScatter(){
   function sy(v){return pad.top+ph-((v-ylo)/(yhi-ylo))*ph}
 
   // Grid lines
-  ctx.strokeStyle="rgba(255,255,255,.06)";ctx.lineWidth=1;
+  ctx.strokeStyle="#2c2c2a";ctx.lineWidth=1;
   for(var i=0;i<=4;i++){
     var gx=pad.left+(pw*i/4);
     var gy=pad.top+(ph*i/4);
@@ -1410,7 +1352,7 @@ function updateScatter(){
   }
 
   // Axis labels
-  ctx.fillStyle="rgba(255,255,255,.3)";ctx.font="600 9px Inter,sans-serif";
+  ctx.fillStyle="#898781";ctx.font="11px 'Source Sans 3',system-ui,sans-serif";
   ctx.textAlign="center";
   ctx.fillText((xlo*100).toFixed(0)+"%",pad.left,h-4);
   ctx.fillText((xhi*100).toFixed(0)+"%",w-pad.right,h-4);
@@ -1431,7 +1373,7 @@ function updateScatter(){
   var r=r_den!==0?r_num/r_den:0;
 
   // Draw best fit line
-  ctx.strokeStyle="rgba(124,108,255,.5)";ctx.lineWidth=2;ctx.setLineDash([6,4]);
+  ctx.strokeStyle="#c3c2b7";ctx.lineWidth=1.5;
   var lx0=xlo,ly0=slope*xlo+intercept,lx1=xhi,ly1=slope*xhi+intercept;
   ly0=Math.max(ylo,Math.min(yhi,ly0));ly1=Math.max(ylo,Math.min(yhi,ly1));
   ctx.beginPath();ctx.moveTo(sx(lx0),sy(ly0));ctx.lineTo(sx(lx1),sy(ly1));ctx.stroke();
@@ -1445,12 +1387,11 @@ function updateScatter(){
     var isSel=p.key===selectedSeatKey;
     ctx.beginPath();ctx.arc(px,py,isSel?5:2.5,0,Math.PI*2);
     if(isSel){
-      ctx.fillStyle="rgba(124,108,255,.9)";
-      ctx.strokeStyle="#fff";ctx.lineWidth=1.5;
+      ctx.fillStyle=INK;
+      ctx.strokeStyle=EDGE;ctx.lineWidth=2;
       ctx.fill();ctx.stroke();
     } else {
-      var wc=PARTY_COLORS[seatData[p.key].winner];
-      ctx.fillStyle=wc?wc.fg+"aa":"rgba(144,144,160,.5)";
+      ctx.fillStyle=partyColor(seatData[p.key].winner)+"b3";
       ctx.fill();
     }
   });
@@ -1527,9 +1468,9 @@ function updateThreshold(){
       var isSel=selectedSeatKey===l._seatKey;
       // At extremes, show everything normally
       if(allMatch||noneMatch){
-        l.setStyle({fillOpacity:0.88,weight:isSel?3:0.5,color:isSel?"#7c6cff":"#000"});
+        l.setStyle({fillOpacity:0.88,weight:isSel?2.5:0.5,color:isSel?INK:EDGE});
       } else {
-        l.setStyle({fillOpacity:match?0.88:0.12,weight:isSel?3:0.5,color:isSel?"#7c6cff":"#000"});
+        l.setStyle({fillOpacity:match?0.88:0.12,weight:isSel?2.5:0.5,color:isSel?INK:EDGE});
       }
     });
   } else if(currentView==="district"&&districtLayer){
@@ -1540,9 +1481,9 @@ function updateThreshold(){
       var match=(thresholdMode==="above")?val>=thresholdVal:val<=thresholdVal;
       if(match)count++;
       if(allMatch||noneMatch){
-        l.setStyle({fillOpacity:0.88,weight:1.5,color:"#444"});
+        l.setStyle({fillOpacity:0.88,weight:1.5,color:DISTRICT_EDGE});
       } else {
-        l.setStyle({fillOpacity:match?0.88:0.12,weight:1.5,color:"#444"});
+        l.setStyle({fillOpacity:match?0.88:0.12,weight:1.5,color:DISTRICT_EDGE});
       }
     });
   }
@@ -1654,7 +1595,7 @@ document.getElementById("share-copy-btn").addEventListener("click",function(){
   inp.select();
   navigator.clipboard.writeText(inp.value).then(function(){
     var btn=document.getElementById("share-copy-btn");
-    btn.textContent="Copied!";
+    btn.textContent="Copied";
     setTimeout(function(){btn.textContent="Copy"},1500);
   });
 });
@@ -1673,7 +1614,7 @@ document.getElementById("share-copy-btn-compare").addEventListener("click",funct
   inp.select();
   navigator.clipboard.writeText(inp.value).then(function(){
     var btn=document.getElementById("share-copy-btn-compare");
-    btn.textContent="Copied!";
+    btn.textContent="Copied";
     setTimeout(function(){btn.textContent="Copy"},1500);
   });
 });
