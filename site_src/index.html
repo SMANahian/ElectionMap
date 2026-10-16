@@ -458,8 +458,10 @@ var STAT_META = {
   bnp_vs_eleven_party_alliance: {
     label:"BNP vs 11-party alliance", party:null,
     range:[0.0, 1.0],
-    // ColorBrewer RdBu 5 (THE classic diverging)
-    ramp:["#0571b0","#92c5de","#ffffbf","#f4a582","#ca0020"],
+    // RdBu end colours (11-party blue, BNP red) with a neutral grey middle in
+    // place of yellow; colour rises quickly on each side so narrow leads
+    // still show which side is ahead
+    ramp:["#0571b0","#367aad","#5582a7","#878683","#bb5c57","#c63c3c","#ca0020"],
     diverging: true
   },
   turnout: {
