@@ -47,7 +47,7 @@ Built by S M A Nahian (<https://smanahian.com>).
 ├── scripts/                # Python pipeline: scraping, merging, map generation
 ├── site_src/               # Website source (index.html)
 ├── site/                   # Deployed site (copied from site_src)
-├── result_from_source/     # Raw scraped results from TBS News & Daily Star
+├── result_from_source/     # Raw scraped results from TBS, The Daily Star, Dhaka Tribune and BSS
 ├── vote_count_combined/    # Merged election results from both sources
 ├── official_result/        # Official Election Commission results
 ├── census_from_sid/        # 2022 Census data (BBS PDF extraction)
@@ -101,7 +101,7 @@ Coalition definitions live in `config/coalitions.json`. Each entry has a unique 
 
 ## Data sources
 
-* **Election results** – [The Business Standard](https://www.tbsnews.net/election-2026) election portal and official Election Commission data
+* **Election results** – official Election Commission results, checked against counts from [The Business Standard](https://www.tbsnews.net/election-2026), The Daily Star, Dhaka Tribune and BSS
 * **Constituency boundaries** – GeoReferenced Electoral Districts (GRED) dataset for Bangladesh's 2008 boundaries, also used by the [BBC Bangla election map](https://www.bbc.com/bengali/resources/idt-12e6dcd9-2189-4c28-aafb-b106e6d01189)
 * **Coalition membership** – based on contemporary reporting and official party announcements
 
@@ -109,8 +109,8 @@ Coalition definitions live in `config/coalitions.json`. Each entry has a unique 
 
 | Folder | Contents |
 |--------|----------|
-| [result_from_source/](result_from_source/) | Raw scraped results from TBS News and Daily Star |
-| [vote_count_combined/](vote_count_combined/) | Merged results from both sources |
+| [result_from_source/](result_from_source/) | Raw scraped results from TBS, The Daily Star, Dhaka Tribune and BSS |
+| [vote_count_combined/](vote_count_combined/) | Merged results from the news sources |
 | [official_result/](official_result/) | Official Election Commission results |
 | [census_from_sid/](census_from_sid/) | 2022 Census data (64 districts, 8 divisions) |
 | [humdata_pop_stats/](humdata_pop_stats/) | Subnational population statistics (HumData) |
@@ -122,7 +122,7 @@ Each folder contains its own README with column descriptions.
 ## Credits
 
 * **Project author** – S M A Nahian (<https://smanahian.com>)
-* **Vote data** – The Business Standard election portal
+* **Vote data** – Bangladesh Election Commission official results, checked against The Business Standard, The Daily Star, Dhaka Tribune and BSS
 * **Boundary data** – GRED / BBC Bangla
 * **Tooling support** – Claude Code, ChatGPT agent, and GitHub Copilot
 
